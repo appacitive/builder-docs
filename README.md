@@ -1,12 +1,12 @@
 appacitive-dev-center
 =====================
 
-Appacitve Dev Center uses HarpJS..
+Appacitve Dev Center uses HarpJS on Node.
 
 To install
 
-   npm install
+    npm install
    
-To run
+To run the web server
 
-   npm start
+    npm start
