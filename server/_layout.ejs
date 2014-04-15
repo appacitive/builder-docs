@@ -9,60 +9,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="/css/common.css" rel="stylesheet" />
-    <link href="/css/index.css" rel="stylesheet" />
 </head>
 <body>
     <div class="body-container">
-        <div id="divHeader" class="navbar pageHeader">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="logo" href="https://www.appacitive.com"></a>
-                    <div class="nav-collapse collapse">
-                        <div class="pull-right">
-                            <ul id="ulSignIn" class="pull-right nav" style="display: none;">
-                                <li><span class="metro-loader loaderBG hide"></span>
-                                    <button class="btn btn-primary navbar-v-align" onclick="javascript:{ window.location = 'signup.html' };">
-                                        sign in</button>
-                                </li>
-                            </ul>
-                            <ul class="pull-right top_links_user hidden" id="divUserMenu">
-                                <li><a href="javascript:void(0)" id="lnkUserMenu">
-                                    <img id="imgUserPhoto" alt="photo" /></a><div class="top_user_drop_menu">
-                                        <ul id="lstUserMenu" class="nav-list">
-                                            <li class="nav-header user-name"><span class="top_nav_user_name_first"></span><span class="top_nav_user_name_last"></span></li>
-                                            <li><a href="javascript:void(0)" id="lnkMyAccount">My Account</a></li>
-                                            <li><a href="javascript:void(0)" id="lnkBilling">Billing & Payments</a></li>
-                                            <li><a href="javascript:void(0)" id="lnkSupport">contact support</a></li>
-                                            <li><a href="javascript:void(0)" id="lnkLogout">Logout</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="nav hidden pull-right platform-dropdown">
-                                <li class="platform-list"><a href="javascript:void(0)"><i class="sprite-apps"></i><span class="apps-name">platforms</span> <i class="sprite-down-arrow-light"></i></a>
-                                    <div class="top_user_drop_menu appList">
-                                        <ul class="nav-list" tabindex="5001" style="display: none; overflow-y: hidden; outline: none;">
-                                            <li><a href="/ios/index.html">iOS</a></li>
-                                            <li><a href="/android/index.html">Android</a></li>
-                                            <li><a href="/windows/index.html">Windows</a></li>
-                                            <li><a href="/javascript/index.html">JavaScript</a></li>
-                                            <li><a href="/python/index.html">Python</a></li>
-                                            <li class="nav-separator"></li>
-                                            <li><a href="/index.html">Dev Center</a></li>
-                                            <li class="nav-separator"></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+        <div id="divHeader" class="navbar navbar-default navbar-inverse pageHeader" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="logo" href="https://www.appacitive.com" titl="appacitive"></a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="pull-right">
+                        <ul id="ulSignIn" class="pull-right nav navbar-nav hide">
+                            <li>
+                                <button class="btn btn-primary navbar-v-align" onclick="javascript:{ window.location = 'signup.html' };">
+                                    sign in</button>
+                            </li>
+                        </ul>
+                        <ul class="pull-right top_links_user hide" id="divUserMenu">
+                            <li><a href="javascript:void(0)" id="lnkUserMenu">
+                                <img id="imgUserPhoto" alt="photo" /></a><div class="top_user_drop_menu">
+                                    <ul id="lstUserMenu" class="nav-list">
+                                        <li class="nav-header user-name"><span class="top_nav_user_name_first"></span><span class="top_nav_user_name_last"></span></li>
+                                        <li><a href="javascript:void(0)" id="lnkMyAccount">My Account</a></li>
+                                        <li><a href="javascript:void(0)" id="lnkBilling">Billing & Payments</a></li>
+                                        <li><a href="javascript:void(0)" id="lnkSupport">contact support</a></li>
+                                        <li><a href="javascript:void(0)" id="lnkLogout">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="nav pull-right platform-dropdown">
+                            <li class="platform-list"><a href="javascript:void(0)"><i class="sprite-apps"></i><span class="apps-name">platforms</span> <i class="sprite-down-arrow-light"></i></a>
+                                <div class="top_user_drop_menu appList">
+                                    <ul class="nav-list" tabindex="5001" style="display: none; overflow-y: hidden; outline: none;">
+                                        <li><a href="/ios">iOS</a></li>
+                                        <li><a href="/android">Android</a></li>
+                                        <li><a href="/windows">Windows</a></li>
+                                        <li><a href="/javascript">JavaScript</a></li>
+                                        <li><a href="/python">Python</a></li>
+                                        <li class="nav-separator"></li>
+                                        <li><a href="/">Dev Center</a></li>
+                                        <li class="nav-separator"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div id="divContent">
-            <div class="container-fluid content">
+            <div class="container-fluid content content-mark-down">
                 <div class="row-fluid">
                     <div class="span12">
                         <%- yield %>
@@ -72,9 +78,9 @@
         </div>
         <footer id="divFooter" class="footer">
             <div class="container-fluid">
-                <div class="row-fluid">
+                <div class="row">
                     <div class="content">
-                        <div class="span3">
+                        <div class="col-xs-12 col-md-3">
                             <h4>Appacitive</h4>
                             <ul>
                                 <li><a href="http://www.appacitive.com/about">About Us</a></li>
@@ -85,7 +91,7 @@
                                 <li><a href="http://status.appacitive.com">Policy</a></li>
                             </ul>
                         </div>
-                        <div class="span3">
+                        <div class="col-xs-12 col-md-3">
                             <h4>Products</h4>
                             <ul>
                                 <li><a href="http://www.appacitive.com/core">Core</a></li>
@@ -94,7 +100,7 @@
                                 <li><a href="http://www.appacitive.com/cloudlogic">Cloud Logic</a></li>
                             </ul>
                         </div>
-                        <div class="span3">
+                        <div class="col-xs-12 col-md-3">
                             <h4>Resources</h4>
                             <ul>
                                 <li><a href="http://support.appacitive.com">Support</a></li>
@@ -103,7 +109,7 @@
                                 <li><a href="http://status.appacitive.com">Status</a></li>
                             </ul>
                         </div>
-                        <div class="span3">
+                        <div class="col-xs-12 col-md-3">
                             <h4>SDKs</h4>
                             <ul>
                                 <li><a href="http://devcenter.appacitive.com/ios">iOS</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/ios">Download</a></li>
@@ -120,6 +126,7 @@
 
     <script src="/js/infra/jquery1.9.1.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
     <script src="/js/infra/md5.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
+    <script src="/js/infra/bootstrap.min.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
     <script src="/js/session.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
 </body>
 </html>

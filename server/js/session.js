@@ -33,7 +33,7 @@
         if (split.length == 6) $('#imgUserPhoto').attr("src", split[5]);
         else $('#imgUserPhoto').attr("src", "https://secure.gravatar.com/avatar/" + MD5(split[4]) + "?s=40&d=" + escape("https://portal.appacitive.com/styles/images/human.png"));
 
-        $('.top_links_user').show();
+        $('.top_links_user').removeClass('hide');
 
         $('#lstUserMenu').hide();
 
@@ -64,14 +64,14 @@
         $("#lnkLogout").click(function () {
             deleteCookie(that.SESSION_COOKIE_NAME);
             deleteCookie(that.USERNAME_COOKIE);
-            $(".top_links_user").hide();
-            $("#aLogin").parent().show();
+            $(".top_links_user").addClass('hide');
+            $("#ulSignIn").removeClass('hide')
         });
         $("#lnkMyAccount").click(function () {
             window.location = "https://portal.appacitive.com/" + that.account + "/accounts.html?accounts=myaccount";
         });
 
-    } else $("#ulSignIn").show();
+    } else $("#ulSignIn").removeClass('hide');
 
     //platform list handling
     $(document).click(function (e) {

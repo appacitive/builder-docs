@@ -1,0 +1,10 @@
+{
+  "index": {
+      "title": "Dev Center - Appacitive",
+      "layout": "_layout-banner"
+   },
+   "downloads": {
+   		"title": "SDK Downloads - Dev Center - Appacitive",
+		"layout": "_layout-banner"
+   }
+}
