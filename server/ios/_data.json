@@ -1,6 +1,8 @@
 {
   "index": {
       "title": "iOS - Dev Center - Appacitive",
-      "layout": "../_layout-banner"
+      "description": "",
+      "layout": "../_layout-banner",
+      "keywords": "ios, sdk, ios sdk, appacitive"
    }
 }

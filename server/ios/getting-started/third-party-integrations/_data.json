@@ -1,0 +1,13 @@
+{
+  "index": {
+      "title": "Getting Started - iOS - Dev Center - Appacitive",
+      "description": "",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": "active"
+   }
+}

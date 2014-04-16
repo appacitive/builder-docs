@@ -1,0 +1,14 @@
+{
+  "index": {
+      "title": "iOS SDK Conventions - Getting Started - iOS - Dev Center - Appacitive",
+      "description": "What are the SDK Conventions for Appacitive iOS SDK - Learn it in getting started section of iOS SDK.",
+      "keywords": "sdk conventions, ios, sdk, ios sdk, debug, getting started, appacitive",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "active",
+      "extendingsdk": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}

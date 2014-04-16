@@ -1,0 +1,14 @@
+{
+  "index": {
+      "title": "Debugging iOS SDK - Getting Started - iOS - Dev Center - Appacitive",
+      "description": "How to debug Appacitive iOS SDK - Know it in getting started section of iOS SDK.",
+      "keywords": "debug ios sdk, ios, sdk, ios sdk, debug, getting started, appacitive",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "debuggingsdk": "active",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}
