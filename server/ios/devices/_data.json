@@ -1,10 +1,12 @@
 {
   "guides": {
-      "title": "Guides - Users - iOS - Dev Center - Appacitive",
-      "description": ""
+      "title": "iOS Devices Guide - Dev Center - Appacitive",
+      "description": "iOS guide explaining the devices in Appacitive Platform using iOS SDK.",
+      "keywords": "ios, guide, devices, appacitive, ios sdk"
    },
    "tutorial": {
-   		"title": "Tutorial - Users - iOS - Dev Center - Appacitive",
-		"": ""
+   		"title": "iOS Access Control Tutorial - Dev Center - Appacitive",
+		"description": "Tutorial on how to do device management in Appacitive Platform using iOS SDK.",
+      	"keywords": "ios, tutorial, device, devices, appacitive, ios sdk"
    }
 }

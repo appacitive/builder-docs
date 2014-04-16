@@ -1,8 +1,11 @@
 {
   "index": {
-      "title": "Getting Started - iOS - Dev Center - Appacitive",
-      "description": "",
-      "layout": "../../../_layout-getting-started",
+      "title": "Error Space - Getting Started - iOS - Dev Center - Appacitive",
+      "description": "Getting started with error handling using  Appacitive iOS SDK.",
+      "keywords": "errors ios sdk, ios, sdk, ios sdk, error, getting started, appacitive",
+      "platform": "iOS",
+      "help_lang": "ios",
+      "layout": "../_layout-getting-started",
       "installation": "",
       "sdkconventions": "",
       "extendingsdk": "",

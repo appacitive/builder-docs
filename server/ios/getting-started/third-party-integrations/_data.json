@@ -1,8 +1,11 @@
 {
   "index": {
-      "title": "Getting Started - iOS - Dev Center - Appacitive",
-      "description": "",
-      "layout": "../../../_layout-getting-started",
+      "title": "Third Party Integrations - Getting Started - iOS - Dev Center - Appacitive",
+      "description": "Third party integrations of Appacitive iOS SDK - Know it in getting started section of iOS SDK.",
+      "keywords": "ios sdk, ios, sdk, ios sdk, getting started, appacitive",
+      "platform": "iOS",
+      "help_lang": "ios",
+      "layout": "../_layout-getting-started",
       "installation": "",
       "sdkconventions": "",
       "extendingsdk": "",

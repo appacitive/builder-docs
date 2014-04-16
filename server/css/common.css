@@ -202,7 +202,7 @@ table tbody td { border-right: solid 1px #aaa; border-bottom: solid 1px #aaa; ba
 table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 
 /* mark down content formatting */
-.content-mark-down h1 { margin-bottom: 3px; }
+.content-mark-down h1 { margin-bottom: 8px; }
 .content-mark-down h2, .content-mark-down h3 { padding: 10px 0 0; margin: 0; font-weight: 300; }
     .content-mark-down h2:first-child, .content-mark-down h3:first-child { padding-top: 0; }
     .content-mark-down h1 .glyphicon { font-size: 26px; }
