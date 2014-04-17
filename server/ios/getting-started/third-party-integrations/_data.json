@@ -4,6 +4,7 @@
       "description": "Third party integrations of Appacitive iOS SDK - Know it in getting started section of iOS SDK.",
       "keywords": "ios sdk, ios, sdk, ios sdk, getting started, appacitive",
       "platform": "iOS",
+      "language": "iOS",
       "help_lang": "ios",
       "layout": "../_layout-getting-started",
       "installation": "",

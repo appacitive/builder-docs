@@ -1,10 +1,16 @@
 {
   "guides": {
-      "title": "Guides - Social - Windows - Dev Center - Appacitive",
-      "description": ""
+      "title": ".Net SDK guide on Social Integration - Dev Center - Appacitive",
+      "description": ".Net guide explaining Social Integration feature provided by Appacitive Platform using .Net SDK.",
+      "keywords": "android, guide, social, files, appacitive, android sdk",
+      "platform": "Windows",
+      "language": ".Net"
    },
    "tutorial": {
-   		"title": "Tutorial - Social - Windows - Dev Center - Appacitive",
-		"": ""
+   		"title": ".Net SDK tutorial on Social Integration - Dev Center - Appacitive",
+		  "description": "Tutorial on how to integrate social network support in your app using .Net SDK.",
+    	"keywords": "android, tutorial, social, files, appacitive, android sdk",
+      "platform": "Windows",
+      "language": ".Net"
    }
 }

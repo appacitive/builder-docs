@@ -1,10 +1,14 @@
 {
   "guides": {
-      "title": "Guides - Social - Java - Dev Center - Appacitive",
-      "description": ""
+      "title": "Android Social Integration Guide - Dev Center - Appacitive",
+      "description": "Android guide explaining Social Integration feature provided by Appacitive Platform using Android SDK.",
+      "keywords": "android, guide, social, files, appacitive, android sdk",
+      "platform": "Android"
    },
    "tutorial": {
-   		"title": "Tutorial - Social - Java - Dev Center - Appacitive",
-		"": ""
+   		"title": "Android Social Integration Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to integrate social network support in your app using Android SDK.",
+    	"keywords": "android, tutorial, social, files, appacitive, android sdk",
+      "platform": "Android"
    }
 }

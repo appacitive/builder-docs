@@ -4,6 +4,7 @@
       "description": "Getting started with extending Appacitive iOS SDK.",
       "keywords": "errors ios sdk, ios, sdk, ios sdk, error, getting started, appacitive",
       "platform": "iOS",
+      "language": "iOS",
       "help_lang": "ios",
       "layout": "../_layout-getting-started",
       "installation": "",

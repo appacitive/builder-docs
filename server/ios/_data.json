@@ -5,6 +5,7 @@
       "layout": "../_layout-banner",
       "keywords": "ios, sdk, ios sdk, appacitive",
       "platform": "iOS",
+      "language": "iOS",
       "help_lang": "ios"
    }
 }

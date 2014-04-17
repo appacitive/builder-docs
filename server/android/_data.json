@@ -5,6 +5,7 @@
       "layout": "../_layout-banner",
       "keywords": "android, sdk, android sdk, appacitive",
       "platform": "Android",
+      "language": "Android",
       "help_lang": "android"
    }
 }

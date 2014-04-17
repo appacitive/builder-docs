@@ -3,12 +3,14 @@
       "title": "Android Files Guide - Dev Center - Appacitive",
       "description": "Android guide explaining file management in Appacitive Platform using Android SDK.",
       "keywords": "android, guide, file, files, appacitive, android sdk",
-      "platform": "Android"
+      "platform": "Android",
+      "language": "Android"
    },
    "tutorial": {
    		"title": "Android Files Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do file management in Appacitive Platform using Android SDK.",
       "keywords": "android, tutorial, file, files, appacitive, android sdk",
-      "platform": "Android"
+      "platform": "Android",
+      "language": "Android"
    }
 }

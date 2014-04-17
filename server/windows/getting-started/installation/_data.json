@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": "Installing .Net SDK - Getting Started - Windows - Dev Center - Appacitive",
+      "description": "How to install Appacitive .Net SDK - Learn it in getting started section of .Net SDK.",
+      "keywords": "install .net sdk, .net, sdk, .net sdk, debug, getting started, appacitive",
+      "platform": "Windows",
+      "language": ".Net",
+      "help_lang": "dotnet",
+      "layout": "../_layout-getting-started",
+      "installation": "active",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}
