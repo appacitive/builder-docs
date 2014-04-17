@@ -1,10 +1,16 @@
 {
   "guides": {
-      "title": "Guides - Data Store - Python - Dev Center - Appacitive",
-      "description": ""
+      "title": "Python Data Store Guide - Dev Center - Appacitive",
+      "description": "Python guide explaining the data storage in Appacitive Platform using Python SDK.",
+      "keywords": "python, guide, data store, appacitive, python sdk",
+      "platform": "Python",
+      "language": "Python"
    },
    "tutorial": {
-   		"title": "Tutorial - Data Store - Python - Dev Center - Appacitive",
-		"": ""
+   		"title": "Python Data Store Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on data storage in Appacitive Platform using Python SDK.",
+      "keywords": "python, tutorial, data store, appacitive, python sdk",
+      "platform": "Python",
+      "language": "Python"
    }
 }

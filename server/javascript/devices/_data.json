@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "JavaScript Devices Guide - Dev Center - Appacitive",
+      "description": "JavaScript guide explaining the devices in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, guide, devices, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   },
+   "tutorial": {
+   		"title": "JavaScript Access Control Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do device management in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, tutorial, device, devices, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   }
+}
