@@ -2,11 +2,13 @@
   "guides": {
       "title": "iOS Data Store Guide - Dev Center - Appacitive",
       "description": "iOS guide explaining the data storage in Appacitive Platform using iOS SDK.",
-      "keywords": "ios, guide, data store, appacitive, ios sdk"
+      "keywords": "ios, guide, data store, appacitive, ios sdk",
+      "platform": "iOS"
    },
    "tutorial": {
    		"title": "iOS Data Store Tutorial - Dev Center - Appacitive",
-		"description": "Tutorial on data storage in Appacitive Platform using iOS SDK.",
-      	"keywords": "ios, tutorial, data store, appacitive, ios sdk"
+		  "description": "Tutorial on data storage in Appacitive Platform using iOS SDK.",
+      "keywords": "ios, tutorial, data store, appacitive, ios sdk",
+      "platform": "iOS"
    }
 }

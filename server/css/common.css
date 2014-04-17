@@ -10,7 +10,7 @@ h3 { font-size: 22px; margin-bottom: 8px; font-weight: normal; }
 
 .body-container { height: auto !important; height: 100%; min-height: 100%; position: relative; display: block; line-height: 0; }
 #divHeader, #divContent, #divFooter{ line-height: 24px; }
-#divContent { position: relative; min-height: 100%; overflow-y: hidden; padding: 0 0 280px; }
+#divContent { position: relative; min-height: 100%; overflow-y: hidden; padding: 0 0 320px; }
 .content { max-width: 1020px; margin: 0 auto; padding-top: 30px; padding-bottom: 50px; }
 .hero-container { background-color: #ddd; width: 100%; display: block; }
     .hero-container .content { padding-bottom: 0; }
@@ -82,10 +82,11 @@ h3 { font-size: 22px; margin-bottom: 8px; font-weight: normal; }
 .navbar-v-align { margin-top: 13px !important; }
 .logo { min-width: 210px; width: 14.1234%; height: 63px; float: left; margin-right: 25px; background: transparent url(images/logo.png) no-repeat 0% 50%; }
 
-footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100%; background-color: #ddd; display: block; min-height: 280px; color: #888; }
+footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100%; background-color: #ddd; display: block; min-height: 320px; color: #888; }
     footer h4 { font-size: 17px; color: #555; text-transform: uppercase; font-weight: normal; }
-    footer ul { margin: 12px 0; }
+    footer ul { margin: 12px 0; font-size: 14px; }
         footer ul li { margin: 7px 0; }
+    footer .glyphicon { font-size: 12px; }
 
 
 /*Platform Icons*/
@@ -93,6 +94,11 @@ footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100
 .platform_ios { background: url('images/platformicons.png') no-repeat 0 -610px; border: none; width: 62px; height: 62px; }
 .platform_html { background: url('images/platformicons.png') no-repeat 0 -305px; border: none; width: 62px; height: 62px; }
 .platform_windows { background: url('images/platformicons.png') no-repeat 0 -915px; border: none; width: 62px; height: 62px; }
+
+/* sprites */
+.sprite-core { background: url('images/sprite-core.png') no-repeat 0 0; width: 66px; height: 66px; display: inline-block; background-size: 66px; }
+.sprite-push { background: url('images/sprite-push.png') no-repeat 0 0; width: 64px; height: 64px; display: inline-block; }
+.sprite-graph { background: url('images/sprite-graph.png') no-repeat 0 0; width: 64px; height: 64px; display: inline-block; }
 
 .ptn, .pvn, .pan { padding-top: 0px; }
 .pts, .pvs, .pas { padding-top: 5px; }

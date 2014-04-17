@@ -84,7 +84,6 @@
     $(".appList ul a").click(function (e) {
         if ($(this).attr("href") === '') return;
         window.location = $(this).attr("href");
-        self.close();
     });
 
     $(".platform-list").unbind("click").click(function (e) {

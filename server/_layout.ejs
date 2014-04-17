@@ -40,7 +40,7 @@
                             <li><a href="javascript:void(0)" id="lnkUserMenu">
                                 <img id="imgUserPhoto" alt="photo" /></a><div class="top_user_drop_menu">
                                     <ul id="lstUserMenu" class="nav-list">
-                                        <li class="nav-header user-name"><span class="top_nav_user_name_first"></span><span class="top_nav_user_name_last"></span></li>
+                                        <li class="nav-header user-name"><span class="top_nav_user_name_first"></span> <span class="top_nav_user_name_last"></span></li>
                                         <li><a href="javascript:void(0)" id="lnkMyAccount">My Account</a></li>
                                         <li><a href="javascript:void(0)" id="lnkBilling">Billing & Payments</a></li>
                                         <li><a href="javascript:void(0)" id="lnkSupport">contact support</a></li>
@@ -50,9 +50,10 @@
                             </li>
                         </ul>
                         <ul class="nav pull-right platform-dropdown">
-                            <li class="platform-list"><a href="javascript:void(0)"><i class="sprite-apps"></i><span class="apps-name">platforms</span> <i class="sprite-down-arrow-light"></i></a>
+                            <li class="platform-list"><a href="javascript:void(0)"><i class="sprite-apps"></i><span class="apps-name"><%- platform %></span> <i class="sprite-down-arrow-light"></i></a>
                                 <div class="top_user_drop_menu appList">
                                     <ul class="nav-list" tabindex="5001" style="display: none; overflow-y: hidden; outline: none;">
+                                        <li class="nav-header user-name" style="height:36px;text-transform:none;line-height:24px">All Platforms</li>
                                         <li><a href="/ios">iOS</a></li>
                                         <li><a href="/android">Android</a></li>
                                         <li><a href="/windows">Windows</a></li>
@@ -106,7 +107,7 @@
                             <h4>Resources</h4>
                             <ul>
                                 <li><a href="http://support.appacitive.com">Support</a></li>
-                                <li><a href="http://devcenter.appacitive.com/push">Dev Center</a></li>
+                                <li><a href="http://devcenter.appacitive.com">Dev Center</a></li>
                                 <li><a href="http://videos.appacitive.com">Videos</a></li>
                                 <li><a href="http://status.appacitive.com">Status</a></li>
                             </ul>
@@ -114,10 +115,14 @@
                         <div class="col-xs-12 col-md-3">
                             <h4>SDKs</h4>
                             <ul>
-                                <li><a href="http://devcenter.appacitive.com/ios">iOS</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/ios">Download</a></li>
-                                <li><a href="http://devcenter.appacitive.com/android">Android</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/android">Download</a></li>
-                                <li><a href="http://devcenter.appacitive.com/windows">Windows</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/windows">Download</a></li>
-                                <li><a href="http://devcenter.appacitive.com/html5">HTML5</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/html5">Download</a></li>
+                                <li><a href="http://devcenter.appacitive.com/ios">iOS</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/ios/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
+                                <li><a href="http://devcenter.appacitive.com/android">Android</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/android/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
+                                <li><a href="http://devcenter.appacitive.com/windows">Windows</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/windows/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
+                                <li><a href="http://devcenter.appacitive.com/javascript">JavaScript</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/javascript/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
+                                <li><a href="http://devcenter.appacitive.com/python">Python</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/python/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
+                                <li><a href="http://devcenter.appacitive.com/java">Java</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/javascript/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
+                                <li><a href="http://devcenter.appacitive.com/nodejs">NodeJS</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/nodejs/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
+                                <li><a href="http://devcenter.appacitive.com/downloads.html">All SDKs</a></li>
                             </ul>
                         </div>
                     </div>

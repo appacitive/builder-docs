@@ -2,11 +2,13 @@
   "guides": {
       "title": "iOS Users Guide - Dev Center - Appacitive",
       "description": "iOS guide explaining the user management in Appacitive Platform using iOS SDK.",
-      "keywords": "ios, guide, user, user management, appacitive, ios sdk"
+      "keywords": "ios, guide, user, user management, appacitive, ios sdk",
+      "platform": "iOS"
    },
    "tutorial": {
    		"title": "Tutorial - Users - iOS - Dev Center - Appacitive",
 		  "description": "Tutorial on user management in Appacitive Platform using iOS SDK.",
-      "keywords": "ios, tutorial, user, user management, appacitive, ios sdk"
+      "keywords": "ios, tutorial, user, user management, appacitive, ios sdk",
+      "platform": "iOS"
    }
 }
