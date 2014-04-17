@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="body-container">
-        <%- partial("_partials/_header") %>
+        <%- partial("/_partials/_header") %>
         <div id="divContent">
             <div class="container-fluid content content-mark-down ptl">
                 <div class="row">
@@ -29,8 +29,9 @@
                 </div>
             </div>
         </div>
-        <%- partial("_partials/_footer") %>
+        <span id="spanPlatform"><%- platform %></span>
+        <%- partial("/_partials/_footer") %>
     </div>
-    <%- partial("_partials/_scripts") %>
+    <%- partial("/_partials/_scripts") %>
 </body>
 </html>

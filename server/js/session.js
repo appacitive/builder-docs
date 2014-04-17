@@ -103,4 +103,7 @@
     });
 
     $("#aLogin").attr("href", $("#aLogin").attr("href") + "&ru=" + window.location.href);
+
+    //change the platform label
+    $('.apps-name').html($('#spanPlatform').html());
 });

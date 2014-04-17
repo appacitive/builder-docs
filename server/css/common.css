@@ -11,10 +11,10 @@ h3 { font-size: 22px; margin-bottom: 8px; font-weight: normal; }
 .body-container { height: auto !important; height: 100%; min-height: 100%; position: relative; display: block; line-height: 0; }
 #divHeader, #divContent, #divFooter{ line-height: 24px; }
 #divContent { position: relative; min-height: 100%; overflow-y: hidden; padding: 0 0 320px; }
-.content { max-width: 1020px; margin: 0 auto; padding-top: 30px; padding-bottom: 50px; }
+.content { max-width: 1020px; margin: 0 auto; padding-top: 15px; padding-bottom: 50px; }
 .hero-container { background-color: #ddd; width: 100%; display: block; }
     .hero-container .content { padding-bottom: 0; }
-.platform { padding: 15px 0 40px; margin: 0; text-align: center; }
+.platform { padding: 15px 0 15px; margin: 0; text-align: center; }
     .platform div { min-height: 250px; }
     .platform  a { -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -ms-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s; position: relative; display: inline-block; border: solid 4px #FFF; background-color: #FFf; border-radius: 100%; padding: 55px; }
         .platform a i { display: inline-block; }

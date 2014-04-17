@@ -16,11 +16,11 @@
 </head>
 <body>
     <div class="body-container">
-        <%- partial("_partials/_header") %>
+        <%- partial("/_partials/_header") %>
         <%- yield %>
-        <%- partial("_partials/_footer") %>
+        <%- partial("/_partials/_footer") %>
     </div>
-
-    <%- partial("_partials/_scripts") %>
+    <span id="spanPlatform"><%- platform %></span>
+    <%- partial("/_partials/_scripts") %>
 </body>
 </html>
