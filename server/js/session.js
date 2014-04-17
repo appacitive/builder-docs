@@ -102,5 +102,9 @@
         return false;
     });
 
-    $("#aLogin").attr("href", $("#aLogin").attr("href") + "&ru=" + window.location.href);
+    $("#btnLogin").click(function(e){
+        e.preventDefault();
+        window.location = 'https://portal.appacitive.com/login.html?rel=devcenter'+ '&ru=' + window.location.href;
+        return false;
+    });
 });
