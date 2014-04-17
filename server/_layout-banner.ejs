@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title><%= title %></title>
-    <script src="/js/infra/gFont.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
-    <meta charset="UTF-8" />
-    <meta name="google" content="notranslate" />
     <meta name="description" content="<%= description %>" />
     <meta name="keywords" content="<%= keywords %>" />
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
     <meta http-equiv="Content-Language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
@@ -16,116 +16,11 @@
 </head>
 <body>
     <div class="body-container">
-        <div id="divHeader" class="navbar navbar-default navbar-inverse pageHeader" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="logo" href="https://www.appacitive.com" titl="appacitive"></a>
-                </div>
-                
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <div class="pull-right">
-                        <ul id="ulSignIn" class="pull-right nav navbar-nav hide">
-                            <li>
-                                <button class="btn btn-primary navbar-v-align" onclick="javascript:{ window.location = 'signup.html' };">
-                                    sign in</button>
-                            </li>
-                        </ul>
-                        <ul class="pull-right top_links_user hide" id="divUserMenu">
-                            <li><a href="javascript:void(0)" id="lnkUserMenu">
-                                <img id="imgUserPhoto" alt="photo" /></a><div class="top_user_drop_menu">
-                                    <ul id="lstUserMenu" class="nav-list">
-                                        <li class="nav-header user-name"><span class="top_nav_user_name_first"></span> <span class="top_nav_user_name_last"></span></li>
-                                        <li><a href="javascript:void(0)" id="lnkMyAccount">My Account</a></li>
-                                        <li><a href="javascript:void(0)" id="lnkBilling">Billing & Payments</a></li>
-                                        <li><a href="javascript:void(0)" id="lnkSupport">contact support</a></li>
-                                        <li><a href="javascript:void(0)" id="lnkLogout">Logout</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="nav pull-right platform-dropdown">
-                            <li class="platform-list"><a href="javascript:void(0)"><i class="sprite-apps"></i><span class="apps-name"><%- platform %></span> <i class="sprite-down-arrow-light"></i></a>
-                                <div class="top_user_drop_menu appList">
-                                    <ul class="nav-list" tabindex="5001" style="display: none; overflow-y: hidden; outline: none;">
-                                        <li class="nav-header user-name" style="height:36px;text-transform:none;line-height:24px">All Platforms</li>
-                                        <li><a href="/ios">iOS</a></li>
-                                        <li><a href="/android">Android</a></li>
-                                        <li><a href="/windows">Windows</a></li>
-                                        <li><a href="/javascript">JavaScript</a></li>
-                                        <li><a href="/python">Python</a></li>
-                                        <li class="nav-separator"></li>
-                                        <li><a href="/">Dev Center</a></li>
-                                        <li class="nav-separator"></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <%- partial("_partials/_header") %>
         <%- yield %>
-        <footer id="divFooter" class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="content">
-                        <div class="col-xs-12 col-md-3">
-                            <h4>Appacitive</h4>
-                            <ul>
-                                <li><a href="http://www.appacitive.com/about">About Us</a></li>
-                                <li><a href="http://www.appacitive.com/contact">Contact Us</a></li>
-                                <li><a href="http://www.appacitive.com/blog">Blog</a></li>
-                                <li><a href="http://www.appacitive.com/jobs">Jobs</a></li>
-                                <li><a href="http://www.appacitive.com/pricing">Pricing</a></li>
-                                <li><a href="http://status.appacitive.com">Policy</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <h4>Products</h4>
-                            <ul>
-                                <li><a href="http://www.appacitive.com/core">Core</a></li>
-                                <li><a href="http://www.appacitive.com/push">Push</a></li>
-                                <li><a href="http://www.appacitive.com/graph">Graph</a></li>
-                                <li><a href="http://www.appacitive.com/cloudlogic">Cloud Logic</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <h4>Resources</h4>
-                            <ul>
-                                <li><a href="http://support.appacitive.com">Support</a></li>
-                                <li><a href="http://devcenter.appacitive.com/push">Dev Center</a></li>
-                                <li><a href="http://videos.appacitive.com">Videos</a></li>
-                                <li><a href="http://status.appacitive.com">Status</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                            <h4>SDKs</h4>
-                            <ul>
-                                <li><a href="http://devcenter.appacitive.com/ios">iOS</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/ios/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
-                                <li><a href="http://devcenter.appacitive.com/android">Android</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/android/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
-                                <li><a href="http://devcenter.appacitive.com/windows">Windows</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/windows/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
-                                <li><a href="http://devcenter.appacitive.com/javascript">JavaScript</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/javascript/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
-                                <li><a href="http://devcenter.appacitive.com/python">Python</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/python/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
-                                <li><a href="http://devcenter.appacitive.com/java">Java</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/javascript/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
-                                <li><a href="http://devcenter.appacitive.com/nodejs">NodeJS</a><span class="mls mrs">|</span><a href="http://devcenter.appacitive.com/nodejs/downloads">Download <span class="glyphicon glyphicon-download-alt"></span></a></li>
-                                <li><a href="http://devcenter.appacitive.com/downloads.html">All SDKs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <%- partial("_partials/_footer") %>
     </div>
 
-    <script src="/js/infra/jquery1.9.1.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
-    <script src="/js/infra/md5.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
-    <script src="/js/infra/bootstrap.min.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
-    <script src="/js/session.js?v=__RevisionNoGoesHere__" type="text/javascript"></script>
+    <%- partial("_partials/_scripts") %>
 </body>
 </html>
