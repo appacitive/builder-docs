@@ -1,6 +1,10 @@
 {
   "index": {
       "title": "Android - Dev Center - Appacitive",
-      "layout": "../_layout-banner"
+      "description": "Everything you need to develop iOS app on Appacitive Platform.",
+      "layout": "../_layout-banner",
+      "keywords": "android, sdk, android sdk, appacitive",
+      "platform": "Android",
+      "help_lang": "android"
    }
 }

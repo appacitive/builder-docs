@@ -1,4 +1,4 @@
-﻿# iOS SDK Samples
+﻿# Graph Query
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 

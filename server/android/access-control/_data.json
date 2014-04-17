@@ -1,10 +1,14 @@
 {
   "guides": {
-      "title": "Guides - Access Control - Android - Dev Center - Appacitive",
-      "description": ""
+      "title": "Android Access Control Guide - Dev Center - Appacitive",
+      "description": "Android guide explaining the data storage in Appacitive Platform using Android SDK.",
+      "keywords": "android, guide, access control, appacitive, android sdk",
+      "platform": "Android"
    },
    "tutorial": {
-   		"title": "Tutorial - Access Control - Android - Dev Center - Appacitive",
-		"": ""
+   		"title": "Android Access Control Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do access control in Appacitive Platform using Android SDK.",
+      "keywords": "android, tutorial, access control, appacitive, android sdk",
+      "platform": "Android"
    }
 }

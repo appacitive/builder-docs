@@ -1,6 +1,8 @@
 {
   "index": {
-      "title": "Samples - Android - Dev Center - Appacitive",
-      "description": ""
+      "title": "Android SDK Samples - Dev Center - Appacitive",
+      "description": "Checkout quick and simple Android SDK samples highlighting some of the main features provided by Appacitive Platform .",
+      "keywords": "android, samples, android samples, android sdk samples, appacitive, android sdk",
+      "platform": "Android"
    }
 }
