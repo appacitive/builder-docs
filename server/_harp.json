@@ -3,6 +3,7 @@
       "title": "Dev Center - Appacitive",
       "description": "Appacitive is a cloud based software as a service platform for developing highly scalable backends for mobile and rich internet applications.",
       "keywords": "cloud, backend as service, software, database, mobile, mobile backend, ios, android, html5",
-      "contact": "connect@appacitive.com"
+      "contact": "connect@appacitive.com",
+      "platform": "platforms"
    }
 }
