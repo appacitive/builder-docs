@@ -14,6 +14,13 @@ h3 { font-size: 22px; margin-bottom: 8px; font-weight: normal; }
 .content { max-width: 1020px; margin: 0 auto; padding-top: 15px; padding-bottom: 50px; }
 .hero-container { background-color: #ddd; width: 100%; display: block; }
     .hero-container .content { padding-bottom: 0; }
+
+/*Platform Icons*/
+.platform_android { background: url('images/platform-android.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
+.platform_ios { background: url('images/platform-ios.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
+.platform_html { background: url('images/platform-javascript.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
+.platform_windows { background: url('images/platform-windows.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
+
 .platform { padding: 15px 0 15px; margin: 0; text-align: center; }
     .platform div { min-height: 250px; }
     .platform  a { -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -ms-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s; position: relative; display: inline-block; border: solid 4px #FFF; background-color: #FFf; border-radius: 100%; padding: 55px; }
@@ -21,10 +28,10 @@ h3 { font-size: 22px; margin-bottom: 8px; font-weight: normal; }
         .platform a .name { position: absolute; top: 200px; text-align: center; left: 0; width: 100%; color: #555; font-size: 20px; background-color: transparent !important; }
         .platform a:hover, .platform a:hover .name { color: #00274f; background-color: #00274f; -webkit-transition: background-color 300ms linear; -moz-transition: background-color 300ms linear; -o-transition: background-color 300ms linear; -ms-transition: background-color 300ms linear; transition: background-color 300ms linear; }
     
-    .platform a:hover .platform_android { background: url('images/platformicons.png') no-repeat 0 -112px; border: none; width: 62px; height: 62px; }
-    .platform a:hover .platform_ios { background: url('images/platformicons.png') no-repeat 0 -722px; border: none; width: 62px; height: 62px; }
-    .platform a:hover .platform_html { background: url('images/platformicons.png') no-repeat 0 -417px; border: none; width: 62px; height: 62px; }
-    .platform a:hover .platform_windows { background: url('images/platformicons.png') no-repeat 0 -1027px; border: none; width: 62px; height: 62px; }
+    .platform a:hover .platform_android { background: url('images/platform-android-white.png') no-repeat; }
+    .platform a:hover .platform_ios { background: url('images/platform-ios-white.png') no-repeat; border: }
+    .platform a:hover .platform_html { background: url('images/platform-javascript-white.png') no-repeat; }
+    .platform a:hover .platform_windows { background: url('images/platform-windows-white.png') no-repeat; }
 
 .platform-name { margin-bottom: 3px; }
 .platform-details { list-style: square; margin-left: 22px; }
@@ -89,16 +96,13 @@ footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100
     footer .glyphicon { font-size: 12px; }
 
 
-/*Platform Icons*/
-.platform_android { background: url('images/platformicons.png') no-repeat 0 0; border: none; width: 62px; height: 62px; }
-.platform_ios { background: url('images/platformicons.png') no-repeat 0 -610px; border: none; width: 62px; height: 62px; }
-.platform_html { background: url('images/platformicons.png') no-repeat 0 -305px; border: none; width: 62px; height: 62px; }
-.platform_windows { background: url('images/platformicons.png') no-repeat 0 -915px; border: none; width: 62px; height: 62px; }
-
 /* sprites */
 .sprite-core { background: url('images/sprite-core.png') no-repeat 0 0; width: 66px; height: 66px; display: inline-block; background-size: 66px; }
 .sprite-push { background: url('images/sprite-push.png') no-repeat 0 0; width: 64px; height: 64px; display: inline-block; }
 .sprite-graph { background: url('images/sprite-graph.png') no-repeat 0 0; width: 64px; height: 64px; display: inline-block; }
+    .platform a:hover .sprite-core { background: url('images/sprite-core-white.png') no-repeat 0 0; }
+    .platform a:hover .sprite-push { background: url('images/sprite-push-white.png') no-repeat 0 0; }
+    .platform a:hover .sprite-graph { background: url('images/sprite-graph-white.png') no-repeat 0 0; }
 
 .ptn, .pvn, .pan { padding-top: 0px; }
 .pts, .pvs, .pas { padding-top: 5px; }
@@ -158,15 +162,16 @@ footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100
 .core-item-filter { background: transparent url(images/sprite-query-filter.png) no-repeat; height: 75px; width: 75px; }
 
 
-.download .core-item { min-width: 170px; }
+.download .core-item { min-width: 170px; margin-right: 40px; margin-bottom: 25px; }
     .download .core-item .glyphicon { padding-left: 3px; }
-.core-item-ios { background: transparent url(images/sprite-sdk-ios.png) no-repeat; height: 75px; width: 75px; }
-.core-item-android { background: transparent url(images/sprite-sdk-andriod.png) no-repeat; height: 75px; width: 75px; }
-.core-item-windows { background: transparent url(images/sprite-sdk-windows.png) no-repeat; height: 75px; width: 75px; }
-.core-item-javascript { background: transparent url(images/sprite-sdk-javascript.png) no-repeat; height: 75px; width: 75px; }
-.core-item-java { background: transparent url(images/sprite-sdk-java.png) no-repeat; height: 75px; width: 75px; }
-.core-item-python { background: transparent url(images/sprite-sdk-python.png) no-repeat; height: 75px; width: 75px; }
-.core-item-nodejs { background: transparent url(images/sprite-sdk-nodejs.png) no-repeat; height: 75px; width: 75px; }
+    .download .core-item h3 { margin: 12px 0 12px;}
+.core-item-ios { background: transparent url(images/sprite-sdk-ios.png) no-repeat; height: 64px; width: 64px; }
+.core-item-android { background: transparent url(images/sprite-sdk-andriod.png) no-repeat; height: 64px; width: 64px; }
+.core-item-windows { background: transparent url(images/sprite-sdk-windows.png) no-repeat; height: 64px; width: 64px; }
+.core-item-javascript { background: transparent url(images/sprite-sdk-javascript.png) no-repeat; height: 64px; width: 64px; }
+.core-item-java { background: transparent url(images/sprite-sdk-java.png) no-repeat; height: 64px; width: 64px; }
+.core-item-python { background: transparent url(images/sprite-sdk-python.png) no-repeat; height: 64px; width: 64px; }
+.core-item-nodejs { background: transparent url(images/sprite-sdk-nodejs.png) no-repeat; height: 64px; width: 64px; }
 
 /* User Navigation */
 ul.top_links_user { padding: 7px 6px 2px 5px; width: auto; margin: 8px -10px 0 0; }
