@@ -1,7 +1,5 @@
 ﻿# Access Control
 
-	var t = new Date();
-	alert(t.getFullYear();)
 	function $initHighlight(block, flags) {
 	  try {
 	    if (block.className.search(/\bno\-highlight\b/) != -1)
@@ -18,3 +16,8 @@
 	  }
 	  console.log(Array.every(classes, Boolean));
 	}
+
+Sample date 
+
+	var t = new Date();
+	alert(t.getFullYear();)
