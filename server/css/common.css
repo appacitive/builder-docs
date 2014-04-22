@@ -231,7 +231,6 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
     .getting-started h2:first-child, .getting-started h3:first-child { padding-top: 0; }
 .getting-started .list-group { margin: 0;}
 
-
 /* boot strap override */
 .navbar-default { background-image: none; background-repeat: no-repeat; border-radius: 0; box-shadow: none; border: none; margin-bottom: 0; }
 .btn-primary { background-image: none; border-radius: 0;}
@@ -240,13 +239,20 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .navbar-collapse.in { overflow-y: inherit;}
 .list-group-item { padding: 8px 15px;}
 
-.core-item-container li {display:inline-block;}
+.core-item-container li { display:inline-block; }
 
+/* theme switch */
 .theme-switch { position: absolute; background-color: #fff; padding: 5px 8px 2px; box-shadow: 0px 0px 8px #666;  }
     .theme-switch a:first-child { margin-right: 10px; }
 .theme { display: inline-block; cursor: pointer; box-shadow: 0px 0px 3px #222; }
 .theme-black { background-color: #15191D; }
 .theme-white { background-color: #F5F5F5; }
+
+.sub-page-banner { padding: 5px 15px 25px; float: left; }
+.sub-page-banner h1 { font-size: 38px; margin-bottom: 20px; }
+.sub-page-banner .app-description { font-size: 20px; line-height: 30px; font-weight: 300; }
+.sub-page-banner p { color: #777; }
+.width-60 { width: 60%; }
 
 @media (max-width: 1180px) /* Small desktop */ {
     .theme-switch { top: 8px; right: 8px; }
@@ -264,4 +270,5 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
     .platform div { min-height: 260px !important; }
     .core-item-container { width: 100%; margin: 0 auto; text-align: center;}
     .core-item { width: 100%; max-width: 145px; margin-right: 15px; text-align: center; }
+    .sub-page-banner p { padding-right: 0px; padding-left: 0px; }
 }
