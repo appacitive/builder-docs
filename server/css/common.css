@@ -252,7 +252,9 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .sub-page-banner h1 { font-size: 38px; margin-bottom: 20px; }
 .sub-page-banner .app-description { font-size: 20px; line-height: 30px; font-weight: 300; }
 .sub-page-banner p { color: #777; }
-.width-60 { width: 60%; }
+
+.sample-app-item { border: solid 1px #eee; color: #444; background-color: #eee; padding: 25px 12px; float: left; box-shadow: 1px 1px 10px #888; }
+.sample-app-item:hover { background-color: #ddd; color: #444; }
 
 @media (max-width: 1180px) /* Small desktop */ {
     .theme-switch { top: 8px; right: 8px; }
