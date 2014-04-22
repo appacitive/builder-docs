@@ -6,7 +6,7 @@
       "platform": "Android",
       "language": "Android",
       "help_lang": "android",
-      "layout": "../_layout-getting-started",
+      "layout": "../../../_layout-getting-started",
       "installation": "active",
       "sdkconventions": "",
       "extendingsdk": "",

@@ -6,7 +6,7 @@
       "platform": "iOS",
       "language": "iOS",
       "help_lang": "ios",
-      "layout": "../_layout-getting-started",
+      "layout": "../../../_layout-getting-started",
       "installation": "",
       "sdkconventions": "active",
       "extendingsdk": "",

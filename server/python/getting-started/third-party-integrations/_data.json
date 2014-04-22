@@ -6,7 +6,7 @@
       "platform": "Python",
       "language": "Python",
       "help_lang": "python",
-      "layout": "../_layout-getting-started",
+      "layout": "../../../_layout-getting-started",
       "installation": "",
       "sdkconventions": "",
       "extendingsdk": "",

@@ -6,7 +6,7 @@
       "platform": "Windows",
       "language": ".Net",
       "help_lang": "dotnet",
-      "layout": "../_layout-getting-started",
+      "layout": "../../../_layout-getting-started",
       "installation": "active",
       "sdkconventions": "",
       "extendingsdk": "",

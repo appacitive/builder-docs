@@ -6,7 +6,7 @@
       "platform": "JavaScript",
       "language": "JavaScript",
       "help_lang": "javascript",
-      "layout": "../_layout-getting-started",
+      "layout": "../../../_layout-getting-started",
       "installation": "active",
       "sdkconventions": "",
       "extendingsdk": "",
