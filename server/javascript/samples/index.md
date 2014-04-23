@@ -11,8 +11,8 @@ We have built some easy to understand apps for you. These apps demonstrate Javas
 					<img src="/css/images/apps/movie-app.png" height="100" />
 				</div>
 				<div class="col-md-8">
-					<h2> Movie App</h2>
-					<p class="mbs">A simple TodoMVC sample App, presenting Appacitive's data store and users capability using Javascript SDK.</p>
+					<h2> TodoMVC App</h2>
+					<p class="mbs">A simple TodoMVC sample App, presenting Appacitive's data store and user accounts capability using Javascript SDK.</p>
 					<p class="muted mbn">Features: Data Store</p>
 				</div>
 			</a>
