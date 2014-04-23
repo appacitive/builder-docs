@@ -1,7 +1,21 @@
-﻿# iOS SDK Samples
+﻿# Jaavascript SDK Sample Apps
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+We have built some easy to understand apps for you. These apps demonstrate Javascript SDK's capabilities and best design practices. It brings together all features provided by Appacitive platform and illustrates how they can seamlessly work together in solving functional problems.
 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-
-It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<br/>
+<div class="container-fulid ptl pbl">
+	<div class="row">
+		<div class="col-md-6">
+			<a class="sample-app-item" href="todo">
+				<div class="col-md-3">
+					<img src="/css/images/apps/movie-app.png" height="100" />
+				</div>
+				<div class="col-md-8">
+					<h2> TodoMVC App</h2>
+					<p class="mbs">A simple TodoMVC sample App, presenting Appacitive's data store and user accounts capability using Javascript SDK.</p>
+					<p class="muted mbn">Features: Data Store</p>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
