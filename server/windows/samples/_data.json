@@ -6,39 +6,5 @@
       "layout": "../../_layout.ejs",
       "platform": "Windows",
       "language": ".Net"
-   },
-   "todo": {
-      "title": "Todo Sample using .Net SDK - Windows - Dev Center - Appacitive",
-      "description": "A simple Todo sample windows phone application demoing Appacitive data store using .Net SDK.",
-      "keywords": "todo, todo sample, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
-      "layout": "../../_layout.ejs",
-      "platform": "Windows",
-      "language": ".Net"
-   },
-   "mvc-todo": {
-      "title": "Todo Sample using .Net SDK - Windows - Dev Center - Appacitive",
-      "description": "A simple Todo sample windows phone application demoing Appacitive data store using .Net SDK.",
-      "keywords": "todo, todo sample, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
-      "layout": "../../_layout.ejs",
-      "platform": "Windows",
-      "language": ".Net"
-   },
-   "movie-app": {
-      "title": "Movie Application using .Net SDK - Windows - Dev Center - Appacitive",
-      "description": "A simple movie sample windows phone application demoing Appacitive data store using .Net SDK.",
-      "keywords": "todo, todo sample, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
-      "layout": "../../_layout-banner-sample.ejs",
-      "platform": "Windows",
-      "language": ".Net",
-      "header_app_name": "Movie App",
-      "header_app_description": "Learn how to create a simple movie listing application using Appacitive as the backend to persist data.",
-      "github": "mrl",
-      "github_url": "https://github.com/apalsapure/wp-movieapp",
-      "zip": "mrl",
-      "zip_url": "https://github.com/apalsapure/wp-movieapp/archive/master.zip",
-      "live_demo": "hide",
-      "live_demo_url": "",
-      "store": "hide",
-      "store_url": ""
    }
 }
