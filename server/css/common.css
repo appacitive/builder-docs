@@ -248,13 +248,16 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .theme-black { background-color: #15191D; }
 .theme-white { background-color: #F5F5F5; }
 
+/* Sample Page CSS */
 .sub-page-banner { padding: 5px 15px 25px; float: left; }
 .sub-page-banner h1 { font-size: 38px; margin-bottom: 20px; }
 .sub-page-banner .app-description { font-size: 20px; line-height: 30px; font-weight: 300; }
 .sub-page-banner p { color: #777; }
 
-.sample-app-item { border: solid 1px #eee; color: #444; background-color: #eee; padding: 25px 12px; float: left; box-shadow: 1px 1px 10px #888; }
-.sample-app-item:hover { background-color: #ddd; color: #444; }
+.sample-app-item { border: solid 1px #eee; color: #444; background-color: #eee; padding: 20px 0px 20px 0px; float: left; box-shadow: 1px 1px 10px #888; margin-bottom: 25px; }
+.sample-app-item:hover { background-color: #ddd; color: #444; text-decoration: none; }
+
+.sample-page h3 { margin-bottom: 5px; margin-top: 25px; }
 
 @media (max-width: 1180px) /* Small desktop */ {
     .theme-switch { top: 8px; right: 8px; }
@@ -273,4 +276,6 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
     .core-item-container { width: 100%; margin: 0 auto; text-align: center;}
     .core-item { width: 100%; max-width: 145px; margin-right: 15px; text-align: center; }
     .sub-page-banner p { padding-right: 0px; padding-left: 0px; }
+    .sample-app-item { text-align: center; }
+    .sample-app-item img { margin-bottom: 5px;}
 }

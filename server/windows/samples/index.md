@@ -3,12 +3,12 @@
 We have built some sample, easy to understand apps for you. These apps demonstrate Windows .Net SDK's capabilities and design best practices. It brings together all most all features provided by Appacitive platform and illustrates how they can seamlessly work together in solving functional problems.
 
 <br/>
-<div class="container-fulid pbl">
+<div class="container-fulid">
 	<div class="row">
 		<div class="col-md-6">
 			<a title="Movie App" class="sample-app-item" href="movie-app">
 				<div class="col-md-3">
-					<img src="/css/images/apps/movie-app.png" height="100" />
+					<img src="http://cdn.appacitive.com/devcenter/root/apps/movie-app.png" height="100" />
 				</div>
 				<div class="col-md-9">
 					<h2>Movie App</h2>
@@ -20,7 +20,7 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 		<div class="col-md-6">
 			<a title="Simple Todo List" class="sample-app-item" href="mvc-todo">
 				<div class="col-md-3">
-					<img src="/css/images/apps/movie-app.png" height="100" />
+					<img src="http://cdn.appacitive.com/devcenter/root/apps/todo-mvc.png" height="100" />
 				</div>
 				<div class="col-md-9">
 					<h2>Todo List (MVC)</h2>
@@ -31,12 +31,12 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 		</div>
 	</div>
 </div>
-<div class="container-fulid ptl pbl">
+<div class="container-fulid">
 	<div class="row">
 		<div class="col-md-6">
 			<a title="MVC Todo App" class="sample-app-item" href="todo">
 				<div class="col-md-3">
-					<img src="/css/images/apps/movie-app.png" height="100" />
+					<img src="http://cdn.appacitive.com/devcenter/root/apps/windows-todo.png" height="100" />
 				</div>
 				<div class="col-md-9">
 					<h2>Todo List</h2>

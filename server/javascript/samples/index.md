@@ -8,12 +8,12 @@ We have built some easy to understand apps for you. These apps demonstrate Javas
 		<div class="col-md-6">
 			<a class="sample-app-item" href="todo">
 				<div class="col-md-3">
-					<img src="/css/images/apps/movie-app.png" height="100" />
+					<img src="http://cdn.appacitive.com/devcenter/root/apps/todo-mvc.png" height="100" />
 				</div>
 				<div class="col-md-8">
-					<h2> TodoMVC App</h2>
-					<p class="mbs">A simple TodoMVC sample App, presenting Appacitive's data store and user accounts capability using Javascript SDK.</p>
-					<p class="muted mbn">Features: Data Store</p>
+					<h2>TodoMVC App</h2>
+					<p class="mbs">A todo management application built using Appacitive's JavaScript SDK. Manage a list of todo items for a logged in user.</p>
+					<p class="muted mbn">Features: Data Store, Users</p>
 				</div>
 			</a>
 		</div>
