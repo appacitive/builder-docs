@@ -15,6 +15,9 @@
       "live_demo": "hide",
       "live_demo_url": "",
       "store": "hide",
-      "store_url": ""
+      "store_url": "",
+      "img_url": "movie-app-windows.png",
+      "image_container": "3",
+      "text_container": "9"
    }
 }
