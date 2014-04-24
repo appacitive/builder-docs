@@ -13,13 +13,13 @@ $(document).ready(function () {
 						        		<div class="form-group"> \
 								        	<label for="inputAppId" class="col-sm-3 control-label">Application Id</label> \
 					        				<div class="col-sm-9">	\
-										    	<input value="56655564046992340" type="text" class="form-control" id="inputAppId" placeholder="Application Id">	\
+										    	<input type="text" class="form-control" id="inputAppId" placeholder="Application Id">	\
 										    </div>	\
 									    </div>	\
 									    <div class="form-group" style="margin-bottom:5px"> \
 								        	<label for="inputAPIKey" class="col-sm-3 control-label">API Key</label> \
 					        				<div class="col-sm-9">	\
-										    	<input value="1+IjYhgSwEG33txpehbTpw=" type="text" class="form-control" id="inputAPIKey" placeholder="API Key">	\
+										    	<input type="text" class="form-control" id="inputAPIKey" placeholder="API Key">	\
 										    </div>	\
 									    </div>	\
 							        </form>  \
