@@ -5,6 +5,22 @@
       "keywords": "cloud, backend as service, software, database, mobile, mobile backend, ios, android, html5",
       "contact": "connect@appacitive.com",
       "platform": "platforms",
-      "language": ""
+      "language": "",
+      "image_container": "",
+      "img_url": "",
+      "text_container": "",
+      "header_app_name": "",
+      "header_app_description": "",
+      "github": "",
+      "github_url": "",
+      "zip": "",
+      "zip_url": "",
+      "live_demo": "",
+      "live_demo_url": "",
+      "store": "",
+      "store_url": "",
+      "img_url": "",
+      "image_container": "",
+      "text_container": ""
    }
 }
