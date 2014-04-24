@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": "Error Space - Getting Started - Python - Dev Center - Appacitive",
+      "description": "Getting started with error handling using  Appacitive Python SDK.",
+      "keywords": "errors python sdk, python, sdk, python sdk, error, getting started, appacitive",
+      "platform": "Python",
+      "language": "Python",
+      "help_lang": "python",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "debuggingsdk": "",
+      "errorspace": "active",
+      "thirdpartyintegrations": ""
+   }
+}

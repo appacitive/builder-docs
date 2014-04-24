@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "JavaScript Files Guide - Dev Center - Appacitive",
+      "description": "JavaScript guide explaining file management in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, guide, file, files, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   },
+   "tutorial": {
+   		"title": "JavaScript Files Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do file management in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, tutorial, file, files, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   }
+}

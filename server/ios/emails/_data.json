@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "iOS Email Guide - Dev Center - Appacitive",
+      "description": "iOS guide explaining emails in Appacitive Platform using iOS SDK.",
+      "keywords": "ios, guide, access control, appacitive, ios sdk",
+      "platform": "iOS",
+      "language": "iOS"
+   },
+   "tutorial": {
+   		"title": "iOS Email Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to send emails using Appacitive Platform.",
+      "keywords": "ios, tutorial, access control, appacitive, ios sdk",
+      "platform": "iOS",
+      "language": "iOS"
+   }
+}

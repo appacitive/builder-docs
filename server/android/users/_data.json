@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "Android Users Guide - Dev Center - Appacitive",
+      "description": "Android guide explaining the user management in Appacitive Platform using Android SDK.",
+      "keywords": "android, guide, user, user management, appacitive, android sdk",
+      "platform": "Android",
+      "language": "Android"
+   },
+   "tutorial": {
+   		"title": "Tutorial - Users - Android - Dev Center - Appacitive",
+		  "description": "Tutorial on user management in Appacitive Platform using Android SDK.",
+      "keywords": "android, tutorial, user, user management, appacitive, android sdk",
+      "platform": "Android",
+      "language": "Android"
+   }
+}

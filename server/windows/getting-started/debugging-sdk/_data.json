@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": "Debugging .Net SDK - Getting Started - Windows - Dev Center - Appacitive",
+      "description": "How to debug Appacitive .Net SDK - Know it in getting started section of .Net SDK.",
+      "keywords": "debug .net sdk, .net, sdk, .net sdk, debug, getting started, appacitive",
+      "platform": "Windows",
+      "language": ".Net",
+      "help_lang": "dotnet",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "debuggingsdk": "active",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}

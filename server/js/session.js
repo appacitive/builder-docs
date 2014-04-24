@@ -1,10 +1,17 @@
 ﻿$(document).ready(function () {
     var that = this;
+
+    var cThemeName = "appacitive-docs-selected-theme";
+
     //authenticated user handling
     this.SESSION_COOKIE_NAME = '__app_session';
     this.USERNAME_COOKIE = "_app_session_user";
     this.account = "";
 
+    var storeCookie = function (cName, value) {
+        if (!value) return;
+        document.cookie = cName + "=" + value + ";path=/";
+    };
     var readCookie = function (name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
@@ -33,7 +40,7 @@
         if (split.length == 6) $('#imgUserPhoto').attr("src", split[5]);
         else $('#imgUserPhoto').attr("src", "https://secure.gravatar.com/avatar/" + MD5(split[4]) + "?s=40&d=" + escape("https://portal.appacitive.com/styles/images/human.png"));
 
-        $('.top_links_user').show();
+        $('.top_links_user').removeClass('hide');
 
         $('#lstUserMenu').hide();
 
@@ -64,14 +71,14 @@
         $("#lnkLogout").click(function () {
             deleteCookie(that.SESSION_COOKIE_NAME);
             deleteCookie(that.USERNAME_COOKIE);
-            $(".top_links_user").hide();
-            $("#aLogin").parent().show();
+            $(".top_links_user").addClass('hide');
+            $("#ulSignIn").removeClass('hide')
         });
         $("#lnkMyAccount").click(function () {
             window.location = "https://portal.appacitive.com/" + that.account + "/accounts.html?accounts=myaccount";
         });
 
-    } else $("#ulSignIn").show();
+    } else $("#ulSignIn").removeClass('hide');
 
     //platform list handling
     $(document).click(function (e) {
@@ -84,7 +91,6 @@
     $(".appList ul a").click(function (e) {
         if ($(this).attr("href") === '') return;
         window.location = $(this).attr("href");
-        self.close();
     });
 
     $(".platform-list").unbind("click").click(function (e) {
@@ -103,5 +109,38 @@
         return false;
     });
 
-    $("#aLogin").attr("href", $("#aLogin").attr("href") + "&ru=" + window.location.href);
+    $("#btnLogin").click(function(e){
+        e.preventDefault();
+        window.location = 'https://portal.appacitive.com/login.html?rel=devcenter'+ '&ru=' + window.location.href;
+        return false;
+    });
+
+    //attach theme switch
+    var html = '<div class="theme-switch">' +
+                    '<a class="theme theme-white" data-theme="white" title="Switch to White theme"></a>' +
+                    '<a class="theme theme-black" data-theme="black" title="Switch to Black theme"></a>' +
+                '</div>';
+    $(html).appendTo($('pre'));
+
+    //Switch theme
+    var switchStyle = function (title) {
+        var i, links = document.getElementsByTagName("link");
+        for (i = 0; i < links.length ; i++) {
+            if ((links[i].rel.indexOf("stylesheet") != -1) && links[i].title) {
+                links[i].disabled = true;
+                if (links[i].title == title) {
+                    links[i].disabled = false;
+                    storeCookie(cThemeName, title);
+                }
+            }
+        }
+    }
+    //theme switch anchors
+    $(".theme-switch a").unbind("click").click(function () {
+        switchStyle($(this).data("theme"));
+    });
+    var theme = readCookie(cThemeName);
+    if (!theme) $(".theme-switch a:first").trigger("click");
+    $("*[data-theme='" + theme + "']").trigger("click");
+
 });

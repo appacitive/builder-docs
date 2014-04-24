@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": "Extending Android SDK - Getting Started - Android - Dev Center - Appacitive",
+      "description": "Getting started with extending Appacitive Android SDK.",
+      "keywords": "errors android sdk, android, sdk, android sdk, error, getting started, appacitive",
+      "platform": "Android",
+      "language": "Android",
+      "help_lang": "android",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "active",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}

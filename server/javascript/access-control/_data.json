@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "JavaScript Access Control Guide - Dev Center - Appacitive",
+      "description": "JavaScript guide explaining the data storage in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javaScript, guide, access control, appacitive, javaScript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   },
+   "tutorial": {
+   		"title": "JavaScript Access Control Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do access control in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javaScript, tutorial, access control, appacitive, javaScript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   }
+}

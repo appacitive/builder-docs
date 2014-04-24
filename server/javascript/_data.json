@@ -1,0 +1,11 @@
+{
+  "index": {
+      "title": "JavaScript - Dev Center - Appacitive",
+      "description": "Everything you need to develop JavaScript app on Appacitive Platform.",
+      "layout": "../_layout-banner",
+      "keywords": "javascript, sdk, javascript sdk, appacitive",
+      "platform": "JavaScript",
+      "language": "JavaScript",
+      "help_lang": "javascript"
+   }
+}

@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": "Installing iOS SDK - Getting Started - iOS - Dev Center - Appacitive",
+      "description": "How to install Appacitive iOS SDK - Learn it in getting started section of iOS SDK.",
+      "keywords": "install ios sdk, ios, sdk, ios sdk, debug, getting started, appacitive",
+      "platform": "iOS",
+      "language": "iOS",
+      "help_lang": "ios",
+      "layout": "../../../_layout-getting-started",
+      "installation": "active",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}

@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "iOS Files Guide - Dev Center - Appacitive",
+      "description": "iOS guide explaining file management in Appacitive Platform using iOS SDK.",
+      "keywords": "ios, guide, file, files, appacitive, ios sdk",
+      "platform": "iOS",
+      "language": "iOS"
+   },
+   "tutorial": {
+   		"title": "iOS Files Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do file management in Appacitive Platform using iOS SDK.",
+      "keywords": "ios, tutorial, file, files, appacitive, ios sdk",
+      "platform": "iOS",
+      "language": "iOS"
+   }
+}

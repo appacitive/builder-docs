@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "JavaScript Graph Query Guide - Dev Center - Appacitive",
+      "description": "JavaScript guide explaining Graph Query feature provided by Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, guide, graph, graph query, files, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   },
+   "tutorial": {
+   		"title": "JavaScript Graph Query Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do make and consume Graph Query feature provided by Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, tutorial, graph, graph query, files, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
+   }
+}

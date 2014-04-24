@@ -1,0 +1,14 @@
+{
+  "index": {
+      "title": "Dev Center - Appacitive",
+      "layout": "_layout-banner",
+      "platform": "platforms",
+      "language": ""
+   },
+   "downloads": {
+   		"title": "SDK Downloads - Dev Center - Appacitive",
+		  "layout": "_layout-banner",
+		  "platform": "platforms",
+      "language": ""
+   }
+}

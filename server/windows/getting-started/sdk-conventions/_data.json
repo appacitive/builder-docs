@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": ".Net SDK Conventions - Getting Started - Windows - Dev Center - Appacitive",
+      "description": "What are the SDK Conventions for Appacitive .Net SDK - Learn it in getting started section of .Net SDK.",
+      "keywords": "sdk conventions, .net, sdk, .net sdk, debug, getting started, appacitive",
+      "platform": "Windows",
+      "language": ".Net",
+      "help_lang": "dotnet",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "active",
+      "extendingsdk": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}
