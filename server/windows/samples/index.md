@@ -18,12 +18,12 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 			</a>
 		</div>
 		<div class="col-md-6">
-			<a title="Simple Todo List" class="sample-app-item" href="mvc-todo">
+			<a title="Simple Todo List" class="sample-app-item" href="todo">
 				<div class="col-md-3">
 					<img src="http://cdn.appacitive.com/devcenter/root/apps/todo-mvc.png" height="100" />
 				</div>
 				<div class="col-md-9">
-					<h2>Todo List (MVC)</h2>
+					<h2>Todo List</h2>
 					<p class="mbs">A todo management application built using Appacitive's .Net SDK. Manage a list of todo items for a logged in user.</p>
 					<p class="muted mbn">Features: Data Store, Users</p>
 				</div>
@@ -33,7 +33,7 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 </div>
 <div class="container-fulid">
 	<div class="row">
-		<div class="col-md-6">
+		<!--<div class="col-md-6">
 			<a title="MVC Todo App" class="sample-app-item" href="todo">
 				<div class="col-md-3">
 					<img src="http://cdn.appacitive.com/devcenter/root/apps/windows-todo.png" height="100" />
@@ -45,7 +45,7 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 				</div>
 			</a>
 		</div>
-		<!--<div class="col-md-6">
+		<div class="col-md-6">
 			<div class="sample-app-item">
 				<div class="col-md-3">
 					<img src="/css/images/apps/movie-app.png" height="100" />

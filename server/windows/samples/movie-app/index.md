@@ -139,14 +139,14 @@ Now we have an application which is using Appacitive as backend. Now we will fet
 
 <p class="mbs mtl"><strong>Important Note</strong></p>
 
-.Net SDK using `async` pattern to talk to Appacitive Platform. Hence when ever you are making any call to Appacitive you will need to use `await` keyword and will to make respective function `async`. Hence `LoadData` function will look like this
+.Net SDK follows `async` pattern to talk to Appacitive Platform. Hence when ever you are making any call to Appacitive you will need to use `await` keyword and will have to make respective function `async`. Hence `LoadData` function will look like this
 
-	public async void LoadData()
+	public async Task LoadData()
 	{
 		//code to load data
 	}
 
-Read more about `async` pattern on <a href="#" >MSDN <span class="plxs glyphicon glyphicon-share-alt"></span></a>.
+Read more about `async` pattern on <a target="_blank" href="http://msdn.microsoft.com/en-us/library/jj152938(v=vs.110).aspx" >MSDN <span class="plxs glyphicon glyphicon-share-alt"></span></a>.
 
 
 
