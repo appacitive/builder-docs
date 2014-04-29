@@ -64,6 +64,6 @@ process.on('uncaughtexceptions', function(e) {
 
 process.on('exit', function(code) {
     if (code == 0) {
-        console.log("\n*************Static html file generated successfully*************\n");
+        console.log("\n*************Site generated successfully*************\n");
     }
 });

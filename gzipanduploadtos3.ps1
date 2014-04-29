@@ -1,7 +1,14 @@
-param([string]$s3cmdpath="D:\utils\s3cmd\s3cmd",[string]$s3bucket="devcenter.appacitive.com",[string]$indexdoc="./publish/index.html")
+param([string]$s3cmdpath="D:\utils\s3cmd\s3cmd",[string]$s3bucket="devcenter.appacitive.com",[string]$indexdoc="index.html")
+
+$curr = Get-location
+Write-Host $curr
+
+$op = %{'{0}\publish' -f $curr}
+Write-Host $op
+Set-Location $op
 
 # Gzip compress files with extension .html, .js, .xml, .css
-$files = Get-ChildItem  -Path ./publish -Recurse . -Attributes !Directory
+$files = Get-ChildItem -Recurse . -Attributes !Directory
 $otherfiles = New-Object Object
 $otherfiles = @()
 $compressextensions = (".html",".js",".xml",".css")
@@ -37,6 +44,7 @@ $onedayrfc1123 = ((Get-Date).AddSeconds(86400)).ToString('r')
 
 # Upload files to S3
 $workingdir = [regex]::Escape((Get-Location).ToString()) #Escapes any special characters that may interfere with RegEx matching
+
 foreach($file in $files)
 {
   $s3path = "s3://" + $s3bucket + (($file.FullName).ToString() -replace $workingdir,"" -replace "\\","/")
