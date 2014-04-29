@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var path = require('path'),
-spawn = require('child_process').spawn;
+exec = require('child_process').exec;
 
 function replaceAll(find, replace, str) {
     return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
@@ -28,8 +28,8 @@ setTimeout(function() {
 
     var harpCompile = spawn('harp',["compile", "server", "publish"]);
 
-    harpCompile.on('close', function (code) {
-        if (code == 0) {
+    exec('harp compile server publish', function(err, stdout, stderr) {
+        if (!err) {
 
             var transform = function(content, filename) {
                 console.log("Transforming " + filename);
