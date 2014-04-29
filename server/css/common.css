@@ -99,7 +99,7 @@ footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100
     footer ul { margin: 12px 0; font-size: 14px; }
         footer ul li { margin: 7px 0; }
     footer .glyphicon { font-size: 12px; }
-
+    footer ul, ol { list-style: none; }
 
 /* sprites */
 .sprite-core { background: url('images/sprite-core.png') no-repeat 0 0; width: 66px; height: 66px; display: inline-block; background-size: 66px; }
@@ -224,9 +224,9 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
     .content-mark-down h1 .glyphicon { font-size: 26px; }
 .content-mark-down .list-group { margin: 0; border-radius: 0; }
 .content-mark-down .list-group-item { border-radius: 0; }
-.content-mark-down ul { list-style: square; margin-left: 20px; }
+.content-mark-down ul { list-style: disc; margin-left: 20px; }
 .content-mark-down li { margin-top: 3px; margin-bottom: 3px; }
-.content-mark-down ul ul { margin-top: 5px; margin-bottom: 5px; list-style: disc; }
+.content-mark-down ul ul { margin-top: 5px; margin-bottom: 5px; list-style: square; }
 .content-mark-down table { max-width: 480px;}
 
 /* getting started content formatting */
@@ -254,7 +254,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 /* Sample Page CSS */
 .sub-page-banner { padding: 5px 15px 25px; float: left; }
 .sub-page-banner h1 { font-size: 38px; margin-bottom: 20px; }
-.sub-page-banner .app-description { font-size: 20px; line-height: 30px; font-weight: 300; }
+.sub-page-banner .app-description { font-size: 18px; line-height: 30px; font-weight: 300; }
 .sub-page-banner p { color: #777; }
 
 .sample-app-item { border: solid 1px #eee; color: #444; background-color: #eee; padding: 20px 0px 20px 0px; transition: all .3s ease-out; float: left; box-shadow: 1px 1px 10px #888; margin-bottom: 25px; }
@@ -265,6 +265,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .sample-page iframe { width: 640px;  height: 377px;}
 .sample-page pre { margin-bottom: 15px; }
 .sample-page p code { padding: 2px 4px !important; }
+.sample-page ul, ol { list-style: disc;}
 
 .import-log { background-color: #f1f1f1; padding: 15px 12px 5px; border: solid 1px #ddd; margin-top: 20px; font-size: 13px; color:#888; }
 .import-log p { line-height: 8px; }

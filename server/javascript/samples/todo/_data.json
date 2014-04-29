@@ -14,7 +14,7 @@
             "zip": "mrl",
             "zip_url": "https://github.com/chiragsanghvi/AppacitiveTodo/archive/master.zip",
             "live_demo": "mrl",
-            "live_demo_url": "http://jstodo.appacitive.com:8085/",
+            "live_demo_url": "http://jstodo.appacitive.com/",
             "store": "hide",
             "store_url": "",
             "img_url": "http://cdn.appacitive.com/devcenter/javascript/todo-mvc-js.png",
