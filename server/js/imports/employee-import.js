@@ -36,36 +36,39 @@ window.sampleData = new (function () {
 		logCallback('Saving employee ' + employee1.name());
 
 		tasks.push(employee2.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee2.name());
 
 		tasks.push(employee3.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee3.name());
 
 		tasks.push(employee4.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee4.name());
 
 		tasks.push(employee5.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee5.name());
 
 		tasks.push(employee6.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee6.name());
 
 		tasks.push(employee7.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee7.name());
 
 		tasks.push(employee8.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee8.name());
 
 		tasks.push(employee9.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee9.name());
 
 		tasks.push(employee10.save());
-		logCallback('Saving employee ' + employee1.name());
+		logCallback('Saving employee ' + employee10.name());
 
 		Appacitive.Promise.when(tasks).then(function() {
 			logCallback('Employees are now in directory.');
 			connectEmployees();
-		}, onError);
+		}, function(errors, results) {
+			errors.forEach(function(e) { onError(e) });
+			logCallback("Employee creation failed");
+		});
 
 		//join manager  and employes
 		function connect (manager, employee) {
