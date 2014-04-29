@@ -1,7 +1,7 @@
-param([string]$s3cmdpath="D:\utils\s3cmd\s3cmd",[string]$s3bucket="devcenter.appacitive.com",[string]$indexdoc="index.html")
+param([string]$s3cmdpath="D:\utils\s3cmd\s3cmd",[string]$s3bucket="devcenter.appacitive.com",[string]$indexdoc="./publish/index.html")
 
 # Gzip compress files with extension .html, .js, .xml, .css
-$files = Get-ChildItem -Recurse . -Attributes !Directory
+$files = Get-ChildItem  -Path ./publish -Recurse . -Attributes !Directory
 $otherfiles = New-Object Object
 $otherfiles = @()
 $compressextensions = (".html",".js",".xml",".css")
