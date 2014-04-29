@@ -6,15 +6,18 @@
       "layout": "../../../_layout-banner-sample.ejs",
       "platform": "Windows",
       "language": ".Net",
-      "header_app_name": "Movie App",
-      "header_app_description": "Learn how to create a simple movie listing application using Appacitive as the backend to persist data.",
+      "header_app_name": "Todo List App",
+      "header_app_description": "Learn how to create a simple todo listing application using Appacitive as the backend to persist data.",
       "github": "mrl",
-      "github_url": "https://github.com/apalsapure/wp-movieapp",
+      "github_url": "https://github.com/apalsapure/wp-todoapp",
       "zip": "mrl",
-      "zip_url": "https://github.com/apalsapure/wp-movieapp/archive/master.zip",
+      "zip_url": "https://github.com/apalsapure/wp-todoapp/archive/master.zip",
       "live_demo": "hide",
       "live_demo_url": "",
       "store": "hide",
-      "store_url": ""
+      "store_url": "",
+      "img_url": "http://cdn.appacitive.com/devcenter/windows/todo-app.png",
+      "image_container": "3",
+      "text_container": "9"
    }
 }
