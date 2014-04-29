@@ -4,10 +4,6 @@ Appacitive <a href="http://github.com/chiragsanghvi/javascriptsdk" target="_blan
 
 As part of design practice, you will learn how to model your app and bind your data to the views. 
 
-### Prequisites
-
-You must be aware of Javascript, Backbone.js and last but not the least <a href="http://portal.appacitive.com" target="_blank">Appacitive Portal <i class="glyphicon glyphicon-share-alt"></i></a>.
-
 ### Dependencies
 
 * Underscore
@@ -39,7 +35,7 @@ All the html that is needed by views is placed in index.html file inside script 
 
 #### 3.1 Include SDK
 
-To get started, add SDK in head tag inside index.html file.
+To get started, add the SDK to head tag inside `index.html` file.
 
 ```html
 <script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.1.min.js"></script>
@@ -47,7 +43,7 @@ To get started, add SDK in head tag inside index.html file.
 
 #### 3.2 Initialize SDK
 
-You can initialize SDK any where in your app, but we suggest to do it in `app.js`. To initialize the SDK, open `app.js` and insert following code in the beginning.
+You can initialize the SDK any where in your app, but we suggest to do it in `app.js`. To initialize the SDK, open `app.js` and insert following code in the beginning.
 
 ```javscript
 Appacitive.initialize({ 
@@ -65,9 +61,9 @@ You will need to replace {{App Id}} by your application's id and {{API Key}} by 
 
 We've extended the todoMVC app with user authentication, which allows users to signup, login and store their todo items on Appacitive. Thus allowing them to access their todo items from any device. 
 
-In addition, we've changed the `AppView` to render either of the 2 views viz. `LoginView` or `TodosView`, depending on whether the user is logged-in or not. All the code, which was part of `AppView` was tranferred into `TodosView`.
+In addition, we've changed the `AppView` to render either of the 2 views viz. `LoginView` or `TodosView`, depending on whether the user is logged-in or not. All the code, which was part of `AppView` was tranferred to `TodosView`.
 
-**Note**: Whenever you use signup or login method, the user is stored in localStorage and can be retrieved using `Appacitive.Users.current()` method. So, everytime your app opens, you just need to check this value, to be sure whether the user is logged-in or not.
+**Note**: Whenever you use signup or login method, the user is stored in the localStorage and can be retrieved using `Appacitive.Users.current()` method. So, everytime your app opens, you just need to check this value, to be sure whether the user is logged-in or not.
 
 Replace `mockedUser` with `Appacitive.Users.current()` in app-view.js.
 
