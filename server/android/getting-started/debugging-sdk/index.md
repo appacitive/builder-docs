@@ -1,8 +1,8 @@
-﻿# Debugging with the Android SDK
+# Debugging with the Android SDK
 
 The Appacitive Android SDK comes with an inbuilt logging mechanism which you can use out of the box, or you can override it with your own logging mechanism.
 
-To use the inbuilt logging mechanism, you simply need to instantiate a new *logger* object using *APContainer*.  
+To use the builtin logging mechanism, you simply need to instantiate a new `Logger` object using `APContainer`.  
 
 ```
         Logger logger = APContainer.build(Logger.class);
@@ -10,14 +10,13 @@ To use the inbuilt logging mechanism, you simply need to instantiate a new *logg
         logger.error("OMG! Some bad happened.");
 ```
 
-The logs will start getting displayed in the **LogCat** view as follows. The inbuilt logger in the SDK simply logs to the *android.util.Log* class.
+The logs will start getting displayed in the **LogCat** view as follows. The builtin logger in the SDK simply logs to the `android.util.Log` class.
 
 ![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
 
-**Note:** Always build the logger after you have made a call to *AppacitiveContext.initialize()*.
+**Note:** Always build the logger after you have made a call to `AppacitiveContext.initialize()`.
 
-
-To override the inbuilt logging mechanism, create a new Java class which extends *com.appacitive.core.interfaces.Logger*.
+To override the builtin logging mechanism, create a new Java class which extends `com.appacitive.core.interfaces.Logger`.
 
 ``` 
 	import com.appacitive.core.interfaces.LogLevel;
@@ -64,8 +63,7 @@ To override the inbuilt logging mechanism, create a new Java class which extends
     }
 
 ```
-
-Now register your new *CustomLogger* with *APContainer* (after you have initiaized the SDK) and start using it as follows,
+Now register your new `CustomLogger` with `APContainer` (after you have initiaized the SDK) and start using it as follows,
 
 ```
     AppacitiveContext.initialize("XXXXXXXXXXXXXXXXXXXXXXXX", Environment.sandbox, this);
@@ -84,5 +82,4 @@ Now register your new *CustomLogger* with *APContainer* (after you have initiaiz
     customLogger.error("OMG! Some bad happened.");
 
 ```
-
-**Note:** Ths SDK logs every time it makes a call to your backend on Appacitive with the **INFO** loglevel. 
+**Note:** Ths SDK logs every time it makes a call to your backend on Appacitive with the `INFO` loglevel. 
