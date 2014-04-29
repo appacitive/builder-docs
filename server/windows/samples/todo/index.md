@@ -107,6 +107,7 @@ Similarly modify all remaining properties of `TodoList` and `TodoItem`. Remove t
 Lastly we will map your local objects to Appacitive types in `Application_Launching` function, after .Net SDK is initialized
 
 	//Map your model object to appacitive type
+    Appacitive.Sdk.App.Types.MapObjectType<User>("user");
     Appacitive.Sdk.App.Types.MapObjectType<TodoList>("todolist");
     Appacitive.Sdk.App.Types.MapObjectType<TodoItem>("todoitem");
 
