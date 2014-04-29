@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var path = require('path'),
-spawn = require('child_process').spawn;
+exec = require('child_process').exec;
 
 function replaceAll(find, replace, str) {
     return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
@@ -26,10 +26,10 @@ setTimeout(function() {
 
     console.log("Compiling html using Harp");
 
-    var harpCompile = spawn('harp',["compile", "server", "publish"]);
+    exec('harp compile server publish', function(err, stdout, stderr) {
+        if (!err) {
 
-    harpCompile.on('close', function (code) {
-        if (code == 0) {
+            console.log("Html compiled\n\n");
 
             var transform = function(content, filename) {
                 console.log("Transforming " + filename);
@@ -64,6 +64,6 @@ process.on('uncaughtexceptions', function(e) {
 
 process.on('exit', function(code) {
     if (code == 0) {
-        console.log("\n*************Static html file generated successfully*************\n");
+        console.log("\n*************Site generated successfully*************\n");
     }
 });
