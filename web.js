@@ -26,10 +26,10 @@ setTimeout(function() {
 
     console.log("Compiling html using Harp");
 
-    var harpCompile = spawn('harp',["compile", "server", "publish"]);
-
     exec('harp compile server publish', function(err, stdout, stderr) {
         if (!err) {
+
+            console.log("Html compiled\n\n");
 
             var transform = function(content, filename) {
                 console.log("Transforming " + filename);
