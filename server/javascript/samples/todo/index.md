@@ -299,13 +299,13 @@ app.todos.fetch({ reset: true, sort: true }).then(function() {
 });
 ```
 
-The `getConnectedObjects` call, returns all the todo items which are connected to current user and get rendered.
+The `getConnectedObjects` call, returns all the todo items which are connected to current user and gets rendered.
 
 #### 3.5 Run your app
 
 Open index.html of your app. Signup and add, update and remove items.
 
-#### 3.6 User Logout and Forgot Password
+#### 3.6 Forgot Password
 
 It's a fact that as soon as you introduce passwords into a system, users will forget them. In such cases, Appacitive provides a way to let them securely reset their password.
 
