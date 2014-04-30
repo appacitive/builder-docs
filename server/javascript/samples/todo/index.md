@@ -196,9 +196,7 @@ As this app has been ported from Backbone's todoMVC app, the only change require
 
 To get a hang of how Backbone Models and Collections are used to represent the todo items, you can refer through the <a href="http://documentcloud.github.io/backbone/docs/todos.html" target="_blank">original annotated source <i class="glyphicon glyphicon-share-alt"></i></a>.
 
-Replace all instances of Backbone.Model with Parse.Object. When doing so, url and urlRoot should be replaced with an appropriate className that maps your objects to a Parse class
-
-To migrate Backbone models and collections on Appacitive, replace `Backbone.Model.extend` with `Appacitive.Object.extend`. When doing so, you need to pass "todo" as first argument to map your objects to Appacitive `type` in `todo.js`.
+To migrate Backbone models and collections on Appacitive, replace `Backbone.Model.extend` with `Appacitive.Object.extend`. When doing so, you need to pass type name which is "todo" in our case, as first argument to map your objects to Appacitive type todo in `todo.js`.
 
 ```javascript
 // Our basic **Todo** model has `title`, `order`, and `completed` attributes.
@@ -206,7 +204,7 @@ app.Todo = Appacitive.Object.extend("todo", {
 	//..
 });
 ```
-and replace `Backbone.Collection` to `Appacitive.Collection` in `todos.js`. You should also specify the Appacitive.Object class, `app.Todo` as the model for collection.
+Replace `Backbone.Collection` to `Appacitive.Collection` in `todos.js`. You should also specify the Appacitive.Object class, `app.Todo` as the model for collection.
 
 ```
 // The collection of Todo objects 
