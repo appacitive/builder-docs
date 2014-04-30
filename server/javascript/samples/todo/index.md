@@ -28,6 +28,32 @@ Following video shows how to create the model for the app on Appacitive Platform
 To jump start, we have cloned the ToDoMVC app for you, and added mock user authentication. This app is fully functional using localstorage. You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/AppacitiveTodo/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
 
 
+#### Directory Structure
+
+```javascript
+css
+└── app.css
+js/
+├── app.js
+├── controllers/
+│   └── todos.js
+├── models/
+│   └── todo.js
+├── routers/
+│   └── router.js
+├── views/
+│   ├── app-view.js
+│   ├── login-view.js
+│   ├── todos-view.js
+│   └── todo-view.js
+└── infra/
+	├── backbone.js
+	├── backbone.localstorag.js
+	└── underscore.js
+index.html
+readme.md
+```
+
 ### 3. Integrating Javascript SDK
 
 All the html that is needed by views is placed in index.html file inside script tags. These templates are <a href="http://underscorejs.org/#template" target="_blank">underscore templates <i class="glyphicon glyphicon-share-alt"></i></a>.
