@@ -95,7 +95,7 @@ In addition, we've changed the `AppView` to render either of the 2 views viz. `L
 
 ```javascript
 // Replace this line
-app.user = app.todos.localStorage['user'] ? new app.User(app.todos.localStorage['user']) : null;
+app.user = window.localStorage['user'] ? new app.User(window.localStorage['user']) : null;
 
 // With this line
 app.user = Appacitive.User.current()
@@ -208,6 +208,7 @@ app.Todo = Appacitive.Object.extend("todo", {
 ```
 and replace `Backbone.Collection` to `Appacitive.Collection` in `todos.js`. You should also specify the Appacitive.Object class, `app.Todo` as the model for collection.
 
+```
 // The collection of Todo objects 
 app.Todos = Appacitive.Collection.extend({
 	
