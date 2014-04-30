@@ -89,7 +89,7 @@ You will need to replace {{App Id}} by your application's id and {{API Key}} by 
 
 We've extended the todoMVC app with user authentication, which allows users to signup, login and store their todo items on Appacitive. Thus allowing them to access their todo items from any device. 
 
-In addition, we've changed the `AppView` to render either of the 2 views viz. `LoginView` or `TodosView`, depending on whether the user is logged-in or not. All the code, which was part of `AppView` was tranferred to `TodosView`.
+In addition, we've changed the `AppView` to render either of the 2 views viz. `LoginView` or `TodosView`, depending on whether the user is logged-in or not.
 
 **Note**: Whenever you use signup or login method, the user is stored in the localStorage and can be retrieved using `Appacitive.Users.current()` method. So, everytime your app opens, you just need to check this value, to be sure whether the user is logged-in or not.
 
@@ -98,7 +98,7 @@ In addition, we've changed the `AppView` to render either of the 2 views viz. `L
 app.user = app.todos.localStorage['user'] ? new app.User(app.todos.localStorage['user']) : null;
 
 // With this line
-app.user = Appacitive.User.currrent()
+app.user = Appacitive.User.current()
 
 // Determines user is logged-in or not
 if (app.user) {
@@ -258,7 +258,7 @@ Shortly we are saving `todo` in context of `user` by creating `owner` connection
 
 The other part of the app that required a change was the way we populate collection of todo items. Here, we  make `getConnectedObjects` call on `current user` object and set it as query for the `Todos` collection instance.
 
-Replace `app.Todos.fetch()` call in initialize function with following code in `todos-view.js`.
+Replace `app.Todos.fetch()` call in `initialize` function with following code in `todos-view.js`.
 
 ```
 // Set query type for app.todos
