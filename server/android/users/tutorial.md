@@ -183,7 +183,7 @@ You can choose to store the `consumer key` and `consumer secret` once through th
 
 ## Current user
 
-Whenever you authenticate a user using the `AppacitiveUser.login...()` method, the user is stored in the platform specific local environment and can be retrieved using `AppacitiveContext.getLoggedInUser()`.
+Whenever you authenticate a user using the `AppacitiveUser.login...()` method, the user and theor token gets stored in `AppacitiveContext` and can be retrieved using `AppacitiveContext.getLoggedInUser()` and `AppacitiveContext.getLoggedInUserToken()`.
 
 ```
     AppacitiveUser currentUser = AppacitiveContext.getLoggedInUser();
