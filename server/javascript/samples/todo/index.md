@@ -139,7 +139,7 @@ The LoginView contains two forms, one for login and other for signup. By default
 </div>
 ```
 
-The LoginView binds to show, hide and submit events for both these forms. To authenticate user open `login-view.js` and replace mocked section in `login` function with following code.
+The LoginView binds to show, hide and submit events for both these forms. To authenticate user open `login-view.js` and replace *mocked section* in `login` function with following code.
 
 ```javascript
 Appacitive.Users.login(username, password).then(function(authResponse) {
@@ -153,7 +153,7 @@ Appacitive.Users.login(username, password).then(function(authResponse) {
 });
 
 ``` 
-For signup, replace mocked section in `signup` function with following code.
+For signup, replace *mocked section* in `signup` function with following code.
 
 ```javascript
 Appacitive.Users.signup({
@@ -176,22 +176,42 @@ Above code creates a new user with given details from the fields and performs lo
 
 **Note**: If you're using client key, then by default only logged-in users themselves can read,update and delete their data.
 
+Once the user logs in, he remains logged-in until he specifically logs out. You can logout current user, by calling `Appacitive.User.logout()` method.
+
+Replace `logOut` function in `todos-view.js` with following code
+
+```javascript
+// Logs out the user from Appacitive and shows the login view
+logOut: function(e) {
+	Appacitive.User.logout(true);
+	new app.LogInView();
+	this.undelegateEvents();
+	delete this;
+},
+```
+
 #### 3.4 Managing the Todo Items
 
 As this app has been ported from Backbone's todoMVC app, the only change required was to replace Backbone models and collections with Appacitive models and collections. 
 
 To get a hang of how Backbone Models and Collections are used to represent the todo items, you can refer through the <a href="http://documentcloud.github.io/backbone/docs/todos.html" target="_blank">original annotated source <i class="glyphicon glyphicon-share-alt"></i></a>.
 
-To migrate Backbone models and collections on Appacitive, change `Backbone.Model` to `Appacitive.Object` in `todo.js` and `Backbone.Collection` to `Appacitive.Collection` in `todos.js`.
+Replace all instances of Backbone.Model with Parse.Object. When doing so, url and urlRoot should be replaced with an appropriate className that maps your objects to a Parse class
+
+To migrate Backbone models and collections on Appacitive, replace `Backbone.Model.extend` with `Appacitive.Object.extend`. When doing so, you need to pass "todo" as first argument to map your objects to Appacitive `type` in `todo.js`.
 
 ```javascript
 // Our basic **Todo** model has `title`, `order`, and `completed` attributes.
 app.Todo = Appacitive.Object.extend("todo", {
 	//..
 });
+```
+and replace `Backbone.Collection` to `Appacitive.Collection` in `todos.js`. You should also specify the Appacitive.Object class, `app.Todo` as the model for collection.
 
 // The collection of Todo objects 
 app.Todos = Appacitive.Collection.extend({
+	
+	// Specify app.Todo as model for collection
 	model: app.Todo,
 	//..
 });
@@ -199,14 +219,14 @@ app.Todos = Appacitive.Collection.extend({
 
 **Saving a Todo Item:**
 
-To do this open `todos.js` and get rid of the `localstorage` property, to start using *Appacitive* for data storage. 
+To do this open `todos.js` and get rid of the `localstorage` property, to start using Appacitive for persisting data. 
 
 ```javascript
 //Remove this for persisting data on Appacitive
 localStorage: new Backbone.LocalStorage("todos-backbone"),
 ```	
 
-Add `create` function as a property to the collection in `todos.js` as follows
+Add `create` function as a property to the `app.Todos` collection in `todos.js` as follows
 
 ```javascript
 create: function(todo) {
@@ -218,11 +238,12 @@ create: function(todo) {
 	this.add(todo, { sort: true });
 }
 ```
+
 **Connecting Todo Item to logged-in User:**
 
 If you observe above code, apart from creating `todo` object, we're also creating a connection of relation-type `owner`. The constructor of owner connection is passed the `todo` object and then saved. For more info on creating connections click <a href="http://help.appacitive.com/v1.0/index.html#javascript/data_connections" target="_blank">here <i class="glyphicon glyphicon-share-alt"></i></a>.
 
-Copy following code in todo.js.
+Copy following code in `todo.js`.
 
 ```javascript
 // Owner connection model
@@ -256,7 +277,7 @@ Shortly we are saving `todo` in context of `user` by creating `owner` connection
 
 **Fetching Todo Items:**
 
-The other part of the app that required a change was the way we populate collection of todo items. Here, we  make `getConnectedObjects` call on `current user` object and set it as query for the `Todos` collection instance.
+The other part of the app that required a change was the way we populate collection of todo items. You should specify a query so that the collection knows how to fetch the objects. Here, we  make `getConnectedObjects` call on `current user` object and set it as query for the `Todos` collection instance.
 
 Replace `app.Todos.fetch()` call in `initialize` function with following code in `todos-view.js`.
 
@@ -283,23 +304,9 @@ The `getConnectedObjects` call, returns all the todo items which are connected t
 
 #### 3.5 Run your app
 
-Open index.html of your app. Try signing up and adding/removing.updating items.
+Open index.html of your app. Signup and add, update and remove items.
 
 #### 3.6 User Logout and Forgot Password
-
-Once the user logs in, he remains logged-in until he specifically logs out. You can logout current user, by calling `Appacitive.Users.logout()` method.
-
-Replace `logOut` function in `todos-view.js` with following code
-
-```javascript
-// Logs out the user from Appacitive and shows the login view
-logOut: function(e) {
-	Appacitive.Users.logout(true);
-	new app.LogInView();
-	this.undelegateEvents();
-	delete this;
-},
-```
 
 It's a fact that as soon as you introduce passwords into a system, users will forget them. In such cases, Appacitive provides a way to let them securely reset their password.
 

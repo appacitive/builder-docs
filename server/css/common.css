@@ -260,6 +260,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .sample-app-item { border: solid 1px #eee; color: #444; background-color: #eee; padding: 20px 0px 20px 0px; transition: all .3s ease-out; float: left; box-shadow: 1px 1px 10px #888; margin-bottom: 25px; }
 .sample-app-item:hover { background-color: #ddd; color: #444; text-decoration: none; }
 
+.sample-page h1, h2, h3, h4 { font-weight: 500; }
 .sample-page h3 { margin-bottom: 4px; margin-top: 30px; line-height: 28px; }
 .sample-page h4 { margin-bottom: 7px; margin-top: 25px; }
 .sample-page iframe { width: 640px;  height: 377px;}
