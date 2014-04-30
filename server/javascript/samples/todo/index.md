@@ -28,6 +28,32 @@ Following video shows how to create the model for the app on Appacitive Platform
 To jump start, we have cloned the ToDoMVC app for you, and added mock user authentication. This app is fully functional using localstorage. You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/AppacitiveTodo/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
 
 
+#### Directory Structure
+
+```javascript
+css
+└── app.css
+js/
+├── app.js
+├── controllers/
+│   └── todos.js
+├── models/
+│   └── todo.js
+├── routers/
+│   └── router.js
+├── views/
+│   ├── app-view.js
+│   ├── login-view.js
+│   ├── todos-view.js
+│   └── todo-view.js
+└── infra/
+	├── backbone.js
+	├── backbone.localstorag.js
+	└── underscore.js
+index.html
+readme.md
+```
+
 ### 3. Integrating Javascript SDK
 
 All the html that is needed by views is placed in index.html file inside script tags. These templates are <a href="http://underscorejs.org/#template" target="_blank">underscore templates <i class="glyphicon glyphicon-share-alt"></i></a>.
@@ -35,7 +61,7 @@ All the html that is needed by views is placed in index.html file inside script 
 
 #### 3.1 Include SDK
 
-To get started, add the SDK to head tag inside `index.html` file.
+To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
 ```html
 <script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.1.min.js"></script>
@@ -47,11 +73,13 @@ You can initialize the SDK any where in your app, but we suggest to do it in `ap
 
 ```javscript
 Appacitive.initialize({ 
-  apikey: "{{API Key}}, 
+  apikey: "{{API Key}}", 
   env: "sandbox", 
   appId: "{{App Id}}"
 });
 ```
+
+**Retrieving API Key and Application Id**
 
 You will need to replace {{App Id}} by your application's id and {{API Key}} by API Key. To get these details, open your app on Appacitive Portal. API key for the app is available on your app's home page at the bottom. To get the App Id, open application details, by clicking on edit icon near your app's name.
 
@@ -61,14 +89,19 @@ You will need to replace {{App Id}} by your application's id and {{API Key}} by 
 
 We've extended the todoMVC app with user authentication, which allows users to signup, login and store their todo items on Appacitive. Thus allowing them to access their todo items from any device. 
 
-In addition, we've changed the `AppView` to render either of the 2 views viz. `LoginView` or `TodosView`, depending on whether the user is logged-in or not. All the code, which was part of `AppView` was tranferred to `TodosView`.
+In addition, we've changed the `AppView` to render either of the 2 views viz. `LoginView` or `TodosView`, depending on whether the user is logged-in or not.
 
 **Note**: Whenever you use signup or login method, the user is stored in the localStorage and can be retrieved using `Appacitive.Users.current()` method. So, everytime your app opens, you just need to check this value, to be sure whether the user is logged-in or not.
 
-Replace `mockedUser` with `Appacitive.Users.current()` in app-view.js.
-
 ```javascript
-if (Appacitive.Users.current()) {
+// Replace this line
+app.user = app.todos.localStorage['user'] ? new app.User(app.todos.localStorage['user']) : null;
+
+// With this line
+app.user = Appacitive.User.current()
+
+// Determines user is logged-in or not
+if (app.user) {
 	new app.TodosView();
 } else {
 	new app.LogInView();
@@ -109,7 +142,8 @@ The LoginView contains two forms, one for login and other for signup. By default
 The LoginView binds to show, hide and submit events for both these forms. To authenticate user open `login-view.js` and replace mocked section in `login` function with following code.
 
 ```javascript
-Appacitive.Users.login(username, password).then(function(user) {
+Appacitive.Users.login(username, password).then(function(authResponse) {
+	app.user = authResponse.user;
 	new app.TodosView();
 	self.undelegateEvents();
 }, function(error) {
@@ -117,6 +151,7 @@ Appacitive.Users.login(username, password).then(function(user) {
 	self.$(".login-form button").removeAttr("disabled");
 	self.$('.login-form #login').html("LogIn");
 });
+
 ``` 
 For signup, replace mocked section in `signup` function with following code.
 
@@ -127,7 +162,8 @@ Appacitive.Users.signup({
 	firstname: firstName,      //mandatory
 	email: email,
 	lastname: lastName
-}).then(function(user) {
+}).then(function(authResponse) {
+	app.user = authResponse.user;
 	new app.TodosView();
 	self.undelegateEvents();
 }, function(error) {
@@ -146,7 +182,7 @@ As this app has been ported from Backbone's todoMVC app, the only change require
 
 To get a hang of how Backbone Models and Collections are used to represent the todo items, you can refer through the <a href="http://documentcloud.github.io/backbone/docs/todos.html" target="_blank">original annotated source <i class="glyphicon glyphicon-share-alt"></i></a>.
 
-To migrate Backbone models and collections on Appacitive, change `Backbone.Model` to `Appacitive.Model` and `Backbone.Collection` to `Appacitive.Collection` in `todo.js`.
+To migrate Backbone models and collections on Appacitive, change `Backbone.Model` to `Appacitive.Object` in `todo.js` and `Backbone.Collection` to `Appacitive.Collection` in `todos.js`.
 
 ```javascript
 // Our basic **Todo** model has `title`, `order`, and `completed` attributes.
@@ -156,20 +192,21 @@ app.Todo = Appacitive.Object.extend("todo", {
 
 // The collection of Todo objects 
 app.Todos = Appacitive.Collection.extend({
+	model: app.Todo,
 	//..
 });
 ```
 
 **Saving a Todo Item:**
 
-To do this open `todos.js` and get rid of the `localstorage` property. 
+To do this open `todos.js` and get rid of the `localstorage` property, to start using *Appacitive* for data storage. 
 
 ```javascript
 //Remove this for persisting data on Appacitive
 localStorage: new Backbone.LocalStorage("todos-backbone"),
 ```	
 
-Modify `create` function as follows
+Add `create` function as a property to the collection in `todos.js` as follows
 
 ```javascript
 create: function(todo) {
@@ -183,9 +220,9 @@ create: function(todo) {
 ```
 **Connecting Todo Item to logged-in User:**
 
-If you observe we're also creating a connection of relation-type `owner` in above code. The constructor of connection class is passed the `todo` object and then saved. For more info on creating connections click <a href="http://help.appacitive.com/v1.0/index.html#javascript/data_connections" target="_blank">here <i class="glyphicon glyphicon-share-alt"></i></a>.
+If you observe above code, apart from creating `todo` object, we're also creating a connection of relation-type `owner`. The constructor of owner connection is passed the `todo` object and then saved. For more info on creating connections click <a href="http://help.appacitive.com/v1.0/index.html#javascript/data_connections" target="_blank">here <i class="glyphicon glyphicon-share-alt"></i></a>.
 
-Copy following code in todo.js at the end.
+Copy following code in todo.js.
 
 ```javascript
 // Owner connection model
@@ -221,7 +258,7 @@ Shortly we are saving `todo` in context of `user` by creating `owner` connection
 
 The other part of the app that required a change was the way we populate collection of todo items. Here, we  make `getConnectedObjects` call on `current user` object and set it as query for the `Todos` collection instance.
 
-Replace  `app.Todos.fetch()` call with following code in `todos-view.js`.
+Replace `app.Todos.fetch()` call in `initialize` function with following code in `todos-view.js`.
 
 ```
 // Set query type for app.todos
@@ -242,10 +279,13 @@ app.todos.fetch({ reset: true, sort: true }).then(function() {
 });
 ```
 
-The `getConnectedObjects` call above returns all the todo items which are connected to current user.
+The `getConnectedObjects` call, returns all the todo items which are connected to current user and get rendered.
 
+#### 3.5 Run your app
 
-#### 3.4 User Logout and Forgot Password
+Open index.html of your app. Try signing up and adding/removing.updating items.
+
+#### 3.6 User Logout and Forgot Password
 
 Once the user logs in, he remains logged-in until he specifically logs out. You can logout current user, by calling `Appacitive.Users.logout()` method.
 
@@ -254,16 +294,16 @@ Replace `logOut` function in `todos-view.js` with following code
 ```javascript
 // Logs out the user from Appacitive and shows the login view
 logOut: function(e) {
-	  Appacitive.Users.logout(true);
-	  new app.LogInView();
-	  this.undelegateEvents();
-	  delete this;
+	Appacitive.Users.logout(true);
+	new app.LogInView();
+	this.undelegateEvents();
+	delete this;
 },
 ```
 
 It's a fact that as soon as you introduce passwords into a system, users will forget them. In such cases, Appacitive provides a way to let them securely reset their password.
 
-To start with the password reset flow, you ask the user for his username and call 'Appacitive.Users.sendResetPasswordEmail'. Replace `forgotPassword` function in `login-view.js` with following code.
+To start with the password reset flow, you ask the user for his username and call `Appacitive.Users.sendResetPasswordEmail`. Replace `forgotPassword` function in `login-view.js` with following code.
 
 ```javascript
 // sendResetPasswordEmail method accepts 2 arguments
