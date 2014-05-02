@@ -79,7 +79,7 @@ $(document).ready(function () {
 	}
 
 	//read the data attribute and include the JS on the fly which will do actual import
-	if($('#aImportTool').data('js') != '')
+	if($('#aImportTool').data('js') && $('#aImportTool').data('js') != '')
 		inlcudeJS($('#aImportTool').data('js'));
 
 });

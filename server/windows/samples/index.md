@@ -34,28 +34,28 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 <div class="container-fulid">
 	<div class="row">
 		<div class="col-md-6">
+			<a title="Employee Directory App" class="sample-app-item" href="galleria-app">
+				<div class="col-md-3">
+					<img src="http://cdn.appacitive.com/devcenter/root/apps/galleria-app.png" height="100" />
+				</div>
+				<div class="col-md-9">
+					<h2>Galleria App</h2>
+					<p class="mbs">Upload photos directly from your Windows Phone using Galleria App built using .Net SDK backed by Appacitive Core.</p>
+					<p class="muted">Features: Data Store</p>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-6">
 			<a title="Employee Directory App" class="sample-app-item" href="employee-directory">
 				<div class="col-md-3">
 					<img src="http://cdn.appacitive.com/devcenter/root/apps/emp-directory.png" height="100" />
 				</div>
 				<div class="col-md-9">
 					<h2>Employee Directory</h2>
-					<p class="mbs">View organizational hierarchy using Employee Directory application. Who is employee's manager? To whom he reports?</p>
+					<p class="mbs">View organizational hierarchy using Employee Directory application. Who is employee's manager? To whom employee reports?</p>
 					<p class="muted">Features: Data Store, Graph API</p>
 				</div>
 			</a>
 		</div>
-		<!--<div class="col-md-6">
-			<div class="sample-app-item">
-				<div class="col-md-3">
-					<img src="/css/images/apps/movie-app.png" height="100" />
-				</div>
-				<div class="col-md-9">
-					<h2> Movie App</h2>
-					<p class="mbs">App shows a listing of trending movies and details of movie like actors from the respective movie, year of release.</p>
-					<p class="muted">Features: Data Store</p>
-				</div>
-			</div>
-		</div>-->
 	</div>
 </div>
