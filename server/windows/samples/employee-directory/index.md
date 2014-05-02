@@ -2,7 +2,7 @@
 
 ### Prerequisites
 
-You are aware of Visual Studio 2012, NuGet Package, Windows Phone SDK and last but not the least Appacitive Portal.
+You are aware of <a target="_blank" href="http://www.visualstudio.com/">Visual Studio 2012</a>, <a target="_blank" href="http://www.nuget.org/">NuGet Package</a>, <a target="_blank" href="https://dev.windowsphone.com/en-us/downloadsdk">Windows Phone SDK</a>, <a target="_blank" href="http://phone.codeplex.com/"> Windows Phone Toolkit</a> and last but not the least <a target="_blank" href="https://portal.appacitive.com/">Appacitive Portal</a>.
 
 
 ### Creating Employee Directory App from Scratch
