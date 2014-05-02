@@ -27,8 +27,7 @@ Once the model is in place you can import some sample data in your app. All the 
 
 You will require API Key and Application Id to import data, to get these details, open your app on Appacitive Portal. API key for the app is available on your app's home page at the bottom. To get the App Id, open application details view by clicking on edit icon near your app's name.
 
-<a id="aImportTool" data-js="employeedirectory-import" class="btn btn-state btn-primary" href="javascript:void('0')">Launch Import Tool</a>
-
+<a id="aImportTool" data-js="employee-import" class="btn btn-state btn-primary" href="javascript:void('0')">Launch Import Tool</a>
 
 
 ### 3. Downloading Boilerplate
