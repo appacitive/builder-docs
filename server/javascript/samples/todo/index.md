@@ -64,7 +64,7 @@ All the html that is needed by views is placed in index.html file inside script 
 To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
 ```html
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.1.min.js"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.5.min.js"></script>
 ```
 
 #### 3.2 Initialize SDK
@@ -252,18 +252,21 @@ Copy following code in `todo.js`.
 // to todo model
 app.Owner = Appacitive.Connection.extend("owner", {
 	constructor: function(todo) {
-		// To avoid other parsing conflicts
-		if (todo instanceof app.Todo) {
-			var attrs = {
+		var args = Array.prototype.slice.call(arguments);
+
+		// To avoid other parsing conflicts with connectedObjects
+		if (args[0] instanceof app.Todo) {
+			arguments[0] = {
 				endpoints: [{
 					label: 'user',
 					object: Appacitive.Users.current()
 				}, {
 					label: 'todo',
-					object: todo
+					object: args[0]
 				}]
 			};
 		}
+
 		//Invoke internal constructor
 		Appacitive.Connection.call(this, attrs); 
 	}
