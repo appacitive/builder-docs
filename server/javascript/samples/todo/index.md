@@ -25,7 +25,7 @@ Following video shows how to create the model for the app on Appacitive Platform
 
 ### 2. Downloading default ToDoMVC app
 
-To jump start, we have cloned the ToDoMVC app for you, and added mock user authentication. This app is fully functional using localstorage. You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/AppacitiveTodo/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
+To jump start, we have copied the ToDoMVC app for you, and added mock user authentication. This app is fully functional using localstorage. You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/AppacitiveTodo/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
 
 
 #### Directory Structure
@@ -330,7 +330,7 @@ Appacitive.User.sendResetPasswordEmail(username, 'Reset your Appacitive ToDo App
 
 This'll basically send the user an email, with a reset password link. When user clicks on the link, he'll be redirected to an Appacitive reset password page, which will allow him to enter new password and save it.
 
-Following video explains reset passowrd flow in more detail.
+Following video explains reset password flow in more detail.
 
 <iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
