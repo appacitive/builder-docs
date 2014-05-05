@@ -1,6 +1,6 @@
-Employee Directory App allows you to look for employees by name, view the details of an employee, and navigate up and down the Org Chart by clicking the employee’s manager or any of his/her direct reports.
+This app allows you to search for employees by name and view their details. It also allows to navigate up and down the Org Chart by clicking the employee’s manager or any of his/her direct reports.
 
-Appacitive <a href="http://github.com/chiragsanghvi/javascriptsdk" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
+Appacitive's <a href="http://github.com/chiragsanghvi/javascriptsdk" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
 
 This tutorial demonstrates two features ***Data Store*** and ***Graph API*** provided by Appacitive Platform. As part of design best practice, you will learn how to model your app and bind your custom objects to the view.
 
@@ -33,31 +33,29 @@ You will require API Key and Application Id to import data, to get these details
 
 <a id="aImportTool" data-js="employee-import" class="btn btn-state btn-primary" href="javascript:void('0')">Launch Import Tool</a>
 
-### 2. Downloading app
+### 2. Download and Run the App
 
 The app itself has no dependency on a specific back end. Thus you can **download and run** the app without having to set up a server and a database.
 
 You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/employee-directory/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
 
-<pre style="padding:10px;">
-Because the templates of this application are loaded using XMLHTTPRequest, you will get a cross domain error (Access-Control-Allow-Origin) if you load index.html from the file system (with the file:// protocol). Make sure you load the application from a web server. For example: http://localhost:8000.
-</pre>
+<div class="block-notice">
+    <i class="glyphicon glyphicon-info-sign"></i>   Because the templates of this application are loaded using XMLHTTPRequest, you will get a cross domain error (Access-Control-Allow-Origin) if you load index.html from the file system (with the file:// protocol). Make sure you load the application from a web server. For example: http://localhost:8000.
+</div>
 
-For MAC OS you can simply use [Anvil](http://anvilformac.com/). 
-
-For others, just install [nodejs](http://nodejs.org) and then run this command in your app's directory
+For MAC OS you can simply use [Anvil](http://anvilformac.com/). For others, just install [nodejs](http://nodejs.org) and then run this command in your app's directory
 
 ```javascript
 node server.js 8000
 ```
 
-### 3. Using Javascript SDK
+### 3. Using the Javascript SDK
 
-The data layer is architected with simple and pluggable data adapters. By default the application uses an in-memory data store, but it can be switched to use Appacitive data adapter.
+The data layer is architected with simple and pluggable data adapters. By default the application uses an in-memory data adapter, but it can be switched to use Appacitive data adapter.
 
-#### 3.1 Include SDK
+#### 3.1 Include the SDK
 
-To change the data layer, just comment out `model-in-memory.js` script, and uncomment the `appacitive-js-sdk-v0.9.6.5.min.js` and `model-appacitive-com.js` scripts  in `index.html`.
+To change the data adapter, just comment out `model-in-memory.js` script, and uncomment the `appacitive-js-sdk-v0.9.6.5.min.js` and `model-appacitive-com.js` scripts  in `index.html`.
 
 ```html
 <!-- SELECT ONE (AND ONLY ONE) OF THE DATA LAYER SOLUTIONS BELOW -->
@@ -84,13 +82,13 @@ Appacitive.initialize({
 
 **Note**: We suggest using the client key as API key to maintain security and controlled access on your data.
 
-### 3.3 App Structure
+### 3.3 Code Walkthrough
 
 Employee Directory is a single page application: *index.html* is essentially empty. Views are injected into and removed from the DOM as needed. Even though it is a single page application, the Backbone.js Router makes it easy to keep the different states of the app *bookmarkable* and *deep-linkable*.
 
-All Appacitive related models and collections are present in `model-appacitive-com.js`. We use the concept of relationships in this tutorial
+All Appacitive related models and collections are present in `model-appacitive-com.js`. We use the concept of <a href="http://help.appacitive.com/v1.0/index.html#javascript/data_connections" target="_blank">relationships <i class="glyphicon glyphicon-share-alt"></i></a> in this tutorial. 
 
-* <b>One-to-Many association</b>. A one-to-many (Manager-to-Employees) association is defined in the `Employee` model as a collection of employees (the direct reports). The initialize functions sets `reports` property in the employee model with a new instance of `Reports Collection`. That collection is populated with reporting employees from the result of `Graph API` query, which is called by employee objects `fetchDetails` method.
+* <b>One-to-Many association</b>. A `manages` relationship is defined between employees labelled as *Manager-to-Employee*. This relationship is defined in the `Employee` model as a collection of employees (the direct reports). The initialize functions sets `reports` property in the employee model with a new instance of `Reports Collection`. That collection is populated with reporting employees from the result of `Graph API` query, on employee fetch.
 
 ```javascript
 // To initialize reports collection
@@ -104,7 +102,9 @@ initialize: function() {
 }
 ```
 
-The `Employee` model is mapped to employee type in our Appacitive app. It overrides its default fetch function to call `fetchDetails`. This function uses graph API to fetch details for that employee. In addition, it also populates the `reports` collection with employees who report to that employee and sets the `managerid` and `managername` with the details of the `manager` employee to whom this employee reports.
+The `Employee` model is mapped to employee type in our Appacitive app. The default fetch function is overriden by `fetchDetails`. This function uses graph API to fetch details for that employee. 
+
+In addition, it also populates the `reports` collection with employees who report to this employee. It also sets the `managerid` and `managername` with the details of the `manager` to whom this employee reports.
 
 ```javascript
 // Use projection query to fetch employee details for this employee
@@ -159,7 +159,9 @@ fetchAllDetails: function(options) {
 }
 ```
 
-The `EmployeeCollection` is the collection of all employees. It overrides the default fetch function of the collection, to add or remove filters ( to filter stuff on basis of firstname or lastname or nothing) to the query before making fetch call. By default the query property in `Appacitive.Collection` is initialized with a `FindAll` query for that model. In our case the model is employee.
+The `EmployeeCollection` is the collection of all employees. It overrides the default fetch function of the collection, to add or remove filters ( to filter stuff on basis of firstname or lastname or nothing) to the query before making fetch call. 
+
+By default the query property in `Appacitive.Collection` is initialized with a <a href="http://help.appacitive.com/v1.0/index.html#javascript/data_querying-data" target="_blank">FindAll <i class="glyphicon glyphicon-share-alt"></i></a> query for that model. In our case the model is Employee.
 
 ```javascript
 // Employee Collection
@@ -202,7 +204,7 @@ directory.EmployeeCollection = Appacitive.Collection.extend(({
 The `ReportsCollection` overrides the default fetch function of the collection, as projection query from employee fetches and adds employees to this collection. Thus it returns a fulfilled promise in fetch call.
 
 ```javascript
-// ReportsCollection Collection
+// Reports Collection
 // ---------------
 
 // The collection of employees who report to another employee
@@ -227,11 +229,11 @@ directory.ReportsCollection = Appacitive.Collection.extend(({
 
 Following video explains Graph API in more detail.
 
-<iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/85415329" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ### Congratulation
 
-You have created a fully functional Employee Directory App using .Net SDK backed by Appacitive Platform. In this App we have explored two features ***Data Store*** and ***Graph API*** feature provided by Appacitive Core.
+You have created a fully functional Employee Directory App using Javascript SDK backed by Appacitive Platform. In this App we have explored two features ***Data Store*** and ***Graph API*** feature provided by Appacitive Core.
 
 ### What's next?
 You can check out our other <a title="All Samples based on Appacitive Javascript SDK" href="../">samples</a> to know more about Javscript SDK and other features provided by Appacitive Platform. For complete API reference of Javascript SDK go to our <a target="_blank" title="http://help.appacitive.com" href="http://help.appacitive.com/v1.0/#javascript">help docs<span class="plxs glyphicon glyphicon-share-alt"></span></a>.

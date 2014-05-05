@@ -22,11 +22,9 @@ Following video shows how to create the model for the app on Appacitive Platform
 
 <iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-
-### 2. Downloading default ToDoMVC app
+### 2. Downloading the default ToDoMVC app
 
 To jump start, we have copied the ToDoMVC app for you, and added mock user authentication. This app is fully functional using localstorage. You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/AppacitiveTodo/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
-
 
 #### Directory Structure
 
@@ -54,12 +52,12 @@ index.html
 readme.md
 ```
 
-### 3. Integrating Javascript SDK
+### 3. Integrating the Javascript SDK
 
 All the html that is needed by views is placed in index.html file inside script tags. These templates are <a href="http://underscorejs.org/#template" target="_blank">underscore templates <i class="glyphicon glyphicon-share-alt"></i></a>.
 
 
-#### 3.1 Include SDK
+#### 3.1 Include the SDK
 
 To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
@@ -67,7 +65,7 @@ To get started, add the SDK to the head tag inside `index.html` file and remove 
 <script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.5.min.js"></script>
 ```
 
-#### 3.2 Initialize SDK
+#### 3.2 Initialize the SDK
 
 You can initialize the SDK any where in your app, but we suggest to do it in `app.js`. To initialize the SDK, open `app.js` and insert following code in the beginning.
 

@@ -271,6 +271,8 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .import-log { background-color: #f1f1f1; padding: 15px 12px 5px; border: solid 1px #ddd; margin-top: 20px; font-size: 13px; color:#888; }
 .import-log p { line-height: 8px; }
 
+.block-notice { padding:10px;margin: 0 0 10px; font-size: 13px; line-height: 1.42857143; color: #333; background-color: #F5FFC0; border: 1px solid #ccc; border-radius: 4px;font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
+
 @media (max-width: 1180px) /* Small desktop */ {
     .theme-switch { top: 8px; right: 8px; }
     .theme { padding: 6px; }
