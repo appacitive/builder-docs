@@ -13,8 +13,6 @@ This tutorial demonstrates two features ***Data Store*** and ***Graph API*** pro
 
 Above specified dependencies are specific to this app. SDK has no dependencies on any libraries. 
 
-### Creating Todo List App from Scratch
-
 Follow this guide to get hands on with this App.
 
 ### 1. Modeling app backend on Appacitive
