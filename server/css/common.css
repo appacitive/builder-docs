@@ -227,7 +227,10 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .content-mark-down ul { list-style: disc; margin-left: 20px; }
 .content-mark-down li { margin-top: 3px; margin-bottom: 3px; }
 .content-mark-down ul ul { margin-top: 5px; margin-bottom: 5px; list-style: square; }
-.content-mark-down table { max-width: 480px;}
+.content-mark-down table { width: 100%; }
+
+/* downloads formatting */
+.content-downloads table { max-width: 480px; }
 
 /* getting started content formatting */
 .getting-started h2, .getting-started h3 { padding: 25px 0 5px; margin: 0; font-weight: 300; }
