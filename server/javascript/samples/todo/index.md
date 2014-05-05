@@ -22,11 +22,9 @@ Following video shows how to create the model for the app on Appacitive Platform
 
 <iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+### 2. Downloading the default ToDoMVC app
 
-### 2. Downloading default ToDoMVC app
-
-To jump start, we have cloned the ToDoMVC app for you, and added mock user authentication. This app is fully functional using localstorage. You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/AppacitiveTodo/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
-
+To jump start, we have copied the ToDoMVC app for you, and added mock user authentication. This app is fully functional using localstorage. You can download the app <a title="Download boilerplate" href="https://github.com/chiragsanghvi/AppacitiveTodo/archive/boilerplate.zip">here <i class="glyphicon glyphicon-download-alt"></i></a>.
 
 #### Directory Structure
 
@@ -54,20 +52,20 @@ index.html
 readme.md
 ```
 
-### 3. Integrating Javascript SDK
+### 3. Integrating the Javascript SDK
 
 All the html that is needed by views is placed in index.html file inside script tags. These templates are <a href="http://underscorejs.org/#template" target="_blank">underscore templates <i class="glyphicon glyphicon-share-alt"></i></a>.
 
 
-#### 3.1 Include SDK
+#### 3.1 Include the SDK
 
 To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
 ```html
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.1.min.js"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.5.min.js"></script>
 ```
 
-#### 3.2 Initialize SDK
+#### 3.2 Initialize the SDK
 
 You can initialize the SDK any where in your app, but we suggest to do it in `app.js`. To initialize the SDK, open `app.js` and insert following code in the beginning.
 
@@ -252,18 +250,21 @@ Copy following code in `todo.js`.
 // to todo model
 app.Owner = Appacitive.Connection.extend("owner", {
 	constructor: function(todo) {
-		// To avoid other parsing conflicts
-		if (todo instanceof app.Todo) {
-			var attrs = {
+		var args = Array.prototype.slice.call(arguments);
+
+		// To avoid other parsing conflicts with connectedObjects
+		if (args[0] instanceof app.Todo) {
+			arguments[0] = {
 				endpoints: [{
 					label: 'user',
 					object: Appacitive.Users.current()
 				}, {
 					label: 'todo',
-					object: todo
+					object: args[0]
 				}]
 			};
 		}
+
 		//Invoke internal constructor
 		Appacitive.Connection.call(this, attrs); 
 	}
@@ -327,7 +328,7 @@ Appacitive.User.sendResetPasswordEmail(username, 'Reset your Appacitive ToDo App
 
 This'll basically send the user an email, with a reset password link. When user clicks on the link, he'll be redirected to an Appacitive reset password page, which will allow him to enter new password and save it.
 
-Following video explains reset passowrd flow in more detail.
+Following video explains reset password flow in more detail.
 
 <iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
