@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="<%= description %>" />
+    <meta name="keywords" content="<%= keywords %>" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="body-container">
+        <%- partial("../../_partials/_header") %>
+        <div id="divContent">
+            <div class="container-fluid content getting-started content-mark-down ptl">
+                <div class="row">
+                    <div class="col-md-12 mbl">
+                        <h1>Getting Started with Appacitive <%- platform %> SDK</h1>
+                        <p>An overview of Appacitive <%- platform %> SDK, how to install and use, basic conventions and debugging, and more.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="list-group">
+                            <a class="list-group-item <%- installation %>" href="../installation">Installation</a>
+                            <a class="list-group-item <%- sdkconventions %>" href="../sdk-conventions">SDK Conventions</a>
+                            <a class="list-group-item <%- subclassing %>" href="../subclassing">Subclassing</a>
+                            <a class="list-group-item <%- debuggingsdk %>" href="../debugging-sdk">Debugging</a>
+                            <a class="list-group-item <%- errorspace %>" href="../error-space">Error Space</a>
+                            <a class="list-group-item <%- extendingsdk %>" href="../extending-sdk">Customizing the SDK</a>
+                            <a class="list-group-item <%- thirdpartyintegrations %>" href="../third-party-integrations">Third Party Integrations</a>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <%- yield %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mtl ptl text-center">
+                       <div class="muted ptl"> For any query or suggestions, feel free to drop an email to <a href="mailto:<%- contact %>"><%- contact %></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- partial("../../_partials/_footer") %>
+    </div>
+    <%- partial("../../_partials/_scripts") %>
+</body>
+</html>

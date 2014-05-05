@@ -9,8 +9,8 @@
       "layout": "../_layout-getting-started-windows",
       "installation": "",
       "sdkconventions": "",
-      "extendingsdk": "active",
-      "subclassing" : "",
+      "extendingsdk": "",
+      "subclassing" : "active",
       "debuggingsdk": "",
       "errorspace": "",
       "thirdpartyintegrations": ""

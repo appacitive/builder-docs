@@ -1,7 +1,5 @@
-# Extending the SDK.
+# Subclassing
 
-## Subclassing
-----------------
 Subclassing allows you to extend the core classes of the SDK with your own. While subclassing is not mandatory,
 it does make for a more succinct and natural coding experience as shown in the example below.
 
@@ -17,13 +15,13 @@ int score = player.Score;
 
 ```
 
-### Which types support subclassing ?
+## Which types support subclassing ?
 Subclassing is fully supported for the `APObject`, `APUser` and `APConnection` types.
 
-### How to create your own sub class.
+## How to create your own sub class.
 The following steps explain how to setup subclassing for your app.
 
-#### 1. Define your subclass.
+### 1. Define your subclass.
 Create your own user defined class which extends `APObject`. Use the `Get()` and `Set()` methods
 on the base class to define your own strongly typed properties as shown.
 
@@ -48,7 +46,7 @@ public class Player : APObject
 
 ```
 
-#### 2. Register the subclass with the SDK.
+### 2. Register the subclass with the SDK.
 Register your subclass with the SDK. This will ensure that whenever you request for the
 specific object type, the SDK will return the corresponding sub class instance instead of
 an APObject.
