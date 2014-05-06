@@ -1,60 +1,16 @@
 # Extending the SDK.
 
-## Subclassing
-----------------
-Subclassing allows you to extend the core classes of the SDK with your own. While subclassing is not mandatory,
-it does make for a more succinct and natural coding experience as shown in the example below.
+## Customizing the SDK.
 
-``` csharp
-// Without subclassing.
-var player = APObjects.GetAsync("player");
-int score = player.Get<int>("score");
+1. [Tracing with a custom trace writer.](#tracing)
+2. [Using your own json serializer.](#custom-serialization)
+3. [Customizing the HTTP connector.](#custom-http-connector)
+4. [Providing your own runtime platform implementation.](#custom-runtime)
 
-// With subclassing
-// Player class subclasses APObject.
-var player = APObjects.GetAsync("attempt") as Player;
-int score = player.Score;
+## <a name="tracing"></a>Tracing with a custom trace writer.
 
-```
+## <a name="custom-serialization"></a>Using your own json serializer.
 
-### Which types support subclassing ?
-Subclassing is fully supported for the `APObject`, `APUser` and `APConnection` types.
+## <a name="custom-http-connector"></a>Customizing the HTTP connector.
 
-### How to create your own sub class.
-The following steps explain how to setup subclassing for your app.
-
-#### 1. Define your subclass.
-Create your own user defined class which extends `APObject`. Use the `Get()` and `Set()` methods
-on the base class to define your own strongly typed properties as shown.
-
-``` csharp
-public class Player : APObject
-{
-
-  public int Score
-  {
-    get
-    {
-      int defaultValue = 0;
-      return base.Get<int>("score", defaultValue);
-    }
-    set
-    {
-      base.Set("score", value);
-    }
-  }
-
-}
-
-```
-
-#### 2. Register the subclass with the SDK.
-Register your subclass with the SDK. This will ensure that whenever you request for the
-specific object type, the SDK will return the corresponding sub class instance instead of
-an APObject.
-
-``` csharp
-/// Registering your custom type with the SDK.
-/// This example maps subclass Player with the object type "player".
-AppContext.Types.MapObjectType<Player>("player");
-```
+## <a name="custom-runtime"></a>Providing your own runtime platform implementation.
