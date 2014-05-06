@@ -1174,7 +1174,57 @@ var greaterThanFilter = Appacitive.Filter.Property("age").greaterThan(25);
 // and for equalTo, equalToDate, equalToDateTime, equalToTime
 ```
 
-### Geolocation
+### Composite Filters
+
+Compound filters allow you to combine multiple filters into one single query. Multiple filters can be combined using `Appacitive.Filter.Or` and `Appacitive.Filter.And` operators. NOTE: All types of filters with the exception of free text filters can be combined into a compound query.
+
+```javascript
+//Use of `And` and `Or` operators
+var center = new Appacitive.GeoCoord(36.1749687195, -115.1372222900);
+
+//AND filter
+var complexFilter = 
+      Appacitive.Filter.And(
+          //OR filter
+          Appacitive.Filter.Or( 
+             Appacitive.Filter.Property("firstname").startsWith("jo"),
+             Appacitive.Filter.Property("lastname").like("oe")
+          ),
+          Appacitive.Filter.Property("location")
+              .withinCircle(center, 
+                      10, 
+                      'mi') // can be set to 'km' or 'mi'
+      );
+
+//Or you can do it as
+
+var complexFilter = Appacitive.Filter.Property("firstname").startsWith("jo")
+          .Or(Appacitive.Filter.Property("lastname").like("oe"))
+          .And(Appacitive.Filter.Property("location")
+                      .withinCircle(center, 10, 'mi')) // can be set to 'km' or 'mi'
+          
+
+//create query object
+var Player = Appacitive.Object.extend('player');
+var query = Player.findAllQuery();
+
+//or without extending
+var query = new Appacitive.Queries.FindAllQuery({
+  type: 'player'
+});
+
+//set filter in query
+query.filter(complexFilter);
+
+//add more filters
+query.filter(query.filter.And( Appacitive.Filter.Property('gender').equalTo('male')));
+
+//fire the query
+query.fetch();
+
+```
+
+## Geolocation
 
 Appacitive supports geolocations, allowing you to save and search geo data. You can specify a property type as a `geography` type for a given type or relation. 
 
@@ -1226,7 +1276,7 @@ Returns a JSON representation of the lat long coordinates:
 
 These properties are essential latitude-longitude pairs. Such properties support geo queries based on a user defined radial or polygonal region on the map. These are extremely useful for making map based or location based searches. E.g., searching for a list of all restaurants within 20 miles of a given users locations.
 
-#### Radial Search
+### Radial Search
 
 A radial search allows you to search for all records of a specific type which contain a geocode which lies within a predefined distance from a point on the map. A radial search requires the following parameters.
 
@@ -1257,7 +1307,7 @@ query.filter(radialFilter);
 query.fetch();
 ```
 
-#### Polygon Search
+### Polygon Search
 
 A polygon search is a more generic form of geographcal search. It allows you to specify a polygonal region on the map via a set of geocodes indicating the vertices of the polygon. The search will allow you to query for all data of a specific type that lies within the given polygon. This is typically useful when you want finer grained control on the shape of the region to search.
 
@@ -1290,11 +1340,11 @@ query.filter(polygonFilter);
 query.fetch();
 ```
 
-### Tag Based Searches
+## Tag Based Searches
 
 The Appacitive platform provides inbuilt support for tagging on all data (objects, connections, users and devices). You can use this tag information to query for a specific data set. The different options available for searching based on tags is detailed in the sections below.
 
-##### Query data tagged with one or more of the given tags
+### Query data tagged with one or more of the given tags
 
 For data of a given type, you can query for all records that are tagged with one or more tags from a given list. For example - querying for all objects of type message that are tagged as personal or private.
 
@@ -1323,7 +1373,7 @@ query.filter(tagFilter);
 query.fetch();
 ```
 
-#### Query data tagged with all of the given tags
+### Query data tagged with all of the given tags
 
 An alternative variation of the above tag based search allows you to query for all records that are tagged with all the tags from a given list. For example, querying for all objects of type message that are tagged as personal AND private.
 
@@ -1352,56 +1402,7 @@ query.filter(tagFilter);
 query.fetch();
 ```
 
-### Composite Filters
-
-Compound filters allow you to combine multiple filters into one single query. Multiple filters can be combined using `Appacitive.Filter.Or` and `Appacitive.Filter.And` operators. NOTE: All types of filters with the exception of free text filters can be combined into a compound query.
-
-```javascript
-//Use of `And` and `Or` operators
-var center = new Appacitive.GeoCoord(36.1749687195, -115.1372222900);
-
-//AND filter
-var complexFilter = 
-      Appacitive.Filter.And(
-          //OR filter
-          Appacitive.Filter.Or( 
-             Appacitive.Filter.Property("firstname").startsWith("jo"),
-             Appacitive.Filter.Property("lastname").like("oe")
-          ),
-          Appacitive.Filter.Property("location")
-              .withinCircle(center, 
-                      10, 
-                      'mi') // can be set to 'km' or 'mi'
-      );
-
-//Or you can do it as
-
-var complexFilter = Appacitive.Filter.Property("firstname").startsWith("jo")
-          .Or(Appacitive.Filter.Property("lastname").like("oe"))
-          .And(Appacitive.Filter.Property("location")
-                      .withinCircle(center, 10, 'mi')) // can be set to 'km' or 'mi'
-          
-
-//create query object
-var Player = Appacitive.Object.extend('player');
-var query = Player.findAllQuery();
-
-//or without extending
-var query = new Appacitive.Queries.FindAllQuery({
-  type: 'player'
-});
-
-//set filter in query
-query.filter(complexFilter);
-
-//add more filters
-query.filter(query.filter.And( Appacitive.Filter.Property('gender').equalTo('male')));
-
-//fire the query
-query.fetch();
-
-```
-### FreeText
+## FreeText
 
 There are situations when you would want the ability to search across all text content inside your data. Free text queries are ideal for implementing this kind of functionality. As an example, consider a free text lookup for users which searches across the username, firstname, lastname, profile description etc.You can pass multiple values inside a free text search. It also supports passing certain modifiers that allow you to control how each search term should be used. This is detailed below.
 

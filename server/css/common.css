@@ -277,16 +277,6 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .block-notice { padding:10px;margin: 0 0 10px; font-size: 13px; line-height: 1.42857143; color: #333; background-color: #F5FFC0; border: 1px solid #ccc; border-radius: 4px;font-family: Menlo,Monaco,Consolas,"Courier New",monospace; }
 
 /* Bootstrap styles for side navbar */
-.group {
-    background: yellow;
-    width: 200px;
-    height: 500px;
-}
-.group .subgroup {
-    background: orange;
-    width: 150px;
-    height: 200px;
-}
 .fixed {
     position: fixed;
 }
@@ -299,7 +289,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
     margin-bottom: 20px;
     background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px;
     position: fixed;
-    width: 19%;
+    width: 245px;
 }
 
 .doc-nav {
@@ -383,7 +373,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
     }
     .bs-docs-sidebar.affix-bottom {
         position: absolute;
-        top: 53735px;
+        width: 245px;
     }
 }
 

@@ -122,8 +122,7 @@ for(var i=0; i< menu.items.length; i= i+1) {
  * Add scrollspy to generated sidebar
  */
 $('body').scrollspy({
-  target: '#sidebar',
-  offset: 10
+  target: ".bs-docs-sidebar"
 });
 
 /**
@@ -134,10 +133,10 @@ var sidebar = $('.bs-docs-sidebar');
 $('.bs-docs-sidebar').affix({
   offset: {
     top: function() {
-        var c = sidebar.offset().top, d = parseInt(sidebar.children(0).css("margin-top"), 10), e = $("#divHeader").height();
+        var c = sidebar.offset().top, d = parseInt(sidebar.children(0).css("margin-top"), 10) + 20, e = $("#divHeader").height();
         return this.top = c - e - d
     }, bottom: function() {
-        return this.bottom = $("#divFooter").outerHeight(!0)
+        return this.bottom = $("#divFooter").outerHeight(!0) + 50
     }
   }
 });
