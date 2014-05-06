@@ -4,6 +4,7 @@
       "description": "JavaScript guide explaining the data storage in Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, data store, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "layout":"../../_layout-menu.ejs",
       "language": "JavaScript"
    },
    "tutorial": {
