@@ -99,7 +99,7 @@ footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100
     footer ul { margin: 12px 0; font-size: 14px; }
         footer ul li { margin: 7px 0; }
     footer .glyphicon { font-size: 12px; }
-    footer ul, ol { list-style: none; }
+    footer ul, footer ol { list-style: none; }
 
 /* sprites */
 .sprite-core { background: url('images/sprite-core.png') no-repeat 0 0; width: 66px; height: 66px; display: inline-block; background-size: 66px; }
@@ -269,7 +269,8 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .sample-page iframe { width: 640px;  height: 377px;}
 .sample-page pre { margin-bottom: 15px; }
 .sample-page p code { padding: 2px 4px !important; }
-.sample-page ul, ol { list-style: disc;}
+.sample-page ul { list-style: disc;}
+.sample-page ol { list-style-type: decimal; }
 
 .import-log { background-color: #f1f1f1; padding: 15px 12px 5px; border: solid 1px #ddd; margin-top: 20px; font-size: 13px; color:#888; }
 .import-log p { line-height: 8px; }
@@ -368,6 +369,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 }
 
 .content-mark-down h1, .content-mark-down h2, .content-mark-down h3, .content-mark-down h4 { font-weight: 400; }
+.content-mark-down ol { list-style-type: decimal; }
 
 @media (max-width: 1180px) /* Small desktop */ {
     .theme-switch { top: 8px; right: 8px; }

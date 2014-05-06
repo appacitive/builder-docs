@@ -4,6 +4,7 @@
       "description": "JavaScript guide explaining the user management in Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, user, user management, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "layout":"../../_layout-menu.ejs",
       "language": "JavaScript"
    },
    "tutorial": {
