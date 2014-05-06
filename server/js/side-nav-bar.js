@@ -136,7 +136,7 @@ $('.bs-docs-sidebar').affix({
         var c = sidebar.offset().top, d = parseInt(sidebar.children(0).css("margin-top"), 10) + 20, e = $("#divHeader").height();
         return this.top = c - e - d
     }, bottom: function() {
-        return this.bottom = $("#divFooter").outerHeight(!0) + 50
+        return this.bottom = $("#divFooter").outerHeight(!0) + 166;
     }
   }
 });
