@@ -34,7 +34,19 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 <div class="container-fulid">
 	<div class="row">
 		<div class="col-md-6">
-			<a title="Employee Directory App" class="sample-app-item" href="galleria-app">
+			<a title="Push Notification" class="sample-app-item" href="push-notification">
+				<div class="col-md-3">
+					<img src="http://cdn.appacitive.com/devcenter/root/apps/push-notification-app.png" height="100" />
+				</div>
+				<div class="col-md-9">
+					<h2>Push Notification</h2>
+					<p class="mbs">A simple windows phone application which demos Push Notification capability of Appacitive Platform.</p>
+					<p class="muted">Features: Push</p>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-6">
+			<a title="Picture Gallery App" class="sample-app-item" href="galleria-app">
 				<div class="col-md-3">
 					<img src="http://cdn.appacitive.com/devcenter/root/apps/galleria-app.png" height="100" />
 				</div>
@@ -45,6 +57,10 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 				</div>
 			</a>
 		</div>
+	</div>
+</div>
+<div class="container-fulid">
+	<div class="row">
 		<div class="col-md-6">
 			<a title="Employee Directory App" class="sample-app-item" href="employee-directory">
 				<div class="col-md-3">
