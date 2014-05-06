@@ -510,9 +510,9 @@ Friend.findAllCloseFriends().then(function(res) {
 });
 ```
 
-Above example depicts use of (queries)[#queries], which we'll discuss in coming sections. By default whenever you extend `Appacitive.Object` class you also extend some of the static methods used for querying and fetching data viz. 
+Above example depicts use of [queries](#queries), which we'll discuss in coming sections. By default whenever you extend `Appacitive.Object` class you also extend some of the static methods used for querying and fetching data viz. 
 
- * [get](#get-connection-by-id) 
+ * [get](#get-by-id) 
  * [multiGet](#multiget-connections) 
  * [multiDelete](#multidelete-connections) 
  * [findAllQuery](#queries) 
@@ -1228,7 +1228,7 @@ query.fetch();
 
 Appacitive supports geolocations, allowing you to save and search geo data. You can specify a property type as a `geography` type for a given type or relation. 
 
-#### GeoPoint
+### GeoPoint
 
 `Appacitive.GeoCoord` is a simple wrapper around lat and lon coordinates. It's used in geolocation queries and in setting property values.
 

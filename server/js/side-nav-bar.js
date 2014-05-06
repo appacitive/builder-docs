@@ -28,7 +28,7 @@ var slugify = function (text) {
  * Adds IDs to headings.
  */
 Transformer.addIDs = function($content) {
-  $content.find('h1, h2, h3').each(function() {
+  $content.find('h1, h2, h3, h4').each(function() {
     var $el = $(this);
     var text = $el.text();
     var id = slugify(text);
@@ -62,7 +62,7 @@ Transformer.getMenu = function($content) {
     return cache[level];
   }
 
-  $content.find('h1, h2, h3').each(function() {
+  $content.find('h1, h2, h3, h4').each(function() {
     var $el = $(this);
     var level = +(this.nodeName.substr(1));
 
@@ -117,6 +117,8 @@ var menu = Transformer.getMenu($('#divDocContent'));
 for(var i=0; i< menu.items.length; i= i+1) {
   setMenuEl(menu.items[i], $("ul#sidebar"));
 }
+
+$('.bs-docs-sidebar').show();
 
 /**
  * Add scrollspy to generated sidebar
