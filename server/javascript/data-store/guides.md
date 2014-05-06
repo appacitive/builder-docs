@@ -260,9 +260,9 @@ You can also retrieve multiple objects at a time, which will return an array of 
 Appacitive.Object.multiGet({ 
   type: 'players', //name of type : mandatory
   ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of object ids to get : mandatory
-  fields: ["name"]// this denotes the fields to be returned in the object object, to avoid increasing the payload : optional
+  fields: ["name"] // fields to be returned object, to avoid increasing the payload : optional
 }).then(function(objects) { 
-  // objects is an array of object objects
+  // objects is an array of player objects
 });
 
 
@@ -270,9 +270,9 @@ Appacitive.Object.multiGet({
 var Player = Appacitive.Object.extend('player');
 Player.multiGet({ 
   ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of object ids to get : mandatory
-  fields: ["name"]// this denotes the fields to be returned in the object object, to avoid increasing the payload : optional
+  fields: ["name"]// fields to be returned, to avoid increasing the payload : optional
 }).then(function(objects) { 
-  // objects is an array of object objects
+  // objects is an array of Player objects
 });
 
 ```
@@ -369,7 +369,7 @@ You can also increment the amount by passing in a second argument to increment. 
 
 ## Deleting Object
 
-Deleting is provided via the `del` method (`delete` is a keyword in javascript apparently o_O). Lets say we've had enough of John Doe and want to remove him from the server, here's what we'd do.
+Deleting is provided via the `destroy` method . Lets say we've had enough of John Doe and want to remove him from the server, here's what we'd do.
 ```javascript
 player.destroy().then(function(obj) {
   alert('Deleted successfully');
@@ -882,7 +882,7 @@ As before, do not modify the `__id` property.
  
 ## Deleting Connection
 
-Deleting is provided via the `del` method.
+Deleting is provided via the `destroy` method.
 ```javascript
 marriage.destroy().then(function() {
   alert('Tarzan and Jane are no longer married.');
@@ -957,7 +957,6 @@ You can also use these queries directly from your extended classes for relations
 var Player = Appacitive.Object.extend('player');
 
 var query = Player.findAllQuery(
-  type: 'player', //mandatory 
   fields: [*],      //optional: returns all user fields only
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1
@@ -971,7 +970,6 @@ var query = Player.findAllQuery(
 var Player = Appacitive.Connection.extend('friends');
 
 var query = Player.findAllQuery(
-  relation: 'friends', //mandatory 
   fields: [*],      //optional: returns all user fields only
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1

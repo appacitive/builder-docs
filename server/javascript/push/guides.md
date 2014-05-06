@@ -1,8 +1,23 @@
 ﻿# Push Notifications
 
-Using Appacitive platform you can send push notification to iOS devices, Android base devices and Windows phone.
- 
-We recommend you to go through **[this](http://appacitive.github.io/docs/current/rest/push/index.html)** section, which explains how you can configure Appacitive app for Push notification. You will need to provide some basic one time configurations like certificates, using which we will setup push notification channels for different platforms for you. Also we provide a Push Console using which you can send push notification to the users.
+Push is a great way to send timely and relevant targeted messages to users of your app and enhance their overall experience and keep them informed of the latest developments on your app.
+Appacitive allows you to send push notifications to your users in a variety of ways and targets android, ios and windows phone.
+
+For detailed info around how platform specific push notifications work, you can check out their specific docs.
+
+iOS       : https://developer.apple.com/notifications/
+
+Android     : http://developer.android.com/google/gcm/index.html
+
+Windows Phone : http://msdn.microsoft.com/en-us/library/hh221549.aspx
+
+You will need to provide some basic one time configurations like certificates, using which we will setup push notification channels for different platforms for you. Also we provide a Push Console using which you can send push notification to the users.
+
+## Configure App for Push Notification
+
+Login to the Appacitive portal and from app list page select the app, you want to configure. Once inside, from the top navigation bar, go to Notification section and select General Settings.
+
+Currently we support Push Notification for iOS, Android and Window, so to enable Push Notifications for the app, you will need to select either of the platforms for your app (if none of the platform is selected, app will guide you to the appropriate section, from where you can select the platform). On the Push Notification's setting page, first you will need to enable them, after that from the iOS section you can upload the certificate and set password for it (if any). For Android, you will need to provide the Sender Id, Sender Auth Token and the package name. That's it, update the app and your app is configured to send push notification.
 
 ## Sending Push Notifications
 
