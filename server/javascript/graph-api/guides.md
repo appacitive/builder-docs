@@ -16,7 +16,7 @@ You can execute a saved Graph API by using it’s name that you assigned to it w
 Following example refers to the Graph API that we created in the video.
 
 ```javascript
-// Name of graph projection query
+// Name of graph API
 var apiName = "get_posts";
 
 //an array of ids of user article : mandatory
