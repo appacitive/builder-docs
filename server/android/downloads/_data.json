@@ -4,6 +4,7 @@
       "description": "Get started with your Android app using our Android SDK.",
       "keywords": "android sdk download, android sdk, getting started, appacitive ",
       "platform": "Android",
-      "language": "Android"
+      "language": "Android",
+      "layout": "../../_layout-downloads.ejs"
    }
 }

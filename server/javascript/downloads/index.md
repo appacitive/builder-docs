@@ -19,6 +19,8 @@
 <h1><span class="glyphicon glyphicon-cloud-download"></span> Download Older Versions</h1>
 Always use the latest version of the SDK, it will be most reliable and compatible with Appacitive API.
 
+
 |Version|Download|Date|
 |:---------------|:------------|
 |1.0.0|<a href="#">Download</a>|May 01, 2014|
+

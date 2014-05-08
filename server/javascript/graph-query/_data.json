@@ -4,6 +4,7 @@
       "description": "JavaScript guide explaining Graph Query feature provided by Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, graph, graph query, files, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "layout":"../../_layout-menu.ejs",
       "language": "JavaScript"
    },
    "tutorial": {

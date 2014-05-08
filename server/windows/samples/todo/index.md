@@ -2,12 +2,12 @@
 
 ### Prerequisites
 
-You are aware of Visual Studio 2012, NuGet Package, Windows Phone SDK and last but not the least Appacitive Portal.
+You are aware of <a target="_blank" href="http://www.visualstudio.com/">Visual Studio 2012</a>, <a target="_blank" href="http://www.nuget.org/">NuGet Package</a>, <a target="_blank" href="https://dev.windowsphone.com/en-us/downloadsdk">Windows Phone SDK</a>, <a target="_blank" href="http://phone.codeplex.com/"> Windows Phone Toolkit</a> and last but not the least <a target="_blank" href="https://portal.appacitive.com/">Appacitive Portal</a>.
 
 
 ### Creating Todo List App from Scratch
 
-Follow the step by step guide to get hands on with the Movie App.
+Follow the step by step guide to get hands on with the Todo List App.
 
 ### 1. Modeling app backend on Appacitive
 
@@ -57,7 +57,7 @@ You will need to replace {{App Id}} by your application's id and {{API Key}} by 
 
 As part of design best practice, we suggest that you inherit your model from `APObject`. This simplifies your code by removing code required to transform Appacitive objects to your model. Additionally we will need to override default constructor by a constructor which will pass name of the type to base constructor. Modify your code as follows
 
-	//This class maps to movie todolist on appacitive
+	//This class maps to todolist on appacitive
 	public class TodoList : Appacitive.Sdk.APObject
     {
     	//override default constructor
@@ -115,7 +115,7 @@ Now we have an application which is using Appacitive as backend.
 
 #### 3.4 Creating and Authenticating User
 
-All the logic for creating and authenticating reside `User.cs`. First we will create user through Signup. Open the file and change `Save` function as follows
+All the logic for creating and authenticating user reside `User.cs`. First we will create user through Signup. Open the file and change `Save` function as follows
 
 	public async Task<bool> Save()
     {
@@ -277,19 +277,18 @@ Whenever user will mark any todo item as done, same save function will be called
 When Details view is rendered it asks `DetailsViewModel` to fetch data. As done earlier, we will replace the hard coded values in `LoadData` function from `DetailsViewModel.cs` file by following code
 
 	//Get all objects of type todoitem
-    var results = await _movie.GetConnectedObjectsAsync("acted", 
-                                                         orderBy: "__utclastupdateddate", 
-                                                         sortOrder: Appacitive.Sdk.SortOrder.Ascending);
+    var results = await _todoList.GetConnectedObjectsAsync("todolist_todoitem",
+                                                         orderBy: "__utclastupdateddate",
+                                                         sortOrder: Appacitive.Sdk.SortOrder.Descending);
 
     //Iterate over the result object till all the todoitems are fetched
     while (true)
     {
         //converting appacitive object to model
-        results.ForEach(r => this.Items.Add(new TodoItem(r)));
+        results.ForEach(r => this.Items.Add(r as TodoItem));
 
         //check if its last set of record
-        if (results.IsLastPage)
-            break;
+        if (results.IsLastPage) break;
 
         //fetch next set of record
         results = await results.NextPageAsync();
