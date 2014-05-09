@@ -18,15 +18,15 @@ Add the jar file to a folder called `libs` in your module. Right click on the ne
 compile files('libs/appacitive-android-1.0.jar') 
 ```
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](1.png)
 
 Initialize the SDK by calling the `AppacitiveContext.initialize()` method with your *API key* and the *environment* you want to use.
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](2.png)
 
 You can find your API Keys on the dashboard of your app in the API Keys section located in the bottom left corner.
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](3.png)
 
 ## For Eclipse users
 
@@ -34,4 +34,4 @@ Similarily for Eclipse, add the Appacitive Android SDK jar file to the `libs` fo
 
 Initialize the SDK by calling the `AppacitiveContext.initialize()` method with your *API key* and the *environment* you want to use.
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](4.png)

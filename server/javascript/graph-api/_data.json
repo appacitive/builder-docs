@@ -4,6 +4,7 @@
       "description": "JavaScript guide explaining Graph API feature provided by Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, graph, graph api, files, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "layout":"../../_layout-menu.ejs",
       "language": "JavaScript"
    },
    "tutorial": {
