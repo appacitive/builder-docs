@@ -4,6 +4,7 @@
       "description": "Android guide explaining file management in Appacitive Platform using Android SDK.",
       "keywords": "android, guide, file, files, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		  "description": "Tutorial on how to do file management in Appacitive Platform using Android SDK.",
       "keywords": "android, tutorial, file, files, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    }
 }

@@ -68,7 +68,7 @@ label { font-weight: normal; line-height: 16px; }
 .circle-disc { list-style: disc; }
 .ul-cozy li { margin: 5px 0; }
 
-.btn { font-size: 15px; padding: 6px 25px 8px; border: none; line-height: 20px; }
+.btn { font-size: 14px; padding: 6px 25px 8px; border: none; line-height: 20px; }
 .btn-state { padding: 6px 12px 8px !important; }
 .btn-small { padding: 5px 9px; font-size: 11px; line-height: 16px; }
 .btn-primary { color: #fff; background-color: #03A0DA; }
@@ -88,7 +88,7 @@ label { font-weight: normal; line-height: 16px; }
 .pageHeader { background-color: #3a3a3a; z-index: 4000; }
     .pageHeader .container-fluid { padding: 0 15px 0 20px; border-bottom: solid 3px #00b0f0; }
     .pageHeader .nav { margin-top: 4px; }
-        .pageHeader .nav > li > a { margin: 10px 15px -2px; font-size: 20px; padding: 14px 5px 16px 15px; color: #fff; font-weight: 300; }
+        .pageHeader .nav > li > a { margin: 10px 15px -2px; font-size: 18px; padding: 14px 0px 16px 10px; color: #fff; font-weight: 300; }
             .pageHeader .nav > li > a:hover { }
     .pageHeader .divider-vertical { height: 55px; background-color: #f7f7f7 !important; border-right: solid 1px #f1f1f1 !important; }
 .navbar-v-align { margin-top: 13px !important; }
@@ -204,7 +204,10 @@ ul.top_links_user li a { margin-left: 0px; }
 .top_user_drop_menu.appList .nav-separator:first-child, .top_user_drop_menu.appList .nav-separator:last-child { border: solid 1px #737373; }
 .navbar .nav .active > a, .navbar .nav .active > a:hover { background-color: transparent; }
 #divHeader .pull-right .active { background-color: #4A4A4A; }
-.platform-dropdown { margin: 0 !important; }
+.platform-dropdown { margin: 0 15px 0 0px !important; }
+.platform-header-links { list-style: none; }
+    .platform-header-links li { display: inline-block; }
+    .platform-header-links a { margin: 6px 10px -2px !important; }
 
 .sprite-down-arrow-light { background: transparent url(images/sprite-down-arrow-light.png) no-repeat 0 0; width: 16px; height: 16px; display: inline-block; margin-left: -2px; }
 

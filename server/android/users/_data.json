@@ -4,6 +4,7 @@
       "description": "Android guide explaining the user management in Appacitive Platform using Android SDK.",
       "keywords": "android, guide, user, user management, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		  "description": "Tutorial on user management in Appacitive Platform using Android SDK.",
       "keywords": "android, tutorial, user, user management, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    }
 }

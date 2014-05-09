@@ -4,6 +4,7 @@
       "description": "Python guide explaining file management in Appacitive Platform using Python SDK.",
       "keywords": "python, guide, file, files, appacitive, python sdk",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		  "description": "Tutorial on how to do file management in Appacitive Platform using Python SDK.",
       "keywords": "python, tutorial, file, files, appacitive, python sdk",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python"
    }
 }

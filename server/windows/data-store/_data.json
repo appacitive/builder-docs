@@ -4,6 +4,7 @@
       "description": ".Net guide explaining the data storage in Appacitive Platform using .Net SDK.",
       "keywords": ".net, guide, data store, appacitive, .net sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		"description": "Tutorial on data storage in Appacitive Platform using .Net SDK.",
       "keywords": ".net, tutorial, data store, appacitive, .net sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    }
 }

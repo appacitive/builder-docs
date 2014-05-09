@@ -17,18 +17,7 @@
 <body>
     <div class="body-container">
         <%- partial("/_partials/_header-platform") %>
-        <div id="divContent">
-            <div class="container-fluid content content-mark-down ptl">
-                <div class="row">
-                    <div class="col-md-12">
-                        <%- yield %>
-                    </div>
-                    <div class="col-md-12 mtl ptl text-center">
-                       <div class="muted ptl"> For any query or suggestions, feel free to drop an email to <a href="mailto:<%- contact %>"><%- contact %></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <%- yield %>
         <%- partial("/_partials/_footer") %>
     </div>
     <%- partial("/_partials/_scripts") %>

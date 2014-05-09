@@ -2,15 +2,17 @@
   "guides": {
       "title": ".Net SDK guide on Graph Query - Dev Center - Appacitive",
       "description": ".Net guide explaining Graph Query feature provided by Appacitive Platform using .Net SDK.",
-      "keywords": "android, guide, graph, graph query, files, appacitive, android sdk",
+      "keywords": "windows, guide, graph, graph query, files, appacitive, windows sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    },
    "tutorial": {
    		"title": ".Net SDK tutorial on Graph Query - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do make and consume Graph Query feature provided by Appacitive Platform using .Net SDK.",
-      "keywords": "android, tutorial, graph, graph query, files, appacitive, android sdk",
+      "keywords": "windows, tutorial, graph, graph query, files, appacitive, windows sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    }
 }

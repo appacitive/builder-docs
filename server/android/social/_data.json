@@ -4,6 +4,7 @@
       "description": "Android guide explaining Social Integration feature provided by Appacitive Platform using Android SDK.",
       "keywords": "android, guide, social, files, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		  "description": "Tutorial on how to integrate social network support in your app using Android SDK.",
     	"keywords": "android, tutorial, social, files, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    }
 }

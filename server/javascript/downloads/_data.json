@@ -4,6 +4,7 @@
       "description": "Get started with your JavaScript app using our JavaScript SDK.",
       "keywords": "javascript sdk download, javascript sdk, getting started, appacitive ",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "language": "JavaScript",
       "layout": "../../_layout-downloads.ejs"
    }

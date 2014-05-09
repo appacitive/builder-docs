@@ -5,6 +5,7 @@
       "keywords": "todo, todo sample, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
       "layout": "../../../_layout-banner-sample.ejs",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net",
       "header_app_name": "Todo List App",
       "header_app_description": "Learn how to create a simple todo listing application using Appacitive as the backend to persist data.",

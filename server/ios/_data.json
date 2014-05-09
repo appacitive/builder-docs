@@ -2,9 +2,10 @@
   "index": {
       "title": "iOS - Dev Center - Appacitive",
       "description": "Everything you need to develop iOS app on Appacitive Platform.",
-      "layout": "../_layout-banner",
+      "layout": "../_layout-banner-platform",
       "keywords": "ios, sdk, ios sdk, appacitive",
       "platform": "iOS",
+      "platform_link": "ios",
       "language": "iOS",
       "help_lang": "ios"
    }

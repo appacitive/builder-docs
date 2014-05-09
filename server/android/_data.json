@@ -2,9 +2,10 @@
   "index": {
       "title": "Android - Dev Center - Appacitive",
       "description": "Everything you need to start developing android apps on the Appacitive platform.",
-      "layout": "../_layout-banner",
+      "layout": "../_layout-banner-platform",
       "keywords": "android, sdk, android sdk, appacitive, java, backend, apps, mobile",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android",
       "help_lang": "android"
    }

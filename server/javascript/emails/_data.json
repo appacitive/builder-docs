@@ -5,6 +5,7 @@
       "description": "JavaScript guide explaining emails in Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, email, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
       "language": "JavaScript"
    },
@@ -13,6 +14,7 @@
 		"description": "Tutorial on how to send emails using Appacitive Platform.",
       "keywords": "javascript, tutorial, email, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "language": "JavaScript"
    }
 }

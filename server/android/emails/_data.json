@@ -4,6 +4,7 @@
       "description": "Android guide explaining emails in Appacitive Platform using Android SDK.",
       "keywords": "android, guide, access control, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		  "description": "Tutorial on how to send emails using Appacitive Platform.",
       "keywords": "android, tutorial, access control, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    }
 }

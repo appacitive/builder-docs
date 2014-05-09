@@ -4,6 +4,7 @@
       "description": "JavaScript guide explaining the devices in Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, devices, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
       "language": "JavaScript"
    },
@@ -12,6 +13,7 @@
 		  "description": "Tutorial on how to do device management in Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, tutorial, device, devices, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "language": "JavaScript"
    }
 }

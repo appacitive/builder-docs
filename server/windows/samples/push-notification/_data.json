@@ -5,6 +5,7 @@
       "keywords": "push, push notification, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
       "layout": "../../../_layout-banner-sample.ejs",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net",
       "header_app_name": "Push Notification App",
       "header_app_description": "Learn how to setup a push channel and listen to it using Appacitive .Net SDK in a Windows Phone App backed by Appacitive Platform.",

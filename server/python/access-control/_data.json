@@ -4,6 +4,7 @@
       "description": "Python guide explaining the data storage in Appacitive Platform using Python SDK.",
       "keywords": "python, guide, access control, appacitive, python sdk",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		  "description": "Tutorial on how to do access control in Appacitive Platform using Python SDK.",
       "keywords": "python, tutorial, access control, appacitive, python sdk",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python"
    }
 }

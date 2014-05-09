@@ -4,6 +4,7 @@
       "description": ".Net guide explaining file management in Appacitive Platform using .Net SDK.",
       "keywords": ".net, guide, file, files, appacitive, .net sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    },
    "tutorial": {
@@ -11,6 +12,7 @@
 		"description": "Tutorial on how to do file management in Appacitive Platform using .Net SDK.",
       "keywords": ".net, tutorial, file, files, appacitive, .net sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    }
 }
