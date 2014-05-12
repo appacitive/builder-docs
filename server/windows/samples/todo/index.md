@@ -45,7 +45,7 @@ You can initialize SDK any where in your app, but we suggest to do it in `App.xa
 	private void Application_Launching(object sender, LaunchingEventArgs e)
     {
     	//Initializing Appacitive .Net SDK
-        Appacitive.Sdk.App.Initialize(Appacitive.Sdk.Platforms.WP7, "{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
+        Appacitive.Sdk.AppContext.Initialize("{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
 
         //your code (if any)
     }
@@ -98,6 +98,7 @@ Now your model is aware of Appacitive Object. The last thing that needs to be ch
             if (value != this.Name)
             {
                 this.Set<string>("name", value);
+                base.FirePropertyChanged("Name");
             }
         }
     }
@@ -107,9 +108,9 @@ Similarly modify all remaining properties of `TodoList` and `TodoItem`. Remove t
 Lastly we will map your local objects to Appacitive types in `Application_Launching` function, after .Net SDK is initialized
 
 	//Map your model object to appacitive type
-    Appacitive.Sdk.App.Types.MapObjectType<User>("user");
-    Appacitive.Sdk.App.Types.MapObjectType<TodoList>("todolist");
-    Appacitive.Sdk.App.Types.MapObjectType<TodoItem>("todoitem");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<User>("user");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<TodoList>("todolist");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<TodoItem>("todoitem");
 
 Now we have an application which is using Appacitive as backend. 
 
@@ -123,7 +124,6 @@ All the logic for creating and authenticating user reside `User.cs`. First we wi
         {
             //Save user in the backend
             await this.SaveAsync();
-            Context.User = this;
             return true;
         }
         catch { return false; }
@@ -144,17 +144,12 @@ To authenticate user we will add following code inside try catch block of `Authe
         MaxAttempts = int.MaxValue
     };
 
-    var userSession = await Appacitive.Sdk.App.LoginAsync(credentials);
-
-    //Logged in user
-    var user = userSession.LoggedInUser as User;
-    
-    Context.User = user;
+    await Appacitive.Sdk.AppContext.LoginAsync(credentials);
 
 For logging out, simply add following code to `Logout` function
 
 	//Logout user
-    Appacitive.Sdk.App.LogoutAsync();
+    Appacitive.Sdk.AppContext.LogoutAsync();
 
 So now you know how to create, authenticate and logout user in the app using .Net SDK.
 
@@ -175,7 +170,7 @@ First we will create a Todo List. To do this open TodoList.cs and modify `Save` 
             //when connection is saved, list is automatically created
             await Appacitive.Sdk.APConnection
                             .New("user_todolist")
-                            .FromExistingObject("user", Context.User.Id)
+                            .FromExistingObject("user", AppContext.UserContext.LoggedInUser.Id)
                             .ToNewObject("todolist", this)
                             .SaveAsync();
             return true;
@@ -190,7 +185,7 @@ Here we are saving TodoList in context of user by creating a connection between 
 Now to fetch `TodoList`, we will make `GetConnectedObjects` call on `User`, as `TodoList` are connected to `User` we can easily fetch `TodoList` for a given `User`. Open `MainViewModel` and remove hard coded code for adding dummy data by following code
 
 	///get connected todolist for current user
-    var result = await Context.User.GetConnectedObjectsAsync("user_todolist",
+    var result = await AppContext.UserContext.LoggedInUser.GetConnectedObjectsAsync("user_todolist",
                                                                 orderBy: "__utcdatecreated",
                                                                 sortOrder: Appacitive.Sdk.SortOrder.Ascending);
     //iterate over result object and add todolist item to the list 
