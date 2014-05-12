@@ -46,6 +46,22 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 			</a>
 		</div>
 		<div class="col-md-6">
+			<a title="Notification App" class="sample-app-item" href="notification-app">
+				<div class="col-md-3">
+					<img src="http://cdn.appacitive.com/devcenter/root/apps/notification-app.png" height="100" />
+				</div>
+				<div class="col-md-9">
+					<h2>Notification App</h2>
+					<p class="mbs">Send emails and push notifications through this ASP.Net application built using .Net SDK backed by Appacitive Core.</p>
+					<p class="muted">Features: Data Store, Users, Email, Push</p>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="container-fulid">
+	<div class="row">
+		<div class="col-md-6">
 			<a title="Picture Gallery App" class="sample-app-item" href="galleria-app">
 				<div class="col-md-3">
 					<img src="http://cdn.appacitive.com/devcenter/root/apps/galleria-app.png" height="100" />
@@ -57,10 +73,6 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 				</div>
 			</a>
 		</div>
-	</div>
-</div>
-<div class="container-fulid">
-	<div class="row">
 		<div class="col-md-6">
 			<a title="Employee Directory App" class="sample-app-item" href="employee-directory">
 				<div class="col-md-3">
