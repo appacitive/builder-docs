@@ -41,7 +41,7 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 				<div class="col-md-9">
 					<h2>Push Notification</h2>
 					<p class="mbs">A simple windows phone application which demos Push Notification capability of Appacitive Platform.</p>
-					<p class="muted">Features: Push</p>
+					<p class="muted">Features: Push, Devices</p>
 				</div>
 			</a>
 		</div>
@@ -69,7 +69,7 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 				<div class="col-md-9">
 					<h2>Galleria App</h2>
 					<p class="mbs">Upload photos directly from your Windows Phone using Galleria App built using .Net SDK backed by Appacitive Core.</p>
-					<p class="muted">Features: Data Store</p>
+					<p class="muted">Features: Data Store, File</p>
 				</div>
 			</a>
 		</div>

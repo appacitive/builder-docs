@@ -1,4 +1,4 @@
-﻿Windows Push App demonstrates ***Push*** feature provided by Appacitive Platform. As part of design best practice, you will learn how to add hooks to receive push notification while app is running.
+﻿Windows Push App demonstrates ***Push*** and ***Device*** features provided by Appacitive Platform. As part of design best practice, you will learn how to add hooks to receive push notification while app is running.
 
 ### Prerequisites
 
@@ -84,7 +84,7 @@ If you add the event handlers without registering device, SDK will throw an exce
 
 ### Congratulation
 
-You have created a fully functional Push Notification enabled App using .Net SDK backed by Appacitive Platform. In this App we have explored ***Push*** feature provided by Appacitive Platform.
+You have created a fully functional Push Notification enabled App using .Net SDK backed by Appacitive Platform. In this App we have explored ***Push*** and ***Device*** features provided by Appacitive Platform.
 
 ### What's next?
 You can check out our other <a title="All Samples based on Appacitive .Net SDK" href="../">samples</a> to know more about .Net SDK and other features provided by Appacitive Platform. For complete API reference of .Net SDK go to our <a target="_blank" title="http://help.appacitive.com" href="http://help.appacitive.com/v1.0/#dotnet">help docs<span class="plxs glyphicon glyphicon-share-alt"></span></a>.
