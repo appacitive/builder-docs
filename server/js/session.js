@@ -1,10 +1,17 @@
 ﻿$(document).ready(function () {
     var that = this;
+
+    var cThemeName = "appacitive-docs-selected-theme";
+
     //authenticated user handling
     this.SESSION_COOKIE_NAME = '__app_session';
     this.USERNAME_COOKIE = "_app_session_user";
     this.account = "";
 
+    var storeCookie = function (cName, value) {
+        if (!value) return;
+        document.cookie = cName + "=" + value + ";path=/";
+    };
     var readCookie = function (name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
@@ -107,4 +114,33 @@
         window.location = 'https://portal.appacitive.com/login.html?rel=devcenter'+ '&ru=' + window.location.href;
         return false;
     });
+
+    //attach theme switch
+    var html = '<div class="theme-switch">' +
+                    '<a class="theme theme-white" data-theme="white" title="Switch to White theme"></a>' +
+                    '<a class="theme theme-black" data-theme="black" title="Switch to Black theme"></a>' +
+                '</div>';
+    $(html).appendTo($('pre'));
+
+    //Switch theme
+    var switchStyle = function (title) {
+        var i, links = document.getElementsByTagName("link");
+        for (i = 0; i < links.length ; i++) {
+            if ((links[i].rel.indexOf("stylesheet") != -1) && links[i].title) {
+                links[i].disabled = true;
+                if (links[i].title == title) {
+                    links[i].disabled = false;
+                    storeCookie(cThemeName, title);
+                }
+            }
+        }
+    }
+    //theme switch anchors
+    $(".theme-switch a").unbind("click").click(function () {
+        switchStyle($(this).data("theme"));
+    });
+    var theme = readCookie(cThemeName);
+    if (!theme) $(".theme-switch a:first").trigger("click");
+    $("*[data-theme='" + theme + "']").trigger("click");
+
 });

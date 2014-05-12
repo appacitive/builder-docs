@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": "Python Graph Query Guide - Dev Center - Appacitive",
+      "description": "Python guide explaining Graph Query feature provided by Appacitive Platform using Python SDK.",
+      "keywords": "python, guide, graph, graph query, files, appacitive, python sdk",
+      "platform": "Python",
+      "language": "Python"
+   },
+   "tutorial": {
+   		"title": "Python Graph Query Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do make and consume Graph Query feature provided by Appacitive Platform using Python SDK.",
+      "keywords": "python, tutorial, graph, graph query, files, appacitive, python sdk",
+      "platform": "Python",
+      "language": "Python"
+   }
+}

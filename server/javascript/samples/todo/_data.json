@@ -1,0 +1,24 @@
+{
+   "index": {
+            "title": "Todo Sample using Javascript SDK - Javascript - Dev Center - Appacitive",
+            "description": "A simple TodoMVC sample App, presenting Appacitive's data store and users capability using Javascript SDK.",
+            "keywords": "todo, todo sample, javascript, samples, javaScript samples, javascript sdk samples, appacitive, javascript sdk",
+            "layout": "../../../_layout-banner-sample.ejs",
+            "platform": "Javascript",
+            "language": "JavaScript",
+            "header_app_name": "TodoMVC Sample",
+            "header_app_description": "By changing a few lines of code, you'll turn the <a href='http://todomvc.com/architecture-examples/backbone/'>TodoMVC</a> sample for <a href='http://backbonejs.org/'>Backbone.js</a> into an app that persists data and user accounts on Appacitive.",
+            "img_url": "todo-mvc-js.png",
+            "github": "mrl",
+            "github_url": "https://github.com/chiragsanghvi/AppacitiveTodo",
+            "zip": "mrl",
+            "zip_url": "https://github.com/chiragsanghvi/AppacitiveTodo/archive/master.zip",
+            "live_demo": "mrl",
+            "live_demo_url": "http://jstodo.appacitive.com/",
+            "store": "hide",
+            "store_url": "",
+            "img_url": "http://cdn.appacitive.com/devcenter/javascript/todo-mvc-js.png",
+            "image_container": "3",
+            "text_container": "9"
+	}
+}

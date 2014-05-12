@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": "Debugging Python SDK - Getting Started - Python - Dev Center - Appacitive",
+      "description": "How to debug Appacitive Python SDK - Know it in getting started section of Python SDK.",
+      "keywords": "debug python sdk, python, sdk, python sdk, debug, getting started, appacitive",
+      "platform": "Python",
+      "language": "Python",
+      "help_lang": "python",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "debuggingsdk": "active",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}

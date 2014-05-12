@@ -3,12 +3,14 @@
       "title": "iOS Access Control Guide - Dev Center - Appacitive",
       "description": "iOS guide explaining the data storage in Appacitive Platform using iOS SDK.",
       "keywords": "ios, guide, access control, appacitive, ios sdk",
-      "platform": "iOS"
+      "platform": "iOS",
+      "language": "iOS"
    },
    "tutorial": {
    		"title": "iOS Access Control Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do access control in Appacitive Platform using iOS SDK.",
       "keywords": "ios, tutorial, access control, appacitive, ios sdk",
-      "platform": "iOS"
+      "platform": "iOS",
+      "language": "iOS"
    }
 }

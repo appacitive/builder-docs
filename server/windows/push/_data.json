@@ -1,0 +1,16 @@
+{
+  "guides": {
+      "title": ".Net SDK guide on Push Notifications - Dev Center - Appacitive",
+      "description": ".Net guide explaining Push Notifications feature provided by Appacitive Platform using .Net SDK.",
+      "keywords": ".net, guide, push, notifications, push notifications, files, appacitive, .net sdk",
+      "platform": "Windows",
+      "language": ".Net"
+   },
+   "tutorial": {
+   		"title": ".Net SDK tutorial on Push Notifications - Dev Center - Appacitive",
+		  "description": "Tutorial on how to send Push Notifications through Appacitive Platform using .Net SDK.",
+    	"keywords": ".net, tutorial, push, notifications, push notifications, files, appacitive, .net sdk",
+      "platform": "Windows",
+      "language": ".Net"
+   }
+}

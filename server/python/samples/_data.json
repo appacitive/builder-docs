@@ -1,6 +1,9 @@
 {
   "index": {
-      "title": "Samples - Python - Dev Center - Appacitive",
-      "description": ""
+      "title": "Python SDK Samples - Dev Center - Appacitive",
+      "description": "Checkout quick and simple Python SDK samples highlighting some of the main features provided by Appacitive Platform .",
+      "keywords": "python, samples, python samples, python sdk samples, appacitive, python sdk",
+      "platform": "Python",
+      "language": "Python"
    }
 }

@@ -1,0 +1,10 @@
+{
+  "index": {
+      "title": "Windows SDK Downloads - Dev Center - Appacitive",
+      "description": "Get started with your Windows app using our Windows SDK.",
+      "keywords": "android sdk download, android sdk, getting started, appacitive ",
+      "platform": "Windows",
+      "language": ".Net",
+      "layout": "../../_layout-downloads.ejs"
+   }
+}

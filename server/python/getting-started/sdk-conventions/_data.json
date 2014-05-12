@@ -1,0 +1,17 @@
+{
+  "index": {
+      "title": "Python SDK Conventions - Getting Started - Python - Dev Center - Appacitive",
+      "description": "What are the SDK Conventions for Appacitive Python SDK - Learn it in getting started section of Python SDK.",
+      "keywords": "sdk conventions, python, sdk, python sdk, debug, getting started, appacitive",
+      "platform": "Python",
+      "language": "Python",
+      "help_lang": "python",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "active",
+      "extendingsdk": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}

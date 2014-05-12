@@ -1,10 +1,17 @@
 {
   "guides": {
-      "title": "Guides - Users - JavaScript - Dev Center - Appacitive",
-      "description": ""
+      "title": "JavaScript Users Guide - Dev Center - Appacitive",
+      "description": "JavaScript guide explaining the user management in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, guide, user, user management, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "layout":"../../_layout-menu.ejs",
+      "language": "JavaScript"
    },
    "tutorial": {
    		"title": "Tutorial - Users - JavaScript - Dev Center - Appacitive",
-		"": ""
+		  "description": "Tutorial on user management in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, tutorial, user, user management, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
    }
 }

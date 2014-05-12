@@ -1,0 +1,125 @@
+﻿a { color: #0093c8; text-decoration: none; }
+	a:hover { color: #0093c8; }
+
+.lang-nolang-rest, .lang-nolang { color: #222; }
+	.lang-nolang .h1, .lang-nolang .h2, .lang-nolang .h3, .lang-nolang .h4 { color: #222; }
+	.lang-nolang i { color: #222; }
+
+@media (max-width: 1180px) /* Small desktop */ {
+	body:not(.no-literate) .content > div > pre > code,
+	body:not(.no-literate) .content > div > pre > code,
+	.content pre > code { background: #F5F5F5; border: solid 1px #e7eaee; border-top: solid 1px #dbdde2; border-left: solid 1px #e2e5e9; }
+		.content pre > code::-webkit-scrollbar { width: 15px; height: 15px; }
+		.content pre > code::-webkit-scrollbar-thumb { background: #ddd; -webkit-border-radius: 8px; border-radius: 8px; border: solid 4px #f3f6fb; }
+		.content pre > code:hover::-webkit-scrollbar-thumb { background: #999; -webkit-box-shadow: inset 2px 2px 3px rgba(0,0,0,0.2); box-shadow: inset 2px 2px 3px rgba(0,0,0,0.2); }
+}
+
+@media (min-width: 1180px) /* Big desktop */ {
+	body:not(.no-literate) .content-root { background-color: #F5F5F5; -webkit-box-shadow: inset 750px 0 #fff, inset 751px 0 #dfe2e7, inset 760px 0 5px -10px rgba(0,0,0,0.1); box-shadow: inset 750px 0 #fff, inset 751px 0 #dfe2e7, inset 760px 0 5px -10px rgba(0,0,0,0.1); }
+	body:not(.no-literate) .content > div > pre > code,
+	body:not(.no-literate) .content > div > pre > code { padding: 10px; background: #F5F5F5; border: solid 1px #e7eaee; border-top: solid 1px #dbdde2; border-left: solid 1px #e2e5e9; }
+}
+
+@media (min-width: 1380px) /* Big desktop */ {
+    body:not(.no-literate) .content-root {
+        background-color: #F5F5F5;
+        -webkit-box-shadow: inset 870px 0 #fff, inset 871px 0 #dfe2e7, inset 880px 0 5px -10px rgba(0,0,0,0.1);
+        box-shadow: inset 870px 0 #fff, inset 871px 0 #dfe2e7, inset 880px 0 5px -10px rgba(0,0,0,0.1);
+    }
+}
+@media (min-width: 1620px) /* Big desktop */ {
+    body:not(.no-literate) .content-root {
+        background-color: #F5F5F5;
+        -webkit-box-shadow: inset 1010px 0 #fff, inset 1011px 0 #dfe2e7, inset 1020px 0 5px -10px rgba(0,0,0,0.1);
+        box-shadow: inset 1010px 0 #fff, inset 1011px 0 #dfe2e7, inset 1020px 0 5px -10px rgba(0,0,0,0.1);
+    }
+}
+@media (min-width: 1880px) /* Big desktop */ {
+    body:not(.no-literate) .content-root {
+        background-color: #F5F5F5;
+        -webkit-box-shadow: inset 1130px 0 #fff, inset 1131px 0 #dfe2e7, inset 1140px 0 5px -10px rgba(0,0,0,0.1);
+        box-shadow: inset 1130px 0 #fff, inset 1131px 0 #dfe2e7, inset 1140px 0 5px -10px rgba(0,0,0,0.1);
+    }
+}
+@media (min-width: 2520px) /* Big desktop */ {
+    body:not(.no-literate) .content-root {
+        background-color: #F5F5F5;
+        -webkit-box-shadow: inset 1560px 0 #fff, inset 1561px 0 #dfe2e7, inset 1570px 0 5px -10px rgba(0,0,0,0.1);
+        box-shadow: inset 1560px 0 #fff, inset 1561px 0 #dfe2e7, inset 1570px 0 5px -10px rgba(0,0,0,0.1);
+    }
+}
+
+/*
+
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+pre code { display: block; padding: 0.5em; }
+
+pre .comment,
+pre .annotation,
+pre .template_comment,
+pre .diff .header,
+pre .chunk,
+pre .apache .cbracket { color: rgb(0, 128, 0); }
+
+pre .keyword,
+pre .id,
+pre .built_in,
+pre .smalltalk .class,
+pre .winutils,
+pre .bash .variable,
+pre .tex .command,
+pre .request,
+pre .status,
+pre .nginx .title,
+pre .xml .tag,
+pre .xml .tag .value { color: rgb(0, 0, 255); }
+
+pre .string,
+pre .title,
+pre .parent,
+pre .tag .value,
+pre .rules .value,
+pre .rules .value .number,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .aggregate,
+pre .template_tag,
+pre .django .variable,
+pre .addition,
+pre .flow,
+pre .stream,
+pre .apache .tag,
+pre .date,
+pre .tex .formula { color: rgb(163, 21, 21); }
+
+pre .ruby .string,
+pre .decorator,
+pre .filter .argument,
+pre .localvars,
+pre .array,
+pre .attr_selector,
+pre .pseudo,
+pre .pi,
+pre .doctype,
+pre .deletion,
+pre .envvar,
+pre .shebang,
+pre .preprocessor,
+pre .userType,
+pre .apache .sqbracket,
+pre .nginx .built_in,
+pre .tex .special,
+pre .prompt { color: rgb(43, 145, 175); }
+
+pre .phpdoc,
+pre .javadoc,
+pre .xmlDocTag { color: rgb(128, 128, 128); }
+
+pre .vhdl .typename { font-weight: bold; }
+pre .vhdl .string { color: #666666; }
+pre .vhdl .literal { color: rgb(163, 21, 21); }
+pre .vhdl .attribute { color: #00B0E8; }
+
+pre .xml .attribute { color: rgb(255, 0, 0); }

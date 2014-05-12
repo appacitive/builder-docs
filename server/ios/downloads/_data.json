@@ -3,6 +3,8 @@
       "title": "iOS SDK Downloads - Dev Center - Appacitive",
       "description": "Get started with your iOS app using our iOS SDK.",
       "keywords": "ios sdk download, ios sdk, getting started, appacitive ",
-      "platform": "iOS"
+      "platform": "iOS",
+      "language": "iOS",
+      "layout": "../../_layout-downloads.ejs"
    }
 }

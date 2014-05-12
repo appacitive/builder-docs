@@ -3,6 +3,7 @@
       "title": "iOS SDK Samples - Dev Center - Appacitive",
       "description": "Checkout quick and simple iOS SDK samples highlighting some of the main features provided by Appacitive Platform .",
       "keywords": "ios, samples, ios samples, ios sdk samples, appacitive, ios sdk",
-      "platform": "iOS"
+      "platform": "iOS",
+      "language": "iOS"
    }
 }

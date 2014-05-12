@@ -1,10 +1,16 @@
 {
   "guides": {
-      "title": "Guides - Data Store - Windows - Dev Center - Appacitive",
-      "description": ""
+      "title": ".Net SDK guide on Data Store - Dev Center - Appacitive",
+      "description": ".Net guide explaining the data storage in Appacitive Platform using .Net SDK.",
+      "keywords": ".net, guide, data store, appacitive, .net sdk",
+      "platform": "Windows",
+      "language": ".Net"
    },
    "tutorial": {
-   		"title": "Tutorial - Data Store - Windows - Dev Center - Appacitive",
-		"": ""
+   	"title": ".Net SDK tutorial on Data Store - Dev Center - Appacitive",
+		"description": "Tutorial on data storage in Appacitive Platform using .Net SDK.",
+      "keywords": ".net, tutorial, data store, appacitive, .net sdk",
+      "platform": "Windows",
+      "language": ".Net"
    }
 }

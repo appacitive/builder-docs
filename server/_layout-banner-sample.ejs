@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title><%= title %></title>
+    <meta name="description" content="<%= description %>" />
+    <meta name="keywords" content="<%= keywords %>" />
+    <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="body-container">
+        <%- partial("/_partials/_header") %>
+        <div id="divContent">
+            <div class="hero-container">
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="sub-page-banner">
+                                <div class="col-md-<%- image_container %>">
+                                    <img src="<%- img_url -%>"/>
+                                </div>
+                                <div class="col-md-<%- text_container %>">
+                                    <h1><%- header_app_name %> using <%- language %> SDK</h1>
+                                    <p class="app-description pbl"><%- header_app_description %></p>
+                                    <p class="mtl mbs">Checkout code for this sample</p>
+                                    <p>
+                                        <a title="View on Github" class="btn btn-success <%- github %>" href="<%- github_url %>">GitHub</a>
+                                        <a title="Download the Zip file" href="<%- zip_url %>" class="btn btn-info <%- zip %>"><i class="glyphicon glyphicon-download-alt"></i> .zip File</a>
+                                        <a title="View on Github" class="btn btn-warning <%- live_demo %>" href="<%- live_demo_url %>"><i class="glyphicon glyphicon-play"></i>  Demo</a>
+                                        <a title="View on Github" class="btn btn-danger <%- store %>" href="<%- store_url %>">
+                                            <i class="glyphicon glyphicon-shopping-cart"></i> App Store
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid content mtl">
+                <div class="row">
+                    <div class="col-md-12 sample-page">
+                        <%- yield %>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <%- partial("/_partials/_footer") %>
+    </div>
+    <%- partial("/_partials/_scripts") %>
+    <script type="text/javascript" src="https://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.5.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.min.js"></script> -->
+    <script type="text/javascript" src="/js/import-controller.js"></script>
+    <script type="text/javascript" src="/js/import-view.js"></script>
+</body>
+</html>

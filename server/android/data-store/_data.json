@@ -3,12 +3,14 @@
       "title": "Android Data Store Guide - Dev Center - Appacitive",
       "description": "Android guide explaining the data storage in Appacitive Platform using Android SDK.",
       "keywords": "android, guide, data store, appacitive, android sdk",
-      "platform": "Android"
+      "platform": "Android",
+      "language": "Android"
    },
    "tutorial": {
    		"title": "Android Data Store Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on data storage in Appacitive Platform using Android SDK.",
       "keywords": "android, tutorial, data store, appacitive, android sdk",
-      "platform": "Android"
+      "platform": "Android",
+      "language": "Android"
    }
 }

@@ -1,10 +1,17 @@
 {
   "guides": {
-      "title": "Guides - Social - JavaScript - Dev Center - Appacitive",
-      "description": ""
+      "title": "JavaScript Social Integration Guide - Dev Center - Appacitive",
+      "description": "JavaScript guide explaining Social Integration feature provided by Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, guide, social, users, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "layout":"../../_layout-menu.ejs",
+      "language": "JavaScript"
    },
    "tutorial": {
-   		"title": "Tutorial - Social - JavaScript - Dev Center - Appacitive",
-		"": ""
+   		"title": "JavaScript Social Integration Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to integrate social network support in your app using JavaScript SDK.",
+    	"keywords": "javascript, tutorial, social, users, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "language": "JavaScript"
    }
 }
