@@ -4,6 +4,10 @@
 
 You are aware of <a target="_blank" href="http://www.visualstudio.com/">Visual Studio 2012</a>, <a target="_blank" href="http://www.nuget.org/">NuGet Package</a>, <a target="_blank" href="http://www.asp.net/">ASP.Net</a> and last but not the least <a target="_blank" href="https://portal.appacitive.com/">Appacitive Portal</a>.
 
+**Important Note:**
+
+In this sample we have used <i>SQLExpress</i> as State Server. If you want to change this setting, go to web.config and do necessary modifications. To read more about ASP.Net Session State Management go to <a href="http://msdn.microsoft.com/en-us/library/y5y3c2c5(v=vs.85).aspx" target="_blank">MSDN <span class="plxs glyphicon glyphicon-share-alt"></span></a>.
+
 
 ### Creating ASP.Net Notification Website from Scratch
 
@@ -131,6 +135,49 @@ All the logic for creating and authenticating user reside `User.cs`. First we wi
 
 Read more about `async` pattern on <a target="_blank" href="http://msdn.microsoft.com/en-us/library/jj152938(v=vs.110).aspx" >MSDN <span class="plxs glyphicon glyphicon-share-alt"></span></a>.
 
+When user click Sign up we first check if user by same username or email exists or not, this is done in following fashion.
+
+    //get username by email
+    private async static Task<string> GetUserNameByEmail(string email)
+    {
+        var totalRecords = 0;
+        var collection = await GetMatchingUsers(Query.Property("email").IsEqualTo(email), 0, 20);
+        if (totalRecords == 0) return null;
+        else
+        {
+            return collection[0].Username;
+        }
+    }
+
+    //get user by username
+    private async static Task<User> GetUser(string username, bool userIsOnline)
+    {
+        var totalRecords = 0;
+        var collection = await GetMatchingUsers(Query.Property("username").IsEqualTo(username), 0, 20);
+        if (totalRecords == 0) return null;
+        else
+        {
+            return collection[0];
+        }
+    }
+
+    //helper function which executes the given query and returns matching users
+    private async static Task<List<User>> GetMatchingUsers(IQuery query, int pageIndex, int pageSize)
+    {
+        var users = await APUsers.FindAllAsync(query, pageNumber: pageIndex, pageSize: pageSize, orderBy: "__id", sortOrder: SortOrder.Ascending);
+
+        var result = new List<User>();
+        users.ForEach((u) =>
+        {
+            result.Add(u as User);
+        });
+        return result;
+    }
+
+Accordingly modify above functions in the boilerplate.
+
+**Authenticating User**
+
 To authenticate user we will add following code inside try catch block of `Authenticate` function
 
     //authenticate user on Appacitive
@@ -147,6 +194,30 @@ For logging out, simply add following code to `Logout` function
 
     //Logout user
     Appacitive.Sdk.AppContext.LogoutAsync();
+
+**Managing User Session**
+
+When ever user session expires, Appacitive API throws an error with a code `19036`. So if we handle this error we can easily manage the user session. In this sample we have done this in `ExceptionPolicy` class as follows
+    
+    //user in the context is null
+    if (AppContext.UserContext.LoggedInUser == null) return LogoutUser();
+
+    //check if exception occurred is an api error
+    if (ex is AppacitiveApiException)
+    {
+        var appEx = ex as AppacitiveApiException;
+
+        //user session expired
+        if (appEx.Code == "19036")
+            return LogoutUser();
+
+        return false;
+    }
+    else if (ex is AppacitiveRuntimeException)
+    {
+        return true;
+    }
+    else return false;
 
 So now you know how to create, authenticate and logout user in the app using .Net SDK.
 
@@ -177,7 +248,7 @@ Following code will send both raw and templated emails, add this to `SendEmail` 
     else
         email.WithTemplateBody(this.TemplateName, this.PlaceHolders, true);
 
-    //use custom SMPT settings
+    //use custom SMTP settings
     if (this.WithCustomSettings)
     {
         email.Server = new SmtpServer();
@@ -191,11 +262,28 @@ Following code will send both raw and templated emails, add this to `SendEmail` 
     //send email
     await email.SendAsync();
 
-In this sample we are storing the custom SMTP settings provided by the user inside attributes of current logged in user.
+In this sample we are storing the custom SMTP settings provided by the user inside attributes of current logged in user. This is done in `SaveSMTPSettings` function as follows
+
+    //get the user from the context
+    //and set the SMTP settings in the attribute
+    var user = AppContext.UserContext.LoggedInUser;
+    user.SetAttribute("smtp:username", username);
+    user.SetAttribute("smtp:password", password);
+    user.SetAttribute("smtp:host", host);
+    user.SetAttribute("smtp:port", port.ToString());
+    user.SetAttribute("smtp:ssl", enableSSL.ToString());
+    await user.SaveAsync();
 
 **Saving EmailItem:**
 
 After sending email we will create an EmailItem and store it in backend, for maintaining history. To do this open EmailItem.cs and add following code to `Save` function
+
+    //add placeholders into the attributes
+    if (PlaceHolders != null && PlaceHolders.Count > 0)
+    {
+        foreach (var key in PlaceHolders.Keys)
+            this.SetAttribute(key, PlaceHolders[key]);
+    }
 
     //as we need to store this email object in context of user
     //we will create a connection between user and the email object
@@ -234,7 +322,19 @@ In last the call we fetched only few properties, but now when we will render ema
     {
         try
         {
-            return await APObjects.GetAsync("email", id) as EmailItem;
+            //get the email item details
+            var emailItem = await APObjects.GetAsync("email", id) as EmailItem;
+            emailItem.PlaceHolders = new Dictionary<string, string>();
+
+            //load the place holders from the attributes
+            if (emailItem.Attributes != null)
+            {
+                foreach (var keyValue in emailItem.Attributes)
+                {
+                    emailItem.PlaceHolders[keyValue.Key] = keyValue.Value;
+                }
+            }
+            return emailItem;
         }
         catch (Exception ex)
         {
@@ -245,7 +345,7 @@ In last the call we fetched only few properties, but now when we will render ema
     }
 
 
-#### 3.5 Managing PushItem and Sending Push Notifications
+#### 3.6 Managing PushItem and Sending Push Notifications
 
 Managing Push Item is very similar to Email Item. But first we will see how to Send Push Notifications.
 
