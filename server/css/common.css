@@ -234,7 +234,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 
 /* downloads formatting */
 .content-downloads table { max-width: 480px; }
-
+.content-downloads h1 { font-weight: 300 !important; }
 /* getting started content formatting */
 .getting-started h2, .getting-started h3 { padding: 25px 0 5px; margin: 0; font-weight: 300; }
     .getting-started h2:first-child, .getting-started h3:first-child { padding-top: 0; }
