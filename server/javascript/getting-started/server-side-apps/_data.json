@@ -1,0 +1,18 @@
+{
+  "index": {
+      "title": "Third Party Integrations - Getting Started - JavaScript - Dev Center - Appacitive",
+      "description": "Third party integrations of Appacitive JavaScript SDK - Know it in getting started section of JavaScript SDK.",
+      "keywords": "javascript sdk, javascript, sdk, javascript sdk, getting started, appacitive, node.js, server",
+      "platform": "JavaScript",
+      "platform_link": "javascript",
+      "language": "JavaScript",
+      "help_lang": "javascript",
+      "layout": "../_layout-getting-started.ejs",
+      "installation": "",
+      "sdkconventions": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "serversideapps": "active",
+      "promises": ""
+   }
+}

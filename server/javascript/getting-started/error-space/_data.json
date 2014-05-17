@@ -7,12 +7,12 @@
       "platform_link": "javascript",
       "language": "JavaScript",
       "help_lang": "javascript",
-      "layout": "../../../_layout-getting-started",
+      "layout": "../_layout-getting-started.ejs",
       "installation": "",
       "sdkconventions": "",
-      "extendingsdk": "",
       "debuggingsdk": "",
       "errorspace": "active",
-      "thirdpartyintegrations": ""
+      "serversideapps": "",
+      "promises": ""
    }
 }
