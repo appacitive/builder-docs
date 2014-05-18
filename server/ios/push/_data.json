@@ -7,7 +7,7 @@
       "platform_link": "ios",
       "language": "iOS",
       "guide_name": "push",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "iOS Push Notifications Tutorial - Dev Center - Appacitive",

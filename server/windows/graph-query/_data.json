@@ -7,7 +7,7 @@
       "platform_link": "windows",
       "language": ".Net",
       "guide_name": "graph-query",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": ".Net SDK tutorial on Graph Query - Dev Center - Appacitive",

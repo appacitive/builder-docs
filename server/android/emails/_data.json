@@ -7,7 +7,7 @@
       "platform_link": "android",
       "language": "Android",
       "guide_name": "emails",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Email Tutorial - Dev Center - Appacitive",

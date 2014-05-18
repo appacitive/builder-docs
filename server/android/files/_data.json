@@ -7,7 +7,7 @@
       "platform_link": "android",
       "language": "Android",
       "guide_name": "files",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Files Tutorial - Dev Center - Appacitive",

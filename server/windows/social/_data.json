@@ -7,7 +7,7 @@
       "platform_link": "windows",
       "language": ".Net",
       "guide_name": "social",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": ".Net SDK tutorial on Social Integration - Dev Center - Appacitive",

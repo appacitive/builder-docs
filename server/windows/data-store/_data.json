@@ -7,7 +7,7 @@
       "platform_link": "windows",
       "language": ".Net",
       "guide_name": "data-store",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    	"title": ".Net SDK tutorial on Data Store - Dev Center - Appacitive",

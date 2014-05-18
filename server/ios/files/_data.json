@@ -7,7 +7,7 @@
       "platform_link": "ios",
       "language": "iOS",
       "guide_name": "files",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "iOS Files Tutorial - Dev Center - Appacitive",

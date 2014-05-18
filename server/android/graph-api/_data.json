@@ -7,7 +7,7 @@
       "platform_link": "android",
       "language": "Android",
       "guide_name": "graph-api",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Graph API Tutorial - Dev Center - Appacitive",

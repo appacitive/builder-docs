@@ -7,7 +7,7 @@
       "platform_link": "android",
       "language": "Android",
       "guide_name": "access-control",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    	"title": "Android Access Control Tutorial - Dev Center - Appacitive",

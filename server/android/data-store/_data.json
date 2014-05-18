@@ -7,7 +7,7 @@
       "platform_link": "android",
       "language": "Android",
       "guide_name": "data-store",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    	"title": "Android Data Store Tutorial - Dev Center - Appacitive",

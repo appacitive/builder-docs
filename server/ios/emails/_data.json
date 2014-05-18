@@ -7,7 +7,7 @@
       "platform_link": "ios",
       "language": "iOS",
       "guide_name": "emails",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "iOS Email Tutorial - Dev Center - Appacitive",

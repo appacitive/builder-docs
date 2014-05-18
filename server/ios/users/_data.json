@@ -7,7 +7,7 @@
       "platform_link": "ios",
       "language": "iOS",
       "guide_name": "users",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Tutorial - Users - iOS - Dev Center - Appacitive",

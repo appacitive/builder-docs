@@ -7,7 +7,7 @@
       "platform_link": "ios",
       "language": "iOS",
       "guide_name": "graph-api",
-      "layout":"../../_layout-menu.ejs",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "iOS Graph API Tutorial - Dev Center - Appacitive",
