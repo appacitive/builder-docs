@@ -5,11 +5,13 @@
       "keywords": "android, guide, access control, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "access-control",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
-   		"title": "Android Access Control Tutorial - Dev Center - Appacitive",
-		  "description": "Tutorial on how to do access control in Appacitive Platform using Android SDK.",
+   	"title": "Android Access Control Tutorial - Dev Center - Appacitive",
+		"description": "Tutorial on how to do access control in Appacitive Platform using Android SDK.",
       "keywords": "android, tutorial, access control, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",

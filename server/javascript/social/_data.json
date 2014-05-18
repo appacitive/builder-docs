@@ -6,7 +6,8 @@
       "platform": "JavaScript",
       "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "guide_name": "social"
    },
    "tutorial": {
    		"title": "JavaScript Social Integration Tutorial - Dev Center - Appacitive",

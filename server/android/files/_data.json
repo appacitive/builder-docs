@@ -5,7 +5,9 @@
       "keywords": "android, guide, file, files, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "files",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
    		"title": "Android Files Tutorial - Dev Center - Appacitive",

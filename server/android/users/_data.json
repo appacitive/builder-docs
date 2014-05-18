@@ -5,7 +5,9 @@
       "keywords": "android, guide, user, user management, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "users",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
    		"title": "Tutorial - Users - Android - Dev Center - Appacitive",

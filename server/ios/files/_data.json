@@ -5,7 +5,9 @@
       "keywords": "ios, guide, file, files, appacitive, ios sdk",
       "platform": "iOS",
       "platform_link": "ios",
-      "language": "iOS"
+      "language": "iOS",
+      "guide_name": "files",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
    		"title": "iOS Files Tutorial - Dev Center - Appacitive",

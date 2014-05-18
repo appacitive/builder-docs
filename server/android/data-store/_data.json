@@ -5,7 +5,9 @@
       "keywords": "android, guide, data store, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "data-store",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
    	"title": "Android Data Store Tutorial - Dev Center - Appacitive",

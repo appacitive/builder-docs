@@ -5,7 +5,9 @@
       "keywords": "android, guide, push, notifications, push notifications, files, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "push",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
    		"title": "Android Push Notifications Tutorial - Dev Center - Appacitive",

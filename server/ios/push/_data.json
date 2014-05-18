@@ -5,7 +5,9 @@
       "keywords": "ios, guide, push, notifications, push notifications, files, appacitive, ios sdk",
       "platform": "iOS",
       "platform_link": "ios",
-      "language": "iOS"
+      "language": "iOS",
+      "guide_name": "push",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
    		"title": "iOS Push Notifications Tutorial - Dev Center - Appacitive",

@@ -6,7 +6,8 @@
       "platform": "JavaScript",
       "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "guide_name": "devices"
    },
    "tutorial": {
    		"title": "JavaScript Access Control Tutorial - Dev Center - Appacitive",

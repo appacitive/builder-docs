@@ -45,6 +45,10 @@
         $('#lstUserMenu').hide();
 
         $("#divUserMenu", that).click(function (e) {
+
+            $(".appList ul").hide();
+            $('.platform-list').removeClass('active');
+        
             //hide rest of stuff
             if ($(".appList ul").is(":visible")) $(".platform-list").trigger('click');
 
@@ -78,6 +82,10 @@
             window.location = "https://portal.appacitive.com/" + that.account + "/accounts.html?accounts=myaccount";
         });
 
+        $("#lnkApps").click(function () {
+            window.location = "https://portal.appacitive.com/" + that.account + "/app-list.html";
+        });
+
     } else $("#ulSignIn").removeClass('hide');
 
     //platform list handling
@@ -94,17 +102,26 @@
     });
 
     $(".platform-list").unbind("click").click(function (e) {
+
+        var isVisible = false;
+        if ($(".appList ul", $(this)).is(":visible")) {
+            isVisible = true;
+        }
+
+        $(".appList ul").hide();
+        $('.platform-list').removeClass('active');
+        
         //hide rest of stuff
         if ($('#lnkUserMenu').hasClass('highlit-menu')) $("#divUserMenu").trigger('click');
 
         e.preventDefault();
-        if ($(".appList ul").is(":visible")) {
+        if (isVisible) {
             $(this).removeClass('active');
-            $(".appList ul").hide();
+            $(".appList ul", $(this)).hide();
         }
         else {
             $(this).addClass('active');
-            $(".appList ul").show();
+            $(".appList ul", $(this)).show();
         }
         return false;
     });

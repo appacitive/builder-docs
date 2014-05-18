@@ -5,7 +5,9 @@
       "keywords": "ios, guide, social, files, appacitive, ios sdk",
       "platform": "iOS",
       "platform_link": "ios",
-      "language": "iOS"
+      "language": "iOS",
+      "guide_name": "social",
+      "layout":"../../_layout-menu.ejs",
    },
    "tutorial": {
    		"title": "iOS Social Integration Tutorial - Dev Center - Appacitive",
