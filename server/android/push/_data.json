@@ -4,13 +4,17 @@
       "description": "Android guide explaining Push Notifications feature provided by Appacitive Platform using Android SDK.",
       "keywords": "android, guide, push, notifications, push notifications, files, appacitive, android sdk",
       "platform": "Android",
-      "language": "Android"
+      "platform_link": "android",
+      "language": "Android",
+      "guide_name": "push",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Push Notifications Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to send Push Notifications through Appacitive Platform using Android SDK.",
     	"keywords": "android, tutorial, push, notifications, push notifications, files, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    }
 }

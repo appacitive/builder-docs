@@ -46,7 +46,7 @@ You can initialize SDK any where in your app, but we suggest to do it in `App.xa
 	private void Application_Launching(object sender, LaunchingEventArgs e)
     {
     	//Initializing Appacitive .Net SDK
-        Appacitive.Sdk.App.Initialize(Appacitive.Sdk.Platforms.WP7, "{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
+        Appacitive.Sdk.AppContext.Initialize("{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
 
         //your code (if any)
     }
@@ -93,8 +93,8 @@ Similarly modify all remaining properties of `ImageDetails` class and remove the
 Lastly we will map your local objects to Appacitive types in `Application_Launching` function, after .Net SDK is initialized
 
 	//Map your model object to appacitive type
-    Appacitive.Sdk.App.Types.MapObjectType<User>("user");
-    Appacitive.Sdk.App.Types.MapObjectType<ImageDetails>("image");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<User>("user");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<ImageDetails>("image");
 
 Now we have an application which is using Appacitive as backend. 
 
@@ -108,7 +108,6 @@ All the logic for creating and authenticating user reside `User.cs`. First we wi
         {
             //Save user in the backend
             await this.SaveAsync();
-            Context.User = this;
             return true;
         }
         catch { return false; }
@@ -129,17 +128,13 @@ To authenticate user we will add following code inside try catch block of `Authe
         MaxAttempts = int.MaxValue
     };
 
-    var userSession = await Appacitive.Sdk.App.LoginAsync(credentials);
+    await Appacitive.Sdk.AppContext.LoginAsync(credentials);
 
-    //Logged in user
-    var user = userSession.LoggedInUser as User;
-    
-    Context.User = user;
 
 For logging out, simply add following code to `Logout` function
 
 	//Logout user
-    Appacitive.Sdk.App.LogoutAsync();
+    Appacitive.Sdk.AppContext.LogoutAsync();
 
 So now you know how to create, authenticate and logout user in the app using .Net SDK.
 
@@ -158,12 +153,19 @@ The Windows Phone SDK will give us a `Stream` object which contains image data, 
 
 Uploading image and retrieving it's download image are two different steps. First we will upload the image, to do so we will modify `UploadFile` function from MainPage.xaml.cs. 
 
-	string fileName = DateTime.Now.Ticks.ToString() + ".jpg";
+    //create a memory stream
+	var memoryStream = new MemoryStream();
+    stream.Seek(0, SeekOrigin.Begin);
+    await stream.CopyToAsync(memoryStream);
+
+    //upload the file
+    string fileName = DateTime.Now.Ticks.ToString() + ".jpg";
     var upload = new Appacitive.Sdk.FileUpload("image/jpeg", fileName, 30);
-    await upload.UploadAsync(imageData);
+    await upload.UploadAsync(memoryStream.ToArray());
 
 Once file is uploaded, we will get it's public URL, which will be saved with the image.
 
+    //get the public url for the file
     var download = new Appacitive.Sdk.FileDownload(fileName);
     string publicUrl = await download.GetPublicUrlAsync();
 
@@ -183,7 +185,7 @@ Using the information provided by user and the public URL retrieved earlier cons
                 //when connection is saved, image is automatically created
                 await Appacitive.Sdk.APConnection
                                 .New("author")
-                                .FromExistingObject("user", Context.User.Id)
+                                .FromExistingObject("user", AppContext.UserContext.LoggedInUser.Id)
                                 .ToNewObject("image", this)
                                 .SaveAsync();
             }
@@ -206,7 +208,7 @@ In this app we will display images which are either uploaded by the user or are 
     //get all images which are public or uploaded by me
     var query = Appacitive.Sdk.Query.Or(new[]{
                             Appacitive.Sdk.Query.Property("ispublic").IsEqualTo(true),
-                            Appacitive.Sdk.Query.Property("__createdby").IsEqualTo(Context.User.Id)
+                            Appacitive.Sdk.Query.Property("__createdby").IsEqualTo(AppContext.UserContext.LoggedInUser.Id)
                 });
 
 Now we will pass this query to `FindAllAsync` function and retrieve the required images

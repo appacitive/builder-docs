@@ -4,6 +4,7 @@
       "description": "What are the SDK Conventions for Appacitive .Net SDK - Learn it in getting started section of .Net SDK.",
       "keywords": "sdk conventions, .net, sdk, .net sdk, debug, getting started, appacitive",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net",
       "help_lang": "dotnet",
       "layout": "../_layout-getting-started-windows",

@@ -4,13 +4,17 @@
       "description": "Android guide explaining Graph Query feature provided by Appacitive Platform using Android SDK.",
       "keywords": "android, guide, graph, graph query, files, appacitive, android sdk",
       "platform": "Android",
-      "language": "Android"
+      "platform_link": "android",
+      "language": "Android",
+      "guide_name": "graph-query",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Graph Query Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do make and consume Graph Query feature provided by Appacitive Platform using Android SDK.",
       "keywords": "android, tutorial, graph, graph query, files, appacitive, android sdk",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android"
    }
 }

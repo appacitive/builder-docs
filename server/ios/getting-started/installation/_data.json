@@ -4,6 +4,7 @@
       "description": "How to install Appacitive iOS SDK - Learn it in getting started section of iOS SDK.",
       "keywords": "install ios sdk, ios, sdk, ios sdk, debug, getting started, appacitive",
       "platform": "iOS",
+      "platform_link": "ios",
       "language": "iOS",
       "help_lang": "ios",
       "layout": "../../../_layout-getting-started",

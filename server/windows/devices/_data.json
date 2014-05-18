@@ -4,13 +4,17 @@
       "description": ".Net guide explaining the devices in Appacitive Platform using .Net SDK.",
       "keywords": ".net, guide, devices, appacitive, .net sdk",
       "platform": "Windows",
-      "language": ".Net"
+      "platform_link": "windows",
+      "language": ".Net",
+      "guide_name": "devices",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": ".Net SDK tutorial on Devices - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do device management in Appacitive Platform using .Net SDK.",
       "keywords": ".net, tutorial, device, devices, appacitive, .net sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    }
 }

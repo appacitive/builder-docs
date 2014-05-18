@@ -4,6 +4,7 @@
       "description": "How to debug Appacitive Android SDK - Know it in getting started section of Android SDK.",
       "keywords": "debug android sdk, android, sdk, android sdk, debug, getting started, appacitive",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android",
       "help_lang": "android",
       "layout": "../../../_layout-getting-started",

@@ -5,6 +5,7 @@
             "keywords": "todo, todo sample, javascript, samples, javaScript samples, javascript sdk samples, appacitive, javascript sdk",
             "layout": "../../../_layout-banner-sample.ejs",
             "platform": "Javascript",
+            "platform_link": "javascript",
             "language": "JavaScript",
             "header_app_name": "TodoMVC Sample",
             "header_app_description": "By changing a few lines of code, you'll turn the <a href='http://todomvc.com/architecture-examples/backbone/'>TodoMVC</a> sample for <a href='http://backbonejs.org/'>Backbone.js</a> into an app that persists data and user accounts on Appacitive.",

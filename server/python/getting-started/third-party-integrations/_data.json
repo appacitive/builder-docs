@@ -4,6 +4,7 @@
       "description": "Third party integrations of Appacitive Python SDK - Know it in getting started section of Python SDK.",
       "keywords": "python sdk, python, sdk, python sdk, getting started, appacitive",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python",
       "help_lang": "python",
       "layout": "../../../_layout-getting-started",

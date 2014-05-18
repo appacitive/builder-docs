@@ -4,6 +4,7 @@
       "description": "Getting started with error handling using  Appacitive Android SDK.",
       "keywords": "errors android sdk, android, sdk, android sdk, error, getting started, appacitive",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android",
       "help_lang": "android",
       "layout": "../../../_layout-getting-started",

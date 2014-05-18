@@ -2,10 +2,12 @@
   "index": {
       "title": "Python - Dev Center - Appacitive",
       "description": "Everything you need to develop Python app on Appacitive Platform.",
-      "layout": "../_layout-banner",
+      "layout": "../_layout-banner-platform",
       "keywords": "python, sdk, python sdk, appacitive",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python",
-      "help_lang": "python"
+      "help_lang": "python",
+      "guides": "hide"
    }
 }

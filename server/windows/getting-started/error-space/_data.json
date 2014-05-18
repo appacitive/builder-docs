@@ -4,6 +4,7 @@
       "description": "Getting started with error handling using  Appacitive .Net SDK.",
       "keywords": "errors .net sdk, .net, sdk, .net sdk, error, getting started, appacitive",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net",
       "help_lang": "dotnet",
       "layout": "../_layout-getting-started-windows",
