@@ -118,8 +118,7 @@
         if (isVisible) {
             $(this).removeClass('active');
             $(".appList ul", $(this)).hide();
-        }
-        else {
+        } else {
             $(this).addClass('active');
             $(".appList ul", $(this)).show();
         }
