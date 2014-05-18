@@ -52,5 +52,18 @@
         <%- partial("../../_partials/_footer") %>
     </div>
     <%- partial("../../_partials/_scripts") %>
+    <script type="text/javascript">
+        var sidebar = $('.list-group');
+        sidebar.affix({
+          offset: {
+            top: function() {
+                var c = sidebar.offset().top, d = -20, e = $("#divHeader").height();
+                return this.top = c - e - d
+            }, bottom: function() {
+                return this.bottom = $("#divFooter").outerHeight(!0) + 166;
+            }
+          }
+        });
+    </script>
 </body>
 </html>

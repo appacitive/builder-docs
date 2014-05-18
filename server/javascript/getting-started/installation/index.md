@@ -54,14 +54,14 @@ To start using the SDK inside your app, you need to initialize it with your `api
 ```javscript
 Appacitive.initialize({ 
   apikey: "{apikey}",    // The master or client api key for your app on appacitive.
-  env: "sandbox", 		 // The environment that you are targetting (sandbox or live).
-  appId: "{appId}}		 // The app id for your app on appacitive. 
+  env: "sandbox", 	   // The environment that you are targetting (sandbox or live).
+  appId: "{appId}"	   // The app id for your app on appacitive. 
 });
 ```
 
 **Retrieving API Key and Application Id**
 
-You will need to replace {appId} by your application's id and {apikey} by API Key. To get these details, open your app on Appacitive Portal. API key for the app is available on your app's home page at the bottom. To get the App Id, open application details, by clicking on edit icon near your app's name.
+You will need to replace `{appId}` by your application's id and `{apikey}` by API Key. To get these details, open your app on Appacitive Portal. API key for the app is available on your app's home page at the bottom. To get the App Id, open application details, by clicking on edit icon near your app's name.
 
 **Note**: We suggest using the client key as API key to maintain security and controlled access on your data.
 

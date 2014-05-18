@@ -238,7 +238,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 /* getting started content formatting */
 .getting-started h2, .getting-started h3 { padding: 25px 0 5px; margin: 0; font-weight: 300; }
     .getting-started h2:first-child, .getting-started h3:first-child { padding-top: 0; }
-.getting-started .list-group { margin: 0;}
+.getting-started .list-group { margin: 0; width: 225px; position: fixed;}
 
 /* boot strap override */
 .navbar-default { background-image: none; background-repeat: no-repeat; border-radius: 0; box-shadow: none; border: none; margin-bottom: 0; }
@@ -401,10 +401,23 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
         position: absolute;
         width: 245px;
     }
+
+    .getting-started .affix {
+        top: 20px;
+    }
+
+    .getting-started .affix-bottom {
+        position: absolute;
+        width: 225px;
+    }
 }
 
 @media (max-width: 900px) {
     .doc-nav {
+        display: none;
+    }
+
+    .getting-started .list-group {
         display: none;
     }
 }
