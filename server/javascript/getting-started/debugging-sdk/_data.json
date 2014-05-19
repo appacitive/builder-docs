@@ -10,6 +10,7 @@
       "layout": "../_layout-getting-started.ejs",
       "installation": "",
       "sdkconventions": "",
+      "masterclientkey": "",
       "debuggingsdk": "active",
       "errorspace": "",
       "serversideapps": "",

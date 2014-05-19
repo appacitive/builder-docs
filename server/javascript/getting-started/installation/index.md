@@ -49,13 +49,14 @@ var Appacitive = require('appacitive');
 
 ## Initializing the sdk for your app.
 
-To start using the SDK inside your app, you need to initialize it with your `apikey`, `appId` and `environment`. You can initialize the SDK any where in your app, but we suggest to do it at the starting point of your app. To initialize the SDK insert following code.
+To start using the SDK inside your app, you need to initialize it with your `apikey`, `appId` and `environment`. You can initialize the SDK any where in your app, before using any Appacitive classes. To initialize the SDK insert following code.
 
 ```javscript
 Appacitive.initialize({ 
-  apikey: "{apikey}",    // The master or client api key for your app on appacitive.
-  env: "sandbox", 	   // The environment that you are targetting (sandbox or live).
-  appId: "{appId}"	   // The app id for your app on appacitive. 
+  apikey: "{apikey}",// The master or client api key for your app on appacitive.
+  env: "sandbox", 	 // The environment that you are targetting (sandbox or live).
+  appId: "{appId}"	 // The app id for your app on appacitive. 
+  masterKey: "{key}" // Optional: The masterKey should be used only in server-side apps
 });
 ```
 
@@ -63,7 +64,25 @@ Appacitive.initialize({
 
 You will need to replace `{appId}` by your application's id and `{apikey}` by API Key. To get these details, open your app on Appacitive Portal. API key for the app is available on your app's home page at the bottom. To get the App Id, open application details, by clicking on edit icon near your app's name.
 
-**Note**: We suggest using the client key as API key to maintain security and controlled access on your data.
+**Note**: We suggest using the client key as API key to maintain security and controlled access on your data in client environments. 
+
+The value in masterKey will not be used by default. You'll need to ask the sdk to start using it as:
+
+```javascript
+// Ask the sdk to use master key
+Appacitive.Session.useMasterKey = true;
+
+// If you haven't set master key in initalize call then you can set it this way
+Appacitive.Session.setMasterKey(masterKey);
+
+// You can change the environment of your app programmatically as
+Appacitive.Session.environment('live');
+
+// To reset all keys, environment and user sessions in the sdk
+// After invoking this method, you'll need to
+// Reinitiailize the sdk to start using it again
+Appacitive.Session.reset();
+```
 
 ## User Session and Current User
 
