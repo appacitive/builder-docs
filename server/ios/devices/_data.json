@@ -4,6 +4,7 @@
       "description": "iOS guide explaining the devices in Appacitive Platform using iOS SDK.",
       "keywords": "ios, guide, devices, appacitive, ios sdk",
       "platform": "iOS",
+      "layout":"../../_layout-menu.ejs",
       "language": "iOS"
    },
    "tutorial": {

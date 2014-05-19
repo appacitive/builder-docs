@@ -4,6 +4,7 @@
       "description": "iOS guide explaining Social Integration feature provided by Appacitive Platform using iOS SDK.",
       "keywords": "ios, guide, social, files, appacitive, ios sdk",
       "platform": "iOS",
+      "layout":"../../_layout-menu.ejs",
       "language": "iOS"
    },
    "tutorial": {

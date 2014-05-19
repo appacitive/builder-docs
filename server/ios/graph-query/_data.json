@@ -4,6 +4,7 @@
       "description": "iOS guide explaining Graph Query feature provided by Appacitive Platform using iOS SDK.",
       "keywords": "ios, guide, graph, graph query, files, appacitive, ios sdk",
       "platform": "iOS",
+      "layout":"../../_layout-menu.ejs",
       "language": "iOS"
    },
    "tutorial": {

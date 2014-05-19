@@ -4,6 +4,7 @@
       "description": "iOS guide explaining emails in Appacitive Platform using iOS SDK.",
       "keywords": "ios, guide, access control, appacitive, ios sdk",
       "platform": "iOS",
+      "layout":"../../_layout-menu.ejs",
       "language": "iOS"
    },
    "tutorial": {
