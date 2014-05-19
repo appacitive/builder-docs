@@ -30,7 +30,7 @@ Build (cmd+B) your project. If the build is successful then you have installed t
 
 Assuming that you have created an app on the appacitive platform, you must have an api key. Here is an image that shows where you can find the API KEY on the dashboard.
 
-![APIKEY screenshot](apikey.png)
+![APIKEY screenshot](http://cdn.appacitive.com/devcenter/ios/gettingstarted/apikey.png)
 
 To get started you need to provide your api key to the SDK. To do this call the + registerApiKey: method on the Appacitive class. Make sure to call this in the ```application:willFinishLaunchingWithOptions:``` method in your delegate. Here is an example:
 
@@ -82,7 +82,7 @@ The SDK is open source and is available at [GitHub](https://github.com/appacitiv
 
 Lets consider that you have created a project called Deals finder. Here is an image that shows the structure of the project in Finder.
 
-![XCode Project Screenshot](xcodeproject.png)
+![XCode Project Screenshot](http://cdn.appacitive.com/devcenter/ios/gettingstarted/xcodeproject.png)
 
 Next, fire up the terminal and navigate to the project directory. Once there run the following command: 
 
