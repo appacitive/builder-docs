@@ -4,13 +4,17 @@
       "description": "Python guide explaining Push Notifications feature provided by Appacitive Platform using Python SDK.",
       "keywords": "python, guide, push, notifications, push notifications, files, appacitive, python sdk",
       "platform": "Python",
-      "language": "Python"
+      "platform_link": "python",
+      "language": "Python",
+      "guide_name": "push",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Python Push Notifications Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to send Push Notifications through Appacitive Platform using Python SDK.",
     	"keywords": "python, tutorial, push, notifications, push notifications, files, appacitive, python sdk",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python"
    }
 }

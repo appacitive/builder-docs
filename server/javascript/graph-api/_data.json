@@ -4,14 +4,17 @@
       "description": "JavaScript guide explaining Graph API feature provided by Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, graph, graph api, files, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "guide_name": "graph-api"
    },
    "tutorial": {
    		"title": "JavaScript Graph API Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do make and consume Graph API feature provided by Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, tutorial, graph, graph api, files, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "language": "JavaScript"
    }
 }

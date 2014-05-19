@@ -5,13 +5,17 @@
       "description": "Python guide explaining emails in Appacitive Platform using Python SDK.",
       "keywords": "python, guide, access control, appacitive, python sdk",
       "platform": "Python",
-      "language": "Python"
+      "platform_link": "python",
+      "language": "Python",
+      "guide_name": "emails",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    	"title": "Python Email Tutorial - Dev Center - Appacitive",
 		"description": "Tutorial on how to send emails using Appacitive Platform.",
       "keywords": "python, tutorial, access control, appacitive, python sdk",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python"
    }
 }

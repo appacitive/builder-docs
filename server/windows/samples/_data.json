@@ -5,6 +5,7 @@
       "keywords": ".net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
       "layout": "../../_layout.ejs",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    }
 }

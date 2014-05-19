@@ -4,13 +4,17 @@
       "description": ".Net guide explaining Graph API feature provided by Appacitive Platform using .Net SDK.",
       "keywords": ".net, guide, graph, graph api, files, appacitive, .net sdk",
       "platform": "Windows",
-      "language": ".Net"
+      "platform_link": "windows",
+      "language": ".Net",
+      "guide_name": "graph-api",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": ".Net SDK tutorial on Graph API - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do make and consume Graph API feature provided by Appacitive Platform using .Net SDK.",
       "keywords": ".net, tutorial, graph, graph api, files, appacitive, .net sdk",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net"
    }
 }

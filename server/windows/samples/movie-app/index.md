@@ -59,7 +59,7 @@ You can initialize SDK any where in your app, but we suggest to do it in `App.xa
 	private void Application_Launching(object sender, LaunchingEventArgs e)
     {
     	//Initializing Appacitive .Net SDK
-        Appacitive.Sdk.App.Initialize(Appacitive.Sdk.Platforms.WP7, "{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
+        Appacitive.Sdk.AppContext.Initialize("{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
 
         //your code (if any)
     }
@@ -105,7 +105,7 @@ Now your model is aware of Appacitive Object. The last thing that needs to be ch
             if (value != this.Name)
             {
                 this.Set<string>("name", value);
-                NotifyPropertyChanged("Name");
+                base.FirePropertyChanged("Name");
             }
         }
     }

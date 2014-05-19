@@ -5,6 +5,7 @@
       "keywords": "gallery, gallery sample, upload file, upload, file, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
       "layout": "../../../_layout-banner-sample.ejs",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net",
       "header_app_name": "Galleria App",
       "header_app_description": "Learn how to create a simple photo gallery application using Appacitive as the backend to persist data.",

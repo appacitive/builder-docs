@@ -5,6 +5,7 @@
       "keywords": "movie, movie sample, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
       "layout": "../../../_layout-banner-sample.ejs",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net",
       "header_app_name": "Movie App",
       "header_app_description": "Learn how to create a simple movie listing application using Appacitive as the backend to persist data.",

@@ -4,6 +4,7 @@
       "description": "What are the SDK Conventions for Appacitive Python SDK - Learn it in getting started section of Python SDK.",
       "keywords": "sdk conventions, python, sdk, python sdk, debug, getting started, appacitive",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python",
       "help_lang": "python",
       "layout": "../../../_layout-getting-started",

@@ -5,6 +5,7 @@
       "keywords": "employee, directory, employee directory sample, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
       "layout": "../../../_layout-banner-sample.ejs",
       "platform": "Windows",
+      "platform_link": "windows",
       "language": ".Net",
       "header_app_name": "Employee Directory App",
       "header_app_description": "Learn how to create a simple Employee Directory application using Appacitive as the backend to persist data.",

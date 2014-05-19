@@ -4,14 +4,17 @@
       "description": "iOS guide explaining Graph Query feature provided by Appacitive Platform using iOS SDK.",
       "keywords": "ios, guide, graph, graph query, files, appacitive, ios sdk",
       "platform": "iOS",
-      "layout":"../../_layout-menu.ejs",
-      "language": "iOS"
+      "platform_link": "ios",
+      "language": "iOS",
+      "guide_name": "graph-query",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "iOS Graph Query Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to do make and consume Graph Query feature provided by Appacitive Platform using iOS SDK.",
       "keywords": "ios, tutorial, graph, graph query, files, appacitive, ios sdk",
       "platform": "iOS",
+      "platform_link": "ios",
       "language": "iOS"
    }
 }

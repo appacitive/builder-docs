@@ -4,6 +4,7 @@
       "description": "Get started with your iOS app using our iOS SDK.",
       "keywords": "ios sdk download, ios sdk, getting started, appacitive ",
       "platform": "iOS",
+      "platform_link": "ios",
       "language": "iOS",
       "layout": "../../_layout-downloads.ejs"
    }
