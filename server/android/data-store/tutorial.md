@@ -449,3 +449,31 @@ You can delete a *connection* using the `deleteInBackground()` method,
 
 ## Querying
 
+*Queries* provide a mechanism to search your app's data. All searching through the SDK is done via `AppacitiveQuery` object. You can retrieve many objects at once, put filters on the objects you wish to retrieve, and much more.
+
+The following basic query APIs are available in the SDK. Queries apart from these can be made using the `AppacitiveGraph` API feature discussed later.
+
+### Query API
+
+```
+        AppacitiveQuery query = new AppacitiveQuery();
+        query.pageNumber = 1;
+        query.pageSize = 10;
+        query.orderBy = "property to decide the sort order of the result";
+        query.isAscending = true;
+
+        List<String> fieldsToFetch = new ArrayList<String>();
+
+        AppacitiveObject.findInBackground(
+                "type to query",
+                query,
+                fieldsToFetch,
+                new Callback<PagedList<AppacitiveObject>>() {
+                    @Override
+                    public void success(PagedList<AppacitiveObject> objects) {
+                        
+                    }
+                }
+        );
+```
+
