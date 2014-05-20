@@ -5,7 +5,9 @@
       "keywords": "windows, guide, access control, appacitive, .net sdk, .net",
       "platform": "Windows",
       "platform_link": "windows",
-      "language": ".Net"
+      "language": ".Net",
+      "guide_name": "access-control",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    	"title": ".Net SDK tutorial on Access Control - Dev Center - Appacitive",

@@ -5,7 +5,9 @@
       "keywords": "python, guide, user, user management, appacitive, python sdk",
       "platform": "Python",
       "platform_link": "python",
-      "language": "Python"
+      "language": "Python",
+      "guide_name": "users",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Tutorial - Users - Python - Dev Center - Appacitive",

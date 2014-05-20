@@ -5,7 +5,9 @@
       "keywords": ".net, guide, access control, appacitive, .net sdk",
       "platform": "Windows",
       "platform_link": "windows",
-      "language": ".Net"
+      "language": ".Net",
+      "guide_name": "emails",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": ".Net SDK tutorial on Email - Dev Center - Appacitive",

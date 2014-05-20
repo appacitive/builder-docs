@@ -45,6 +45,10 @@
         $('#lstUserMenu').hide();
 
         $("#divUserMenu", that).click(function (e) {
+
+            $(".appList ul").hide();
+            $('.platform-list').removeClass('active');
+        
             //hide rest of stuff
             if ($(".appList ul").is(":visible")) $(".platform-list").trigger('click');
 
@@ -78,6 +82,10 @@
             window.location = "https://portal.appacitive.com/" + that.account + "/accounts.html?accounts=myaccount";
         });
 
+        $("#lnkApps").click(function () {
+            window.location = "https://portal.appacitive.com/" + that.account + "/app-list.html";
+        });
+
     } else $("#ulSignIn").removeClass('hide');
 
     //platform list handling
@@ -94,20 +102,49 @@
     });
 
     $(".platform-list").unbind("click").click(function (e) {
+
+        var isVisible = false;
+        if ($(".appList ul", $(this)).is(":visible")) {
+            isVisible = true;
+        }
+
+        $(".appList ul").hide();
+        $('.platform-list').removeClass('active');
+        
         //hide rest of stuff
         if ($('#lnkUserMenu').hasClass('highlit-menu')) $("#divUserMenu").trigger('click');
 
         e.preventDefault();
-        if ($(".appList ul").is(":visible")) {
+        if (isVisible) {
             $(this).removeClass('active');
-            $(".appList ul").hide();
-        }
-        else {
+            $(".appList ul", $(this)).hide();
+        } else {
             $(this).addClass('active');
-            $(".appList ul").show();
+            $(".appList ul", $(this)).show();
         }
         return false;
     });
+
+
+    var split = window.location.pathname.split('/');
+    if (window.location.pathname !== '/' ) {
+        var relativeUrl = '/';
+        if (window.location.pathname.indexOf('getting-started') != -1) {
+            relativeUrl = '/getting-started/installation';
+        } else if (window.location.pathname.indexOf('guides.html') != -1) {
+            relativeUrl = '/' + split[2] + '/' + split[3];
+        } else if (window.location.pathname.indexOf('samples') != -1) {
+            relativeUrl = '/samples';
+        } else if (window.location.pathname.indexOf('downloads') != -1) {
+            relativeUrl = '/downloads';
+        }
+        $('a', $('.nav-list', '.platform-dropdown')).each(function(i, a) {
+            a = $(a);
+            if (a.attr('href') !== '/') {
+                a.attr('href', a.attr('href') + relativeUrl);
+            }
+        });
+    }
 
     $("#btnLogin").click(function(e){
         e.preventDefault();

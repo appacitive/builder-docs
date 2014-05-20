@@ -5,7 +5,9 @@
       "keywords": "ios, guide, data store, appacitive, ios sdk",
       "platform": "iOS",
       "platform_link": "ios",
-      "language": "iOS"
+      "language": "iOS",
+      "guide_name": "data-store",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "iOS Data Store Tutorial - Dev Center - Appacitive",

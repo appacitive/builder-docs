@@ -7,7 +7,8 @@
       "platform": "JavaScript",
       "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "guide_name": "emails"
    },
    "tutorial": {
    	"title": "JavaScript Email Tutorial - Dev Center - Appacitive",

@@ -7,6 +7,7 @@
       "platform": "Python",
       "platform_link": "python",
       "language": "Python",
-      "help_lang": "python"
+      "help_lang": "python",
+      "guides": "hide"
    }
 }

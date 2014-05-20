@@ -5,7 +5,9 @@
       "keywords": "android, guide, access control, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "emails",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Email Tutorial - Dev Center - Appacitive",

@@ -8,12 +8,12 @@
       "language": "JavaScript",
       "help_lang": "javascript",
       "layout": "../_layout-getting-started.ejs",
-      "installation": "active",
+      "installation": "",
       "sdkconventions": "",
       "debuggingsdk": "",
-      "masterclientkey": "",
       "errorspace": "",
+      "masterclientkey": "",
       "serversideapps": "",
-      "promises": ""
+      "promises": "active"
    }
 }

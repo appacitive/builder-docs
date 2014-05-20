@@ -54,7 +54,7 @@ But, you need a user logged in to perform user-specific operations like update, 
 
 ```javascript
 //fetch user by username
-Appacitive.Users.getUserByUsername("john.doe").then(function(obj) {
+Appacitive.User.getUserByUsername("john.doe").then(function(obj) {
   alert('Could not fetch user with id 12345');
 });
 ```
@@ -62,7 +62,7 @@ Appacitive.Users.getUserByUsername("john.doe").then(function(obj) {
 
 ```javascript
 //fetch user by usertoken
-Appacitive.Users.getUserByToken("{{usertoken}}").then(function(obj) {
+Appacitive.User.getUserByToken("{{usertoken}}").then(function(obj) {
   alert('Could not fetch user with id 12345');
 });
 ```
@@ -80,7 +80,7 @@ There are 3 ways of deleting a user.
 ### Delete By Id
 ```javascript
 //To delete a user with an `__id` of, say, 1000.
-Appacitive.Users.deleteUser('1000').then(function() {
+Appacitive.User.deleteUser('1000').then(function() {
   // deleted successfully
 });
 ```
@@ -96,7 +96,7 @@ user.destroy().then(function() {
 #### Deleting the currently logged in user
 ```javascript
 //You can delete the currently logged in user via a helper method.
-Appacitive.Users.deleteCurrentUser().then(function() {
+Appacitive.User.deleteCurrentUser().then(function() {
   // delete successful
 });
 ```
@@ -133,7 +133,7 @@ var userDetails = {
 };
 
 // now to create the user
-Appacitive.Users.signup(userDetails).then(function(authResult) {
+Appacitive.User.signup(userDetails).then(function(authResult) {
   conole.log(authResult.token);
   alert('Saved successfully, id: ' + authResult.user.get('__id'));
 });
@@ -150,7 +150,7 @@ Appacitive.Users.signup(userDetails).then(function(authResult) {
 You can ask your users to authenticate via their username and password.
 ```javascript
 
-Appacitive.Users.login("username", "password").then(function (authResult) {
+Appacitive.User.login("username", "password").then(function (authResult) {
     // user has been logged in successfully
 });
 
@@ -163,7 +163,7 @@ Appacitive.Users.login("username", "password").then(function (authResult) {
 
 ## Current User
 
-Whenever you use any signup or login method, the user is stored in localStorage and can be retrieved using `Appacitive.Users.current`.So, everytime your app opens, you just need to check this value, to be sure whether the user is logged-in or logged-out.
+Whenever you use any signup or login method, the user is stored in localStorage and can be retrieved using `Appacitive.User.current`.So, everytime your app opens, you just need to check this value, to be sure whether the user is logged-in or logged-out.
 ```javascript
 var cUser = Appacitive.User.current();
 if (cUser) {
@@ -184,23 +184,23 @@ var user = new Appacitive.User({
     lastname: 'Doe'
 });
 
-Appacitive.Users.setCurrentUser(user, token);
+Appacitive.User.setCurrentUser(user, token);
 
 //Now current user points to `john.doe`
-console.log(Appacitive.Users.current().get('__id'));
+console.log(Appacitive.User.current().get('__id'));
 ```
 
-You can clear currentuser, calling `Appacitive.Users.logout()` method.
+You can clear currentuser, calling `Appacitive.User.logout()` method.
 ```javascript
 var makeAPICall = true
 
 //setting makeAPICall true will tell the SDK to make an API call and invalidate the token
 //setting it false won't make an API call and simply reset the token and currentUser
 
-Appacitive.Users.logout(makeAPICall).then(function() {
+Appacitive.User.logout(makeAPICall).then(function() {
   // user is looged out 
   // this will now be null
-  var cUser = Appacitive.Users.current();  
+  var cUser = Appacitive.User.current();  
 });
 ```
 
@@ -224,12 +224,12 @@ User session validation is used to check whether the user is authenticated and h
 ```javascript
 
 // to check whether user is loggedin locally. This won't make any explicit apicall to validate user
-Appacitive.Users.validateCurrentUser().then(function(isValid) {
+Appacitive.User.validateCurrentUser().then(function(isValid) {
   if(isValid) //user is logged in
 });
 // to check whether user is loggedin, explicitly making apicall to validate usertoken
 // pass true as first argument to validate usertoken making an apicall
-Appacitive.Users.validateCurrentUser(true).then(function(isValid) {
+Appacitive.User.validateCurrentUser(true).then(function(isValid) {
   if (isValid)  //user is logged in
 }); 
 ```
@@ -246,7 +246,7 @@ There're 2 ways users can change their password
 Users often forget their passwords for your app. So you are provided with an API to reset their passwords.To start, you ask the user for his username and call
 
 ```javascript
-Appacitive.Users.sendResetPasswordEmail("{username}", "{subject for the mail}")
+Appacitive.User.sendResetPasswordEmail("{username}", "{subject for the mail}")
 	.then(function(){
 	  alert("Password reset mail sent successfully"); 
 	});
@@ -273,13 +273,13 @@ So basically, following flow can be utilized for reset password
 
 1.Validate token specified in URL
 ```javascript
-Appacitive.Users.validateResetPasswordToken(token).then(function(user) {
+Appacitive.User.validateResetPasswordToken(token).then(function(user) {
   //token is valid and json user object is returned for that token
 });
 ```
 2.If valid then allow the user to enter his new password and save it
 ```javascript
-Appacitive.Users.resetPassword(token, newPassword).then(function() {
+Appacitive.User.resetPassword(token, newPassword).then(function() {
   //password for user has been updated successfully
 });
 ```
@@ -288,7 +288,7 @@ Appacitive.Users.resetPassword(token, newPassword).then(function() {
 Users need to change their passwords whenever they've compromised it. You can update it using this call:
 ```javascript
 //You can make this call only for a loggedin user
-Appacitive.Users.current().updatePassword('{oldPassword}','{newPassword}')
+Appacitive.User.current().updatePassword('{oldPassword}','{newPassword}')
 	.then(function(){
 	  alert("Password updated successfully"); 
 	});
@@ -297,7 +297,7 @@ Appacitive.Users.current().updatePassword('{oldPassword}','{newPassword}')
 
 Users can check-in at a particular co-ordinate uing this call. Basically this call updates users location.
 ```javascript
-Appacitive.Users.current().checkin(new Appacitive.GeoCoord(18.57, 75.55))
+Appacitive.User.current().checkin(new Appacitive.GeoCoord(18.57, 75.55))
 		.then(function() {
 		  alert("Checked in successfully");
 		});

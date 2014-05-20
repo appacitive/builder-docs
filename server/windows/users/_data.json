@@ -5,7 +5,9 @@
       "keywords": ".net, guide, user, user management, appacitive, .net sdk",
       "platform": "Windows",
       "platform_link": "windows",
-      "language": ".Net"
+      "language": ".Net",
+      "guide_name": "users",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": ".Net SDK Users Tutorial - Windows - Dev Center - Appacitive",

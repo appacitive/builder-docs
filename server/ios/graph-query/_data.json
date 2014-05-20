@@ -5,7 +5,9 @@
       "keywords": "ios, guide, graph, graph query, files, appacitive, ios sdk",
       "platform": "iOS",
       "platform_link": "ios",
-      "language": "iOS"
+      "language": "iOS",
+      "guide_name": "graph-query",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "iOS Graph Query Tutorial - Dev Center - Appacitive",

@@ -6,7 +6,8 @@
       "platform": "JavaScript",
       "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "guide_name": "graph-api"
    },
    "tutorial": {
    		"title": "JavaScript Graph API Tutorial - Dev Center - Appacitive",

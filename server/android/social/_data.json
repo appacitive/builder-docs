@@ -5,7 +5,9 @@
       "keywords": "android, guide, social, files, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "social",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Social Integration Tutorial - Dev Center - Appacitive",

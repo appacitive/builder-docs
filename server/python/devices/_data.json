@@ -5,7 +5,9 @@
       "keywords": "python, guide, devices, appacitive, python sdk",
       "platform": "Python",
       "platform_link": "python",
-      "language": "Python"
+      "language": "Python",
+      "guide_name": "devices",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Python Access Control Tutorial - Dev Center - Appacitive",

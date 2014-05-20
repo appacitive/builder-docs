@@ -5,7 +5,9 @@
       "keywords": ".net, guide, file, files, appacitive, .net sdk",
       "platform": "Windows",
       "platform_link": "windows",
-      "language": ".Net"
+      "language": ".Net",
+      "guide_name": "files",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    	"title": ".Net SDK tutorial on File Management - Dev Center - Appacitive",

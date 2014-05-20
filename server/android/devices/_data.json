@@ -5,7 +5,9 @@
       "keywords": "android, guide, devices, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "devices",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Access Control Tutorial - Dev Center - Appacitive",

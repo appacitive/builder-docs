@@ -6,7 +6,8 @@
       "platform": "JavaScript",
       "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "guide_name": "users"
    },
    "tutorial": {
    		"title": "Tutorial - Users - JavaScript - Dev Center - Appacitive",

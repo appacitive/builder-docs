@@ -5,7 +5,9 @@
       "keywords": "android, guide, graph, graph query, files, appacitive, android sdk",
       "platform": "Android",
       "platform_link": "android",
-      "language": "Android"
+      "language": "Android",
+      "guide_name": "graph-query",
+      "layout":"../../_layout-menu.ejs"
    },
    "tutorial": {
    		"title": "Android Graph Query Tutorial - Dev Center - Appacitive",
