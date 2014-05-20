@@ -206,6 +206,7 @@ ul.top_links_user li a { margin-left: 0px; }
 #divHeader .pull-right .active { background-color: #4A4A4A; }
 .platform-dropdown { margin: 0 15px 0 0px !important; }
 .guides-dropdown { margin: 0px -10px 0px 0px !important;}
+
 .platform-header-links { list-style: none; }
     .platform-header-links li { display: inline-block; }
     .platform-header-links a { margin: 6px 10px -2px !important; }

@@ -1534,6 +1534,22 @@ The properties are key value pairs whose values should conform to the businesss 
 
 So far we've stored and retrived all our data in properties of object using `set` and `get` methods. This data is more specific to what you've specified in your model. 
 
+We've designed the Javascript SDK in such a way that you typically don't need to worry about how data is saved while using the sdk. Simply add data to the `Appacitive.Object`, and it'll be saved correctly.
+
+Nevertheless, there are some cases where it's useful to be aware of how data is stored on the Appacitive platform.
+
+Internally, Appacitive stores data as JSON, so any datatype that can be converted to JSON can be stored on Parse. Overall, the following types are allowed for each field in your object:
+
+* string
+* integer
+* decimal
+* boolean
+* datetime
+* text
+* multivalued string (array of string values)
+* multivalued integer (array of integer values)
+* multivalued decimal (array of decimal values)
+
 For example, for type player we had defined following properties:
 
 * firstname: string
@@ -1541,6 +1557,18 @@ For example, for type player we had defined following properties:
 * age: integer
 * score: integer
 * hobbies: multivalued string
+
+Our SDK handles translating native javascript types to JSON. For example, if you save an `date` object, it will be translated into a Datetime type in our system.
+
+Object Keys starting with the characters $ or __, for example __type/__id, are reserved for the framework to handle additional types, so don't use those yourself.
+
+## Data Type Constraints
+
+Appacitive doesn't allow a user to create types and relation on the fly. Thus, you need to define your model and their properties on <a href="https://portal.appacitive.com">Appacitive Portal</a>.
+
+When a property for a type or relation is defined, that property is constrained to the data-type that you specfied when it was saved. For example, if a User object is saved with field `name` of data-type `String`, that field will be restricted to the String type only (our SDK will return an error if you try to save anything else).
+
+One special case is that any field can be set to null, no matter what type it is.
 
 ## Attributes
 
