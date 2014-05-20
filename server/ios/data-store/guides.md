@@ -1,8 +1,10 @@
+----------
+
 ## Data storage and retrieval
 
 All data is represented as entities. This will become clearer as you read on. Lets assume that we are building a game and we need to store player data on the server.
 
-### Creating
+### Creating objects
 
 ```objectivec
 APObject *player = [[APObject alloc] initWithTypeName:@"player"];
@@ -14,7 +16,7 @@ What is a type? In short, think of types as tables in a contemporary relational 
 
 The player object is an instance of `APObject`. An `APObject` is a class which encapsulates the data (the actual entity or the object) and methods that provide ways to update it, delete it etc.
 
-#### Setting Values
+#### Setting Values for objects
 Now we need to name our player 'John Doe'. This can be done as follows
 
 ```objectivec
@@ -24,7 +26,7 @@ APObject *player = [[APObject] initWithType:@"player"];
 
 ```
 
-#### Getting values
+#### Getting values for objects
 Lets verify that our player is indeed called 'John Doe'.
 
 ```objectivec
@@ -36,7 +38,7 @@ NSLog(@"Player Name: %@",[player.properties valueForKey:@"name"]);  // John Doe
 
 ```
 
-#### Saving
+#### Saving objects
 Saving a player to the server is easy.
 
 ```objectivec
@@ -69,7 +71,7 @@ This is what is available in the `player` object after a successful save.
 
 You'll see a bunch of fields that were created automatically by the server. They are used for housekeeping and storing meta-information about the object. All system generated fields start with `__`, avoid changing their values. Your values will be different than the ones shown here.
 
-### Retrieving
+### Retrieving objects
  To retrieve an object, simply call the fetch method on the instance and on success the instance will be populated with the object from Appacitive.
 
 ```objectivec
@@ -105,7 +107,8 @@ NSLog(@"Error occurred: %@",[error description]);
 }];
 ```
 
-### Updating
+### Updating objects
+
 You can update your existing objects and save them to Appacitive.
 
 ```objectivec
@@ -133,7 +136,8 @@ NSLog(@"Error occurred: %@",[error description]);
 
 ```
 
-### Deleting
+### Deleting objects
+
 Lets say we've had enough of John Doe and want to remove him from the server, here's what we'd do.
 
 ```objectivec
@@ -227,20 +231,20 @@ This is the recommended way to do it. In this case, the myScore relation will cr
 
 **NOTE:** It doesn't matter whether player and score have been saved to the server yet. If they've been saved, then they will get connected via the relation 'myScore'. And if both (or one) hasn't been saved yet, the required entities will get connected and stored on the server. So you could create the two entities and connect them via a single call, and if you see the two entities will also get reflected with saved changes, so your objects are synced.
 
-#### Setting Values
+#### Setting values for a connection
 
 ```objectivec
 //This works exactly the same as in case of APObjects.
 [myScore addPropertyWithKey:@"matchname" value:@"European Premier League"];
 ```
 
-#### Getting values
+#### Getting values for a connection
 
 ```objectivec
 NSLog(@"Match name: %@", [myScore getPropertyWithKey:@"matchname"]);
 ```
 
-### Retrieving
+### Retrieving connections
 
 #### Get Connection by Id
 
@@ -257,12 +261,12 @@ Retrieving can also be done via the `fetch` method. Here's an example
 ```objectivec
 APConnection *review = [[APConnection alloc] initWithTypeName:@"review" objectId:@"35097613532529604"];
 [review fetchWithSuccessHandler:^()
-	{
-		NSLog(@"Connection fetched: %@",[review description]);
-	}
-	failureHandler:^(APError *error) {
-		NSLog(@"Error occurred: %@",[error description]);
-	}
+  {
+    NSLog(@"Connection fetched: %@",[review description]);
+  }
+  failureHandler:^(APError *error) {
+    NSLog(@"Error occurred: %@",[error description]);
+  }
 ];
 ```
 
@@ -274,13 +278,13 @@ Consider `Jane` has a lot of friends whom she wants to invite to her marriage. S
 
 ```objectivec
 [APConnections fetchConnectedObjectsOfType:@"person" withObjectId:@"1234567890" withRelationType:@"friends" successHandler:^(NSArray *objects)
-	{
-		NSLog(@"Jane's friends:\n");
-		for(APObject *obj in objects)
-		{
-			NSLog(@"%@ \n"[obj getPropertyWithKey:@"name"]);
-		}
-	}
+  {
+    NSLog(@"Jane's friends:\n");
+    for(APObject *obj in objects)
+    {
+      NSLog(@"%@ \n"[obj getPropertyWithKey:@"name"]);
+    }
+  }
 ```
 
 #### Get all Connections for an Endpoint Object Id
@@ -355,7 +359,7 @@ Consider, `Jane` wants to what type of connections exists between her and a grou
 });
 ```
 
-### Updating
+### Updating connections
 
 
 Updating is done exactly in the same way as entities, i.e. via the `updateConnection` method.
@@ -369,7 +373,7 @@ APConnection *newConnection = [[APConnection alloc] initWithRelationType:@"mycon
 [newConnection updateConnection];
 ```
 
-### Deleting
+### Deleting connections
 
 Deleting is provided via the `del` method.
 
