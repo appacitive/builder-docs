@@ -72,7 +72,7 @@ player.get('11133431223344', {
 });
 ```
 
-The get call might also fail because the device couldn't connect to the Appacitive. Here's the same callback but with a bit of extra code to handle that scenario:
+The get call might also fail because it couldn't connect to the Appacitive. Here's the same callback but with a bit of extra code to handle that scenario:
 
 ```javascript
 var Player = Appacitive.Object.extend('player');
@@ -130,8 +130,7 @@ promise.then(funtion() {
     if(e instanceof Error) {
         // e holds the Error thrown in the then handler above.
         // e.message === 'I am just an error.';
-    }
-    else {
+    } else {
         // e is an Appacitive.Error.
     }
 });
