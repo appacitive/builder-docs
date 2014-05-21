@@ -1,8 +1,9 @@
-## Device
+# Device
+----
 
 Appacitive provides an out-of-the box data type called device. This type helps you in managing the devices that your apps are installed on. You can use the device class to track your user's devices and send push notifications.
 
-### Register
+## Register
 
 There are two types of device registrations provided by the SDK. the `registerDevice` method will create a device instance in your app at appacitive and also give you an instance to the newly created device, just like when you create an object.
 
@@ -25,7 +26,7 @@ The `registerCurrentDeviceWithPushDeviceToken` method will create a device insta
 }];
 ```
 
-### De-register
+## De-register
 
 The deregisterCurrentDevice method will set the isActive flag of the current device to `false` thereby disabling push notifications on the device.
 
@@ -37,15 +38,15 @@ The deregisterCurrentDevice method will set the isActive flag of the current dev
 }];
 ```
 
-### Delete
+## Delete
 
 Deleting a device works the same way as [deleting an APObject](/ios/data-store/guides.html#deleting).
 
-### Update
+## Update
 
 Updating an APDevice works the same way as [updating an APObject](/ios/data-store/guides.html#updating).
 
-### Retrieve
+## Retrieve
 
 Retrieving a device works the same way as [retrieving an APDObject](/ios/data-store/guides.html#retrieving).
 

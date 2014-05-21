@@ -53,7 +53,7 @@ foreach($file in $files)
   {
     ".html" 
 	  {
-	    python $s3cmdpath sync --no-progress --acl-public --no-preserve --add-header="Cache-Control:public, max-age=$oneday, must-revalidate" --add-header="Content-Encoding:gzip" --mime-type="text/html; charset=utf-8" $file.FullName $s3path
+	    python $s3cmdpath sync --no-progress --acl-public --no-preserve --add-header="Cache-Control:public, max-age=$onehour, must-revalidate" --add-header="Content-Encoding:gzip" --mime-type="text/html; charset=utf-8" $file.FullName $s3path
 		break
 	  }
 	".js"
