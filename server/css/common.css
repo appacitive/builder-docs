@@ -424,9 +424,12 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
     }
 }
 
+@media (max-width: 990px) {
+    #divContent { padding-bottom: 780px; }
+}
+
 /* small display (mobile) */
 @media (max-width: 768px) {
-    #divContent { padding-bottom: 780px; }
     .platform div { min-height: 260px !important; }
     .core-item-container { width: 100%; margin: 0 auto; text-align: center;}
     .core-item { width: 100%; max-width: 145px; margin-right: 15px; text-align: center; }

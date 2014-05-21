@@ -9,7 +9,7 @@ You are aware of <a target="_blank" href="http://www.visualstudio.com/">Visual S
 
 Follow the step by step guide to get hands on with the Todo List App.
 
-### 1. Modeling app backend on Appacitive
+<h3 id="model-backend"> 1. Modeling app backend on Appacitive</h3>
 
 Following video shows how to create the model for the app on Appacitive Platform.
 
@@ -19,7 +19,7 @@ Following video shows how to create the model for the app on Appacitive Platform
 
 ### 2. Downloading Boilerplate
 
-To jump start, we have created a boilerplate app for you, which is fully functional with some sample data hard coded in the app. You can download the boilerplate <a title="Download boilerplate" href="https://github.com/apalsapure/wp-todoapp/archive/boilerplate.zip">here</a>
+To jump start, we have created a boilerplate app for you, which is fully functional with some sample data hard coded in the app. You can download the boilerplate <a title="Download boilerplate" href="https://github.com/apalsapure/wp-todoapp/archive/boilerplate.zip">here</a>.
 
 
 
