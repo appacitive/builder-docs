@@ -6,11 +6,11 @@ The Appacitive Android SDK has support to let you send raw and templated emails.
 
 You can configure your SMTP settings from the portal. Go to *modules* -> *notifications* -> *email configurations*. 
 
-![](https://s3-us-west-2.amazonaws.com/appacitive-cdn/devcenter/android/emails-1.png)
+![](http://cdn.appacitive.com/devcenter/android/emails-1.png)
 
 Here you can configure your SMTP settings and also the *from* address and *reply-to* address for all your mails. You could also enable *test mode* for testing out you emails before sending them out.
 
-![](https://s3-us-west-2.amazonaws.com/appacitive-cdn/devcenter/android/email-2.png)
+![](http://cdn.appacitive.com/devcenter/android/email-2.png)
 
 ## Sending raw emails
 
@@ -79,7 +79,7 @@ A request to send an email with overridden SMTP settings would look like this,
 Appacitive allows you to pre-configure your emails' contents with placeholders and then send them with dynamically substituted values for those placeholders. 
 You can start creating and managing your own email templates by going to *modules* -> *notifications* -> *email templates* on the management portal.
 
-![](https://s3-us-west-2.amazonaws.com/appacitive-cdn/devcenter/android/email-3.png)
+![](http://cdn.appacitive.com/devcenter/android/email-3.png)
 
 For example, if you want to send an email for every new registration, it is useful to have an email template with placeholders.
 Consider we have created an email template called `welcome_email` with the following body.
