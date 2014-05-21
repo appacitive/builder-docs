@@ -1,4 +1,5 @@
-﻿## Debugging
+﻿# Debugging
+----
 
 The appacitive iOS SDK provides a class called APLogger for debugging the network requests and responses. The APLogger class logs the all messages to the console. To log to a file or someplace else, you will have to extend the APLogger class and override the `-[APLogger log:withType:]` method. Logging is disabled by default. To enable Logging use the `-[APLogger enableLogging:];` method. The SDK uses a static `sharedLogger` instance for logging the network requests. If you decide to use the same instance for logging the messages in your app, note that disabling the logging on the `sharedLogger` instance will disable the logging of Appacitive network request calls. 
 

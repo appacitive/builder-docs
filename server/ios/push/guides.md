@@ -1,4 +1,5 @@
-## Push Notifications
+# Push Notifications
+----
 
 Using Appacitive platform you can send push notification to iOS, Android and Windows Phone devices.
 
@@ -12,7 +13,7 @@ Appacitive provides four ways to select the sender list
 * To List of Channels
 * Query
 
-### Broadcast
+## Broadcast
 
 If you want to send a push notification to all active devices, you can use the following options
 
@@ -26,7 +27,7 @@ notification.isBroadcast = YES;
 }];
 ```
 
-### Platform specific Devices
+## Platform specific Devices
 
 If you want to send push notifications to specific platforms, you can do so in the following way.
 
@@ -40,7 +41,7 @@ notification.query = [[[APQuery queryExpressionWithProperty:@"devicetype"] isEqu
 }];
 ```
 
-### Specific List of Devices
+## Specific List of Devices
 
 If you want to send push notifications to specific devices, will need to provide the device ids.
 
@@ -54,7 +55,7 @@ notification.deviceIds = @[@"23423432545", @"4353452352"];
 }];
 ```
 
-### To List of Channels
+## To List of Channels
 
 You can also send PUSH messages to specific channels.
 
@@ -68,7 +69,7 @@ notification.channels = @[@"updates", @"upgrades"];
 }];
 ```
 
-### Query
+## Query
 
 You can send push notifications to devices using a Query. All the devices which comes out as result of the query will receive the push notification.
 

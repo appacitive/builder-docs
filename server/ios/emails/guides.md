@@ -1,8 +1,7 @@
-----------
+# Emails
+----
 
-## Emails
-
-### Configuring
+## Configuring
 
 Sending emails from the SDK is quite easy. There are primarily two types of emails that can be sent
 
@@ -11,7 +10,7 @@ Sending emails from the SDK is quite easy. There are primarily two types of emai
 
 Email is accessed through the APEmail interface. Before you get to sending emails, you need to configure SMTP settings. You can either configure it from the portal or in the `APEmail` interface with your mail provider's settings.
 
-### Sending Raw Emails
+## Sending Raw Emails
 
 A raw email is one where you can specify the entire body of the email. An email has the structure
 
@@ -38,7 +37,7 @@ emailObj.replyToEmail = @"jessica.osborne@mail.com";
 [emailObj sendEmail];
 ```
 
-### Sending Templated Emails
+## Sending Templated Emails
 
 You can also save email templates in Appacitive and use these templates for sending mails. The template can contain placeholders that can be substituted before sending the mail.
 

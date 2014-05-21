@@ -1,8 +1,9 @@
-## Files
+# Files
+----
 
 Appacitive supports file storage and provides api's for you to easily upload and download files. In the background we use amazon's S3 services for persistence. To upload or download files, the SDK provides `APFile` class, which you can instantiate to perform operations on file.
 
-### Uploading
+## Uploading
 
 You can download file directly.
 
@@ -18,7 +19,7 @@ If you wish to manage the upload process on your own, you can just fetch the upl
     }];
 ```
 
-### Downloading
+## Downloading
 
 ```objectivec
 

@@ -1,10 +1,8 @@
-----------
-
-## Data storage and retrieval
+# Objects
 
 All data is represented as entities. This will become clearer as you read on. Lets assume that we are building a game and we need to store player data on the server.
 
-### Creating objects
+## Creating objects
 
 ```objectivec
 APObject *player = [[APObject alloc] initWithTypeName:@"player"];
@@ -16,7 +14,7 @@ What is a type? In short, think of types as tables in a contemporary relational 
 
 The player object is an instance of `APObject`. An `APObject` is a class which encapsulates the data (the actual entity or the object) and methods that provide ways to update it, delete it etc.
 
-#### Setting Values for objects
+### Setting Values for objects
 Now we need to name our player 'John Doe'. This can be done as follows
 
 ```objectivec
@@ -26,7 +24,7 @@ APObject *player = [[APObject] initWithType:@"player"];
 
 ```
 
-#### Getting values for objects
+### Getting values for objects
 Lets verify that our player is indeed called 'John Doe'.
 
 ```objectivec
@@ -38,7 +36,7 @@ NSLog(@"Player Name: %@",[player.properties valueForKey:@"name"]);  // John Doe
 
 ```
 
-#### Saving objects
+### Saving objects
 Saving a player to the server is easy.
 
 ```objectivec
@@ -71,7 +69,7 @@ This is what is available in the `player` object after a successful save.
 
 You'll see a bunch of fields that were created automatically by the server. They are used for housekeeping and storing meta-information about the object. All system generated fields start with `__`, avoid changing their values. Your values will be different than the ones shown here.
 
-### Retrieving objects
+## Retrieving objects
  To retrieve an object, simply call the fetch method on the instance and on success the instance will be populated with the object from Appacitive.
 
 ```objectivec
@@ -107,7 +105,7 @@ NSLog(@"Error occurred: %@",[error description]);
 }];
 ```
 
-### Updating objects
+## Updating objects
 
 You can update your existing objects and save them to Appacitive.
 
@@ -136,7 +134,7 @@ NSLog(@"Error occurred: %@",[error description]);
 
 ```
 
-### Deleting objects
+## Deleting objects
 
 Lets say we've had enough of John Doe and want to remove him from the server, here's what we'd do.
 
@@ -164,7 +162,7 @@ APObject *player = [[APObject alloc] initWithTypeName:@"player" objectId:@"12345
 ```
 
 ----------
-## Connections
+# Connections
 
 All data that resides in the Appacitive platform is relational, like in the real world. This means you can do operations like fetching all games that any particular player has played, adding a new player to a team or disbanding a team whilst still keeping the other teams and their `players` data perfectly intact.
 
@@ -179,9 +177,9 @@ As with entities (objects), relations are also contained in collections.
 Let's jump in!
 
 
-### Creating &amp; Saving
+## Creating &amp; Saving
 
-#### New Connection between two existing Objects
+### New Connection between two existing Objects
 
 Connections represent relations between objects. Consider the following.
 
@@ -201,7 +199,7 @@ APConnection *connection = [[APConnection alloc] initWithRelationType:@"review"]
 }];
 ```
 
-#### New Connection between two new Objects
+### New Connection between two new Objects
 
 There is another easier way to connect two new entities. You can pass the new entities themselves to the connection while creating it.
 
@@ -231,22 +229,22 @@ This is the recommended way to do it. In this case, the myScore relation will cr
 
 **NOTE:** It doesn't matter whether player and score have been saved to the server yet. If they've been saved, then they will get connected via the relation 'myScore'. And if both (or one) hasn't been saved yet, the required entities will get connected and stored on the server. So you could create the two entities and connect them via a single call, and if you see the two entities will also get reflected with saved changes, so your objects are synced.
 
-#### Setting values for a connection
+### Setting values for a connection
 
 ```objectivec
 //This works exactly the same as in case of APObjects.
 [myScore addPropertyWithKey:@"matchname" value:@"European Premier League"];
 ```
 
-#### Getting values for a connection
+### Getting values for a connection
 
 ```objectivec
 NSLog(@"Match name: %@", [myScore getPropertyWithKey:@"matchname"]);
 ```
 
-### Retrieving connections
+## Retrieving connections
 
-#### Get Connection by Id
+### Get Connection by Id
 
 ```objectivec
 [APConnections fetchConnectionWithRelationType:@"review" objectId:@"33017891581461312" successHandler^(NSArray objects) {
@@ -272,7 +270,7 @@ APConnection *review = [[APConnection alloc] initWithTypeName:@"review" objectId
 
 The review object is similar to the object, except you get two new fields viz. endpointA and endpointB which contain the id and label of the two entities that this review object connects.
 
-#### Get Connected Objects
+### Get Connected Objects
 
 Consider `Jane` has a lot of friends whom she wants to invite to her marriage. She can simply get all her friends who're of type `person` connected with `Jane` through a relation `friends` with label for Jane as `me` and friends as `friend` using this search
 
@@ -287,7 +285,7 @@ Consider `Jane` has a lot of friends whom she wants to invite to her marriage. S
   }
 ```
 
-#### Get all Connections for an Endpoint Object Id
+### Get all Connections for an Endpoint Object Id
 
 Scenarios where you may need to just get all connections of a particular relation for an objectId, this query comes to rescue.
 
@@ -311,7 +309,7 @@ queryObj.filterQuery = [[APQuery queryExpressionWithProperty:@"attending"] isEqu
 
 In this query, you provide a relation type (name) and a label of opposite side whose connection you want to fetch and what is returned is a list of all the connections for above object.
 
-#### Get Connection by Endpoint Object Ids
+### Get Connection by Endpoint Object Ids
 
 Appacitive also provides a reverse way to fetch a connection  between two objects.
 If you provide two object ids of same or different type types, all connections between those two objects are returned.
@@ -332,7 +330,7 @@ Consider you want to check whether `John` and `Jane` are married, you can do it 
 
 ```
 
-#### Get all connections between two Object Ids
+### Get all connections between two Object Ids
 
 Consider `Jane` is connected to `John` via a `marriage` and a `friend` relationship. If we want to fetch all connections between them we could do this as
 
@@ -346,7 +344,7 @@ Consider `Jane` is connected to `John` via a `marriage` and a `friend` relations
 
 On success, we get a list of all connections that connects `Jane` and `John`.
 
-#### Get Interconnections between one and multiple Object Ids
+### Get Interconnections between one and multiple Object Ids
 
 Consider, `Jane` wants to what type of connections exists between her and a group of persons and houses , she could do this as
 
@@ -359,7 +357,7 @@ Consider, `Jane` wants to what type of connections exists between her and a grou
 });
 ```
 
-### Updating connections
+## Updating connections
 
 
 Updating is done exactly in the same way as entities, i.e. via the `updateConnection` method.
@@ -373,7 +371,7 @@ APConnection *newConnection = [[APConnection alloc] initWithRelationType:@"mycon
 [newConnection updateConnection];
 ```
 
-### Deleting connections
+## Deleting connections
 
 Deleting is provided via the `del` method.
 
@@ -393,7 +391,7 @@ APConnection *newConnection = [[APConnection alloc] initWithRelationType:@"mycon
 
 ----------
 
-## Queries
+# Queries
 
 All searching in SDK is done via `APQuery` object. You can retrieve many objects at once, put conditions on the objects you wish to retrieve, and more.
 
@@ -415,7 +413,7 @@ The above query will return all the players with 'John' as the first name. We fi
 
 Take a look at the documentation of the `APQuery` class to get the complete list of all types of queries you can construct.
 
-### Modifiers
+## Modifiers
 
 The APQuery interface provides various modifiers in the form of properties like `pageSize`, `pageNumber`, `orderBy`, `isAscending`, `filterQuery`, `fields`  and `freeText`. These are the options that you can specify in a query. Lets get to those.
 
@@ -451,18 +449,18 @@ NSLog(@"String Representation of the queryObj:"[queryObj stringValue]);
 });
 ```
 
-#### Pagination
+### Pagination
 
 All search queries on the Appacitive platform support pagination. To specify pagination on your queries, you need to  set the properties as shown in the above code sample.
 
 
 **NOTE**: By default, pageNumber is 1 and pageSize is 50
 
-#### Sorting
+### Sorting
 
 The data fetched using the query object can be sorted on any existing property of the object. In the above example we are sorting the results by the `lastname` property of the object. The sorting order is set to Ascending by setting the `isAsc` property to `YES`. If you do not set the `isAsc` property to `YES` , then the default sorting order would be descending.
 
-#### Fields
+### Fields
 
 You can also mention exactly which fields/properties you need to be fetched in query results.
 
@@ -473,7 +471,7 @@ In the above example we set the propertiesToFetch property of the queryObj to to
 
 **NOTE**: If you do not set the `propertiesToFetch` property, then all the proper tie for the objects will be fetched.
 
-#### Filter
+### Filter
 
 Filters are useful for limiting or funneling your results. They can be added on properties, attributes, aggregates and tags.
 
@@ -484,11 +482,11 @@ You can filter on `property`, `attribute`, `aggregate` or `tags`.
 In the above example we have filtered based on the first name property using the APSimpleQuery interface object. You can also find some more examples [here](http://help.appacitive.com/v1.0/index.html#ios/data_querying-data) for the filter queries.
 
 
-#### Geolocation
+### Geolocation
 
 You can specify a property type as a geography type for a given type or relation. These properties are essential latitude-longitude pairs. Such properties support geo queries based on a user defined radial or polygonal region on the map. These are extremely useful for making map based or location based searches. E.g., searching for a list of all restaurants within 20 miles of a given users locations.
 
-##### Radial Search
+#### Radial Search
 
 A radial search allows you to search for all records of a specific type which contain a geocode property which lies within a predefined distance from a point on the map. the following example query will filter the objects based on the `location` property whose value lies within the 5 miles of current location.
 
@@ -497,7 +495,7 @@ CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:23.2 longitud
     APSimpleQuery *radialSearch = [APQuery queryWithRadialSearchForProperty:@"location" nearLocation:currentLocation withinRadius:@5 usingDistanceMetric:kMiles];
 ```
 
-##### Polygon Search
+#### Polygon Search
 
 A polygon search is a more generic form of geographical search. It allows you to specify a polygon region on the map via a set of geocodes indicating the vertices of the polygon. The search will allow you to query for all data of a specific type that lies within the given polygon. This is typically useful when you want finer grained control on the shape of the region to search.
 
@@ -512,11 +510,11 @@ CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:5.3 longitude
 APSimpleQuery *polygonSearch = [APQuery queryWithPolygonSearchForProperty:@"location" withPolygonCoordinates:@[point1, point2, point3, point4]];
 ```
 
-#### Tag Based Searches
+### Tag Based Searches
 
 The Appacitive platform provides inbuilt support for tagging data (objects, connections, users and devices). You can use this tag information to query for a specific data set. The different options available for searching based on tags is detailed in the sections below.
 
-##### Query data tagged with one or more of the given tags
+#### Query data tagged with one or more of the given tags
 
 For data of a given type, you can query for all records that are tagged with one or more tags from a given list. For example - querying for all objects of type message that are tagged with the names `Gina`, `George`, `Walt`.
 
@@ -524,7 +522,7 @@ For data of a given type, you can query for all records that are tagged with one
 APSimpleQuery *tagQuery = [APQuery queryWithSearchUsingOneOrMoreTags:@[@"Gina", @"George", @"Walt"]];
 ```
 
-##### Query data tagged with all of the given tags
+#### Query data tagged with all of the given tags
 
 An alternative variation of the above tag based search allows you to query for all records that are tagged with all the tags from a given list. For example, querying for all objects that are tagged with `football`, `soccer` and `rugby`.
 
@@ -532,7 +530,7 @@ An alternative variation of the above tag based search allows you to query for a
 APSimpleQuery *tagQuery = [APQuery queryWithSearchUsingAllTags:@[@"football", @"soccer", @"rugby"]];
 ```
 
-#### Composite Filters
+### Composite Filters
 
 Compound queries allow you to combine multiple queries into one single query. The multiple queries can be combined using `logical OR` and `logical And` operators. NOTE: All queries of type APSimpleQuery with the exception of free text queries can be combined into a compound query.
 
@@ -547,7 +545,7 @@ Similarly you can also construct a complex query with the boolean OR operator.
 APCompoundQuery *complexQuery = [APQuery booleanOr:@[[[APQuery queryExpressionWithProperty:@"name"] isLike:@"John"], [[APQuery queryExpressionWithAttribute:@"eye color"] isEqualTo:@"brown"]]];
 ```
 
-#### FreeText
+### FreeText
 
 There are situations when you would want the ability to search across all text content inside your data. Free text queries are ideal for implementing this kind of functionality. As an example, consider a free text lookup for users which searches across the username, firstname, lastname, profile description etc.You can pass multiple values inside a free text search. It also supports passing certain modifiers that allow you to control how each search term should be used. This is detailed below.
 
