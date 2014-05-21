@@ -2,7 +2,7 @@
 
 The Appacitive Android SDK comes with an inbuilt logging mechanism which you can use out of the box, or you can override it with your own logging mechanism.
 
-To use the builtin logging mechanism, you simply need to instantiate a new `Logger` object using `APContainer`.  
+To use the built in logging mechanism, you simply need to instantiate a new `Logger` object using `APContainer`.  
 
 ```
         Logger logger = APContainer.build(Logger.class);
@@ -12,7 +12,7 @@ To use the builtin logging mechanism, you simply need to instantiate a new `Logg
 
 The logs will start getting displayed in the **LogCat** view as follows. The builtin logger in the SDK simply logs to the `android.util.Log` class.
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](https://cdn.appacitive.com/devcenter/android/logging-1.png)
 
 **Note:** Always build the logger after you have made a call to `AppacitiveContext.initialize()`.
 
