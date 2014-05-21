@@ -1,18 +1,22 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> iOS SDK Downloads</h1>
-<span class="muted mbm">Version 1.0.0 - May 01, 2014</span>
-<div <a class="btn btn-primary pll prl">Download</a></div>
+<span class="muted mbm">Version 0.9b - May 21, 2014</span>
+<div <a class="btn btn-primary pll prl" href="http://cdn.appacitive.com/sdk/ios/v0.9b/Appacitive.framework.zip">Download</a></div>
 <br/>
 <br/>
 <br/>
 
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
-## v 1.0.0
+## v 0.9b
 <span class="muted">May 01, 2014</span>
 
-+   Initial release of Appacitive Kit
-+   Support for users, data and resources
-+   ACL Integrated
++   Beta release of Appacitive iOS SDK.
++   Includes support for Objects, Users, Devices and Connections.
++   Includes support for User Groups and ACLs.
++ 	Includes support for Emails.
++	Includes support for Push notifications.
++	Includes support for Graph Query and Graph API.
++ 	Includes support for Logging API calls.
 
 <br/>
 
@@ -21,4 +25,4 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 
 |Version|Download|Date|
 |:---------------|:------------|
-|1.0.0|<a href="#">Download</a>|May 01, 2014|
+|0.9b|<a href="http://cdn.appacitive.com/sdk/ios/v0.9b/Appacitive.framework.zip">Download</a>|May 21, 2014|
