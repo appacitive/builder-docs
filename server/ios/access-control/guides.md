@@ -1,4 +1,5 @@
-## Access Control
+# Access Control
+----
 
 You can also manage access controls on your objects using the acl property of the APObect, APUser or the APDevice classes and their sub classes.
 

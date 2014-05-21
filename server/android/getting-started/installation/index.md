@@ -5,10 +5,10 @@ You can use Appacitive as the backend for you new or existing android apps using
 ## Prerequisites
 
 1. [Java Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (JDK) 1.6
-2. [Appacitive Android SDK](http://www.appacitive.com) jar. 
+2. [Appacitive Android SDK](http://devcenter.appacitive.com/android/downloads/) jar. 
 3. An IDE of your choice.
 
-The SDK currently supports Android 2.3 (API 9) and higher.
+The SDK currently supports Android 2.2 (API 8) and higher.
 
 ## For Android Studio users
 
@@ -18,20 +18,20 @@ Add the jar file to a folder called `libs` in your module. Right click on the ne
 compile files('libs/appacitive-android-1.0.jar') 
 ```
 
-![](1.png)
+![](http://cdn.appacitive.com/devcenter/android/android-studio-1.png)
 
 Initialize the SDK by calling the `AppacitiveContext.initialize()` method with your *API key* and the *environment* you want to use.
 
-![](2.png)
+![](http://cdn.appacitive.com/devcenter/android/android-studio-2.png)
 
 You can find your API Keys on the dashboard of your app in the API Keys section located in the bottom left corner.
 
-![](3.png)
+![](http://cdn.appacitive.com/devcenter/android/android-studio-3.png)
 
 ## For Eclipse users
 
-Similarily for Eclipse, add the Appacitive Android SDK jar file to the `libs` folder in your app's module. 
+Similarly for Eclipse, add the Appacitive Android SDK jar file to the `libs` folder in your app's module. 
 
 Initialize the SDK by calling the `AppacitiveContext.initialize()` method with your *API key* and the *environment* you want to use.
 
-![](4.png)
+![](http://cdn.appacitive.com/devcenter/android/eclipse-1.png)

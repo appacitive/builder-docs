@@ -1,4 +1,4 @@
-## Extending SDK
+# Extending SDK
 ----
 
 The Appacitive iOS SDK has four main classes that correspond to the respective entities in Appacitive.

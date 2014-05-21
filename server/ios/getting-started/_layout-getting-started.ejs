@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title><%= title %></title>
@@ -29,14 +29,10 @@
                     <div class="col-md-3">
                         <ul class="list-group">
                             <a class="list-group-item <%- installation %>" href="../installation">Installation</a>
-                            <a class="list-group-item <%- masterclientkey %>" href="../master-client-keys">Client/Master Keys</a>
                             <a class="list-group-item <%- sdkconventions %>" href="../sdk-conventions">SDK Conventions</a>
-                            <a class="list-group-item <%- promises %>" href="../promises">Promises</a>
-                            <a class="list-group-item <%- debuggingsdk %>" href="../debugging-sdk">Debugging</a>
-                            <a class="list-group-item <%- errorspace %>" href="../error-space">Error handling</a>
-                            <!--<a class="list-group-item <%- serversideapps %>" href="../server-side-apps">Server side apps</a>-->
-                            <a class="list-group-item" href="../../data-store/guides.html#extending-object">Extending Object</a>
-                            <a class="list-group-item" href="../../data-store/guides.html#collections">Collections</a>
+                            <a class="list-group-item <%- extendingsdk %>" href="../extending-sdk">Extending SDK</a>
+                            <a class="list-group-item <%- debuggingsdk %>" href="../debugging-sdk">Debugging SDK</a>
+                            <a class="list-group-item <%- errorspace %>" href="../error-space">Error Space</a>
                         </ul>
                     </div>
                     <div class="col-md-9">
@@ -54,16 +50,18 @@
     </div>
     <%- partial("../../_partials/_scripts") %>
     <script type="text/javascript">
-        var sidebar = $('.list-group');
-        sidebar.affix({
-          offset: {
-            top: function() {
-                var c = sidebar.offset().top, d = -20, e = $("#divHeader").height();
-                return this.top = c - e - d
-            }, bottom: function() {
-                return this.bottom = $("#divFooter").outerHeight(!0) + 166;
-            }
-          }
+        $(function() {
+            var sidebar = $('.list-group');
+            sidebar.affix({
+              offset: {
+                top: function() {
+                    var c = sidebar.offset().top, d = -20, e = $("#divHeader").height();
+                    return this.top = c - e - d
+                }, bottom: function() {
+                    return this.bottom = $("#divFooter").outerHeight(!0) + 166;
+                }
+              }
+            });
         });
     </script>
 </body>
