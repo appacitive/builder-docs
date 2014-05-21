@@ -34,7 +34,7 @@ Store the *filename* safely as a property in some custom type, as this will be t
 
 You will be able to see your uploaded file in the *file browser* in the management portal. Go to *modules*->*data & storage*->*files*.
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](https://s3-us-west-2.amazonaws.com/appacitive-cdn/devcenter/android/files-1.png)
 
 ## Downloading the file
 

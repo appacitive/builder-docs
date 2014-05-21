@@ -12,7 +12,7 @@ To use the builtin logging mechanism, you simply need to instantiate a new `Logg
 
 The logs will start getting displayed in the **LogCat** view as follows. The builtin logger in the SDK simply logs to the `android.util.Log` class.
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](https://s3-us-west-2.amazonaws.com/appacitive-cdn/devcenter/android/logging-1.png)
 
 **Note:** Always build the logger after you have made a call to `AppacitiveContext.initialize()`.
 

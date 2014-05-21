@@ -9,7 +9,7 @@ First and foremost, you must enable push notifications for your app. Go to *modu
 
 Next, configure your platform specific settings for your app in the same section.
 
-![](https://lh5.ggpht.com/oXwS_Jo1xrUhkZRxtTTvRH4Avartfj6PVjlveBMIHCryeKwV-aj_N4lpPzx37DLi5Bg=w300)
+![](https://s3-us-west-2.amazonaws.com/appacitive-cdn/devcenter/android/push-1.png)
 
 ## Sending Push Notifications
 
