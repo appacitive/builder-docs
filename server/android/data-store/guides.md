@@ -367,17 +367,32 @@ In all other scenarios, passing a label is optional.
 
 #### Get all Connections for an Endpoint Object Id
 
-Scenarios where you may need to just retrieve all *connections* of a particular *relation* for an *object* id, this query comes to your rescue.
-
-Consider *Jane* is connected to some objects of type *person* via *invite* relationship, that also contains a bool *property* viz. *attending*, which is false by default and will be set to true if that *person* is attending marriage.
-
-Now she wants to know who all are attending her marriage without actually fetching their connected person object, this can be done as
-
 #### Get Connection by Endpoint Object Ids
 
-#### Get all connections between two Object Ids
+##### Get all connections of any relation between two Object Ids
+
+##### Get all connections of a particular relation between two Object Ids
 
 #### Get Interconnections between one and multiple Object Ids
+
+Consider, *jane* wants to what all connections exist between her and a set of *houses* , she could do this as,
+
+```
+        long janeId = 12345;
+        List<Long> houseIds = new ArrayList<Long>(){{
+            add(11111l);
+            add(22222l);
+            add(33333l);
+        }};
+        AppacitiveConnection.findInterconnectsInBackground(janeId, houseIds, null, new Callback<PagedList<AppacitiveConnection>>() {
+            @Override
+            public void success(PagedList<AppacitiveConnection> result) {
+
+            }
+        });
+```
+
+The result would contain a paged list of **all** connections of any relation type between *jane* and the list of `houseIds`.
 
 ### Updating
 
@@ -406,7 +421,6 @@ Updating is done exactly in the same way as *objects*, i.e. via the `updateInBac
 ```
 
 **Note:** You cannot update any of the system-defined properties (the ones that begin with a double underscore like __id, __type, __createdby etc.). 
-
 
 ### Deleting
 
@@ -443,8 +457,6 @@ You can delete a *connection* using the `deleteInBackground()` method,
             }
         });
 ```
-
-
 ----------
 
 ## Querying
