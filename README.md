@@ -1,7 +1,7 @@
-appacitive-dev-center
+dev-center
 =====================
 
-Appacitve Dev Center uses HarpJS on Node.
+Dev Center uses HarpJS on Node.
 
 To install
 
