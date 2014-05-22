@@ -8,15 +8,18 @@ The SDK itself has no dependencies on any libraries. The SDK doesn't include bac
 
 It is recommended to serve the sdk directly from our Content Delivery Network. Add the following line of code after loading Backbone.js and its dependencies.
 
+This will include the sdk in your project.
+
 ```html
 <script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.min.js"></script>
 ```
 Using a protocol relative URI means the sdk will be served using the same protocol (HTTP or HTTPS) as your index.html.
 
-This will include the sdk in your project.
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
+
 ##Download and Include the sdk 
 
-Incase you do not want to use CDN, you can always <a href="/javascript/downloads" target="_blank">download <i class="glyphicon glyphicon-share-alt"></i></a> the SDK.
+Incase you don't want to use CDN, you can always <a href="/javascript/downloads" target="_blank">download <i class="glyphicon glyphicon-share-alt"></i></a> the SDK.
 
 The source code for the Javascript sdk for Appacitive is open source and
 is available on github under the [Apache License](https://github.com/chiragsanghvi/JavascriptSDK/blob/master/License).
@@ -56,7 +59,6 @@ Appacitive.initialize({
   apikey: "{apikey}",// The master or client api key for your app on appacitive.
   env: "sandbox", 	 // The environment that you are targetting (sandbox or live).
   appId: "{appId}"	 // The app id for your app on appacitive. 
-  masterKey: "{key}" // Optional: The masterKey should be used only in server-side apps
 });
 ```
 
@@ -69,11 +71,11 @@ You will need to replace `{appId}` by your application's id and `{apikey}` by AP
 The value in masterKey will not be used by default. You'll need to ask the sdk to start using it as:
 
 ```javascript
+// If you haven't set master key in initialize call then you can set it this way
+Appacitive.Session.setMasterKey(masterKey);
+
 // Ask the sdk to use master key
 Appacitive.Session.useMasterKey = true;
-
-// If you haven't set master key in initalize call then you can set it this way
-Appacitive.Session.setMasterKey(masterKey);
 
 // You can change the environment of your app programmatically as
 Appacitive.Session.environment('live');
@@ -82,6 +84,20 @@ Appacitive.Session.environment('live');
 // After invoking this method, you'll need to
 // Reinitiailize the sdk to start using it again
 Appacitive.Session.reset();
+```
+
+##Verify Set Up
+
+Your app is now connected to Appacitive. The `ping` method, as shown below, will contact the backend and verify that the SDK can communicate with your app.
+
+```javascript
+Appacitive.ping({
+	success: function(response) {
+	    console.log('Appacitive Ping Successful. Your app is up and running.');
+	}, error: function(error) {
+	    console.log('Appacitive Ping Failed. Response: ' + error.message);
+	}
+});
 ```
 
 ## User Session and Current User
