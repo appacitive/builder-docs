@@ -3,6 +3,7 @@
       "title": ".Net SDK guide on Data Store - Dev Center - Appacitive",
       "description": ".Net guide explaining the data storage in Appacitive Platform using .Net SDK.",
       "keywords": ".net, guide, data store, appacitive, .net sdk",
+      "layout":"../../_layout-menu.ejs",
       "platform": "Windows",
       "language": ".Net"
    },
