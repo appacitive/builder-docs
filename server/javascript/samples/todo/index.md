@@ -62,7 +62,7 @@ All the html that is needed by views is placed in index.html file inside script 
 To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
 ```html
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.5.min.js"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.2.min.js"></script>
 ```
 
 #### 3.2 Initialize the SDK
@@ -90,6 +90,8 @@ We've extended the todoMVC app with user authentication, which allows users to s
 In addition, we've changed the `AppView` to render either of the 2 views viz. `LoginView` or `TodosView`, depending on whether the user is logged-in or not.
 
 **Note**: Whenever you use signup or login method, the user is stored in the localStorage and can be retrieved using `Appacitive.Users.current()` method. So, everytime your app opens, you just need to check this value, to be sure whether the user is logged-in or not.
+
+Open `appView.js` and replace specified content.
 
 ```javascript
 // Replace this line
@@ -170,7 +172,7 @@ Appacitive.Users.signup({
 	self.$('.signup-form #login').html("Sign Up");
 });
 ```
-Above code creates a new user with given details from the fields and performs login on user's behalf. After successful login/signup , we render `TodosView`. For more info on users click <a href="http://help.appacitive.com/v1.0/index.html#javascript/user-management_users" target="_blank">here<i class="glyphicon glyphicon-share-alt"></i></a>
+Above code creates a new user with given details from the fields and performs login on user's behalf. After successful login/signup , we render `TodosView`. For more info on users click <a href="/javascript/users" target="_blank">here<i class="glyphicon glyphicon-share-alt"></i></a>
 
 **Note**: If you're using client key, then by default only logged-in users themselves can read,update and delete their data.
 
@@ -194,23 +196,33 @@ As this app has been ported from Backbone's todoMVC app, the only change require
 
 To get a hang of how Backbone Models and Collections are used to represent the todo items, you can refer through the <a href="http://documentcloud.github.io/backbone/docs/todos.html" target="_blank">original annotated source <i class="glyphicon glyphicon-share-alt"></i></a>.
 
-To migrate Backbone models and collections on Appacitive, replace `Backbone.Model.extend` with `Appacitive.Object.extend`. When doing so, you need to pass type name which is "todo" in our case, as first argument to map your objects to Appacitive type todo in `todo.js`.
+To migrate Backbone models and collections on Appacitive, replace `Backbone.Model.extend` with `Appacitive.Object.extend`. When doing so, you need to set `typeName` which is `todo` in our case, as a property to map your objects to Appacitive type `todo` in `todo.js`.
 
 ```javascript
-// Our basic **Todo** model has `title`, `order`, and `completed` attributes.
-app.Todo = Appacitive.Object.extend("todo", {
+// Our basic **Todo** model has `title` and `completed` attributes.
+app.Todo = Appacitive.Object.extend({
+    
+    //type name to which this object binds on Appacitive
+    typeName: 'todo'
+	
 	//..
 });
 ```
-Replace `Backbone.Collection` to `Appacitive.Collection` in `todos.js`. You should also specify the Appacitive.Object class, `app.Todo` as the model for collection.
+Replace `Backbone.Collection` to `Appacitive.Collection` in `todos.js`. You'll also need to change the `comparator` to use `createdAt` property of app.Todo, eliminating the need for ordering todo items manually.
 
 ```
 // The collection of Todo objects 
-app.Todos = Appacitive.Collection.extend({
+var Todos = Appacitive.Collection.extend({
 	
 	// Specify app.Todo as model for collection
 	model: app.Todo,
-	//..
+
+	// Todos are sorted by their created date.
+	comparator: function (todo) {
+		return todo.createdAt;
+	},
+
+	//  ..
 });
 ```
 
@@ -233,12 +245,12 @@ create: function(todo) {
 	//owner connection model
 	var owner = new app.Owner(todo).save();
 	this.add(todo, { sort: true });
-}
+},
 ```
 
 **Connecting Todo Item to logged-in User:**
 
-If you observe above code, apart from creating `todo` object, we're also creating a connection of relation-type `owner`. The constructor of owner connection is passed the `todo` object and then saved. For more info on creating connections click <a href="http://help.appacitive.com/v1.0/index.html#javascript/data_connections" target="_blank">here <i class="glyphicon glyphicon-share-alt"></i></a>.
+If you observe above code, apart from creating `todo` object, we're also creating a connection of relation-type `owner`. The constructor of `owner` connection is passed the `todo` object and then saved. For more info on creating connections click <a href="http://help.appacitive.com/v1.0/index.html#javascript/data_connections" target="_blank">here <i class="glyphicon glyphicon-share-alt"></i></a>.
 
 Copy following code in `todo.js`.
 
@@ -248,8 +260,16 @@ Copy following code in `todo.js`.
 
 // Our basic **owner** relation model, which connects logged-in user
 // to todo model
-app.Owner = Appacitive.Connection.extend("owner", {
+app.Owner = Appacitive.Connection.extend({
+    
+    //relation name to which this connection binds on Appacitive
+    relationName: "owner",
+
+    // Override internal constructor to add endpoints for connection
+	// If `todo`, an instance of app.Todo is passed then only we change the attributes to add endpoints
+	// Finally we call the internal constructor
 	constructor: function(todo) {
+
 		var args = Array.prototype.slice.call(arguments);
 
 		// To avoid other parsing conflicts with connectedObjects
@@ -266,14 +286,14 @@ app.Owner = Appacitive.Connection.extend("owner", {
 		}
 
 		//Invoke internal constructor
-		Appacitive.Connection.call(this, attrs); 
+		Appacitive.Connection.apply(this, arguments);
 	}
 });
 ```
 
 Here, we're extending the `owner` connection, to set endpoints in constructor. One of the endpoint is the `todo` object that we passed and other is the logged-in user. 
 
-Shortly we are saving `todo` in context of `user` by creating `owner` connection between `user` and `todo`. On saving the `owner` connection, the `todo` object is also created.
+Shortly we're saving `todo` in context of `user` by creating `owner` connection between `user` and `todo`. On saving the `owner` connection, the `todo` object is also created.
 
 **Fetching Todo Items:**
 
@@ -285,9 +305,10 @@ Replace `app.Todos.fetch()` call in `initialize` function with following code in
 // Set query type for app.todos
 // Query will be getConnectedObjects in respect to current user for relation owner
 // This'll allow us to fetch todo objects connected to user by owner relation
-var query = Appacitive.Users.current().getConnectedObjects({
+var query = Appacitive.User.current().getConnectedObjects({
 	 relation : 'owner',
-	 pageSize: 200
+	 pageSize: 200,
+	 fields: ["title", "completed", "__utcdatecreated"]
 });
 
 app.todos.query(query);
@@ -304,13 +325,13 @@ The `getConnectedObjects` call, returns all the todo items which are connected t
 
 #### 3.5 Run your app
 
-Open index.html of your app. Signup and add, update and remove items.
+Open `index.html` of your app in a browser. Signup and add, update and remove items.
 
 #### 3.6 Forgot Password
 
 It's a fact that as soon as you introduce passwords into a system, users will forget them. In such cases, Appacitive provides a way to let them securely reset their password.
 
-To start with the password reset flow, you ask the user for his username and call `Appacitive.Users.sendResetPasswordEmail`. Replace `forgotPassword` function in `login-view.js` with following code.
+To start with the password reset flow, you ask the user for his username and call `Appacitive.User.sendResetPasswordEmail`. Replace `forgotPassword` function in `login-view.js` with following code.
 
 ```javascript
 // sendResetPasswordEmail method accepts 2 arguments
@@ -330,7 +351,14 @@ This'll basically send the user an email, with a reset password link. When user 
 
 Following video explains reset password flow in more detail.
 
-<iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/95948652" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen 
+allowfullscreen></iframe>
+
+<br/>
+You can find the templates for `email` and `reset-password` page over here
+
+* [Email Template](https://github.com/chiragsanghvi/AppacitiveTodo/blob/master/reset-password-tmpl/email-template.html)
+* [Reset-Password-Page](https://github.com/chiragsanghvi/AppacitiveTodo/blob/master/reset-password-tmpl/reset-page-template.html)
 
 ### Congratulation
 
