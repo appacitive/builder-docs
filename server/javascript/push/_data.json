@@ -4,14 +4,17 @@
       "description": "JavaScript guide explaining Push Notifications feature provided by Appacitive Platform using JavaScript SDK.",
       "keywords": "javascript, guide, push, notifications, push notifications, files, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript"
+      "language": "JavaScript",
+      "guide_name": "push"
    },
    "tutorial": {
    		"title": "JavaScript Push Notifications Tutorial - Dev Center - Appacitive",
 		  "description": "Tutorial on how to send Push Notifications through Appacitive Platform using JavaScript SDK.",
     	"keywords": "javascript, tutorial, push, notifications, push notifications, files, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "language": "JavaScript"
    }
 }

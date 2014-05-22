@@ -9,7 +9,7 @@ You are aware of <a target="_blank" href="http://www.visualstudio.com/">Visual S
 
 Follow the step by step guide to get hands on with the Todo List App.
 
-### 1. Modeling app backend on Appacitive
+<h3 id="model-backend"> 1. Modeling app backend on Appacitive</h3>
 
 Following video shows how to create the model for the app on Appacitive Platform.
 
@@ -19,7 +19,7 @@ Following video shows how to create the model for the app on Appacitive Platform
 
 ### 2. Downloading Boilerplate
 
-To jump start, we have created a boilerplate app for you, which is fully functional with some sample data hard coded in the app. You can download the boilerplate <a title="Download boilerplate" href="https://github.com/apalsapure/wp-todoapp/archive/boilerplate.zip">here</a>
+To jump start, we have created a boilerplate app for you, which is fully functional with some sample data hard coded in the app. You can download the boilerplate <a title="Download boilerplate" href="https://github.com/apalsapure/wp-todoapp/archive/boilerplate.zip">here</a>.
 
 
 
@@ -45,7 +45,7 @@ You can initialize SDK any where in your app, but we suggest to do it in `App.xa
 	private void Application_Launching(object sender, LaunchingEventArgs e)
     {
     	//Initializing Appacitive .Net SDK
-        Appacitive.Sdk.App.Initialize(Appacitive.Sdk.Platforms.WP7, "{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
+        Appacitive.Sdk.AppContext.Initialize("{{App Id}}", "{{API Key}}", Appacitive.Sdk.Environment.Sandbox);
 
         //your code (if any)
     }
@@ -57,59 +57,50 @@ You will need to replace {{App Id}} by your application's id and {{API Key}} by 
 
 As part of design best practice, we suggest that you inherit your model from `APObject`. This simplifies your code by removing code required to transform Appacitive objects to your model. Additionally we will need to override default constructor by a constructor which will pass name of the type to base constructor. Modify your code as follows
 
-	//This class maps to todolist on appacitive
-	public class TodoList : Appacitive.Sdk.APObject
+	//This class maps to todo on appacitive
+	public class TodoItem : Appacitive.Sdk.APObject
     {
     	//override default constructor
-        public TodoList()
-            : base("todolist")
+        public TodoItem()
+            : base("todo")
         { }
         //special constructor called by SDK
-        public TodoList(Appacitive.Sdk.APObject existing)
+        public TodoItem(Appacitive.Sdk.APObject existing)
             : base(existing)
         { }
 
     	//code
     }
 
-    //This class maps to todoitem type on appacitive
-    public class TodoItem : Appacitive.Sdk.APObject
-    {
-    	public TodoItem(Appacitive.Sdk.APObject existing)
-            : base(existing)
-        { }
-
-    	//code
-    }
 
 Similarly, inherit `User` object from `APUser`, and remove `Id`, `Username`, `Email`, `Password`, `FirstName` and `LastName` from `User` class as they are there in `APUser`.
 
 Now your model is aware of Appacitive Object. The last thing that needs to be changed is the properties. Instead of retrieving property value from local object, you will read it using .Net SDK helper methods. Following sample code shows how to do this
 	
-	// Change Name property of TodoList
+	// Change Name property of Todo Item
 	public string Name
     {
         get
         {
-            return this.Get<string>("name");
+            return this.Get<string>("title");
         }
         set
         {
             if (value != this.Name)
             {
-                this.Set<string>("name", value);
+                this.Set<string>("title", value);
+                base.FirePropertyChanged("title");
             }
         }
     }
 
-Similarly modify all remaining properties of `TodoList` and `TodoItem`. Remove the `Id` property from both the classes because now it is provided by the base class `APObject`.
+Similarly modify all remaining properties of `TodoItem`. Remove the `Id` property from both the classes because now it is provided by the base class `APObject`.
 
 Lastly we will map your local objects to Appacitive types in `Application_Launching` function, after .Net SDK is initialized
 
 	//Map your model object to appacitive type
-    Appacitive.Sdk.App.Types.MapObjectType<User>("user");
-    Appacitive.Sdk.App.Types.MapObjectType<TodoList>("todolist");
-    Appacitive.Sdk.App.Types.MapObjectType<TodoItem>("todoitem");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<User>("user");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<TodoItem>("todo");
 
 Now we have an application which is using Appacitive as backend. 
 
@@ -123,7 +114,6 @@ All the logic for creating and authenticating user reside `User.cs`. First we wi
         {
             //Save user in the backend
             await this.SaveAsync();
-            Context.User = this;
             return true;
         }
         catch { return false; }
@@ -140,108 +130,26 @@ To authenticate user we will add following code inside try catch block of `Authe
 	//authenticate user on Appacitive
     var credentials = new UsernamePasswordCredentials(email, password)
     {
-        TimeoutInSeconds = 15 * 60,
+        TimeoutInSeconds = int.MaxValue,
         MaxAttempts = int.MaxValue
     };
 
-    var userSession = await Appacitive.Sdk.App.LoginAsync(credentials);
-
-    //Logged in user
-    var user = userSession.LoggedInUser as User;
-    
-    Context.User = user;
+    await Appacitive.Sdk.AppContext.LoginAsync(credentials);
 
 For logging out, simply add following code to `Logout` function
 
 	//Logout user
-    Appacitive.Sdk.App.LogoutAsync();
+    Appacitive.Sdk.AppContext.LogoutAsync();
 
 So now you know how to create, authenticate and logout user in the app using .Net SDK.
 
-#### 3.5 Managing Todo Lists
-
-Now will we learn how do basic CRUD operations on `TodoList` object using .Net SDK.
-
-**Saving TodoList:**
-
-First we will create a Todo List. To do this open TodoList.cs and modify `Save` function as follows
-
-	public async Task<bool> Save()
-    {
-        try
-        {
-            //as we need to store this list in context of user
-            //we will create a connection between user and the list
-            //when connection is saved, list is automatically created
-            await Appacitive.Sdk.APConnection
-                            .New("user_todolist")
-                            .FromExistingObject("user", Context.User.Id)
-                            .ToNewObject("todolist", this)
-                            .SaveAsync();
-            return true;
-        }
-        catch { return false; }
-    }
-
-Here we are saving TodoList in context of user by creating a connection between `User` and `TodoList`.
-
-**Fetching TodoList:**
-
-Now to fetch `TodoList`, we will make `GetConnectedObjects` call on `User`, as `TodoList` are connected to `User` we can easily fetch `TodoList` for a given `User`. Open `MainViewModel` and remove hard coded code for adding dummy data by following code
-
-	///get connected todolist for current user
-    var result = await Context.User.GetConnectedObjectsAsync("user_todolist",
-                                                                orderBy: "__utcdatecreated",
-                                                                sortOrder: Appacitive.Sdk.SortOrder.Ascending);
-    //iterate over result object and add todolist item to the list 
-    while (true)
-    {
-        result.ForEach(r => this.Items.Add(r as TodoList));
-        //check if all pages are retrieved
-        if (result.IsLastPage) break;
-        //fetch next page
-        result = await result.NextPageAsync();
-    }
-
-**Deleting TodoList:**
-
-Last thing we will do with TodoList is to delete it. To do so replace `Delete` function from TodoList.cs by following
-
-	public async Task<bool> Delete()
-    {
-        //get all list items
-        var result = await this.GetConnectedObjectsAsync("todolist_todoitem");
-        var list = new List<TodoItem>();
-
-        //iterate over result object and add todoitem to the list 
-        while (true)
-        {
-            result.ForEach(r => list.Add(r as TodoItem));
-			//check if all pages are retrieved
-            if (result.IsLastPage) break;
-        	//fetch next page
-            result = await result.NextPageAsync();
-        }
-
-        //delete todolist with it's user connection
-        await Appacitive.Sdk.APObjects.DeleteAsync("todolist", this.Id, true);
-
-        //delete all items from list one by one
-        list.ForEach(r => r.Delete());
-        return true;
-    }
-
-Here we are fetching `TodoItem` connected to the `TodoList`, so that once `TodoList` is deleted we can delete all orphan `TodoItem` objects from Appacitive.
-
 #### 3.5 Managing Todo Items
 
-Lastly will we learn perform CRUD operations on `TodoItem` object using .Net SDK. 
-
-When user tap on any todo list, todo items for that list view will be rendered.
+Now will we learn how to do basic CRUD operations on `TodoItem` object using .Net SDK.
 
 **Saving TodoItem:**
 
-Creation of `TodoItem` is similar to `TodoList`, the only difference is `TodoItem` is connected to `TodoList` and not to `User`.
+First we will create a Todo Item. To do this open TodoItem.cs and modify `Save` function as follows
 
 	public async Task<bool> Save()
     {
@@ -251,18 +159,18 @@ Creation of `TodoItem` is similar to `TodoList`, the only difference is `TodoIte
             //else update
             if (string.IsNullOrEmpty(this.Id))
             {
-                //as we need to store this item in context of todolist
-                //we will create a connection between todolist and the todoitem
+                //as we need to store this item in context of user
+                //we will create a connection between todoitem and the user
                 //when connection is saved, todoitem is automatically created
                 await Appacitive.Sdk.APConnection
-                                .New("todolist_todoitem")
-                                .FromExistingObject("todolist", _parent.Id)
-                                .ToNewObject("todoitem", this)
+                                .New("owner")
+                                .FromExistingObject("user", AppContext.UserContext.LoggedInUser.Id)
+                                .ToNewObject("todo", this)
                                 .SaveAsync();
             }
             else
             {
-            	//update the state
+                //update the state
                 await this.SaveAsync();
             }
             return true;
@@ -270,39 +178,33 @@ Creation of `TodoItem` is similar to `TodoList`, the only difference is `TodoIte
         catch { return false; }
     }
 
-Whenever user will mark any todo item as done, same save function will be called and whatever state of the object will be saved in Appacitive Platform.
+Here we are saving TodoItem in context of user by creating a `Owner` connection between `User` and `TodoItem`.
 
-**Fetching TodoItems:**
+**Fetching TodoItem:**
 
-When Details view is rendered it asks `DetailsViewModel` to fetch data. As done earlier, we will replace the hard coded values in `LoadData` function from `DetailsViewModel.cs` file by following code
+Now to fetch `TodoItem`, we will make `GetConnectedObjects` call on `User`, as `TodoItem` are connected to `User` we can easily fetch `TodoItem` for a given `User`. Open `MainViewModel` and remove hard coded code for adding dummy data by following code
 
-	//Get all objects of type todoitem
-    var results = await _todoList.GetConnectedObjectsAsync("todolist_todoitem",
-                                                         orderBy: "__utclastupdateddate",
-                                                         sortOrder: Appacitive.Sdk.SortOrder.Descending);
-
-    //Iterate over the result object till all the todoitems are fetched
+	///get connected todo items for current user
+    var result = await AppContext.UserContext.LoggedInUser.GetConnectedObjectsAsync("owner",
+                                                                orderBy: "__utcdatecreated",
+                                                                sortOrder: Appacitive.Sdk.SortOrder.Ascending);
+    //iterate over result object and add todo item to the list 
     while (true)
     {
-        //converting appacitive object to model
-        results.ForEach(r => this.Items.Add(r as TodoItem));
-
-        //check if its last set of record
-        if (results.IsLastPage) break;
-
-        //fetch next set of record
-        results = await results.NextPageAsync();
+        result.ForEach(r => this.Items.Add(r as TodoItem));
+        //check if all pages are retrieved
+        if (result.IsLastPage) break;
+        //fetch next page
+        result = await result.NextPageAsync();
     }
-
-
 
 **Deleting TodoItem:**
 
-Following code shows how to delete an individual TodoItem.
+Last thing we will do with TodoItem is to delete it. To do so replace `Delete` function from TodoItem.cs by following
 
 	public async Task<bool> Delete()
     {
-        //delete todo item from backend
+        //delete list item from backend
         try
         {
             await Appacitive.Sdk.APObjects.DeleteAsync(this.Type, this.Id, true);
@@ -311,6 +213,7 @@ Following code shows how to delete an individual TodoItem.
         catch { return false; }
     }
 
+Here we are deleting `TodoItem` connected to the `User` with the `Owner` connection.
 
 ### Congratulation
 

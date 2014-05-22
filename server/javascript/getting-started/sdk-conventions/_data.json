@@ -4,14 +4,16 @@
       "description": "What are the SDK Conventions for Appacitive JavaScript SDK - Learn it in getting started section of JavaScript SDK.",
       "keywords": "sdk conventions, javascript, sdk, javascript sdk, debug, getting started, appacitive",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "language": "JavaScript",
       "help_lang": "javascript",
-      "layout": "../../../_layout-getting-started",
+      "layout": "../_layout-getting-started.ejs",
       "installation": "",
       "sdkconventions": "active",
-      "extendingsdk": "",
       "debuggingsdk": "",
+      "masterclientkey": "",
       "errorspace": "",
-      "thirdpartyintegrations": ""
+      "serversideapps": "",
+      "promises": ""
    }
 }

@@ -4,6 +4,7 @@
       "description": "Third party integrations of Appacitive Android SDK - Know it in getting started section of Android SDK.",
       "keywords": "android sdk, android, sdk, android sdk, getting started, appacitive",
       "platform": "Android",
+      "platform_link": "android",
       "language": "Android",
       "help_lang": "android",
       "layout": "../../../_layout-getting-started",

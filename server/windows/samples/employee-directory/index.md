@@ -60,7 +60,7 @@ You can initialize SDK any where in your app, but we suggest to do it in `App.xa
 	private void Application_Launching(object sender, LaunchingEventArgs e)
     {
     	//Initializing Appacitive .Net SDK
-        Appacitive.Sdk.App.Initialize(Appacitive.Sdk.WindowsPhone8.Platforms.WP8, 
+        Appacitive.Sdk.AppContext.Initialize(Appacitive.Sdk.WindowsPhone8.Platforms.WP8, 
                                          "{{App Id}}", 
                                          "{{API Key}}", 
                                          Appacitive.Sdk.Environment.Sandbox);
@@ -111,7 +111,7 @@ Similarly modify all remaining properties of `Employee`. Remove the `Id` propert
 Lastly we will map your local objects to Appacitive types in `Application_Launching` function, after .Net SDK is initialized
 
     //Map your model object to appacitive type
-    Appacitive.Sdk.App.Types.MapObjectType<Employee>("employees");
+    Appacitive.Sdk.AppContext.Types.MapObjectType<Employee>("employees");
 
 Now we have an application which is using Appacitive as backend. 
 

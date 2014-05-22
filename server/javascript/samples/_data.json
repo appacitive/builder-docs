@@ -4,6 +4,7 @@
       "description": "Checkout quick and simple JavaScript SDK samples highlighting some of the main features provided by Appacitive Platform .",
       "keywords": "javascript, samples, javascript samples, javascript sdk samples, appacitive, javascript sdk",
       "platform": "JavaScript",
+      "platform_link": "javascript",
       "language": "JavaScript"
    }
 }

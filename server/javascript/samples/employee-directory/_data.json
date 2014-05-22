@@ -5,6 +5,7 @@
             "keywords": "todo, todo sample, javascript, samples, javaScript samples, javascript sdk samples, appacitive, javascript sdk, graph, data",
             "layout": "../../../_layout-banner-sample.ejs",
             "platform": "Javascript",
+            "platform_link": "javascript",
             "language": "JavaScript",
             "header_app_name": "Employee Directory",
             "header_app_description": "Learn how to create a simple Employee Directory application using Appacitive as the backend to fetch data. This application uses <a href='http://backbonejs.org/'>Backbone.js <i class='glyphicon glyphiocn-share-alt'></i></a> to organize the code, and <a href='http://getbootstrap.com/2.3.2/'>Twitter Bootstrap <i class='glyphicon glyphiocn-share-alt'></i></a> to organize the UI.",

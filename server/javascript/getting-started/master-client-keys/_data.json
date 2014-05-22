@@ -1,0 +1,19 @@
+{
+  "index": {
+      "title": "Master/Client keys - Getting Started - JavaScript - Dev Center - Appacitive",
+      "description": "Usage of master and clinet keys in SDK - Learn it in getting started section of JavaScript SDK.",
+      "keywords": "master key, client key, apikey, javascript, sdk, javascript sdk, debug, getting started, appacitive",
+      "platform": "JavaScript",
+      "platform_link": "javascript",
+      "language": "JavaScript",
+      "help_lang": "javascript",
+      "layout": "../_layout-getting-started.ejs",
+      "installation": "",
+      "masterclientkey": "active",
+      "sdkconventions": "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "serversideapps": "",
+      "promises": ""
+   }
+}

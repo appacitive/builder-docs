@@ -1,0 +1,108 @@
+<div id="divHeader" class="navbar navbar-default navbar-inverse pageHeader" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="logo" href="/" title="appacitive"></a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="pull-right">
+                <ul id="ulSignIn" class="pull-right nav navbar-nav hide">
+                    <li>
+                        <button id="btnLogin" class="btn btn-primary navbar-v-align">
+                            Sign in</button>
+                    </li>
+                </ul>
+                <ul class="pull-right top_links_user hide" id="divUserMenu">
+                    <li><a href="javascript:void(0)" id="lnkUserMenu">
+                        <img id="imgUserPhoto" alt="photo" /></a><div class="top_user_drop_menu">
+                            <ul id="lstUserMenu" class="nav-list">
+                                <li class="nav-header user-name"><span class="top_nav_user_name_first"></span> <span class="top_nav_user_name_last"></span></li>
+                                <li><a href="javascript:void(0)" id="lnkApps">Apps</a></li>
+                                <li><a href="javascript:void(0)" id="lnkMyAccount">My Account</a></li>
+                                <li><a href="javascript:void(0)" id="lnkBilling">Billing & Payments</a></li>
+                                <li><a href="javascript:void(0)" id="lnkSupport">contact support</a></li>
+                                <li><a href="javascript:void(0)" id="lnkLogout">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav pull-right platform-dropdown">
+                    <li class="platform-list">
+                        <a href="javascript:void(0)">
+                            <i class="sprite-apps"></i>
+                            <span class="apps-name"><%= platform %></span> 
+                            <i class="sprite-down-arrow-light"></i>
+                        </a>
+                        <div class="top_user_drop_menu appList">
+                            <ul class="nav-list" tabindex="5001" style="display: none; overflow-y: hidden; outline: none;">
+                                <li class="nav-header user-name" style="height:36px;text-transform:none;line-height:24px">All Platforms</li>
+                                <li><a href="/ios">iOS</a></li>
+                                <li><a href="/android">Android</a></li>
+                                <li><a href="/windows">Windows</a></li>
+                                <li><a href="/javascript">JavaScript</a></li>
+                                <li><a href="/python">Python</a></li>
+                                <li class="nav-separator"></li>
+                                <li><a href="/">Dev Center</a></li>
+                                <li class="nav-separator"></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <% if (typeof guide_name != 'undefined') { %>
+                <ul class="nav pull-right guides-dropdown">
+                    <li class="platform-list">
+                        <a href="javascript:void(0)">
+                            <i class="sprite-apps"></i>
+                            <%  function capitaliseFirstLetter(str) {  %>
+                            <%      var strs = str.split('-'); %>
+                            <%      var op = ''; %>
+                            <%      strs.forEach(function(s) { %>
+                            <%          op += s.charAt(0).toUpperCase() + s.slice(1) + ' '; %>
+                            <%      }); %>
+                            <%      return op; %>
+                            <%  } %>
+                            <%  guide_name = capitaliseFirstLetter(guide_name); %>
+                            <span class="apps-name"><%= guide_name %></span> 
+                            <i class="sprite-down-arrow-light"></i>
+                        </a>
+                        <div class="top_user_drop_menu appList">
+                            <ul class="nav-list" tabindex="5001" style="display: none; overflow-y: hidden; outline: none;">
+                                <li class="nav-header user-name" style="height:36px;text-transform:none;line-height:24px">Core</li>
+                                <li><a href="../data-store/guides.html">Data Store</a></li>
+                                <li><a href="../users/guides.html">Users</a></li>
+                                <li><a href="../access-control/guides.html">Access Control</a></li>
+                                <li><a href="../emails/guides.html">Emails</a></li>
+                                <li><a href="../social/guides.html">Social</a></li>
+                                <li><a href="../files/guides.html">Files</a></li>
+                                <li class="nav-header user-name" style="height:36px;text-transform:none;line-height:24px">Push Notification</li>
+                                <li><a href="../push/guides.html">Push</a></li>
+                                <li><a href="../devices/guides.html">Devices</a></li>
+                                 <li class="nav-header user-name" style="height:36px;text-transform:none;line-height:24px">Graph</li>
+                                <li><a href="../graph-api/guides.html">Graph API</a></li>
+                                <li><a href="../graph-query/guides.html">Graph Query</a></li>
+                                <li class="nav-separator"></li>
+                                <li><a href="/<%= platform_link %>">Guides</a></li>
+                                <li class="nav-separator"></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <% } %>
+                <ul class="nav pull-right platform-header-links">
+                    <li><a href="/<%= platform_link %>/getting-started">Getting Started</a></li>
+                    <li><a href="/<%= platform_link %>/samples">Samples</a></li>
+                    <li><a href="/<%= platform_link %>/downloads">Downloads</a></li>
+                    <% if (typeof guides == 'undefined' && typeof guide_name == 'undefined') { %>
+                        <li><a href="/<%= platform_link %>" >Guides</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

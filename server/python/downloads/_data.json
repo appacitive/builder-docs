@@ -4,6 +4,7 @@
       "description": "Get started with your Python app using our Python SDK.",
       "keywords": "python sdk download, python sdk, getting started, appacitive ",
       "platform": "Python",
+      "platform_link": "python",
       "language": "Python",
       "layout": "../../_layout-downloads.ejs"
    }
