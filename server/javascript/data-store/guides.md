@@ -806,7 +806,7 @@ Marriage.multiGet({
 
 ### Get Connected Objects
 
-Consider `Jane` has a lot of friends whom she wants to invite to her marriage. We can simply get all her friends who're of type `person` connected through a relation `friends` with label for jane as `me` and friends as `friend` using this search
+Consider `Jane` has a lot of friends whom she wants to invite to her `marriage`. We can simply get all her friends who're of type `person` connected through a relation `friends` with label for jane as `me` and friends as `friend` using this search
 
 ```javascript
 //Get an instance of person Object for Jane 
@@ -871,7 +871,7 @@ query.fetch().then(function(invites) {
 });
 ```
 
-In this query, you provide a relation type (name) and a label of opposite side whose conenction you want to fetch and what is returned is a list of all the connections for above object. 
+In this query, you provide a relation type (name) and a label of opposite side whose connection you want to fetch and what is returned is a list of all the connections for above object. 
 
 ### Get Connection between 2 Object Ids
 
@@ -893,7 +893,6 @@ var query = Appacitive.Connection.getBetweenObjectsForRelation({
 
 //construct query by extending class
 var Marriage = Appacitive.Connection.extend('marriage');
-
 var query = Marriage.getBetweenObjectsForRelation({ 
     objectAId : "22322", //mandatory 
     objectBId : "33422", //mandatory
@@ -901,7 +900,6 @@ var query = Marriage.getBetweenObjectsForRelation({
 });
 
 //fire the query to fetch
-
 query.fetch().then(function(marriage){
     if (marriage != null) {
       // connection obj is returned as argument to onsuccess
@@ -916,7 +914,7 @@ query.fetch().then(function(marriage){
 
 ```
 
-Conside you want to check that a particular `house` is owned by `Jane`, you can do it by fetching connection for relation `owns_house` between `person` and `house`.
+Conside you want to check that a particular `house` is owned by `Jane`, you can do it by fetching connection for relation `owns_house` between `person` and `house`:
 ```javascript
 var Owns_house = Appacitive.Connection.extend('owns_house');
 
@@ -936,7 +934,7 @@ query.fetch().then(function(obj) {
 
 ### Get all connections between two Object Ids
 
-Consider `jane` is connected to `tarzan` via a `marriage` and a `friend` relationship. If we want to fetch al connections between them we could do this as
+Consider `jane` is connected to `tarzan` via a `marriage` and a `friend` relationship. If we want to fetch all connections between them we could do this as:
 
 ```javascript
 var query = Appacitive.Connection.getBetweenObjects({
@@ -952,11 +950,11 @@ On success, we get a list of all connections that connects `jane` and `tarzan`.
 
 ### Get Interconnections between one and multiple Object Ids
 
-Consider, `jane` wants to what type of connections exists between her and a group of persons and houses , she could do this as
+Consider, `jane` wants to know what type of connections exists between her and a group of `persons` and `houses` , she could do this as:
 ```javascript
 var query = Appacitive.Connection.getInterconnects({
   objectAId: '13432',
-    objectBIds: ['32423423', '2342342', '63453425', '345345342']
+  objectBIds: ['32423423', '2342342', '63453425', '345345342']
 });
 
 query.fetch().then(function(connections) {
@@ -966,7 +964,7 @@ query.fetch().then(function(connections) {
 });
 ```
 
-This would return all connections with object id 13432 on one side and '32423423', '2342342', '63453425' or '345345342' on the other side, if they exist.
+This would return all connections with object id `13432` on one side and '32423423', '2342342', '63453425' or '345345342' on the other side, if they exist.
 
 ## Updating Connection
 
@@ -1004,7 +1002,6 @@ Appacitive.Connection.multiDelete({
 
 //by extending class
 var Friends = Appacitive.Connection.extend('friends');
-
 Friends.multiDelete({   
   ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of connection ids to delete
 }).then(function() { 
@@ -1149,74 +1146,65 @@ query.fields([*]); //will set fields to return all user-defined properties and _
 
 ### Filter
 
-Filters are useful for limiting or funneling your results. They can be added on properties, attributes, aggregates and tags.
+Filters are useful for fine tuning the results of your search. Objects and connections inside Appacitive have 4 different types of data, namely - [properties](#properties), [attributes](#attributes), aggregates and [tags](#tags). Filters can be applied on each and every one of these. Combinations of these filters is also possible.
 
-Adding filters in a query is done using the `Appacitive.Filter` object, which has following functions to initialize a new filter.
-
-```javascript
-Appacitive.Filter.Property
-Appacitive.Filter.Attribute
-Appacitive.Filter.Aggregate
-Appacitive.Filter.TaggedWithOneOrMore
-Appacitive.Filter.TaggedWithAll
-Appacitive.Filter.Or
-Appacitive.Filter.And
+The `Appacitive.Filter` class provides a factory for creating filters for appacitive without having to learn the specialized query format used by the underlying REST api.
+The typical format for the filter helper class is
+```csharp
+Appacitive.Filter.{Property|Attribute|Aggregate}("name").<Condition>(condition args);
 ```
+Some sample examples of how it can be used are
+```csharp
+// To filter on a property called firstname
+var propfilter = Appacitive.Filter.Property("firstname").equalTo("John");
 
-Lets first discuss how to use **Appacitive.Filter.Property**, **Appacitive.Filter.Attribute** and **Appacitive.Filter.Aggregate**. 
+// To query on an attribute called nickname
+var propfilter = Appacitive.Filter.Attribute("nickname").equalTo("John");
 
-All of these take one argument, which is either the property or the attribute or the aggregate name on which you want to filter
-
-```javascript
-var name = new Appacitive.Filter.Property('name');
-var nickName = new Appacitive.Filter.Attribute('nickname');
-var count = new Appacitive.Filter.Aggregate('count');
+// To query on an aggregate called avg_rating
+var aggrFilter = Appacitive.Filter.Aggregate("avg_rating").greaterThan(4.5);
 ```
 
 In response it returns you an expression object, which has all the conditional methods that can be applied for respective property/ attribute/aggregate. 
 
-Most of these methods other than
+This expression object, can be directly assigned to a query as:
 
 ```javascript
-var nameFilter = name.equalTo('jane'); // exact match
-var nickNameFilter = nickName.like('an'); // like match
-var countFilter = count.lessThan(20); // less than search
-```
-
-This returns you a filter object, which can be directly assigned to query
-```javascript
-query.filter(nameFilter);
-query.filter(nickNameFilter);
-query.filter(countFilter);
+query.filter(propfilter);
 
 //you can also set it as
-query.filter(new Appacitive.Filter.Property('name').equalTo('name'));
+query.filter(new Appacitive.Filter.Property('firstname').equalTo('John'));
+
+// format in underlying REST api.
+console.log(propFilter.toString()); // *firstname == 'john'
 ```
 
-**List of all filters and their support**
+### List of supported conditions
 
-| Filter        | Property         | Attribute  | Aggregate |
-| ------------- |:-----:| :-----:|:-----:|
-| equalTo      | Y | Y | Y |
-| equalToDate      | Y | - | - |
-| equalToTime      | Y | - | - |
-| equalToDateTime      | Y | - | - |
-| greaterThan      | Y | - | Y |
-| greaterThanDateTime      | Y | - | - |
-| greaterThanEqualTo      | Y | - | Y |
-| greaterThanEqualToDateTime      | Y | - | N |
-| lessThan      | Y | N | Y |
-| lessThanDate      | Y | N | N |
-| lessThanTime      | Y | N | N |
-| lessThanDateTime      | Y | N | N |
-| lessThanEqualTo      | Y | N | Y |
-| lessThanEqualToDateTime      | Y | N | N |
-| between      | Y | Y | Y |
-| betweenDateTime      | Y | - | - |
-| like      | Y | Y | N |
-| startsWith      | Y | Y | N |
-| endsWith      | Y | Y | N |
-| contains      | Y | Y | N |
+| Condition | Sample usage |
+| ------------- |:-----|
+| **Geography properties** ||
+| withinPolygon() | ``` Appacitive.Filter.Property("location").withinPolygon(geocodes); ```
+| withinCircle() | ```Appacitive.Filter.Property("location").withinCircle(geocode, radius, unit {km/mi} ); ```|
+| equalTo() | ```Appacitive.Filter.Property("location").equalTo(geocode);``` |
+| **String properties** ||
+| startsWith() | ```Appacitive.Filter.Property("name").startsWith("Ja"); ```|
+| like()| ```Appacitive.Filter.Property("name").like("an"); ```|
+| match()**   | ```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
+| endsWith() | ```Appacitive.Filter.Property("name").endsWith("ne"); ``` |
+| equalTo() | ```Appacitive.Filter.Property("name").equalTo("Jane"); ``` |
+| contains() | ```Appacitive.Filter.Property("name").contains([value1, value1]);``` |
+| **Text properties** ||
+| match()**   |```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
+| **Datetime, int and decimal properties** ||
+| equalTo() | ```Appacitive.Filter.Property("field").equalTo(value);``` |
+| lessThan() | ```Appacitive.Filter.Property("field").lessThan(value);``` |
+| lessThanEqualTo() | ```Appacitive.Filter.Property("field").lessThanEqualTo(value);``` |
+| greaterThan() | ```Appacitive.Filter.Property("field").greaterThan(value);``` |
+| greaterThanEqualTo() | ```Appacitive.Filter.Property("field").greaterThanEqualTo(value);``` |
+| between() | ```Appacitive.Filter.Property("field").between(start, end);``` |
+| contains() | ```Appacitive.Filter.Property("field").contains([value1, value1]);``` |
+** Supports [Lucene query parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
 
 <br/>
 
@@ -1236,24 +1224,24 @@ var containsFilter = Appacitive.Filter.Property("firstname").contains(["John", "
 //Between two datetimeobjects
 var start = new Date("12 Dec 1975");
 var end = new Date("12 Jun 1995");
-var betweenDatesFilter = Appacitive.Filter.Property("birthdate").betweenDateTime(start, end);
+var betweenDatesFilter = Appacitive.Filter.Property("birthdate").between(start, end);
 
 //Between two datetime objects
-var betweenDateTimeFilter = Appacitive.Filter.Property("__utclastupdateddate").betweenDateTime(start, end);
+var betweenDateTimeFilter = Appacitive.Filter.Property("__utclastupdateddate").between(start, end);
 
 //Between some two numbers
 var betweenFilter = Appacitive.Filter.Property("age").between(23, 70);
 
 //Greater than a datetime
-var greaterThanDateTimeFilter = Appacitive.Filter.Property("birthdate").greaterThanDateTime(date);
+var greaterThanDateTimeFilter = Appacitive.Filter.Property("birthdate").greaterThan(date);
 
 //greater then some number 
 var greaterThanFilter = Appacitive.Filter.Property("age").greaterThan(25);
 
-//Same works for greaterThanEqualTo and greaterThanEqualToDateTime
-//and for lessThan and lessThanDateTime
-//and for lessThanEqualTo and lessThanEqualToDateTime
-// and for equalTo and equalToDateTime
+//Same works for greaterThanEqualTo
+//and for lessThan
+//and for lessThanEqualTo
+// and for equalTo
 ```
 
 ### Compoound Filters
@@ -1330,7 +1318,8 @@ Let's create a geography property and save it as `location` in type `hotel`. We'
 var Hotel = Appacitive.Object.extend('hotel'); 
   
 var location = new Appacitive.GeoCoord(16.734, 80.3423); //lat, lon
-var hilton = new Hotel({ name: 'Hotel Hilton', location: location }); // you can assign geocoord objects directly to properties
+// you can assign geocoord objects directly to properties
+var hilton = new Hotel({ name: 'Hotel Hilton', location: location }); 
 
 //or set it in object
 hilton.set('location', location);
@@ -1339,9 +1328,11 @@ hilton.set('location', location);
 hilton.set('location', '16.734, 80.3423');
 
 hilton.save().then(function(obj) {
-    alert(hilton.get('location')); // will display 16.734, 80.3423
+    // will display 16.734, 80.3423
+    alert(hilton.get('location').toString()); 
 
-    var loc = hilton.get('location', 'geocode')); // will return you an instance of Appacitive.GeoCoord type
+    // will return you an instance of Appacitive.GeoCoord type
+    var loc = hilton.get('location'); 
 
     alert("Latitude: " + loc.lat() + ', longitude: ' + loc.lng());
 });
