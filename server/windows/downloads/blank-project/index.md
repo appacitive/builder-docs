@@ -20,8 +20,8 @@ Depending upon your requirement download appropriate project. If you don't find 
 			<tbody>
 				<tr>
 					<td>ASP.Net</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/asp-net/csharp/AspNetStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/asp-net/vb/AspNetStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>WCF</td>
@@ -35,18 +35,18 @@ Depending upon your requirement download appropriate project. If you don't find 
 				</tr>
 				<tr>
 					<td>Windows Form</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/win-form/csharp/WinFormStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/win-form/vb/WinFormStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>Windows Phone 8</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wp8/csharp/WP8StarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wp8/vb/WP8StarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>Windows Phone 7.1</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wp7/csharp/WP7StarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wp7/vb/WP7StarterProject.zip">VB</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -64,8 +64,8 @@ Depending upon your requirement download appropriate project. If you don't find 
 			<tbody>
 				<tr>
 					<td>ASP.Net</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/asp-net/csharp/AspNetStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/asp-net/vb/AspNetStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>WCF</td>
@@ -79,18 +79,18 @@ Depending upon your requirement download appropriate project. If you don't find 
 				</tr>
 				<tr>
 					<td>Windows Form</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/win-form/csharp/WinFormStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/win-form/vb/WinFormStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>Windows Phone 8</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wp8/csharp/WP8StarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wp8/vb/WP8StarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>Windows Phone 7.1</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wp7/csharp/WP7StarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wp7/vb/WP7StarterProject.zip">VB</a></td>
 				</tr>
 			</tbody>
 		</table>
