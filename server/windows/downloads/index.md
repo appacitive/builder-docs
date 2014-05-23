@@ -2,7 +2,10 @@
 <h1><span class="glyphicon glyphicon-download-alt"></span> .Net SDK Downloads</h1>
 <span class="muted mbm">Version 1.0.0 - May 01, 2014</span>
 <div <a class="btn btn-primary pll prl">Download</a></div>
-<br/>
+<div class="ptm">
+To fast track your development, we have created <a href="blank-project">blank projects</a> of different project types. These blank projects has a references to .Net SDK with all it's other dependencies.
+</div>
+
 <br/>
 <br/>
 
