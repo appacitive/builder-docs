@@ -1,33 +1,33 @@
 ﻿Todo List App demonstrates ***Users*** and ***Data Store***  features provided by Appacitive Platform. As part of design best practice, you will learn how to model your app and bind your custom objects to the view.
 
-### Creating Todo List App from Scratch
+
+### Creating todo list app from scratch
 
 Follow the step by step guide to get hands on with the Todo List App.
 
 
-### 1. Modeling the app backend on Appacitive
+### 1. Modeling the app back-end on Appacitive
 
 Following video shows how to create the model for the app on Appacitive Platform.
 
 <iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-### 2. Downloading Boilerplate
+### 2. Downloading the boilerplate code
 
-To jump start, we have created a boilerplate app for you. To complete the boilerplate code, first make your model for the todo app on appacitive and then follow the guide that follows or read it [here](https://github.com/pratik644/AppacitiveToDoSample/tree/boilerplate)  You can download the boilerplate [here](https://github.com/pratik644/todoapp/archive/boilerplate.zip)
+To jump start, we have created a boilerplate app for you. To complete the boilerplate code, first make your model for the todo app on Appacitive and then follow the guide that follows or read it [here](https://github.com/pratik644/AppacitiveToDoSample/tree/boilerplate)  You can download the boilerplate [here](https://github.com/pratik644/todoapp/archive/boilerplate.zip)
 
--------
 
-# Let's Do - A simple to-do application built with Appacitive.
+### 3. Implementing the application
 
-## INTRODUCTION
+#### 3.1. Introduction
 
 **Let's Do** is a very simple to-do application with minimal functionality built to help you get started with using your Appacitive model in an iOS application. If you have reached here through the wizard from the Appacitive portal, I assume you have already built your mode for the application which means 50% of your work is done. If, for any reason, you have not made a model at Appacitive, I would advise you to first complete that step and come back here and continue. In case if you are not familiar with building your model in Appacitive, I would encourage you to take a look at [this](http://www.vimeo.com/appacitive) page which contains very comprehensive videos on using Appacitive as your back-end.
 
 Now that your model is all set up, lets add some code to the boilerplate to complete the app. 
 
 
-## INTEGRATING THE APPACITIVE iOS SDK
+#### 3.2. Integrating the iOS SDK
 
 First thing we need to do is integrate the Appacitive iOS SDK into our project. There are two methods to do that and the instructions can be found [here](http://devcenter.appacitive.com/ios/getting-started/installation/). For the sake of convenience, we will use the first method. Download the latest version of the SDK framework bundle from the link provided on the [Appacitive DevCenter](http://devcenter.appacitive.com/ios/downloads/) and extract the framework bundle from the zip archive.
 
@@ -46,7 +46,8 @@ __Optional:__ For debugging purposes, add the following code below the `+[Appaci
 [[APLogger sharedLogger] enableVerboseMode:YES];
 ```
 
-## IMPLEMENTING LOGIN
+
+#### 3.3. Implementing user authentication
 
 Open the `LoginViewController.m` file and add an import statement `#import <Appacitive/AppacitiveSDK.h>` to import the Appacitive iOS SDK. Replace the `buttonTapped:sender:` method with the following code.
 
@@ -124,9 +125,9 @@ Open the `LoginViewController.m` file and add an import statement `#import <Appa
     }
 }```
 
-In the above code, we simply check the button that the user has tapped among the three buttons on the login view viz. login, signup and forgot password. Then based on the button press we validate if he has entered all the required fields. If all validation checks pass then based on the button the user has pressed, we perform the appropriate opertaion. For the login we use the `+[APUser authenticateUserWithUserName:password:successHandler:failureHandler:]` method. For sign-up, we create a new user and use the `-[APUser  createUserWithSuccessHandler:failureHandler:]` method to create a new user and on success we use the above mentioned `+[APUser authenticateUserWithUserName:password:successHandler:failureHandler:]` method to authenticate the new user and log him in to the app. In case the user has tapped the forgot password button then we use the `+[APUser sendResetPasswordEmailForUSerWithUsername:withSubject:]` method to send a reset password email to the user's registered email address.
+In the above code, we simply check the button that the user has tapped among the three buttons on the login view i.e. the login, sign-up and forgot password buttons. Then based on the button press we validate if he has entered all the required fields. If all validation checks pass then based on the button the user has pressed, we perform the appropriate operation. For the login we use the `+[APUser authenticateUserWithUserName:password:successHandler:failureHandler:]` method. For sign-up, we create a new user and use the `-[APUser  createUserWithSuccessHandler:failureHandler:]` method to create a new user and on success we use the above mentioned `+[APUser authenticateUserWithUserName:password:successHandler:failureHandler:]` method to authenticate the new user and log him in to the app. In case the user has tapped the forgot password button then we use the `+[APUser sendResetPasswordEmailForUSerWithUsername:withSubject:]` method to send a reset password email to the user's registered email address.
 
-## IMPLEMENTING TODO LIST
+#### 3.4. Implementing the todo list 
 
 Next, open the ViewController.m file and replace the `logoutButtonTapped` with the following code.
 
@@ -262,9 +263,11 @@ In the above code, we simply check the `completed` property of the `todo` APObje
 
 That's it. Build and run the project and try creating your own todo list.
 
-## CONCLUSION
+
+### 4. Conclusion
 
 You have created a fully functional Todo App using the Appacitive iOS SDK. In this Todo App we have explored the **CRUD** capability of two features ***Data Store*** and **Users** provided by Appacitive Core. You also learned how to **Authenticate** a user.
 
-## WHAT'S NEXT?
+
+### 5. What's next?
 You can check out our other <a title="All Samples based on Appacitive iOS SDK" href="../">samples</a> to know more about iOS SDK and other features provided by Appacitive Platform. For complete API reference of iOS SDK go to our <a target="_blank" title="http://help.appacitive.com" href="http://help.appacitive.com/v1.0/#ios">help docs<span class="plxs glyphicon glyphicon-share-alt"></span></a>.
