@@ -1181,21 +1181,21 @@ console.log(propFilter.toString()); // *firstname == 'john'
 
 ### List of supported conditions
 
-| Condition | Sample usage |
+| Condition    | Sample usage |
 | ------------- |:-----|
 | **Geography properties** ||
-| withinPolygon() | ``` Appacitive.Filter.Property("location").withinPolygon(geocodes); ```
-| withinCircle() | ```Appacitive.Filter.Property("location").withinCircle(geocode, radius, unit {km/mi} ); ```|
+| withinPolygon() | ``` Appacitive.Filter.Property("loc").withinPolygon(geocodes); ```
+| withinCircle() | ```Appacitive.Filter.Property("loc").withinCircle(geocode, radius, unit); ```|
 | equalTo() | ```Appacitive.Filter.Property("location").equalTo(geocode);``` |
 | **String properties** ||
 | startsWith() | ```Appacitive.Filter.Property("name").startsWith("Ja"); ```|
-| like()| ```Appacitive.Filter.Property("name").like("an"); ```|
-| match()**   | ```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
+| like()  | ```Appacitive.Filter.Property("name").like("an"); ```|
+| match()  | ```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
 | endsWith() | ```Appacitive.Filter.Property("name").endsWith("ne"); ``` |
 | equalTo() | ```Appacitive.Filter.Property("name").equalTo("Jane"); ``` |
 | contains() | ```Appacitive.Filter.Property("name").contains([value1, value1]);``` |
 | **Text properties** ||
-| match()**   |```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
+| match()  |```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
 | **Datetime, int and decimal properties** ||
 | equalTo() | ```Appacitive.Filter.Property("field").equalTo(value);``` |
 | lessThan() | ```Appacitive.Filter.Property("field").lessThan(value);``` |
