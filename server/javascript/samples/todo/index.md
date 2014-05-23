@@ -16,7 +16,7 @@ Above specified dependencies are specific to this app. SDK has no dependencies o
 
 Follow this guide to get hands on with the todo App.
 
-### 1. Modeling app backend on Appacitive
+<h3 id="model-backend">1. Modeling app backend on Appacitive</h3>
 
 Following video shows how to create the model for the app on Appacitive Platform.
 
