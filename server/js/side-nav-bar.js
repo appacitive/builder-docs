@@ -124,7 +124,7 @@ $('.bs-docs-sidebar').show();
  * Add scrollspy to generated sidebar
  */
 $('body').scrollspy({
-  target: ".bs-docs-sidebar"
+  target: ".doc-nav"
 });
 
 /**

@@ -1,6 +1,6 @@
 This app allows you to search for employees by name and view their details. It also allows to navigate up and down the Org Chart by clicking the employee’s manager or any of his/her direct reports.
 
-Appacitive's <a href="http://github.com/chiragsanghvi/javascriptsdk" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
+Appacitive's <a href="../downloads" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
 
 This tutorial demonstrates two features ***Data Store*** and ***Graph API*** provided by Appacitive Platform. As part of design best practice, you will learn how to model your app and bind your custom objects to the view.
 
@@ -64,7 +64,7 @@ To change the data adapter, just comment out `model-in-memory.js` script, and un
 <!--<script src="js/models/model-in-memory.js"></script>-->
 
 <!-- Uncomment the two scripts below to use Appacitive.com as the data persistence layer. -->
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.6.5.min.js" type="text/javascript"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.3.min.js" type="text/javascript"></script>
 <script src="js/models/model-appacitive-com.js"></script>
 ```
 
@@ -236,4 +236,4 @@ Following video explains Graph API in more detail.
 You have created a fully functional Employee Directory App using Javascript SDK backed by Appacitive Platform. In this App we have explored two features ***Data Store*** and ***Graph API*** feature provided by Appacitive Core.
 
 ### What's next?
-You can check out our other <a title="All Samples based on Appacitive Javascript SDK" href="../">samples</a> to know more about Javscript SDK and other features provided by Appacitive Platform. For complete API reference of Javascript SDK go to our <a target="_blank" title="http://help.appacitive.com" href="http://help.appacitive.com/v1.0/#javascript">help docs<span class="plxs glyphicon glyphicon-share-alt"></span></a>.
+You can check out our other <a title="All Samples based on Appacitive Javascript SDK" href="../">samples</a> to know more about Javscript SDK and other features provided by Appacitive Platform. For complete API reference of Javascript SDK go to our <a title="javascript help docs" href="../../">help docs</a>.

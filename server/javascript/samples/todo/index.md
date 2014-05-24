@@ -1,6 +1,6 @@
 This tutorial will help you integrate *Appacitive* in existing *TodoMVC* app for *Backbone*.js. It demonstrates Users and Data Store features provided by Appacitive Platform. 
 
-Appacitive <a href="http://github.com/chiragsanghvi/javascriptsdk" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
+Appacitive <a href="../downloads" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
 
 As part of design practice, you will learn how to model your app and bind your data to the views. 
 
@@ -62,7 +62,7 @@ All the html that is needed by views is placed in index.html file inside script 
 To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
 ```html
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.2.min.js"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.3.min.js"></script>
 ```
 
 #### 3.2 Initialize the SDK
@@ -365,7 +365,7 @@ You can find the templates for `email` and `reset-password` page over here
 You have created a fully functional Todo App using Javsript SDK backed by Appacitive Platform. In this Todo App we have explored the **CRUD** capability of two features **Data Store** and **Users** provided by Appacitive Core. You also learned how to **Create and Authenticate** user. 
 
 ### What's next?
-You can check out our other <a title="All Samples based on Appacitive Javascript SDK" href="../">samples</a> to know more about Javscript SDK and other features provided by Appacitive Platform. For complete API reference of Javascript SDK go to our <a target="_blank" title="http://help.appacitive.com" href="http://help.appacitive.com/v1.0/#javascript">help docs<span class="plxs glyphicon glyphicon-share-alt"></span></a>.
+You can check out our other <a title="All Samples based on Appacitive Javascript SDK" href="../">samples</a> to know more about Javscript SDK and other features provided by Appacitive Platform. For complete API reference of Javascript SDK go to our <a title="javascript help docs" href="../../">help docs</a>.
 
 
 
