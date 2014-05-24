@@ -21,10 +21,15 @@ label { font-weight: normal; line-height: 16px; }
     .hero-container .content { padding-bottom: 0; }
 
 /*Platform Icons*/
-.platform_android { background: url('images/platform-android.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
-.platform_ios { background: url('images/platform-ios.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
-.platform_html { background: url('images/platform-javascript.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
-.platform_windows { background: url('images/platform-windows.png') no-repeat 0 0; border: none; width: 64px; height: 64px; }
+.platform_android, .platform_ios, .platform_html, .platform_windows{
+    background: url(images/all-platforms-sprite.png) no-repeat;
+    width: 64px; height: 64px;
+}
+
+.platform_android{ background-position: -1px 0; }
+.platform_ios{ background-position: 0 -137px; }
+.platform_html{ background-position: 0 -271px; }
+.platform_windows{ background-position: 0 -406px; }
 
 .platform { padding: 15px 0 15px; margin: 0; text-align: center; }
     .platform div { min-height: 250px; }
@@ -33,10 +38,10 @@ label { font-weight: normal; line-height: 16px; }
         .platform a .name { position: absolute; top: 200px; text-align: center; left: 0; width: 100%; color: #555; font-size: 20px; background-color: transparent !important; }
         .platform a:hover, .platform a:hover .name { color: #00274f; background-color: #00274f; -webkit-transition: background-color 300ms linear; -moz-transition: background-color 300ms linear; -o-transition: background-color 300ms linear; -ms-transition: background-color 300ms linear; transition: background-color 300ms linear; }
     
-    .platform a:hover .platform_android { background: url('images/platform-android-white.png') no-repeat; }
-    .platform a:hover .platform_ios { background: url('images/platform-ios-white.png') no-repeat; border: }
-    .platform a:hover .platform_html { background: url('images/platform-javascript-white.png') no-repeat; }
-    .platform a:hover .platform_windows { background: url('images/platform-windows-white.png') no-repeat; }
+    .platform a:hover .platform_android { background-position: 0 -69px; }
+    .platform a:hover .platform_ios { background-position: 0 -206px; }
+    .platform a:hover .platform_html { background-position: 0 -340px; }
+    .platform a:hover .platform_windows { background-position: 0 -471px;}
 
 .platform-name { margin-bottom: 3px; }
 .platform-details { list-style: square; margin-left: 22px; }
@@ -102,12 +107,19 @@ footer { position: absolute; bottom: 0px; border-top: 3px solid #aaa; width: 100
     footer ul, footer ol { list-style: none; }
 
 /* sprites */
-.sprite-core { background: url('images/sprite-core.png') no-repeat 0 0; width: 66px; height: 66px; display: inline-block; background-size: 66px; }
-.sprite-push { background: url('images/sprite-push.png') no-repeat 0 0; width: 64px; height: 64px; display: inline-block; }
-.sprite-graph { background: url('images/sprite-graph.png') no-repeat 0 0; width: 64px; height: 64px; display: inline-block; }
-    .platform a:hover .sprite-core { background: url('images/sprite-core-white.png') no-repeat 0 0; }
-    .platform a:hover .sprite-push { background: url('images/sprite-push-white.png') no-repeat 0 0; }
-    .platform a:hover .sprite-graph { background: url('images/sprite-graph-white.png') no-repeat 0 0; }
+.sprite-core, .sprite-graph, .sprite-push {
+    background: url(images/product-sprites.png) no-repeat;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+}
+
+.sprite-core{ background-position: 0 0; width: 66px; height: 66px; background-size: 66px; }
+.sprite-graph{ background-position: -1px -134px; }
+.sprite-push{ background-position: 0 -270px; }
+    .platform a:hover .sprite-core { background-position: 0 -67px ; }
+    .platform a:hover .sprite-push { background-position: 0 -337px ; }
+    .platform a:hover .sprite-graph { background-position: 0 -201px ; }
 
 .ptn, .pvn, .pan { padding-top: 0px; }
 .pts, .pvs, .pas { padding-top: 5px; }
