@@ -3,7 +3,7 @@
 
 To get you started, we have created blank projects of different project types. These blank projects has a references to .Net SDK with all it's other dependencies. .Net SDK can be used in any app which is built on .Net Framework 4.0 and 4.5.
 
-Depending upon your requirement download appropriate project. If you don't find the project you are looking for you can always install the .Net SDK using <a href="http://www.nuget.org/packages/Appacitive/" target="_blank">Nuget Package Manger</a>.
+Depending upon your requirements download appropriate project from the following options. If you don't find the project you are looking for you can always create project of your type and install the .Net SDK using <a href="http://www.nuget.org/packages/Appacitive/" target="_blank">Nuget Package Manger</a>.
 
 
 <div class="clear ptm"></div>
@@ -25,13 +25,13 @@ Depending upon your requirement download appropriate project. If you don't find 
 				</tr>
 				<tr>
 					<td>WCF</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wcf/csharp/WcfStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wcf/vb/WcfStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>WPF</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wpf/csharp/WpfStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net45/wpf/vb/WpfStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>Windows Form</td>
@@ -69,13 +69,13 @@ Depending upon your requirement download appropriate project. If you don't find 
 				</tr>
 				<tr>
 					<td>WCF</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wcf/csharp/WcfStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wcf/vb/WcfStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>WPF</td>
-					<td><a href="#">C#</a></td>
-					<td><a href="#">VB</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wpf/csharp/WpfStarterProject.zip">C#</a></td>
+					<td><a href="http://devcenter.appacitive.com/blank-project/windows/Appacitive.0.9.9/net40/wpf/vb/WpfStarterProject.zip">VB</a></td>
 				</tr>
 				<tr>
 					<td>Windows Form</td>
@@ -94,5 +94,11 @@ Depending upon your requirement download appropriate project. If you don't find 
 				</tr>
 			</tbody>
 		</table>
+		<div class="clear ptl"></div>
 	</div>
 </div>
+
+**Important Note:**
+<br/>
+Please note that all blank projects has reference to **.Net SDK v0.9.9**.
+<br/>
