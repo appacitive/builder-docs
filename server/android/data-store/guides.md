@@ -40,7 +40,7 @@ Lets verify that our *player* is indeed called 'John Doe',
 String name = john.getPropertyAsString("name");
 ```
 
-### Saving
+### Saving objects
 
 Saving a *player* to the server is easy.
 
@@ -58,7 +58,7 @@ Saving a *player* to the server is easy.
 
 When you call `createInBackground()`, the object is created on Appacitive's servers. A unique object *id* is generated and assigned to the *player* object. This identifier is also returned within the *object* on the client-side. You can access it directly using `getId()` property. This is available in the *player* object after a successful save.
 
-### Retrieving
+### Retrieving objects
 
 You can retrieving an existing *object* from the backend using it's *type* and unique *id*.
 
@@ -123,7 +123,7 @@ You can also retrieve multiple *objects* at a time, which will return a collecti
         });
 ```
 
-### Updating
+### Updating objects
 
 You can update an existing object via the `updateInBackground()` instance method on `AppacitiveObject`. Saving an object will update the instance with the latest values from the server. 
 
@@ -173,7 +173,7 @@ Every object instance has a integer based *__revision* property which is interna
 
 **Note:** A helper method called `fetchLatestInBackground()` has been provided for you to fetch the latest copy of the object/connection/user/device on the client side.
 
-### Deleting
+### Deleting objects
 
 You can delete an *object* on the server via the `deleteInBackground()` method on the `AppacitiveObject `class. Let's say we've had enough of our *John Doe* and want to delete his *player* object from the server. Here's how you can do that,
 
@@ -313,7 +313,7 @@ For example, a relation of type *employed* between a *user* and a *company* can 
 
 Properties in connections work exactly in the same way as they work in objects.
 
-### Retrieving
+### Retrieving connections
 
 #### Get connection by id
 
@@ -394,7 +394,7 @@ Consider, *jane* wants to what all connections exist between her and a set of *h
 
 The result would contain a paged list of **all** connections of any relation type between *jane* and the list of `houseIds`.
 
-### Updating
+### Updating connections
 
 Updating is done exactly in the same way as *objects*, i.e. via the `updateInBackground()` method.
 
@@ -422,7 +422,7 @@ Updating is done exactly in the same way as *objects*, i.e. via the `updateInBac
 
 **Note:** You cannot update any of the system-defined properties (the ones that begin with a double underscore like __id, __type, __createdby etc.). 
 
-### Deleting
+### Deleting connections
 
 You can delete a *connection* using the `deleteInBackground()` method,
 
