@@ -2,7 +2,7 @@
 
 You can use social identities to simplify user management in your app. By offering options for your users to login using their Facebook or Twitter accounts, you eliminate a source of friction by not requiring that users create app specific usernames and passwords just for your app.
 
-With Appacitive you can register multiple social identities against the same Kinvey user and switch between them as needed. This allows you to offer multiple login options (e.g.: Login with Facebook and Login with Twitter) in your app.
+With Appacitive you can register multiple social identities against the same Appacitive user and switch between them as needed. This allows you to offer multiple login options (e.g.: Login with Facebook and Login with Twitter) in your app.
 
 ## Facebook
 
