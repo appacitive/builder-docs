@@ -2,7 +2,7 @@
 
 You can use social identities to simplify user management in your app. By offering options for your users to login using their Facebook or Twitter accounts, you eliminate a source of friction by not requiring that users create app specific usernames and passwords just for your app.
 
-With Appacitive you can register multiple social identities against the same Kinvey user and switch between them as needed. This allows you to offer multiple login options (e.g.: Login with Facebook and Login with Twitter) in your app.
+With Appacitive you can register multiple social identities against the same Appacitive user and switch between them as needed. This allows you to offer multiple login options (e.g.: Login with Facebook and Login with Twitter) in your app.
 
 ## Facebook
 
@@ -73,13 +73,13 @@ The success callback is given one argument: `authresult`
 }
 ```
 * The `token` field is the user token. This is similar to the session token, but instead of authenticating the app with the server, it authenticates the logged in user with the app. More on this later, in the authentication section.
-* The `user` field is the Appacitive User object. The data that exists in the user field got pulled from facebook when he/she logged in. Note: <span style="font-weight: bold">The user must agree to share his/her  email address with your app to be able to use facebook to signup/login.</span>
+* The `user` field is the Appacitive User object. The data that exists in the user field got pulled from facebook when he/she logged in.
 
 **Note**: For nodejs you just need to set the `Appacitive.Facebook.accessToken()` value, and call Appacitive.Users.signupWithFacebook with the token.
 
 ### Linking Facebook account
 
-**Note:** here, we consider that the user has already logged-in with Facebook or Twitter.
+**Note:** here, we consider that the user has already logged-in with Facebook.
 
 If you want to associate an existing loggedin Appacitive.User to a Facebook account, you can link it like so
 
@@ -93,7 +93,7 @@ user.linkFacebook(global.Appacitive.Facebook.accessToken()).then(function(obj) {
 
 ### Create Facebook linked accounts
 
-**Note:** here, we consider that the user has already logged-in with Facebook or Twitter.
+**Note:** here, we consider that the user has already logged-in with Facebook.
 
 If you want to associate a new Appacitive.User to a Facebook account, you can link it like so
 ```javascript
@@ -195,7 +195,6 @@ user.save().then(function(obj) {
   console.dir(user.linkedAccounts());
 });
 ```
-
 
 ### Delinking Twitter account
 ```javascript
