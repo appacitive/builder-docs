@@ -1,7 +1,7 @@
 {
   "index": {
       "title": "Windows - Dev Center - Appacitive",
-      "description": "Everything you need to develop iOS app on Appacitive Platform.",
+      "description": "Everything you need to develop Windows OS based app on Appacitive Platform.",
       "layout": "../_layout-banner-platform",
       "keywords": "windows, sdk, windows sdk, dotnet, dotnet sdk, appacitive",
       "platform": "Windows",
