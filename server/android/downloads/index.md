@@ -1,7 +1,7 @@
 
 <h1><span class="glyphicon glyphicon-download-alt"></span> Android SDK Downloads</h1>
 <span class="muted mbm">Version 1.0.0 - May 01, 2014</span>
-<div> <a class="btn btn-primary pll prl">Download</a></div>
+<div> <a href="https://cdn.appacitive.com/sdk/android/0.9.0/appacitive-android-0.9.0.jar" class="btn btn-primary pll prl">Download</a></div>
 <br/>
 
 
@@ -21,4 +21,4 @@ Always use the latest version of the SDK, as it will be the most reliable and up
 
 |Version|Download|Date|
 |:---------------|:------------|
-|1.0.0|<a href="#">Download</a>|May 01, 2014|
+|0.9.0|<a href="https://cdn.appacitive.com/sdk/android/0.9.0/appacitive-android-0.9.0.jar">Download</a>|May 01, 2014|
