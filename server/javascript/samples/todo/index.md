@@ -20,7 +20,7 @@ Follow this guide to get hands on with the todo App.
 
 Following video shows how to create the model for the app on Appacitive Platform.
 
-<iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/96687510?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ### 2. Downloading the default ToDoMVC app
 
