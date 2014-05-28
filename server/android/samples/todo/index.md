@@ -38,7 +38,7 @@ Make sure the appacitive SDK jar is present in the libs folder of the source dir
 You can initialize the SDK anywhere in your app, but we suggest you do it in the launcher activity, by doing so SDK is available every where in the app. To initialize the SDK, copy the following code in the `onCreate()` method on `LoginActivity`.
 
 ```
-AppacitiveContext.initialize("{{App Id}}", Environment.sandbox, this);
+	AppacitiveContext.initialize("{{App Id}}", Environment.sandbox, this);
 ```
 
 You will need to replace `{{API Key}}` by your API Key. To get your api key, open your app on Appacitive Portal. API key for the app is available on your app's home page at the bottom.
@@ -126,8 +126,79 @@ Add the following code in the `onCreate()` method of `TasksActivity`.
 
 In the success handler we are initializing the TasksAdapter for the listview with the tasks fetched from Appacitive for the user.
 
+#### 3.6 Adding a new task
 
+In the `TasksActivity` class there is a button handler for adding a new task. Paste the following code snippet there.
 
+```
+	AppacitiveObject task = new AppacitiveObject("todo");
+	            task.setStringProperty("title", newTaskName.trim());
+	            task.setBoolProperty("completed", false);
+	
+	            new AppacitiveConnection("owner")
+	                    .toExistingObject("user", mUserId)
+	                    .fromNewObject("todo", task)
+	                    .createInBackground(new Callback<AppacitiveConnection>() {
+	                        @Override
+	                        public void success(AppacitiveConnection result) {
+	                            Toast.makeText(mContext, "New task added", Toast.LENGTH_LONG).show();
+	                            mAdapter.add((AppacitiveObject) result.endpointA.object);
+	                            mAdapter.notifyDataSetChanged();
+	                        }
+	
+	                        @Override
+	                        public void failure(AppacitiveConnection result, Exception e) {
+	                            Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+	                        }
+	                    });
+```
+
+This adds a new task on Appacitive and in the success handler informs the listview adapter that data has changed.
+
+#### 3.7 Deleting a task
+
+This code goes in the `TasksAdapter` class. Look for the correct comment under which you must paste this code.
+
+```
+	AppacitiveObject task = getItem(position);
+	                task.deleteInBackground(true, new Callback<Void>() {
+	                    @Override
+	                    public void success(Void result) {
+	                        Toast.makeText(mContext, "Task removed", Toast.LENGTH_SHORT).show();
+	                    }
+	
+	                    @Override
+	                    public void failure(Void result, Exception e) {
+	                        Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+	                    }
+	                });
+	                remove(task);
+	                notifyDataSetChanged();
+```
+
+#### 3.8 Deleting a task
+
+Similarily, for deleting a task paste the following code snippet in `TasksActivity`. 
+
+```
+	AppacitiveObject task = getItem(position);
+	                task.setBoolProperty("completed", isChecked);
+	
+	                task.updateInBackground(false, new Callback<AppacitiveObject>() {
+	                    @Override
+	                    public void success(AppacitiveObject result) {
+	                        if (isChecked)
+	                            Toast.makeText(mContext, "Task done", Toast.LENGTH_SHORT).show();
+	                        else
+	                            Toast.makeText(mContext, "Task undone", Toast.LENGTH_SHORT).show();
+	                    }
+	
+	                    @Override
+	                    public void failure(AppacitiveObject result, Exception e) {
+	                        Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show();
+	                    }
+	                });
+```
 
 ### Congratulation
 
