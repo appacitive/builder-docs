@@ -10,9 +10,7 @@
       "layout": "../../../_layout-getting-started",
       "installation": "",
       "sdkconventions": "",
-      "extendingsdk": "",
       "debuggingsdk": "",
-      "errorspace": "",
-      "thirdpartyintegrations": "active"
+      "errorspace": ""
    }
 }

@@ -9,10 +9,8 @@
       "help_lang": "android",
       "layout": "../../../_layout-getting-started",
       "installation": "",
-      "sdkconventions": "",
-      "extendingsdk": "",
+      "sdkconventions": "",      
       "debuggingsdk": "active",
-      "errorspace": "",
-      "thirdpartyintegrations": ""
+      "errorspace": ""      
    }
 }
