@@ -33,7 +33,7 @@ You will require API Key and Application Id to import data, to get these details
 
 <a id="aImportTool" data-js="employee-import" class="btn btn-state btn-primary" href="javascript:void('0')">Launch Import Tool</a>
 
-### 2. Download and Run the App
+### 3. Download and Run the App
 
 The app itself has no dependency on a specific back end. Thus you can **download and run** the app without having to set up a server and a database.
 
@@ -49,11 +49,11 @@ For MAC OS you can simply use [Anvil](http://anvilformac.com/). For others, just
 node server.js 8000
 ```
 
-### 3. Using the Javascript SDK
+### 4. Using the Javascript SDK
 
 The data layer is architected with simple and pluggable data adapters. By default the application uses an in-memory data adapter, but it can be switched to use Appacitive data adapter.
 
-#### 3.1 Include the SDK
+#### 4.1 Include the SDK
 
 To change the data adapter, just comment out `model-in-memory.js` script, and uncomment the `appacitive-js-sdk-v0.9.6.5.min.js` and `model-appacitive-com.js` scripts  in `index.html`.
 
@@ -68,7 +68,7 @@ To change the data adapter, just comment out `model-in-memory.js` script, and un
 <script src="js/models/model-appacitive-com.js"></script>
 ```
 
-#### 3.2 Initialize SDK
+#### 4.2 Initialize SDK
 
 Replace `{{API Key}}` with your Api Key and `{{App Id}}` with your App Id in `model-appacitive-com.js`.
 
