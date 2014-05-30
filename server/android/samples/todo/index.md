@@ -13,7 +13,7 @@ Follow the step by step guide to get hands on with the ToDo list app.
 
 Following video shows how to create the model for the todo app on the Appacitive platform.
 
-<iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/96887976?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ### 2. Downloading Boilerplate
 
