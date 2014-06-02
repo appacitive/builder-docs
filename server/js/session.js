@@ -42,6 +42,8 @@
 
         $('.top_links_user').removeClass('hide');
 
+        $('#ulSignIn').hide();
+
         $('#lstUserMenu').hide();
 
         $("#divUserMenu", that).click(function (e) {
@@ -86,8 +88,9 @@
             window.location = "https://portal.appacitive.com/" + that.account + "/app-list.html";
         });
 
-    } else $("#ulSignIn").removeClass('hide');
-
+    } else {
+       $("#ulSignIn").css('visibility', 'visible');
+    }
     //platform list handling
     $(document).click(function (e) {
         if ($(".appList ul").is(":visible")) {
