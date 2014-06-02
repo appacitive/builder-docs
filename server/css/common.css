@@ -245,6 +245,7 @@ table tbody tr:nth-child(even) td { background-color: #f4f4f4; }
 .content-mark-down li { margin-top: 3px; margin-bottom: 3px; }
 .content-mark-down ul ul { margin-top: 5px; margin-bottom: 5px; list-style: square; }
 .content-mark-down table { width: 100%; }
+.content-mark-down img { max-width: 100%; }
 
 /* downloads formatting */
 .content-downloads table { max-width: 480px; }
