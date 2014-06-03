@@ -245,10 +245,10 @@ In the above code, we simply check the `completed` property of the `todo` APObje
 That's it. Build and run the project and try creating your own todo list.
 
 
-### 4. Conclusion
+### Conclusion
 
 You have created a fully functional Todo App using the Appacitive iOS SDK. In this Todo App we have explored the **CRUD** capability of two features ***Data Store*** and **Users** provided by Appacitive Core. You also learned how to **Authenticate** a user.
 
 
-### 5. What's next?
+### What's next?
 You can check out our other <a title="All Samples based on Appacitive iOS SDK" href="../">samples</a> to know more about iOS SDK and other features provided by Appacitive Platform. For complete API reference of iOS SDK go to our <a target="_blank" title="http://help.appacitive.com" href="http://help.appacitive.com/v1.0/#ios">help docs<span class="plxs glyphicon glyphicon-share-alt"></span></a>.
