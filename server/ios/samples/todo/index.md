@@ -49,83 +49,64 @@ __Optional:__ For debugging purposes, add the following code below the `+[Appaci
 
 #### 3.3. Implementing user authentication
 
-Open the `LoginViewController.m` file and add an import statement `#import <Appacitive/AppacitiveSDK.h>` to import the Appacitive iOS SDK. Replace the `buttonTapped:sender:` method with the following code.
+Open the `LoginViewController.m` file and add an import statement `#import <Appacitive/AppacitiveSDK.h>` to import the Appacitive iOS SDK. In the `buttonTapped:sender:` method replace the comment `Insert Appacitive code here - 1` with the code below.
 
 ```objectivec
--(IBAction)buttonTapped:(id)sender {
-    if(self.email.text != nil && self.password.text != nil && 
-    ![[self.email.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""] &&
-    ![[self.password.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]) 
-    {
-        if((UIButton*)sender == self.loginButton) {
-            if(_busyView == nil) {
-                _busyView = [[MBProgressHUD alloc] initWithView:self.view];
-            }
-            [_busyView setLabelText:@"Verifying..."];
-            [self.view addSubview:_busyView];
-            _busyView.delegate = self;
-            [_busyView show:YES];
-            [APUser authenticateUserWithUsername:self.email.text password:_password.text successHandler:^(APUser *user){
-                [_busyView removeFromSuperview];
-                [self dismissViewControllerAnimated:YES completion:nil];
-            } failureHandler:^(APError *error) {
-                NSLog(@"ERROR:%@",[error description]);
-                [_busyView removeFromSuperview];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-                [alert show];
-            }];
-        } else if ((UIButton*)sender == self.signupButton) {
-            [_busyView setLabelText:@"Signing you up..."];
-            [self.view addSubview:_busyView];
-            _busyView.delegate = self;
-            [_busyView show:YES];
-            APUser *newUser = [[APUser alloc] init];
-            [newUser addPropertyWithKey:@"username" value:self.email.text];
-            [newUser addPropertyWithKey:@"password" value:self.password.text];
-            [newUser addPropertyWithKey:@"firstname" value:self.email.text];
-            [newUser addPropertyWithKey:@"email" value:self.email.text];
-            [newUser createUserWithSuccessHandler:^{
-                [APUser authenticateUserWithUsername:self.email.text password:self.password.text successHandler:^(APUser *user) {
-                    [_busyView removeFromSuperview];
-                    [self dismissViewControllerAnimated:YES completion:nil];
-                } failureHandler:^(APError *error) {
-                    NSLog(@"ERROR:%@",[error description]);
-                    [_busyView removeFromSuperview];
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-                    [alert show];
-                }];
-                [self dismissViewControllerAnimated:YES completion:nil];
-            } failureHandler:^(APError *error) {
-                NSLog(@"ERROR:%@",[error description]);
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-                [alert show];
-            }];
-        }
-        else {
-            if(_busyView == nil) {
-                _busyView = [[MBProgressHUD alloc] initWithView:self.view];
-            }
-            [_busyView setLabelText:@"Hold on tight..."];
-            [self.view addSubview:_busyView];
-            _busyView.delegate = self;
-            [_busyView show:YES];
-            [APUser sendResetPasswordEmailForUserWithUsername:self.email.text withSubject:@"Reset your Let's Do account password." successHandler:^{
-                [_busyView removeFromSuperview];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Yay!" message:@"I have sent you an email with instructions for resetting your Let's Do account password. Come back soon with a new password, we have a lot to get done." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-                [alert show];
-            } failureHandler:^(APError *error) {
-                NSLog(@"ERROR:%@",[error description]);
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-                [alert show];
-            }];
-        }
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"We need your 'email' and 'password' both." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
-        [alert show];
-    }
-}```
+[APUser authenticateUserWithUsername:self.email.text password:_password.text successHandler:^(APUser *user){
+    [_busyView removeFromSuperview];
+    [self dismissViewControllerAnimated:YES completion:nil];
+} failureHandler:^(APError *error) {
+    NSLog(@"ERROR:%@",[error description]);
+    [_busyView removeFromSuperview];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+    [alert show];
+}];
+```
+The above piece of code will authenticte the user with the username and the password that he provides.
 
-In the above code, we simply check the button that the user has tapped among the three buttons on the login view i.e. the login, sign-up and forgot password buttons. Then based on the button press we validate if he has entered all the required fields. If all validation checks pass then based on the button the user has pressed, we perform the appropriate operation. For the login we use the `+[APUser authenticateUserWithUserName:password:successHandler:failureHandler:]` method. For sign-up, we create a new user and use the `-[APUser  createUserWithSuccessHandler:failureHandler:]` method to create a new user and on success we use the above mentioned `+[APUser authenticateUserWithUserName:password:successHandler:failureHandler:]` method to authenticate the new user and log him in to the app. In case the user has tapped the forgot password button then we use the `+[APUser sendResetPasswordEmailForUSerWithUsername:withSubject:]` method to send a reset password email to the user's registered email address.
+In the same `buttonTapped:sender:` method replace the comment `Insert Appacitive code here - 2` with the code below.
+
+```objectivec
+APUser *newUser = [[APUser alloc] init];
+[newUser addPropertyWithKey:@"username" value:self.email.text];
+[newUser addPropertyWithKey:@"password" value:self.password.text];
+[newUser addPropertyWithKey:@"firstname" value:self.email.text];
+[newUser addPropertyWithKey:@"email" value:self.email.text];
+[newUser createUserWithSuccessHandler:^{
+    [APUser authenticateUserWithUsername:self.email.text password:self.password.text successHandler:^(APUser *user) {
+        [_busyView removeFromSuperview];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } failureHandler:^(APError *error) {
+        NSLog(@"ERROR:%@",[error description]);
+        [_busyView removeFromSuperview];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
+} failureHandler:^(APError *error) {
+    NSLog(@"ERROR:%@",[error description]);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+    [alert show];
+}];
+```
+
+In the above piece of code, we instantiate a new `APUser` object that we will use for signing up our new users. We add the `username`, `password`, `email` and `firstname` properties to the newly created APUser instance and we then call the `+[APUser createUserWithSuccessHandler:failureHandler:]` method to create a new user object on Appacitive. That's it, the new user is signed up and in successHandler we login the newly created user to make him the current user of the app.
+
+In the same `buttonTapped:sender:` method replace the comment `Insert Appacitive code here - 3` with the code below.
+
+```objectivec
+[APUser sendResetPasswordEmailForUserWithUsername:self.email.text withSubject:@"Reset your Let's Do account password." successHandler:^{
+    [_busyView removeFromSuperview];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Yay!" message:@"We have sent you an email with instructions for resetting your Let's Do account password. Come back soon with a new password, we have a lot to get done." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+    [alert show];
+} failureHandler:^(APError *error) {
+    NSLog(@"ERROR:%@",[error description]);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+    [alert show];
+}];
+```
+
+In the above piece of code, we send a reset pasword email to the user when he taps the `Forgot password` button.
 
 #### 3.4. Implementing the todo list 
 

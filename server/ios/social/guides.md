@@ -1,19 +1,21 @@
 #Social Network Integration
 ----
 
+The Appacitive iOS SDK allows you to use your Facebook and Twitter accounts for authenticating, signing-up. It becomes really easy for the users of your application to authenticate themselves or create user accounts using their existing Facebook or Twitter accounts.
+
 ## Creating Users via Facebook
 
-You can give your users the option of signing up or logging in via Facebook. For this you need to
+You can give your users the option of signing up or logging in via Facebook. For this you need to:
 
  1. [Setup Facebook app](https://developers.Facebook.com/apps).
- 2. Follow [these](https://developers.Facebook.com/docs/reference/ios/current/) instructions to [include Facebook SDK](https://developers.Facebook.com/docs/reference/ios/current/) in your app.
+ 2. Follow [these](https://developers.Facebook.com/docs/reference/ios/current/) instructions to [include Facebook SDK](https://developers.Facebook.com/docs/reference/ios/current/) in your application.
 
 
-To create a user with Facebook, you need the user's Facebook access token and you need to pass it to the `createUserWithFacebook:` method.
+To create a user with Facebook, you need the user's Facebook access token and you need to pass it to the `createUserWithFacebook:` method. If you set the `signUp` parameter to `YES`, the API will also create a new user based on the Facebook account. The `sessionExpiresAfter:` parameter takes number of minutes as an argument. If you set it to nil, the user token will be valid forever. The `limitAPICallsTo:` parameter will limit the number of API calls you can make to Appacitive with
 
 ```objectivec
 APUser *spencer = [[APUser alloc] init];
-[spencer createUserWithFacebook:@"Hsdfbk234kjnbkb23k4JLKJ234kjnkkJK2341nkjnJSD"];
+[spencer createUserWithFacebook:@"Hsdfbk234kjnbkb23k4JLKJ234kjnkkJK2341nkjnJSD" signUp:NO sessionExpiresAfter:nil limitAPICallsTo:nil];
 ```
 
 Similarly you can also create a user with Twitter Oauth v1.0 and Oauth v2.0.
@@ -99,33 +101,6 @@ If you want to associate a new APUser to a Twitter account, you can simply use t
 
 ```objectivec
 [user delinkAccountWithServiceName:@"facebook"];
-});
-```
-
-## Password Management
-
-### Reset Password
-
-Users often forget their passwords for your app. So you are provided with an API to reset their passwords.To start, you ask the user for his username and call
-
-```objectivec
-[user sendResetPasswordEmailWithSubject:@"APPACITIVE : Reset your password"];
-```
-
-This will send the user an email, with a reset password link. When user clicks on the link, he'll be redirected to an Appacitive page, which will allow him to enter new password and save it.
-
-### Update Password
-Users need to change their passwords whenever they've compromised it. You can update it using this call:
-
-```objectivec
-[user changePasswordFromOldPassword:@"0LDP4$$W0RD" toNewPassword:@"N3WP4$$W0RD"];});
-```
-## Check-in
-
-Users can check-in at a particular co-ordinate using this call.
-
-```objectivec
-[APUser setUserLocationToLatitude:@"23.27" longitude:@"72.30" forUserWithUserId:@"spencer.maguire"];
 });
 ```
 
