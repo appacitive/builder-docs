@@ -122,8 +122,11 @@ Appacitive.User.logIn("username", "password").then(function(user) {
 }).then(function(object) {
   // the object was saved.
 }, function(error) {
-   if (error.code == Appacitive.Error.UserAuthenticationError)
-  // there was some error.
+   if (error.code == Appacitive.Error.UserAuthenticationError) {
+    // User login failed
+   } else {
+    // User update failed
+  }
 });
 ```
 

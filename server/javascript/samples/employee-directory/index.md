@@ -1,6 +1,6 @@
 This app allows you to search for employees by name and view their details. It also allows to navigate up and down the Org Chart by clicking the employee’s manager or any of his/her direct reports.
 
-Appacitive's <a href="../downloads" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
+Appacitive's <a href="../../downloads" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
 
 This tutorial demonstrates two features ***Data Store*** and ***Graph API*** provided by Appacitive Platform. As part of design best practice, you will learn how to model your app and bind your custom objects to the view.
 
@@ -19,7 +19,7 @@ Follow this guide to get hands on with this App.
 
 Following video shows how to create the model for the app on Appacitive Platform.
 
-<iframe src="//player.vimeo.com/video/89849527?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/89849527?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ### 2. Importing Sample Data
 
@@ -33,7 +33,7 @@ You will require API Key and Application Id to import data, to get these details
 
 <a id="aImportTool" data-js="employee-import" class="btn btn-state btn-primary" href="javascript:void('0')">Launch Import Tool</a>
 
-### 2. Download and Run the App
+### 3. Download and Run the App
 
 The app itself has no dependency on a specific back end. Thus you can **download and run** the app without having to set up a server and a database.
 
@@ -49,11 +49,11 @@ For MAC OS you can simply use [Anvil](http://anvilformac.com/). For others, just
 node server.js 8000
 ```
 
-### 3. Using the Javascript SDK
+### 4. Using the Javascript SDK
 
 The data layer is architected with simple and pluggable data adapters. By default the application uses an in-memory data adapter, but it can be switched to use Appacitive data adapter.
 
-#### 3.1 Include the SDK
+#### 4.1 Include the SDK
 
 To change the data adapter, just comment out `model-in-memory.js` script, and uncomment the `appacitive-js-sdk-v0.9.6.5.min.js` and `model-appacitive-com.js` scripts  in `index.html`.
 
@@ -68,7 +68,7 @@ To change the data adapter, just comment out `model-in-memory.js` script, and un
 <script src="js/models/model-appacitive-com.js"></script>
 ```
 
-#### 3.2 Initialize SDK
+#### 4.2 Initialize SDK
 
 Replace `{{API Key}}` with your Api Key and `{{App Id}}` with your App Id in `model-appacitive-com.js`.
 

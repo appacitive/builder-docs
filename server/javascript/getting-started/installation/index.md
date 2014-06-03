@@ -68,10 +68,12 @@ You will need to replace `{appId}` by your application's id and `{apikey}` by AP
 
 **Note**: We suggest using the client key as API key to maintain security and controlled access on your data in client environments. 
 
-The value in masterKey will not be used by default. You'll need to ask the sdk to start using it as:
+!["Getting your apikey"](http://cdn.appacitive.com/devcenter/root/dashboard.png)
+
+Consider you need to use master key for some operations, then you'll need to ask the sdk to start using it as:
 
 ```javascript
-// If you haven't set master key in initialize call then you can set it this way
+// Set master key in this way
 Appacitive.Session.setMasterKey(masterKey);
 
 // Ask the sdk to use master key
