@@ -1,0 +1,19 @@
+{
+  "index": {
+      "title": "Error Space - Getting Started - JavaScript - Dev Center - Appacitive",
+      "description": "Getting started with error handling using  Appacitive JavaScript SDK.",
+      "keywords": "errors javascript sdk, javascript, sdk, javascript sdk, error, getting started, appacitive",
+      "platform": "JavaScript",
+      "platform_link": "javascript",
+      "language": "JavaScript",
+      "help_lang": "javascript",
+      "layout": "../_layout-getting-started.ejs",
+      "installation": "",
+      "sdkconventions": "",
+      "debuggingsdk": "",
+      "masterclientkey": "",
+      "errorspace": "active",
+      "serversideapps": "",
+      "promises": ""
+   }
+}

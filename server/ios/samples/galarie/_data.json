@@ -1,0 +1,24 @@
+{
+  "index": {
+      "title": "Photo album app using iOS SDK - Dev Center - Appacitive",
+      "description": "A simple photo album app with functionality to upload, like and comment on photos.",
+      "keywords": "galarie, photo album, gallarie sample, photo album sample, ios, samples, ios samples, ios sdk samples, appacitive, ios sdk",
+      "layout": "../../../_layout-banner-sample.ejs",
+      "platform": "iOS",
+      "platform_link": "ios",
+      "language": "iOS",
+      "header_app_name": "Photo Album App",
+      "header_app_description": "Learn how to create a simple photo album iOS app using Appacitive as the backend to persist data.",
+      "github": "mrl",
+      "github_url": "https://github.com/pratik644/Galarie",
+      "zip": "mrl",
+      "zip_url": "https://github.com/pratik644/Galarie/archive/master.zip",
+      "live_demo": "hide",
+      "live_demo_url": "",
+      "store": "hide",
+      "store_url": "",
+      "img_url": "http://devcenter.appacitive.com/ios/samples/galarie/preview.png",
+      "image_container": "3",
+      "text_container": "9"
+   }
+}

@@ -1,0 +1,19 @@
+{
+  "index": {
+      "title": "Third Party Integrations - Getting Started - Windows - Dev Center - Appacitive",
+      "description": "Third party integrations of Appacitive .Net SDK - Know it in getting started section of .Net SDK.",
+      "keywords": ".net sdk, .net, sdk, .net sdk, getting started, appacitive",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net",
+      "help_lang": "dotnet",
+      "layout": "../_layout-getting-started-windows",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "subclassing" : "",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "serverside": "active"
+   }
+}

@@ -1,0 +1,21 @@
+{
+
+  "guides": {
+      "title": "JavaScript Email Guide - Dev Center - Appacitive",
+      "description": "JavaScript guide explaining emails in Appacitive Platform using JavaScript SDK.",
+      "keywords": "javascript, guide, email, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "platform_link": "javascript",
+      "layout":"../../_layout-menu.ejs",
+      "language": "JavaScript",
+      "guide_name": "emails"
+   },
+   "tutorial": {
+   	"title": "JavaScript Email Tutorial - Dev Center - Appacitive",
+		"description": "Tutorial on how to send emails using Appacitive Platform.",
+      "keywords": "javascript, tutorial, email, appacitive, javascript sdk",
+      "platform": "JavaScript",
+      "platform_link": "javascript",
+      "language": "JavaScript"
+   }
+}

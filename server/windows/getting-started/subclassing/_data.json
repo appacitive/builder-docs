@@ -1,0 +1,19 @@
+{
+  "index": {
+      "title": "Extending .Net SDK - Getting Started - Windows - Dev Center - Appacitive",
+      "description": "Getting started with extending Appacitive .Net SDK.",
+      "keywords": "errors .net sdk, .net, sdk, .net sdk, error, getting started, appacitive",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net",
+      "help_lang": "dotnet",
+      "layout": "../_layout-getting-started-windows",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "",
+      "subclassing" : "active",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "serverside": ""
+   }
+}

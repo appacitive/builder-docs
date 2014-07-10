@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": "Android Email Guide - Dev Center - Appacitive",
+      "description": "Android guide explaining emails in Appacitive Platform using Android SDK.",
+      "keywords": "android, guide, access control, appacitive, android sdk",
+      "platform": "Android",
+      "platform_link": "android",
+      "language": "Android",
+      "guide_name": "emails",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": "Android Email Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to send emails using Appacitive Platform.",
+      "keywords": "android, tutorial, access control, appacitive, android sdk",
+      "platform": "Android",
+      "platform_link": "android",
+      "language": "Android"
+   }
+}

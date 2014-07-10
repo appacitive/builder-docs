@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": ".Net SDK guide on Email - Dev Center - Appacitive",
+      "description": ".Net guide explaining emails in Appacitive Platform using .Net SDK.",
+      "keywords": ".net, guide, access control, appacitive, .net sdk",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net",
+      "guide_name": "emails",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": ".Net SDK tutorial on Email - Dev Center - Appacitive",
+		   "description": "Tutorial on how to send emails using Appacitive Platform.",
+         "keywords": ".net, tutorial, access control, appacitive, .net sdk",
+         "platform": "Windows",
+         "platform_link": "windows",
+         "language": ".Net"
+   }
+}

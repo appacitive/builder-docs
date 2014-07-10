@@ -1,0 +1,25 @@
+{
+   "index": {
+            "title": "Employee Directory Application using Javascript SDK - Javascript - Dev Center - Appacitive",
+            "description": "A simple employee directory sample App, presenting Appacitive data store and graph API using Javascript SDK.",
+            "keywords": "todo, todo sample, javascript, samples, javaScript samples, javascript sdk samples, appacitive, javascript sdk, graph, data",
+            "layout": "../../../_layout-banner-sample.ejs",
+            "platform": "Javascript",
+            "platform_link": "javascript",
+            "language": "JavaScript",
+            "header_app_name": "Employee Directory",
+            "header_app_description": "Learn how to create a simple Employee Directory application using Appacitive as the backend to fetch data. This application uses <a href='http://backbonejs.org/'>Backbone.js <i class='glyphicon glyphiocn-share-alt'></i></a> to organize the code, and <a href='http://getbootstrap.com/2.3.2/'>Twitter Bootstrap <i class='glyphicon glyphiocn-share-alt'></i></a> to organize the UI.",
+            "img_url": "todo-mvc-js.png",
+            "github": "mrl",
+            "github_url": "https://github.com/chiragsanghvi/employee-directory",
+            "zip": "mrl",
+            "zip_url": "https://github.com/chiragsanghvi/employee-directory/archive/master.zip",
+            "live_demo": "mrl",
+            "live_demo_url": "http://emp-directory.appacitive.com",
+            "store": "hide",
+            "store_url": "",
+            "img_url": "http://cdn.appacitive.com/devcenter/javascript/emp-directory-js.png",
+            "image_container": "3",
+            "text_container": "9"
+	}
+}

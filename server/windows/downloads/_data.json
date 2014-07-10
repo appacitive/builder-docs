@@ -1,0 +1,11 @@
+{
+  "index": {
+      "title": "Windows .Net SDK Downloads - Dev Center - Appacitive",
+      "description": "Get started with your Windows app using our Windows .Net SDK.",
+      "keywords": ".net sdk download, .net sdk, getting started, appacitive ",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net",
+      "layout": "../../_layout-downloads.ejs"
+   }
+}

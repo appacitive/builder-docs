@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": "Python Users Guide - Dev Center - Appacitive",
+      "description": "Python guide explaining the user management in Appacitive Platform using Python SDK.",
+      "keywords": "python, guide, user, user management, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python",
+      "guide_name": "users",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": "Tutorial - Users - Python - Dev Center - Appacitive",
+		  "description": "Tutorial on user management in Appacitive Platform using Python SDK.",
+      "keywords": "python, tutorial, user, user management, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python"
+   }
+}

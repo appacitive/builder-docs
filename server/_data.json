@@ -1,0 +1,20 @@
+{
+  "index": {
+      "title": "Dev Center - Appacitive",
+      "description": "Appacitive Dev Center. SDKs, samples, downloads, design inspiration, and other resources you need to build your iOS, Android, Windows or Javascript app.",
+      "keywords": "sdk, sdks, ios, android, windows, .net, samples, downloads",
+      "layout": "_layout-banner",
+      "platform": "Platforms",
+      "platform_link": "Platforms",
+      "language": ""
+   },
+   "downloads": {
+      "title": "SDK Downloads - Dev Center - Appacitive",
+      "description": "Get the latest SDKs, samples and other resources for platform of your choice.",
+      "keywords": "sdk, sdks, ios, android, windows, .net, samples, downloads",
+      "layout": "_layout-banner",
+      "platform": "Platforms",
+      "platform_link": "Platforms",
+      "language": ""
+   }
+}

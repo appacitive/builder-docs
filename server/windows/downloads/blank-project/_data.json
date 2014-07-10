@@ -1,0 +1,12 @@
+{
+  "index": {
+      "title": "Blank Projects - Windows .Net SDK Downloads - Dev Center - Appacitive",
+      "description": "Get started with your Windows app using our Blank Projects integrated with Windows .Net SDK.",
+      "keywords": "blank project, blank projects, wcf, asp.net, windows phone, .net sdk download, .net sdk, getting started, appacitive ",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net",
+      "layout": "../../../_layout-downloads.ejs"
+      
+   }
+}

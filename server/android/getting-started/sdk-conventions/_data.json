@@ -1,0 +1,16 @@
+{
+  "index": {
+      "title": "Android SDK Conventions - Getting Started - Android - Dev Center - Appacitive",
+      "description": "What are the SDK Conventions for Appacitive Android SDK - Learn it in getting started section of Android SDK.",
+      "keywords": "sdk conventions, android, sdk, android sdk, debug, getting started, appacitive",
+      "platform": "Android",
+      "platform_link": "android",
+      "language": "Android",
+      "help_lang": "android",
+      "layout": "../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "active",      
+      "debuggingsdk": "",
+      "errorspace": ""
+   }
+}

@@ -1,0 +1,11 @@
+{
+  "index": {
+      "title": "Android SDK Downloads - Dev Center - Appacitive",
+      "description": "Get started with your Android app using our Android SDK.",
+      "keywords": "android sdk download, android sdk, getting started, appacitive ",
+      "platform": "Android",
+      "platform_link": "android",
+      "language": "Android",
+      "layout": "../../_layout-downloads.ejs"
+   }
+}

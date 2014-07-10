@@ -1,0 +1,19 @@
+{
+  "index": {
+      "title": "Debugging JavaScript SDK - Getting Started - JavaScript - Dev Center - Appacitive",
+      "description": "How to debug Appacitive JavaScript SDK - Know it in getting started section of JavaScript SDK.",
+      "keywords": "debug javascript sdk, javascript, sdk, javascript sdk, debug, getting started, appacitive",
+      "platform": "JavaScript",
+      "platform_link": "javascript",
+      "language": "JavaScript",
+      "help_lang": "javascript",
+      "layout": "../_layout-getting-started.ejs",
+      "installation": "",
+      "sdkconventions": "",
+      "masterclientkey": "",
+      "debuggingsdk": "active",
+      "errorspace": "",
+      "serversideapps": "",
+      "promises": ""
+   }
+}

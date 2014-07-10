@@ -1,0 +1,11 @@
+{
+  "index": {
+      "title": ".Net SDK Samples - Windows - Dev Center - Appacitive",
+      "description": "Checkout quick and simple .Net SDK samples highlighting some of the main features provided by Appacitive Platform .",
+      "keywords": ".net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
+      "layout": "../../_layout.ejs",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net"
+   }
+}

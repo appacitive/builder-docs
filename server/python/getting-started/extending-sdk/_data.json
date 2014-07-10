@@ -1,0 +1,18 @@
+{
+  "index": {
+      "title": "Extending Python SDK - Getting Started - Python - Dev Center - Appacitive",
+      "description": "Getting started with extending Appacitive Python SDK.",
+      "keywords": "errors python sdk, python, sdk, python sdk, error, getting started, appacitive",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python",
+      "help_lang": "python",
+      "layout": "../../../_layout-getting-started",
+      "installation": "",
+      "sdkconventions": "",
+      "extendingsdk": "active",
+      "debuggingsdk": "",
+      "errorspace": "",
+      "thirdpartyintegrations": ""
+   }
+}

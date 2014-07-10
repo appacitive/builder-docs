@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": "Python Access Control Guide - Dev Center - Appacitive",
+      "description": "Python guide explaining the data storage in Appacitive Platform using Python SDK.",
+      "keywords": "python, guide, access control, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python",
+      "guide_name": "access-control",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": "Python Access Control Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do access control in Appacitive Platform using Python SDK.",
+      "keywords": "python, tutorial, access control, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python"
+   }
+}

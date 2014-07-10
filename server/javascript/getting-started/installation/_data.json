@@ -1,0 +1,19 @@
+{
+  "index": {
+      "title": "Installing JavaScript SDK - Getting Started - JavaScript - Dev Center - Appacitive",
+      "description": "How to install Appacitive JavaScript SDK - Learn it in getting started section of JavaScript SDK.",
+      "keywords": "install javascript sdk, javascript, sdk, javascript sdk, debug, getting started, appacitive",
+      "platform": "JavaScript",
+      "platform_link": "javascript",
+      "language": "JavaScript",
+      "help_lang": "javascript",
+      "layout": "../_layout-getting-started.ejs",
+      "installation": "active",
+      "sdkconventions": "",
+      "debuggingsdk": "",
+      "masterclientkey": "",
+      "errorspace": "",
+      "serversideapps": "",
+      "promises": ""
+   }
+}

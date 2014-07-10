@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": "iOS Social Integration Guide - Dev Center - Appacitive",
+      "description": "iOS guide explaining Social Integration feature provided by Appacitive Platform using iOS SDK.",
+      "keywords": "ios, guide, social, files, appacitive, ios sdk",
+      "platform": "iOS",
+      "platform_link": "ios",
+      "language": "iOS",
+      "guide_name": "social",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": "iOS Social Integration Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to integrate social network support in your app using iOS SDK.",
+    	"keywords": "ios, tutorial, social, files, appacitive, ios sdk",
+      "platform": "iOS",
+      "platform_link": "ios",
+      "language": "iOS"
+   }
+}

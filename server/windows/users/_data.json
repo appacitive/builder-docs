@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": ".Net SDK Users Guide - Windows - Dev Center - Appacitive",
+      "description": ".Net guide explaining the user management in Appacitive Platform using .Net SDK.",
+      "keywords": ".net, guide, user, user management, appacitive, .net sdk",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net",
+      "guide_name": "users",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": ".Net SDK Users Tutorial - Windows - Dev Center - Appacitive",
+		  "description": "Tutorial on user management in Appacitive Platform using - Windows SDK.",
+      "keywords": ".net, tutorial, user, user management, appacitive, .net sdk",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net"
+   }
+}

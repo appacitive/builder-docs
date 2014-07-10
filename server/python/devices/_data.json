@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": "Python Devices Guide - Dev Center - Appacitive",
+      "description": "Python guide explaining the devices in Appacitive Platform using Python SDK.",
+      "keywords": "python, guide, devices, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python",
+      "guide_name": "devices",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": "Python Access Control Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to do device management in Appacitive Platform using Python SDK.",
+      "keywords": "python, tutorial, device, devices, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python"
+   }
+}

@@ -1,0 +1,24 @@
+{
+  "index": {
+      "title": "Todo Sample App using .Net SDK - Windows - Dev Center - Appacitive",
+      "description": "A simple Todo sample windows phone application demoing Appacitive data store using .Net SDK.",
+      "keywords": "todo, todo sample, .net, samples, .net samples, .net sdk samples, appacitive, .net sdk",
+      "layout": "../../../_layout-banner-sample.ejs",
+      "platform": "Windows",
+      "platform_link": "windows",
+      "language": ".Net",
+      "header_app_name": "Todo App",
+      "header_app_description": "Learn how to create a simple todo listing Windows Phone application using Appacitive as the backend to persist data.",
+      "github": "mrl",
+      "github_url": "https://github.com/apalsapure/wp-todoapp",
+      "zip": "mrl",
+      "zip_url": "https://github.com/apalsapure/wp-todoapp/archive/master.zip",
+      "live_demo": "hide",
+      "live_demo_url": "",
+      "store": "hide",
+      "store_url": "",
+      "img_url": "http://cdn.appacitive.com/devcenter/windows/todo-app-v2.png",
+      "image_container": "3",
+      "text_container": "9"
+   }
+}

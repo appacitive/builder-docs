@@ -1,0 +1,20 @@
+{
+  "guides": {
+      "title": "Python Social Integration Guide - Dev Center - Appacitive",
+      "description": "Python guide explaining Social Integration feature provided by Appacitive Platform using Python SDK.",
+      "keywords": "python, guide, social, files, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python",
+      "guide_name": "social",
+      "layout":"../../_layout-menu.ejs"
+   },
+   "tutorial": {
+   		"title": "Python Social Integration Tutorial - Dev Center - Appacitive",
+		  "description": "Tutorial on how to integrate social network support in your app using Python SDK.",
+    	"keywords": "python, tutorial, social, files, appacitive, python sdk",
+      "platform": "Python",
+      "platform_link": "python",
+      "language": "Python"
+   }
+}
