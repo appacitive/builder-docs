@@ -1,7 +1,9 @@
 {
   "index": {
       "title": "SDK Downloads - Dev Center - Appacitive",
+      "description": "Download the latest SDKs for your favorite platform.",
       "layout": "../_layout-banner",
+      "keywords": "ios, windows, android, javascript, sdk, sdks, download, appacitive",
       "platform": "Platforms",
       "platform_link": "Platforms",
       "language": "",

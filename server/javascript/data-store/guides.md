@@ -634,7 +634,7 @@ Above example depicts use of [queries](#queries), which we'll discuss in coming 
 Before we go about creating connections, we need two entities. Consider the following
 
 ```javascript
-var Person = Appacitive.Object.extend('person');
+var Person = Appacitive.Object('person');
 
 var  tarzan = new Person({ name: 'Tarzan' })
     , jane =  new Person({ name: 'Jane' });
@@ -644,7 +644,7 @@ var  tarzan = new Person({ name: 'Tarzan' })
 // ...
 
 // initialize and set up a connection
-var Marriage = Appacitive.Connection.extend('marriage');
+var Marriage = Appcitive.Connection.extend('marriage');
 
 var marriage = new Marriage({ 
   endpoints: [{
@@ -675,7 +675,7 @@ In case you are wondering why this is necessary then here is the answer, it allo
 There is another easier way to connect two new entities. You can pass the new entities themselves to the connection while creating it.
 
 ```javascript
-var Person = Appacitive.Object.extend('person');
+var Person = Appacitive.Object('person');
 
 var  tarzan = new Person({ name: 'Tarzan' })
     , jane =  new Person({ name: 'Jane' });
@@ -684,7 +684,7 @@ var  tarzan = new Person({ name: 'Tarzan' })
 // This is another way to initialize a connection object without collection
 // You can pass same options in the previous way of creating connection as well
 
-var Marriage = Appacitive.Connection.extend('marriage');
+var Marriage = Appcitive.Connection.extend('marriage');
 
 var marriage = new Marriage({ 
   endpoints: [{

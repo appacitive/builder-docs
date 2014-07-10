@@ -11,7 +11,7 @@ It is recommended to serve the sdk directly from our Content Delivery Network. A
 This will include the sdk in your project.
 
 ```html
-<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.3.min.js"></script>
+<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.min.js"></script>
 ```
 Using a protocol relative URI means the sdk will be served using the same protocol (HTTP or HTTPS) as your index.html.
 

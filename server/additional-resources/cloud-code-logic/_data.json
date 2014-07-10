@@ -1,0 +1,12 @@
+{
+  "index": {
+      "title": "Cloud Code Logic - Additional Resources - Dev Center - Appacitive",
+      "description": "Write your own custom code, and we will host it for you inside Cloud Code.",
+      "layout": "../../_layout-banner",
+      "keywords": "cloud code, custom code, resources, appacitive",
+      "platform": "Platforms",
+      "platform_link": "Platforms",
+      "language": "",
+      "downloads": "../../downloads"
+   }
+}

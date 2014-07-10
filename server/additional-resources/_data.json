@@ -1,0 +1,12 @@
+{
+  "index": {
+      "title": "Additional Resources - Dev Center - Appacitive",
+      "description": "Resources which will help you to learn more about the Appacitive Platform.",
+      "layout": "../_layout-banner",
+      "keywords": "service hooks, push console, resources, appacitive",
+      "platform": "Platforms",
+      "platform_link": "Platforms",
+      "language": "",
+      "downloads": "../downloads"
+   }
+}

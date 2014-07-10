@@ -1,0 +1,12 @@
+{
+  "index": {
+      "title": "Service Hooks - Additional Resources - Dev Center - Appacitive",
+      "description": "Service Hooks enables user to get a callback once any subscribed event is raised inside Appacitive Platform.",
+      "layout": "../../_layout-banner",
+      "keywords": "service hook, callback, resources, appacitive",
+      "platform": "Platforms",
+      "platform_link": "Platforms",
+      "language": "",
+      "downloads": "../../downloads"
+   }
+}

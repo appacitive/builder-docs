@@ -1,0 +1,12 @@
+{
+  "index": {
+      "title": "Push Console - Additional Resources - Dev Center - Appacitive",
+      "description": "Learn how to use Push Console to send Push Notifications using Appacitive Platform.",
+      "layout": "../../_layout-banner",
+      "keywords": "push console, push notification, resources, appacitive",
+      "platform": "Platforms",
+      "platform_link": "Platforms",
+      "language": "",
+      "downloads": "../../downloads"
+   }
+}
