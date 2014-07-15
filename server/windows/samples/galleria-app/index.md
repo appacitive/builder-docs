@@ -13,7 +13,7 @@ Follow the step by step guide to get hands on with the Movie App.
 
 Following video shows how to create the model for the app on Appacitive Platform.
 
-<iframe src="//www.youtube.com/embed/ui80iGH190w" frameborder="0" allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/100574543?byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ### 2. Downloading Boilerplate

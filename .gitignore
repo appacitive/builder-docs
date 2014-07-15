@@ -3,6 +3,7 @@ node_modules
 server/shared/configuration.js
 *.combined.js
 *.combined.css
+Thumbs.db
 
 #Symbols
 

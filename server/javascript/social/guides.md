@@ -42,13 +42,14 @@ Appacitive.Facebook.requestLogin().then(function(fbResponse) {
   												+ Appacitive.Facebook.accessToken());
   
   // signup with Appacitive
-  return Appacitive.Users.loginWithFacebook(Appacitive.Facebook.accessToken(), { create: true });
+  return Appacitive.User.loginWithFacebook(Appacitive.Facebook.accessToken(), 
+                                                                { create: true });
 
 }).then(function (authResult) {
   // user has been successfully signed up and set as current user
   // authresult contains the user and Appacitive-usertoken
 }, function(err) {
-  if (global.Appacitive.Facebook.accessToken()) {
+  if (Appacitive.Facebook.accessToken()) {
     // there was an error during facebook login
   } else {
     // there was an error signing up the user
@@ -63,7 +64,7 @@ So simple? Indeed. These're the steps followed
 3. Our app gets the userinfo for that accessToken and saves it to an `Appacitive User`. If it's a new user based on the Facebook ID, then that user is created.
 4. After saving, the user is set as current user
 
-The method `Appacitive.Users.loginWithFacebook` will attempt to login an existing user with the obtained token. If such a user does not exist, it creates a new user and associates the Facebook ID with that user. If you do not want to perform the last step of creating a new user, you can pass in the create: false option as third argument to the method.
+The method `Appacitive.User.loginWithFacebook` will attempt to login an existing user with the obtained token. If such a user does not exist, it creates a new user and associates the Facebook ID with that user. If you do not want to perform the last step of creating a new user, don't send create:true in second argument.
 
 The success callback is given one argument: `authresult`
 ```javascript
@@ -75,7 +76,18 @@ The success callback is given one argument: `authresult`
 * The `token` field is the user token. This is similar to the session token, but instead of authenticating the app with the server, it authenticates the logged in user with the app. More on this later, in the authentication section.
 * The `user` field is the Appacitive User object. The data that exists in the user field got pulled from facebook when he/she logged in.
 
-**Note**: For nodejs you just need to set the `Appacitive.Facebook.accessToken()` value, and call Appacitive.Users.signupWithFacebook with the token.
+**Note**: For nodejs you just need to set the `Appacitive.Facebook.accessToken()` value, and call `Appacitive.User.loginWithFacebook` with the token.
+
+```javascript
+//Token retreived from Facebook
+var token = "your_fb_token";
+
+//Set token
+Appacitive.Facebook.accessToken(token);
+
+//Call login
+Appacitive.User.loginWithFacebook(token);
+```
 
 ### Linking Facebook account
 
@@ -85,7 +97,7 @@ If you want to associate an existing loggedin Appacitive.User to a Facebook acco
 
 ```javascript
 var user = Appacitive.User.current();
-user.linkFacebook(global.Appacitive.Facebook.accessToken()).then(function(obj) {
+user.linkFacebook(Appacitive.Facebook.accessToken()).then(function(obj) {
   //You can access linked accounts of a user, using this field
   console.dir(user.linkedAccounts()); 
 });
@@ -107,7 +119,7 @@ var user = new Appacitive.User({
 });
 
 //link facebook account
-user.linkFacebook(global.Appacitive.Facebook.accessToken());
+user.linkFacebook(Appacitive.Facebook.accessToken());
 
 //create the user on server
 user.save().then(function(obj) {
@@ -118,7 +130,7 @@ user.save().then(function(obj) {
 ### Delinking Facebook account
 ```javascript
 //specify account which needs to be delinked
-Appacitive.Users.current().unlink('facebook').then(function() {
+Appacitive.User.current().unlink('facebook').then(function() {
   alert("Facebook account delinked successfully");
 });
 ```
@@ -132,7 +144,7 @@ Fot twitter login you can use <a href="https://oauth.io/docs"> OAuth.io <i class
 You can ask your users to log or signup in via Twitter. This'll require you to implement twitter login and provide the SDK with consumerkey, consumersecret, oauthtoken and oauthtokensecret.  This'll also create a new user if it doesn't exist.
 ```javascript
 //For login with twitter, pass twitter credentials to SDK
-Appacitive.Users.loginWithTwitter({
+Appacitive.User.loginWithTwitter({
   oauthtoken: {{twitterObj.oAuthToken}} ,
   oauthtokensecret: {{twitterObj.oAuthTokenSecret}},
   consumerKey: {{twitterObj.consumerKey}},
@@ -150,7 +162,7 @@ Appacitive.Users.loginWithTwitter({
 }
 ```
 
-The method `Appacitive.Users.loginWithTwitter` will attempt to login an existing user with the obtained token. If such a user does not exist, it creates a new user and associates the Twiiter ID with that user. If you do not want to perform the last step of creating a new user, you can pass in the create: false option as third argument to the method.
+The method `Appacitive.User.loginWithTwitter` will attempt to login an existing user with the obtained token. If such a user does not exist, it creates a new user and associates the Twiiter ID with that user. If you do not want to perform the last step of creating a new user, you can pass in the create: false option as third argument to the method.
 
 ### Linking Twitter account
 
@@ -199,14 +211,14 @@ user.save().then(function(obj) {
 ### Delinking Twitter account
 ```javascript
 //specify account which needs to be delinked
-Appacitive.Users.current().unlink('twitter').then(function() {
+Appacitive.User.current().unlink('twitter').then(function() {
   alert("Twitter account delinked successfully");
 });
 ```
 
 ## Retreiving all linked accounts
 ```javascript
-Appacitive.Users.current().getAllLinkedAccounts().then(function() {
-  console.dir(Appacitive.Users.current().linkedAccounts());
+Appacitive.User.current().getAllLinkedAccounts().then(function() {
+  console.dir(Appacitive.User.current().linkedAccounts());
 });
 ```

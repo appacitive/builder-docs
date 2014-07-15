@@ -1,0 +1,24 @@
+{
+  "index": {
+      "title": "Daily deals sample app using iOS SDK - Dev Center - Appacitive",
+      "description": "A daily deals app that finds deals around you location.",
+      "keywords": "daily deals, daily deals sample, DealHunter, DealHunter sample, ios, samples, ios samples, ios sdk samples, appacitive, ios sdk",
+      "layout": "../../../_layout-banner-sample.ejs",
+      "platform": "iOS",
+      "platform_link": "ios",
+      "language": "iOS",
+      "header_app_name": "Daily Deals App",
+      "header_app_description": "Learn how to create a simple daily deals iOS app using Appacitive as the backend to persist data.",
+      "github": "mrl",
+      "github_url": "https://github.com/pratik644/DealHunter",
+      "zip": "mrl",
+      "zip_url": "https://github.com/pratik644/DealHunter/archive/master.zip",
+      "live_demo": "hide",
+      "live_demo_url": "",
+      "store": "hide",
+      "store_url": "",
+      "img_url": "http://devcenter.appacitive.com/ios/samples/dealhunter/preview.png",
+      "image_container": "3",
+      "text_container": "9"
+   }
+}

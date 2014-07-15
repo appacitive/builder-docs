@@ -1,0 +1,24 @@
+{
+  "index": {
+      "title": "Note taking sample app using iOS SDK and Swift language - Dev Center - Appacitive",
+      "description": "A simple note taking sample iOS application demonstrating Appacitive data store using iOS SDK and Swift language.",
+      "keywords": "todo, todo sample, swift, ios, samples, ios samples, ios sdk samples, appacitive, ios sdk",
+      "layout": "../../../_layout-banner-sample.ejs",
+      "platform": "iOS",
+      "platform_link": "ios",
+      "language": "iOS",
+      "header_app_name": "Note Taking App",
+      "header_app_description": "Learn how to create a simple notes iOS app using Appacitive as the backend to persist data.",
+      "github": "mrl",
+      "github_url": "https://github.com/pratik644/NoteKeeperSample",
+      "zip": "mrl",
+      "zip_url": "https://github.com/pratik644/NoteKeeperSample/archive/master.zip",
+      "live_demo": "hide",
+      "live_demo_url": "",
+      "store": "hide",
+      "store_url": "",
+      "img_url": "http://devcenter.appacitive.com/ios/samples/notekeeper/preview.png",
+      "image_container": "3",
+      "text_container": "9"
+   }
+}
