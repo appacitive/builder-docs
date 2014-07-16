@@ -2,7 +2,15 @@
 
 Appacitive allows you to integrate your current email providers to send out emails through our APIs. The provider settings can be configured in the Portal, or you can send them along with each call that you make.Note : The email settings in the request body overrides the email settings set using the management portal.
 
-## Configuring
+## Configuration 
+
+You can configure your SMTP settings from the portal. Go to modules -> notifications -> email configurations.
+
+![](http://cdn.appacitive.com/devcenter/windows/Email-Config-Modules.png)
+
+Here you can configure your SMTP settings and also the from address and reply-to address for all your mails. You could also enable test mode for testing out your emails before sending them out.
+
+![](http://cdn.appacitive.com/devcenter/windows/Email-Configurations-Page.png)
 
 Sending emails from the sdk is quite easy. There are primarily two types of emails that can be sent
 
