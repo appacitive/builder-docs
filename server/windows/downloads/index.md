@@ -20,4 +20,4 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 
 |Version|Download|Date|
 |:---------------|:------------|
-|1.0.0|<a href="https://github.com/appacitive/appacitive-dotnet-sdk/releases/download/v1.0.0/Appacitive.Net.Sdk.v.1.0.zip">Download</a>|May 01, 2014|
+|1.0.0|<a href="https://github.com/appacitive/appacitive-dotnet-sdk/releases/download/v1.0.0/Appacitive.Net.Sdk.v.1.0.zip">Download</a>|July 15, 2014|
