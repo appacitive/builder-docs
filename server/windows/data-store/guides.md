@@ -272,147 +272,65 @@ NOTE: Incase the relation you are querying is between the same type with differe
 
 In all other scenarios, passing a label is optional.
 
-#### Get all Connections for an Endpoint Object Id
+#### Get all connections for an object
 
-Scenarios where you may need to just get all connections of a particular relation for an objectId, this query comes to rescue.
+Get all connections for an object lets you get all connected objects along with the actual connections between them and your initial object.
 
-Consider `Jane` is connected to some objects of type `person` via `invite` relationship, that also contains a `bool` property viz. `attending`,  which is false by default and will be set to true if that person is attending marriage.
+Consider that a `person` `Jane` is connected to some objects of type `person` via an `invited` relationship. The `invited` relation contains a property viz. `accepted`,  which is `false` by default and will be set to true if that person has accepted the invite.
 
-Now she wants to know who all are attending her marriage without actually fetching their connected `person` object, this can be done as
+Get all connections is useful for her to track which people have accepted her invite as the actual status is stored in the connection rather than the person object. She can _optionally_ also apply a filter to return only those connections which have accepted as true.
 
-```javascript
+```csharp
 //set an instance of person Object for Jane
-var jane = new Appacitive.Object({ __id : '123345456', __type : 'person');
+var jane = new APObject("person", "id for jane");
 
-//call fetchConnectedObjects with all options that're supported by queries syntax
-// we'll cover queries in dept in next section
-var query = jane.getConnections({
-  relation: 'invite', //mandatory
-  label: 'invitee', //mandatory
-  filter: Appacitive.Filter.Property('attending').equalTo(true)
-});
+// Create query
+var query = Query.Property("accepted").IsEqualTo(false);
 
-query.fetch().then(function(invites) {
-  //invites is an array of connections
-  console.log(invites);
-});
+// Get connections
+// This will return the top 200 connections
+PagedList<APConnection> = jane.GetConnectionsAsync("invited", query, pageSize:200);
 ```
 
-In this query, you provide a relation type (name) and a label of opposite side whose conenction you want to fetch and what is returned is a list of all the connections for above object.
-
-#### Get Connection by Endpoint Object Ids
+#### Get connection by endpoints
 
 Appacitive also provides a reverse way to fetch a connection  between two objects.
 If you provide two object ids of same or different type types, all connections between those two objects are returned.
 
-Consider you want to check whether `Tarzan` and `Jane` are married, you can do it as
-```javascript
-//'marriage' is the relation between person type
-//and 'husband' and 'wife' are the endpoint labels
-var query = Appacitive.Connection.getBetweenObjectsForRelation({
-    relation: "marriage", //mandatory
-    objectAId : "22322", //mandatory
-    objectBId : "33422", //mandatory
-    label : "wife" //madatory for a relation between same type and differenct labels
-});
+Consider you want to check whether `John` and `Jane` are friends you can check for the existance of a `friend` relationship.
 
-query.fetch().then(function(marriage){
-  if(marriage != null) {
-      // connection obj is returned as argument to onsuccess
-      alert('Tarzan and jane are married at location ', marriage.get('location'));
-    } else {
-      alert('Tarzan and jane are not married');
-    }
-});
+```csharp
+bool areFriends = false;
+APObject jane, john; // Objects of person type.
 
-//For a relation between same type type and differenct endpoint labels
-//'label' parameter becomes mandatory for the get call
-
+// Get connection of type "friend" between jane and john if it exists.
+var friendConnection = APConnections.GetAsync("friend", jane.Id, john.Id);
+// If no connections exist, then the two users are not friends.
+if( friendConnection == null )
+    areFriends = false;
+else 
+    areFriends = true;
 ```
-
-Conside you want to check that a particular `house` is owned by `Jane`, you can do it by fetching connection for relation `owns_house` between `person` and `house`.
-```javascript
-var query = Appacitive.Connection.getBetweenObjectsForRelation({
-    relation: "owns_house",
-    objectAId : "22322", // person type entity id
-    objectBId : "33422" //house type entity id
-});
-
-query.fetch().then(function(obj) {
-    if(obj != null) {
-      alert('Jane owns this house');
-    } else {
-      alert("Jane doesn't owns this house");
-    }
-});
-```
-
-#### Get all connections between two Object Ids
-
-Consider `jane` is connected to `tarzan` via a `marriage` and a `freind` relationship. If we want to fetch al connections between them we could do this as
-
-```javascript
-var query = Appacitive.Connection.getBetweenObjects({
-  objectAId : "22322", // id of jane
-    objectBId : "33422" // id of tarzan
-});
-
-query.fetch().then(function(connections) {
-  console.log(connections);
-});
-```
-On success, we get a list of all connections that connects `jane` and `tarzan`.
-
-#### Get Interconnections between one and multiple Object Ids
-
-Consider, `jane` wants to what type of connections exists between her and a group of persons and houses , she could do this as
-```javascript
-var query = Appacitive.Connection.getInterconnects({
-  objectAId: '13432',
-    objectBIds: ['32423423', '2342342', '63453425', '345345342']
-});
-
-query.fetch().then(function(connections) {
-  console.log(connections);
-}, function(err) {
-  alert("code:" + err.code + "\nmessage:" + err.message);
-});
-```
-
-This would return all connections with object id 13432 on one side and '32423423', '2342342', '63453425' or '345345342' on the other side, if they exist.
 
 ### Updating a connection
 
+Updating is done exactly in the same way as entities, i.e. via the `SaveAsync()` method.
 
-Updating is done exactly in the same way as entities, i.e. via the `save()` method.
+*Important*: The endpoints for a connection are immutable and cannot be changed. To change the endpoints, you would need to delete the existing connection and recreate a new one. 
 
-*Important*: Updating the endpoints (the `__endpointa` and the `__endpointb` property) will not have any effect and will fail the call. In case you need to change the connected entities, you need to delete the connection and create a new one.
-```javascript
-marriage.set('location', 'Las Vegas');
-
-marriage.save().then(function(obj) {
-    alert('saved successfully!');
-});
+```csharp
+var membership = new APConnection("membership", "{membershidId}");
+// Update the membership renewal date.
+membership.Set("renewalDate", DateTime.Now);
+await membership.SaveAsync();
 ```
-As before, do not modify the `__id` property.
-
 
 ### Deleting a connection
 
-Deleting is provided via the `del` method.
-```javascript
-marriage.destroy().then(function() {
-  alert('Tarzan and Jane are no longer married.');
-});
-
-
-// Multiple coonection can also be deleted at a time. Here's an example
-Appacitive.Object.multiDelete({
-  relation: 'freinds', //name of relation
-  ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of connection ids to delete
-}).then(function() {
-  //successfully deleted all connections
-});
+You can delete a connection via the `DeleteAsync` method on the `APConnections` helper class. 
+```csharp
+var membershipId = "1872389122";
+await APConnections.DeleteAsync("membership", membershipId);
 ```
 
 ----------
