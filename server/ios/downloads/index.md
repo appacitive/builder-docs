@@ -8,14 +8,15 @@
 
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
 ## Version 0.9.1
+<span class="muted">July 21, 2014</span>
 
 +   Fixed a bug in reset permission method of Access Control class.
-+   Changed a method name in APQuery class to resolve a name conflict with Swift keywords.
++   Changed a method name in APQuery class to resolve a name conflict with a Swift language keyword.
 
 <br />
 
 ## Version 0.9b
-<span class="muted">May 01, 2014</span>
+<span class="muted">May 21, 2014</span>
 
 +   Beta release of Appacitive iOS SDK.
 +   Includes support for Objects, Users, Devices and Connections.
