@@ -1,7 +1,7 @@
 Developing an iOS Notes app using the Appacitive-iOS-SDK and Swift programming language
 ----
 
-With the preview iOS 8, Apple unveiled a new programming language called __Swift__ for developing iOS apps. The Appacitive iOS SDK has been written using the Objective-C language. To maintain a backward compatibility for libraries written in Objective-C, Apple has provided a way to use the existing Objective-C code in an app written with the Swift language.
+With the preview of iOS 8, Apple unveiled a new programming language called __Swift__ for developing iOS apps. The Appacitive iOS SDK has been written using the Objective-C language. To maintain a backward compatibility for libraries written in Objective-C, Apple has provided a way to use the existing Objective-C code in an app written with the Swift language.
 
 To use our existing Objective-C SDK in you swift app, you just need to do one extra thing. Let me explain it to you step-by-step.
 
