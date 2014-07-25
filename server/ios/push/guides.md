@@ -3,7 +3,7 @@
 
 Using Appacitive platform you can send push notification to iOS, Android and Windows Phone devices.
 
-We recommend you to go through **[this](http://devcenter.appacitive.com//ios/push/guides.html#setup-on-appacitive)** section, which explains how you can configure Appacitive app for Push notification. You will need to provide some basic one time configurations like certificates, using which we will setup push notification channels for different platforms for you. Also we provide a Push Console using which you can send push notification to the users.
+We recommend you to go through **[this](http://devcenter.appacitive.com/ios/push/guides.html#setup-on-appacitive)** section, which explains how you can configure Appacitive app for Push notification. You will need to provide some basic one time configurations like certificates, using which we will setup push notification channels for different platforms for you. Also we provide a Push Console using which you can send push notification to the users.
 
 Appacitive provides four ways to select the sender list
 
