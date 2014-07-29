@@ -1,6 +1,6 @@
 This tutorial will help you integrate *Appacitive* in existing *TodoMVC* app for *Backbone*.js. It demonstrates Users and Data Store features provided by Appacitive Platform. 
 
-Appacitive <a href="../downloads" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
+Appacitive <a href="../../downloads" target="_blank">Javascript SDK <i class="glyphicon glyphicon-share-alt"></i></a> is built mostly in the way models and collections work in backbone.js, with changes to accomodate <a href="http://help.appacitive.com" target="_blank">Appacitive's API  convention<i class="glyphicon glyphicon-share-alt"></i></a>. Thus integrating SDK with backbone apps becomes more easy.
 
 As part of design practice, you will learn how to model your app and bind your data to the views. 
 
