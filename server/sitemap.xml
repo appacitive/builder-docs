@@ -4,929 +4,928 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
 <url>
   <loc>http://devcenter.appacitive.com/</loc>
-  <lastmod>2014-05-27T17:52:28+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/</loc>
-  <lastmod>2014-05-27T17:53:55+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:40+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/</loc>
-  <lastmod>2014-05-27T17:52:32+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:05+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/</loc>
-  <lastmod>2014-05-27T17:56:25+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:07+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/</loc>
-  <lastmod>2014-05-27T17:54:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:41+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/downloads/</loc>
-  <lastmod>2014-05-27T17:53:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:39+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/ios/downloads/</loc>
-  <lastmod>2014-05-27T17:54:06+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/android/downloads/</loc>
-  <lastmod>2014-05-27T17:52:44+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/windows/downloads/</loc>
-  <lastmod>2014-05-27T17:56:37+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/javascript/downloads/</loc>
-  <lastmod>2014-05-27T17:54:51+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/ios/samples/</loc>
-  <lastmod>2014-05-27T17:54:30+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/getting-started/</loc>
-  <lastmod>2014-05-27T17:54:13+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:04+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/ios/samples/</loc>
+  <lastmod>2014-07-25T13:24:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/ios/downloads/</loc>
+  <lastmod>2014-07-25T13:23:54+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/getting-started/installation/</loc>
-  <lastmod>2014-05-27T17:54:18+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:10+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/getting-started/sdk-conventions/</loc>
-  <lastmod>2014-05-27T17:54:19+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:11+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/getting-started/extending-sdk/</loc>
-  <lastmod>2014-05-27T17:54:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:08+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/getting-started/debugging-sdk/</loc>
-  <lastmod>2014-05-27T17:54:15+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:05+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/getting-started/error-space/</loc>
-  <lastmod>2014-05-27T17:54:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:07+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/data-store/guides.html</loc>
-  <lastmod>2014-05-27T17:53:59+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:45+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/data-store/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:02+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:49+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/users/guides.html</loc>
-  <lastmod>2014-05-27T17:54:36+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/users/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:38+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:40+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/access-control/guides.html</loc>
-  <lastmod>2014-05-27T17:53:56+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:41+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/access-control/tutorial.html</loc>
-  <lastmod>2014-05-27T17:53:58+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:44+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/emails/guides.html</loc>
-  <lastmod>2014-05-27T17:54:07+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:56+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/emails/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:09+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:58+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/social/guides.html</loc>
-  <lastmod>2014-05-27T17:54:32+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:33+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/social/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:34+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/files/guides.html</loc>
-  <lastmod>2014-05-27T17:54:10+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/files/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:13+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:02+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/push/guides.html</loc>
-  <lastmod>2014-05-27T17:54:27+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:21+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/push/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:29+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/devices/guides.html</loc>
-  <lastmod>2014-05-27T17:54:03+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:50+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/devices/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:05+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:53+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/graph-api/guides.html</loc>
-  <lastmod>2014-05-27T17:54:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:13+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/graph-api/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:22+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:16+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/graph-query/guides.html</loc>
-  <lastmod>2014-05-27T17:54:23+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/graph-query/tutorial.html</loc>
-  <lastmod>2014-05-27T17:54:25+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/android/samples/</loc>
-  <lastmod>2014-05-27T17:53:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:20+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/getting-started/</loc>
-  <lastmod>2014-05-27T17:52:52+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:29+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/android/samples/</loc>
+  <lastmod>2014-07-25T13:22:51+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/android/downloads/</loc>
+  <lastmod>2014-07-25T13:22:20+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/getting-started/installation/</loc>
-  <lastmod>2014-05-27T17:52:58+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:35+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/getting-started/sdk-conventions/</loc>
-  <lastmod>2014-05-27T17:52:59+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/android/getting-started/extending-sdk/</loc>
-  <lastmod>2014-05-27T17:52:55+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/getting-started/debugging-sdk/</loc>
-  <lastmod>2014-05-27T17:52:53+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:30+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/getting-started/error-space/</loc>
-  <lastmod>2014-05-27T17:52:54+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/android/getting-started/third-party-integrations/</loc>
-  <lastmod>2014-05-27T17:53:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:32+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/data-store/guides.html</loc>
-  <lastmod>2014-05-27T17:52:37+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:11+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/data-store/tutorial.html</loc>
-  <lastmod>2014-05-27T17:52:39+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:14+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/users/guides.html</loc>
-  <lastmod>2014-05-27T17:53:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:57+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/users/tutorial.html</loc>
-  <lastmod>2014-05-27T17:53:19+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:23:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/access-control/guides.html</loc>
-  <lastmod>2014-05-27T17:52:33+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:07+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/access-control/tutorial.html</loc>
-  <lastmod>2014-05-27T17:52:36+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:10+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/emails/guides.html</loc>
-  <lastmod>2014-05-27T17:52:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:21+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/emails/tutorial.html</loc>
-  <lastmod>2014-05-27T17:52:47+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/social/guides.html</loc>
-  <lastmod>2014-05-27T17:53:13+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:53+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/social/tutorial.html</loc>
-  <lastmod>2014-05-27T17:53:15+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:56+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/files/guides.html</loc>
-  <lastmod>2014-05-27T17:52:48+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/files/tutorial.html</loc>
-  <lastmod>2014-05-27T17:52:51+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/push/guides.html</loc>
-  <lastmod>2014-05-27T17:53:07+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:47+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/push/tutorial.html</loc>
-  <lastmod>2014-05-27T17:53:10+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:49+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/devices/guides.html</loc>
-  <lastmod>2014-05-27T17:52:40+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:15+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/devices/tutorial.html</loc>
-  <lastmod>2014-05-27T17:52:43+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:18+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/graph-api/guides.html</loc>
-  <lastmod>2014-05-27T17:53:01+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:39+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/graph-api/tutorial.html</loc>
-  <lastmod>2014-05-27T17:53:03+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:42+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/graph-query/guides.html</loc>
-  <lastmod>2014-05-27T17:53:04+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:43+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/android/graph-query/tutorial.html</loc>
-  <lastmod>2014-05-27T17:53:06+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/windows/samples/</loc>
-  <lastmod>2014-05-27T17:57:03+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:22:46+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/</loc>
-  <lastmod>2014-05-27T17:56:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:36+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/windows/samples/</loc>
+  <lastmod>2014-07-25T13:28:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/windows/downloads/</loc>
+  <lastmod>2014-07-25T13:27:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/installation/</loc>
-  <lastmod>2014-05-27T17:56:49+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:42+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/sdk-conventions/</loc>
-  <lastmod>2014-05-27T17:56:50+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:43+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/extending-sdk/</loc>
-  <lastmod>2014-05-27T17:56:48+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:41+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/debugging-sdk/</loc>
-  <lastmod>2014-05-27T17:56:46+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:38+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/error-space/</loc>
-  <lastmod>2014-05-27T17:56:47+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:39+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/server-side-apps/</loc>
-  <lastmod>2014-05-27T17:56:51+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:45+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/data-store/guides.html</loc>
-  <lastmod>2014-05-27T17:56:29+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/data-store/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:32+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:19+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/users/guides.html</loc>
-  <lastmod>2014-05-27T17:57:14+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/users/tutorial.html</loc>
-  <lastmod>2014-05-27T17:57:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:22+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/access-control/guides.html</loc>
-  <lastmod>2014-05-27T17:56:26+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:08+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/access-control/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:28+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:15+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/emails/guides.html</loc>
-  <lastmod>2014-05-27T17:56:38+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/emails/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:40+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:31+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/social/guides.html</loc>
-  <lastmod>2014-05-27T17:57:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:12+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/social/tutorial.html</loc>
-  <lastmod>2014-05-27T17:57:13+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:16+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/files/guides.html</loc>
-  <lastmod>2014-05-27T17:56:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:32+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/files/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:44+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:35+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/push/guides.html</loc>
-  <lastmod>2014-05-27T17:57:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:56+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/push/tutorial.html</loc>
-  <lastmod>2014-05-27T17:57:02+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:58+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/devices/guides.html</loc>
-  <lastmod>2014-05-27T17:56:33+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:21+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/devices/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:36+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:23+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/graph-api/guides.html</loc>
-  <lastmod>2014-05-27T17:56:53+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:48+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/graph-api/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:56+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:51+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/graph-query/guides.html</loc>
-  <lastmod>2014-05-27T17:56:57+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:52+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/graph-query/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:59+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/javascript/samples/</loc>
-  <lastmod>2014-05-27T17:55:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:55+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/getting-started/</loc>
-  <lastmod>2014-05-27T17:54:58+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:05+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/javascript/samples/</loc>
+  <lastmod>2014-07-25T13:25:29+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/javascript/downloads/</loc>
+  <lastmod>2014-07-25T13:24:56+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/getting-started/installation/</loc>
-  <lastmod>2014-05-27T17:55:02+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:10+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/getting-started/master-client-keys/</loc>
-  <lastmod>2014-05-27T17:55:03+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:11+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/getting-started/sdk-conventions/</loc>
-  <lastmod>2014-05-27T17:55:05+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:14+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/getting-started/debugging-sdk/</loc>
-  <lastmod>2014-05-27T17:54:59+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/getting-started/error-space/</loc>
-  <lastmod>2014-05-27T17:55:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:08+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/getting-started/promises/</loc>
-  <lastmod>2014-05-27T17:55:04+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:12+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/data-store/guides.html</loc>
-  <lastmod>2014-05-27T17:54:44+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:47+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/users/guides.html</loc>
-  <lastmod>2014-05-27T17:55:23+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:38+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/access-control/guides.html</loc>
-  <lastmod>2014-05-27T17:54:40+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:43+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/emails/guides.html</loc>
-  <lastmod>2014-05-27T17:54:52+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:57+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/social/guides.html</loc>
-  <lastmod>2014-05-27T17:55:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:34+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/files/guides.html</loc>
-  <lastmod>2014-05-27T17:54:55+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:01+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/push/guides.html</loc>
-  <lastmod>2014-05-27T17:55:13+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:25+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/devices/guides.html</loc>
-  <lastmod>2014-05-27T17:54:48+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:51+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/graph-api/guides.html</loc>
-  <lastmod>2014-05-27T17:55:07+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/graph-query/guides.html</loc>
-  <lastmod>2014-05-27T17:55:10+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:21+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/samples/todo/</loc>
-  <lastmod>2014-05-27T17:55:18+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:32+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/samples/employee-directory/</loc>
-  <lastmod>2014-05-27T17:55:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/windows/downloads/blank-project/</loc>
-  <lastmod>2014-05-27T17:56:37+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/python/</loc>
-  <lastmod>2014-05-27T17:55:40+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/python/downloads/</loc>
-  <lastmod>2014-05-27T17:55:51+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:30+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/ios/samples/todo/</loc>
-  <lastmod>2014-05-27T17:54:31+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:32+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/ios/samples/dealhunter/</loc>
+  <lastmod>2014-07-25T13:24:26+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/ios/samples/galarie/</loc>
+  <lastmod>2014-07-25T13:24:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/ios/samples/notekeeper/</loc>
+  <lastmod>2014-07-25T13:24:30+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/python/</loc>
+  <lastmod>2014-07-25T13:26:02+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/android/samples/todo/</loc>
+  <lastmod>2014-07-25T13:22:52+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/samples/movie-app/</loc>
-  <lastmod>2014-05-27T17:57:07+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:04+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/samples/todo/</loc>
-  <lastmod>2014-05-27T17:57:10+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:09+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/samples/push-notification/</loc>
-  <lastmod>2014-05-27T17:57:09+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:08+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/samples/notification-app/</loc>
-  <lastmod>2014-05-27T17:57:08+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/samples/galleria-app/</loc>
-  <lastmod>2014-05-27T17:57:06+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/windows/samples/employee-directory/</loc>
-  <lastmod>2014-05-27T17:57:04+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:28:02+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/windows/getting-started/subclassing/</loc>
-  <lastmod>2014-05-27T17:56:52+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:27:46+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/access-control/</loc>
-  <lastmod>2014-05-27T17:54:42+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:24:44+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/javascript/users/</loc>
-  <lastmod>2014-05-27T17:55:25+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://devcenter.appacitive.com/python/samples/</loc>
-  <lastmod>2014-05-27T17:56:17+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T13:25:40+00:00</lastmod>
+  <changefreq>monthly</changefreq>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/getting-started/</loc>
-  <lastmod>2014-05-27T17:55:59+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/python/samples/</loc>
+  <lastmod>2014-07-25T13:26:57+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://devcenter.appacitive.com/python/downloads/</loc>
+  <lastmod>2014-07-25T13:26:17+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/getting-started/installation/</loc>
-  <lastmod>2014-05-27T17:56:03+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:40+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/getting-started/sdk-conventions/</loc>
-  <lastmod>2014-05-27T17:56:05+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:41+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/getting-started/extending-sdk/</loc>
-  <lastmod>2014-05-27T17:56:03+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:37+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/getting-started/debugging-sdk/</loc>
-  <lastmod>2014-05-27T17:56:00+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:34+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/getting-started/error-space/</loc>
-  <lastmod>2014-05-27T17:56:02+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:35+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/getting-started/third-party-integrations/</loc>
-  <lastmod>2014-05-27T17:56:06+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:43+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/data-store/guides.html</loc>
-  <lastmod>2014-05-27T17:55:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:08+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/data-store/tutorial.html</loc>
-  <lastmod>2014-05-27T17:55:47+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:11+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/users/guides.html</loc>
-  <lastmod>2014-05-27T17:56:22+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:27:02+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/users/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:24+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:27:06+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/access-control/guides.html</loc>
-  <lastmod>2014-05-27T17:55:41+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:04+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/access-control/tutorial.html</loc>
-  <lastmod>2014-05-27T17:55:44+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:07+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/emails/guides.html</loc>
-  <lastmod>2014-05-27T17:55:52+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:18+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/emails/tutorial.html</loc>
-  <lastmod>2014-05-27T17:55:55+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:23+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/social/guides.html</loc>
-  <lastmod>2014-05-27T17:56:18+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:58+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/social/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:20+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:27:01+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/files/guides.html</loc>
-  <lastmod>2014-05-27T17:55:56+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:24+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/files/tutorial.html</loc>
-  <lastmod>2014-05-27T17:55:58+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:27+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/push/guides.html</loc>
-  <lastmod>2014-05-27T17:56:14+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:53+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/push/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:16+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:56+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/devices/guides.html</loc>
-  <lastmod>2014-05-27T17:55:48+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:13+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/devices/tutorial.html</loc>
-  <lastmod>2014-05-27T17:55:50+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:16+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/graph-api/guides.html</loc>
-  <lastmod>2014-05-27T17:56:07+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:44+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/graph-api/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:09+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:47+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/graph-query/guides.html</loc>
-  <lastmod>2014-05-27T17:56:10+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:48+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 <url>
   <loc>http://devcenter.appacitive.com/python/graph-query/tutorial.html</loc>
-  <lastmod>2014-05-27T17:56:13+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.51</priority>
+  <lastmod>2014-07-25T13:26:51+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.41</priority>
 </url>
 </urlset>
