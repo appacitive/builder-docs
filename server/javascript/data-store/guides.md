@@ -1304,7 +1304,7 @@ Appacitive supports geolocations, allowing you to save and search geo data. You 
 `Appacitive.GeoCoord` is a simple wrapper around lat and lon coordinates. It's used in geolocation queries and in setting property values.
 
 ```javascript
-var geopoint = new Appacitive.GeoCoords(lat, lon);
+var geopoint = new Appacitive.GeoCoord(lat, lon);
  
 lat: the latitude coordinates. Range: -90, 90 
 lon: the longitude coordinates. Range: -180, 180
@@ -1364,7 +1364,7 @@ var radialFilter = Appacitive.Filter.Property('location').withinCircle(center, 1
 //create query object
 var Hotel = Appacitive.Object.extend('hotel');
 
-var query = Hotel.FindAllQuery({
+var query = Hotel.findAllQuery({
   filter: radialFilter
 });
 
@@ -1400,7 +1400,7 @@ var polygonFilter = Appacitive.Filter.Property("location")
 
 //create query object
 var Hotel = Appacitive.Object.extend('hotel');
-var query = Hotel.FindAllQuery();
+var query = Hotel.findAllQuery();
 
 // or without extending
 var query = new Appacitive.Object.FindAllQuery({
@@ -1430,7 +1430,7 @@ var tagFilter = Appacitive.Filter
 
 //create the query
 var Message = Appacitive.Object('message');
-var query = Message.FindAllQuery({
+var query = Message.findAllQuery({
   filter: tagFilter
 });
 
@@ -1459,7 +1459,7 @@ var tagFilter = Appacitive.Filter
 
 //create the query
 var Message = Appacitive.Object('message');
-var query = Message.FindAllQuery({
+var query = Message.findAllQuery({
   filter: tagFilter
 });
 
