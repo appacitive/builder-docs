@@ -42,6 +42,13 @@ void Application_Launching(object sender, LaunchingEventArgs e)
 }
 ```
 
+**Retrieving API Key and Application Id**
+
+You will need to replace `{appId}` by your application's id and `{apikey}` by API Key. To get these details, open your app on Appacitive Portal. API key for the app is available on your app's home page at the bottom. To get the App Id, open application details, by clicking on edit icon near your app's name.
+
+**Note**: We suggest using the client key as API key to maintain security and controlled access on your data in client environments. 
+
+!["Getting your apikey"](http://cdn.appacitive.com/devcenter/root/dashboard.png)
 
 ## Compile and install from source code
 Incase you do not want to use NuGet, you can always download and compile the sdk from source.

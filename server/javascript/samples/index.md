@@ -17,6 +17,7 @@ We have built some easy to understand apps for you. These apps demonstrate Javas
 				</div>
 			</a>
 		</div>
+		<!--
 		<div class="col-md-6">
 			<a title="Employee Directory App" class="sample-app-item" href="employee-directory" style="padding-bottom:10px;">
 				<div class="col-md-3">
@@ -29,5 +30,6 @@ We have built some easy to understand apps for you. These apps demonstrate Javas
 				</div>
 			</a>
 		</div>
+		-->
 	</div>
 </div>

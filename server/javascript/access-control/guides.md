@@ -60,12 +60,12 @@ By default, the appacitive platform provides two system defined user groups. The
 * **loggedin** : Represents all logged in users.
 * **anonymous** : Represents all non-logged in (anonymous) users.
 
-## Managing usergroups on Portal
+<!--## Managing usergroups on Portal
 
 You can refer this video for more info on managing usergroups through [Appacitive Portal](https://portal.appacitive.com)
 
 <iframe src="//player.vimeo.com/video/85415329" width="700" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-<br/>
+<br/> -->
 
 # Access Control
 
@@ -186,9 +186,10 @@ When using access control for you app, you need to be aware of the following got
 2. When an object is created, the user available in the user context is automatically setup as the owner of the object. Owners can perform all operations on an object without any acl setup.
 3. Using the master key in the SDK or when making REST api calls will skip all acl evaluation.
  
-## Manging Acl's on Portal
+<!--## Manging Acl's on Portal
 
 You can refer this video for more info on managing access control list through [Appacitive Portal](https://portal.appacitive.com)
 
 <iframe src="//player.vimeo.com/video/85415329" width="700" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 <br/>
+-->

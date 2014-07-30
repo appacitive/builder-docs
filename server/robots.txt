@@ -1,4 +1,4 @@
-﻿# robots.txt
+﻿﻿# robots.txt
 User-agent: *
 Disallow: /css
 Disallow: /js

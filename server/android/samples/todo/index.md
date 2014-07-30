@@ -179,9 +179,9 @@ This code goes in the `TasksAdapter` class. Look for the correct comment under w
 
 After the task is deleted we also remove the task from the adapter and notify it that underlying data has changed.
 
-#### 3.8 Deleting a task
+#### 3.8 Updating a task
 
-Similarily, for deleting a task paste the following code snippet in `TasksActivity`. 
+Similarily, for updating a task paste the following code snippet in `TasksActivity`. 
 
 ```
 	AppacitiveObject task = getItem(position);

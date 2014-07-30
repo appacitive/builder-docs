@@ -73,6 +73,7 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 				</div>
 			</a>
 		</div>
+		<!--
 		<div class="col-md-6">
 			<a title="Employee Directory App" class="sample-app-item" href="employee-directory">
 				<div class="col-md-3">
@@ -85,5 +86,6 @@ We have built some sample, easy to understand apps for you. These apps demonstra
 				</div>
 			</a>
 		</div>
+		-->
 	</div>
 </div>

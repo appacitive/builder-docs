@@ -2,9 +2,9 @@
   "index": {
       "title": "Android SDK Samples - Dev Center - Appacitive",
       "description": "Checkout quick and simple Android SDK samples highlighting some of the main features provided by Appacitive Platform .",
-      "keywords": "ios, samples, ios samples, ios sdk samples, appacitive, ios sdk",
-      "platform": "iOS",
-      "platform_link": "ios",
-      "language": "iOS"
+      "keywords": "android, samples, android samples, android sdk samples, appacitive, android sdk",
+      "platform": "Android",
+      "platform_link": "android",
+      "language": "android"
    }
 }
