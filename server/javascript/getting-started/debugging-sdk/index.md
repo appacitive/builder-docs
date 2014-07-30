@@ -34,7 +34,7 @@ These log messages contain these properties:
 | `request` | Request data sent in the call. |
 | `response` | Response data received in the call. |
 
-You might be able to identify the error by inspecting these messages. When contacting <a href="appacitive.freshdesk.com">Appacitive Support Forum</a>, sending this log along will be of great help.
+You might be able to identify the error by inspecting these messages. When contacting <a href="http://appacitive.freshdesk.com">Appacitive Support Forum</a>, sending this log along will be of great help.
 
 ## Enable Exception Debugging
 
