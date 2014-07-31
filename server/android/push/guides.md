@@ -5,11 +5,13 @@ This tutorial will guide you through the push notification capabilities of the A
 
 ## Configuration
 
-First and foremost, you must enable push notifications for your app. Go to *modules* -> *notifications* -> *push settings* and enable the toggle to allow push notifications being sent for your app.
+First and foremost, you must enable push notifications for your app on the management portal. Go to *modules* -> *notifications* -> *push settings* and enable the toggle to allow push notifications to be sent for your app.
 
 Next, configure your platform specific settings for your app in the same section.
 
 ![](http://cdn.appacitive.com/devcenter/android/push-1.png)
+
+You can obtain the required details by following the steps on the [Getting Started](http://developer.android.com/google/gcm/gs.html) page of the Android developer site.
 
 ## Sending Push Notifications
 
@@ -90,7 +92,7 @@ If you want to send push notifications to specific devices, you can use this opt
 
 ### To one or more channels
 
-The `device` object has a multi-valued property called`channel`, using which you can club multiple devices. This is helpful if you want to send push notification using channel.
+The `device` object has a *multi-valued* property called`channel`, using which you can club multiple devices. This is helpful if you want to send push notification using channel.
 
 ```
         String message = "Hello World!";
@@ -133,7 +135,7 @@ You can send push notifications to devices using a `Query`. All the devices whic
 
 ## Platform specific options
 
-The `AppacitivePushNotification`'s fluent interface provides a `WithPlatformOptions` method to pass different platform specific options as shown in the examples below.
+The `AppacitivePushNotification`'s fluent interface provides a `withPlatformOptions` method to pass different platform specific options as shown in the examples below.
 
 ### iOS
 
@@ -256,6 +258,6 @@ The Windows Phone platform options allows you to choose the specific kind of not
         });
 ```
 
-You can try each of these calls manually from the management portal. Go to *modules* -> *notofications* -> *push console*. Make sure you have enabled push notifications and selected all your desired platforms for the app.
+You can fire each of these calls from the management portal using the **Push Console**. Go to *modules* -> *notofications* -> *push console*. Make sure you have enabled push notifications and selected all your desired platforms for the app.
 
 You can also view the status of your sent push notifications in the **push log** section. 
