@@ -1621,7 +1621,7 @@ var collection = new PlayerCollection();
 // A Collection of Players whose score is greater than 200
 var HighScoreCollection = Appacitive.Collection.extend({
   model: Player,
-  query: (new Appacitive.Query()).filter(
+  query: (new Appacitive.Query(Player)).filter(
           Appacitive.Filter.Property('score').greaterThan(200)
           )
 });
