@@ -55,7 +55,7 @@ The data layer is architected with simple and pluggable data adapters. By defaul
 
 #### 4.1 Include the SDK
 
-To change the data adapter, just comment out `model-in-memory.js` script, and uncomment the `appacitive-js-sdk-v0.9.6.5.min.js` and `model-appacitive-com.js` scripts  in `index.html`.
+To change the data adapter, just comment out `model-in-memory.js` script, and uncomment the `appacitive-js-sdk-v0.9.7.7.min.js` and `model-appacitive-com.js` scripts  in `index.html`.
 
 ```html
 <!-- SELECT ONE (AND ONLY ONE) OF THE DATA LAYER SOLUTIONS BELOW -->
@@ -64,7 +64,7 @@ To change the data adapter, just comment out `model-in-memory.js` script, and un
 <!--<script src="js/models/model-in-memory.js"></script>-->
 
 <!-- Uncomment the two scripts below to use Appacitive.com as the data persistence layer. -->
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.4.min.js" type="text/javascript"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.7.min.js" type="text/javascript"></script>
 <script src="js/models/model-appacitive-com.js"></script>
 ```
 

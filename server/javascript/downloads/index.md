@@ -1,9 +1,9 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 0.9.7.4 - July 17, 2014</span>
+<span class="muted mbm">Version 0.9.7.7 - August 23, 2014</span>
 <div> 
-	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.4.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
-	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.4.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
+	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.7.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
+	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.7.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
 </div>
 <br/>
 
@@ -11,11 +11,20 @@
 To fast track your development, we have created blank projects of different project types. These blank projects have Javascript SDK included with all it's other dependencies. After downloading these projects you can switch over to our [Getting Started](../getting-started) guide.
 <br/>
 <br/>
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.7.4.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.7.7.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
 </div>
 <br/>
 
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
+## v0.9.7.7
+<span class="muted">July 17, 2014</span>
+
++ Includes support for recursively retrieving an object if it contains any children.
++ Referred Appacitive.Query to start pointing to Appacitive.Queries.FindAllQuery.
++ Made setting query in collection implicit if not provided.
+
+<br/>
+
 ## v0.9.7.4
 <span class="muted">July 17, 2014</span>
 
@@ -49,6 +58,12 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td align="left">0.9.7.7</td>
+			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.7.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.7.js">Development</a></td>
+			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/v0.9.7.7">Github</a></td>
+			<td>Aug 23, 2014</td>
+		</tr>
 		<tr>
 			<td align="left">0.9.7.4 beta</td>
 			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.4.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.4.js">Development</a></td>
