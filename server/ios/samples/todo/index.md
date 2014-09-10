@@ -29,9 +29,10 @@ Now that your model is all set up, lets add some code to the boilerplate to comp
 
 #### 3.2. Integrating the iOS SDK
 
-First thing we need to do is integrate the Appacitive iOS SDK into our project. There are two methods to do that and the instructions can be found [here](http://devcenter.appacitive.com/ios/getting-started/installation/). For the sake of convenience, we will use the first method. Download the latest version of the SDK framework bundle from the link provided on the [Appacitive DevCenter](http://devcenter.appacitive.com/ios/downloads/) and extract the framework bundle from the zip archive.
+First thing we need to do is integrate the Appacitive iOS SDK into our project. You can checkout the [installation](http://devcenter.appacitive.com/ios/getting-started/installation/) page to find out how, if you already haven't done that. 
+In short, you can download the *Appacitive.framework* file and drag it  into the `Frameworks` group in the project navigator. 
 
-Open the Xcode project, drag the `Appacitive.framework` bundle  into the `Frameworks` group in the project navigator. Now open the AppDelegate.m file, add an import statement `#import <Appacitive/AppacitiveSDK.h>` to import the AppacitiveSDK and add the following line in the `application:didLaunchWithOptions:` method.
+Now open the AppDelegate.m file, add an import statement `#import <Appacitive/AppacitiveSDK.h>` to import the AppacitiveSDK and add the following line in the `application:didLaunchWithOptions:` method.
 
 ```objectivec
 [Appacitive registerAPIKey:@"YOUR_API_KEY" useLiveEnvironment:NO];

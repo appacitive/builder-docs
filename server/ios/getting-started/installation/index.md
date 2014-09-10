@@ -1,27 +1,30 @@
 #Installing the Appactive iOS SDK
 ----
 
-There are two ways to integrate the Appacitive iOS SDK into your project. 
+There is a very simple way to integrate the Appacitive iOS SDK to your project. 
+All you need to do is drag a *.frameworks* file yo your project. 
 
-1. Adding the Appacitive iOS SDK framework to your project.
-2. Using the CocoaPods dependency manager.
+
+Soon you will be able to use CocoaPods to integrate the Appacitive iOS SDK.
+
 
 ## Adding the Appacitive iOS SDK framework to your project.
 
 ### Step 1: Download the Appactive iOS SDK framework bundle
 
-Go [here](https://cdn.appacitive.com/sdk/ios/appacitive-ios-sdk-v-0.9.framework.zip) and download the Appacitive iOS SDK. The file you download will be a zip archive. Extract the contents. You will  find a single file named *AppacitiveSDK.framework* which is a static library framework bundle.
+You can download the latest SDK [here](http://cdn.appacitive.com/sdk/ios/v0.9.1/Appacitive.framework.zip). The file you download will be a zip archive. Extract the contents. You will  find a single file named *Appacitive.framework* which is a static library framework bundle. 
+You can checkout the earlier versions on the [downloads](http://devcenter.appacitive.com/ios/downloads/) page.
 
 ### Step 2: Integrate the framework bundle into your Xcode project
 
-Drag the *AppacitiveSDK.framework* file into your Xcode project's *Project Navigator* and drop it inside the group(looks like a folder) named *Frameworks*. That's it, the SDK has been integrated.
+Drag the *Appacitive.framework* file into your Xcode project's *Project Navigator* and drop it inside the group(looks like a folder) named *Frameworks*. That's it, the SDK has been integrated.
 
 ### Step 3: Verify the setup
 
 At this point you are going to verify if the SDK was installed successfully. In your Xcode project, open up the *Prefix.pch* file and add the following header:
 
 ```objectivec
- #import <AppacitiveSDK/AppacitiveSDK.h> 
+ #import <Appacitive/AppacitiveSDK.h> 
 ```
 
 Build (cmd+B) your project. If the build is successful then you have installed the SDK correctly.
@@ -45,9 +48,9 @@ To get started you need to provide your api key to the SDK. To do this call the 
 
 The above method will use the provided API key and register it with the SDK.
 
------------------------------------------
+<!-- ----------------------------------------- -->
 
-## Using the CocoaPods dependency manager:
+<!-- ## Using the CocoaPods dependency manager:
  
 The following steps will show you how to integrate the Appacitive iOS SDK into your app using CococPods.
 
@@ -134,4 +137,4 @@ To get started you need to provide your api key to the SDK. To do this call the 
 }
 ```
 
-The above method will use the provided API key and register it with the SDK.
+The above method will use the provided API key and register it with the SDK. -->
