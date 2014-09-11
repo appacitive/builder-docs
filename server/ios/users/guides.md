@@ -28,7 +28,7 @@ spencer.password = @"H3LL0_K177Y";
 You can give your users the option of signing up or logging in via Facebook. For this you need to
 
  1. [Setup Facebook app](https://developers.Facebook.com/apps).
- 2. Follow [these](https://developers.Facebook.com/docs/reference/ios/current/) instructions to [include Facebook SDK](https://developers.Facebook.com/docs/reference/ios/current/) in your app.
+ 2. Follow [these](https://developers.facebook.com/docs/ios/getting-started) instructions to [include Facebook SDK](https://developers.Facebook.com/docs/reference/ios/current/) in your app.
 
 
 To create a user with Facebook, you need the user's Facebook access token and you need to pass it to the `createUserWithFacebook:` method.
