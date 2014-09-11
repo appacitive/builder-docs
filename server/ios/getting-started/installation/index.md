@@ -35,13 +35,13 @@ Assuming that you have created an app on the appacitive platform, you must have 
 
 <img src = "http://cdn.appacitive.com/devcenter/ios/gettingstarted/apikey.png" style="max-width:100%;" />
 
-To get started you need to provide your api key to the SDK. To do this call the + registerApiKey: method on the Appacitive class. Make sure to call this in the ```application:willFinishLaunchingWithOptions:``` method in your delegate. Here is an example:
+To get started you need to provide your api key to the SDK. To do this call the + registerApiKey: method on the Appacitive class. Make sure to call this in the ```application:didFinishLaunchingWithOptions:``` method in your delegate. Here is an example:
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application 
              didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-     [Appacitive registerApiKey:@"REPLACE_ME_WITH_YOUR_APIKEY" useLiveEnvironment:NO];
+     [Appacitive registerAPIKey:@"REPLACE_ME_WITH_YOUR_APIKEY" useLiveEnvironment:NO];
      return YES;
 }
 ```
