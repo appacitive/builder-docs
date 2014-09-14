@@ -26,9 +26,110 @@ Create two albums named _Paris_ and _Disneyland_. Add entries for the files show
 
 Go to the explorer on the Appacitive portal and add all the types to the canvas. Carefully connect all the Disneyland photos to the Disneyland album and all the Paris photos to the Paris album. Also connect users to the photos with like and comment relation and set the text property for each comment relation. Refer to the second screenshot below.
 
-<img alt="scrrenshot" src="http://devcenter.appacitive.com/ios/samples/galarie/ss1.png" style="max-width:100%">
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/files.png" style="max-width:100%">
 
+<br>
+<br>
 <img alt="scrrenshot" src="http://devcenter.appacitive.com/ios/samples/galarie/ss2.png" style="max-width:100%">
+
+#### Graph API
+
+In this tutorial we shall also make use of one of the awesome features of Appacitive i.e. that Graph API.
+To understand it in detail have a look at this video over [here](https://vimeo.com/album/2939704/video/85415329).
+
+The images below is a step by step setup of the Graph API (we shall be naming it *photo_details*) we will be using in this tutorial.
+This API is going to be used to get all the details of the Photo and its relations (so the comments and likes and also the users who liked and commented) 
+#### Creating the graph API
+
+ Head over to the graph api builder
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/modules-graph-api.png" style="max-width:100%">
+<br><br>
+
+ Here you can see a list of all the Graph APIs that you have created. Since we have created none it should be empty.
+<br>Click on add at the bottom
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/add-graph-api.png" style="max-width:100%">
+<br>
+<br>
+
+You shall be taken to the designer where you can create the Graph API. 
+We shall start with the root node. 
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/graph-start.png" style="max-width:100%">
+<br><br>
+
+Click on the circle which says add root node and select the type as photo. 
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/added-root-node.png" style="max-width:100%">
+<br><br>
+
+Now for a photo we want to get all the users who liked the photo. So click on the add child button on the right,
+and in the modal, select *user via likes* in the *relation type* drop down, and in the *name* box type in *user_likes*
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/add-child-user-likes.png" style="max-width:100%">
+<br><br>
+
+
+For the photo, we also want to get the users who commented on the photo. So similarly as above, click on the add child button on the right,
+and in the modal, select *user via commented* in the *relation type* drop down, and in the *name* box type in *user_comment*
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/add-child-user-comments.png" style="max-width:100%">
+<br><br>
+
+
+Great!! One of great things about the Graph API is that you can select what properties the API returns to you, for each type.
+So lets say in this case, when the API returns to us which user liked a photo, we want it to return just the *username*.
+
+To do this, select the circle (node) which says *user_likes* and a modal should open. (If the node was not blue before, then the first click would select the node and then the second click would open the modal).
+In the modal you should be able to see all the properties of the *user* type, i.e. username, firstname, email etc. We just want *username*, so just select the *username* box and click on save at the bottom.
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/select-property-user-likes.png" style="max-width:100%">
+<br><br>
+
+Similarly for the users who have commented on the photo, we just want to get their *username*. 
+So select the node which says *user_comment* and in the modal, select *username* and click on save.
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/select-property-user-comment.png" style="max-width:100%">
+<br><br>
+
+If you remember we had added a property called *text* in the *commented* relation between the *user* and the *photo* types.
+The Graph API by default does not return to you the properties of the connection. 
+So basically in this case, if we wanted to know the *text* the user had commented on the photo, we would need to do one more thing.
+
+On the line which joins the nodes *photo* and *user_comment*, you should see a the relation name *commented*. Click on this text and you shall see a modal pop up. On this modal, select YES for *return edge* and in the properties below, select *text* and then click on save. 
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/commented_text.png" style="max-width:100%">
+<br><br>
+
+Now we have our API setup and it should look something like this
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/graph-api-look.png" style="max-width:100%">
+<br><br>
+
+You can test the API by clicking on run at the bottom and selecting one photo when the modal shows up.
+You should see a JSON output if you have already connected the photos to the users with the *like* and *commented* relationship.
+
+Now to the last step.. Saving the API. 
+Click on the save button at the bottom, and on the modal type in the name as *photo_details*.
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/save-graph.png" style="max-width:100%">
+<br><br>
+
+Awesome!! You have just created your first Graph API!!!
+
+
 
 Now that our model is set-up, lets write some code to build an app that can consume the data from our model and present it to us in a visually aesthetic way.
 
