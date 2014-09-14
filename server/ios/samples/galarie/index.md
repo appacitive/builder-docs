@@ -101,6 +101,13 @@ So select the node which says *user_comment* and in the modal, select *username*
 <img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/select-property-user-comment.png" style="max-width:100%">
 <br><br>
 
+And for the photo object, we want it to return the filename.
+
+<br>
+<img alt="scrrenshot" src="http://cdn.appacitive.com/samples/ios/galarie/photo-object-filename.png" style="max-width:100%">
+<br><br>
+
+
 If you remember we had added a property called *text* in the *commented* relation between the *user* and the *photo* types.
 The Graph API by default does not return to you the properties of the connection. 
 So basically in this case, if we wanted to know the *text* the user had commented on the photo, we would need to do one more thing.
