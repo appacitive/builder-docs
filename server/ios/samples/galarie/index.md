@@ -17,8 +17,8 @@ We will also need a type called `user` but there is no need to create this type 
 | RELATION   | FROM TYPE | TO TYPE | MULTIPLICITY | PROPERTIES   |
 |------------|-----------|---------|--------------|--------------|
 | belongs_to | photo     | album   | many to many | -none-       |
-| commented  | user      | photo   | many to one  | text as text |
-| likes      | user      | photo   | many to one  | -none-       |
+| commented  | user      | photo   | many to many | text as text |
+| likes      | user      | photo   | many to many | -none-       |
 
 Upload some pictures on Appacitive and name them appropriately since the same name goes in to the filename property of the photo type. Refer the first screenshot below.
 
