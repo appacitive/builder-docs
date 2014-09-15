@@ -518,15 +518,15 @@ var Friend = Appacitive.Connection.extend('friends');  //Name subclass using pas
 var frnd = new Friend({
   endpoints: [{
     label: 'me',
-    endpoint: jane //instance of Appacitive.Object person type
+    object: jane //instance of Appacitive.Object person type
   }, {
     label: 'friend',
-    endpint: joe   //instance of Appacitive.Object person type
+    object: joe   //instance of Appacitive.Object person type
   }]
 }); 
 
 // Alternatively, you can use the typical Backbone syntax.
-var Friend = Appacitive.Object.extend({
+var Friend = Appacitive.Connection.extend({
   // Specify relationName
   relationName: 'player'
 });
@@ -585,10 +585,10 @@ var Friend = Appacitive.Connection.extend('friends', {
     return new Friend({ 
       endpoints: [{
           label: 'me',
-          endpoint: person1 //instance of Appacitive.Object person type
+          object: person1 //instance of Appacitive.Object person type
         }, {
           label: 'friend',
-          endpint: person2   //instance of Appacitive.Object person type
+          object: person2   //instance of Appacitive.Object person type
         }],
       type: type 
     });
