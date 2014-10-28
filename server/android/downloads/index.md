@@ -1,7 +1,7 @@
 
 <h1><span class="glyphicon glyphicon-download-alt"></span> Android SDK Downloads</h1>
-<span class="muted mbm">Version 1.0.0 - May 01, 2014</span>
-<div> <a href="https://cdn.appacitive.com/sdk/android/0.9.0/appacitive-android-0.9.0.jar" class="btn btn-primary pll prl">Download</a></div>
+<span class="muted mbm">Version 1.0.0 - October 28, 2014</span>
+<div> <a href="https://cdn.appacitive.com/sdk/android/1.0.0/appacitive-android-1.0.0.jar" class="btn btn-primary pll prl">Download</a></div>
 <br/>
 
 
