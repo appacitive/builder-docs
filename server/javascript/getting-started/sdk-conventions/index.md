@@ -121,7 +121,7 @@ obj.save({
   // Api call specific options
 
   apikey: '{apikey}',       // Use this apikey for this call
-  environment: 'live'       // Use live environment for this call
+  env: 'live'       // Use live environment for this call
   userToken: '{userToken}', // Use this token for this call
   ignoreUserToken: false,   // Send usertoken in this call
   useMasterKey: false       // Don't use masterKey in this call

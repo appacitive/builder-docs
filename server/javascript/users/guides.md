@@ -1,6 +1,6 @@
 ﻿# Users
 
-Users represent your app's users. There is a host of different functions/features available in the SDK to make managing users easier. The `Appacitive.Users` module deals with user management.
+Users represent your app's users. There are a host of different functions/features available in the SDK to make managing users easier. The `Appacitive.Users` module deals with user management.
 
 ## Create User
 
@@ -102,7 +102,7 @@ Appacitive.User.deleteCurrentUser().then(function() {
 ```
 ## Authentication
 
-Authentication is the core of user management. You can authenticate (log in) users in multiple ways. Once the user has authenticated successfully, you will be provided the user's details and an access token. This access token identifies the currently logged in user and will be used to implement access control. Each instance of an app can have one logged in user at any given time. You can also explicitly set the accesstoken and tell the SDK to start using the access token.
+Authentication is the core of user management. You can authenticate (log in) users in multiple ways. Once the user has been authenticated successfully, you will be provided with the user details and access token. This access token identifies the currently logged in user and will be used to implement access control. Each instance of an app can have one logged in user at any given time. You can also explicitly set the accesstoken and tell the SDK to start using the access token.
 ```javascript
 // the access token
 // var token = /* ... */
@@ -134,7 +134,7 @@ var userDetails = {
 
 // now to create the user
 Appacitive.User.signup(userDetails).then(function(authResult) {
-  conole.log(authResult.token);
+  console.log(authResult.token);
   alert('Saved successfully, id: ' + authResult.user.get('__id'));
 });
 
@@ -206,7 +206,7 @@ Appacitive.User.logout(makeAPICall).then(function() {
 
 ## User Session Management
 
-Once the user has authenticated successfully, you will be provided the user's details and an access token. This access token identifies the currently logged in user and will be used to implement access control. Each instance of an app can have one logged in user at any given time.By default the SDK takes care of setting and unsetting this token. However, you can explicitly tell the SDK to start using another access token.
+Once the user has been authenticated successfully, you will be provided with the user details and an access token. This access token identifies the currently logged in user and will be used to implement access control. Each instance of an app can have one logged in user at any given time.By default the SDK takes care of setting and unsetting this token. However, you can explicitly tell the SDK to start using another access token.
 ```javascript
 // the access token
 // var token = /* ... */
