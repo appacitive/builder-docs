@@ -21,10 +21,36 @@ Lets familiarise ourselves with the terminology of Appacitive platform since I w
 
 **Connection**: A `connection` is an instance of a relation. It is like a set of one or more `records` or `rows` in a relational database.
 
-I assume that by now you have familiarised yourself with building your data model on appacitive. For the sake of this tutorial, we will create a simple app named DealHunter. The purpose of this app is to show deals on shopping to the users based on their location. Head over to http://portal.appacitive.com and login to your account or sign up for one if you didn't already do so. Create a new app named DealHunter. Now form the left hand side menu bar, select `design`. The content view will now display all the `Types` and `Relations` of your app. Select `edit` from the actions bar at the bottom and on the content view in the search field, type the `deal` and press return. This will create a new type named `deal`. Select the type and on the content view click the blue button that says 'add property' and add the properties as shown in the screenshots below.
-    Also create the types `dealdetail` and `comment`. Then click on relations and create the relations `details`, `author`, `comments` and `liked`. Add the respective properties as shown in the screenshot images below.
 
-<img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss01.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
+#### Modelling
+I assume that by now you have familiarised yourself with building your data model on appacitive. For the sake of this tutorial, we will create a simple app named DealHunter. The purpose of this app is to show deals on shopping to the users based on their location. Head over to http://portal.appacitive.com and login to your account or sign up for one if you didn't already do so. Create a new app named DealHunter. 
+
+You can head over to the model designer and create the following types.
+
+| TYPE          | PROPERTIES                                                    |
+|---------------|---------------------------------------------------------------|
+| deal          | name as string ; location as geography;                       |
+| comment       | text as text;                                                 | 
+| dealdetails   | location as string ; details as string ; storename as string; | 
+
+
+<br>
+The user type is available out of the box so you do not need to create it.
+
+Next we create the following relations.
+
+| RELATION | FROM TYPE | TO TYPE     | MULTIPLICITY | PROPERTIES  |
+|----------|-----------|-------------|--------------|-------------|
+| author   | comment   | user        | many to many | -none-      |
+| comments | comment   | deal        | many to many | -none-      |
+| liked    | user      | deal        | many to many | -none-      |
+| details  | deal      | dealdetails | 1 is to 1    | -none-      |
+
+<br>
+So this is how your model would look.
+
+
+<!-- <img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss01.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
 <img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss02.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
 <img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss03.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
 <img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss04.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
@@ -32,27 +58,58 @@ I assume that by now you have familiarised yourself with building your data mode
 <img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss06.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
 <img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss07.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
 <img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss08.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
-<img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss12.png" alt="Screenshot" style="max-width:100%; padding:1%;" />
+<img src="http://devcenter.appacitive.com/ios/samples/dealhunter/ss12.png" alt="Screenshot" style="max-width:100%; padding:1%;" /> -->
+
+<img alt="Screenshot" src="http://cdn.appacitive.com/samples/ios/dealhunter/dealhunter-model.png" style="max-width:100%">
+<br>
+
+#### Dummy Data
+You can head over to the the data explorer page 
+
+<img alt="Screenshot" src="http://cdn.appacitive.com/samples/ios/dealhunter/data-explorer.png" style="max-width:100%">
+<br>
+
+and add some dummyy data
+
+<img alt="Screenshot" src="http://cdn.appacitive.com/samples/ios/dealhunter/data.png" style="max-width:100%">
+<br>
+
+
+You can checkout this video to understand how to use the data explorer
+
+<iframe src="//player.vimeo.com/video/84661858" width="700" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+<br/>
+
+
+To add a new object click on the circlular icon on the top left. 
+And to connect two existing objects, click on the *link* icon on the left and then select the two object you want to connect.
+
+
+#### The App
 
 Now that our model is set up lets begin creating the app. Open Xcode and create a new project, select the ‘Master-Detail Application’ project template. Name it `DealHunter` and select `iPhone` form the `Devices` drop down box.
 
-There are two ways you can integrate the Appacitive SDK in to your project.
+Check out how to install the Appacitive iOS SDK into your file over [here](../../getting-started/installation/).
 
-* Using the Appacitive SDK framework bundle.
-* Using the CocoaPods dependency manager.
+In brief, you can download the latest SDK Frameworks file on the [downloads page](../../downloads) and just drag the *Appacitive.frameworks* file to the *Frameworks* group in your Xcode project.
 
-The guides to both the above mentioned methods to integrate the SDK can be found at <Insert_Link_Here>. For the sake of this tutorial, we will use the framework bundle, since it is more convenient.
+
 
 ####REGISTERING THE API KEY
 
-In order to make communicate with the Appacitive back end you need to first register the APIkey in to your app. To do so, open the AppdDelegate.m and in the application:didFinishLaunchingWithOptions: method add the following line of code to register the APIKey in to your app. If you are using the live environment make sure to set the useLiveEnvironment parameter to YES.
+In order to make communicate with the Appacitive back end you need to first register the APIkey in to your app. To do so, open the AppdDelegate.m and in the `application:didFinishLaunchingWithOptions:` method add the following line of code to register the APIKey in to your app. If you are using the live environment make sure to set the useLiveEnvironment parameter to YES.
 
 ```objectivec
 [Appacitive registerAPIKey:@"YOUR_API_KEY_HERE" useLiveEnvironment:NO];
 ```
 
+You can get your APIKey from your home page
+
+<img alt="Screenshot" src="http://cdn.appacitive.com/devcenter/ios/gettingstarted/apikey.png" style="max-width:100%">
+
+<br>
 ####IMPLEMENTING AUTHENTICATION:
-Add a new file to the project. Select Objective-C class form the template. Name the class `LoginViewController` and select `UIViewController` form the Subclass of drop down menu. Make sure the `Targeted for iPad` and `With XIB for user interface` are unchecked.
+Add a new file to the project. Select Objective-C class as the template. Name the class `LoginViewController` and select `UIViewController` from the Subclass of drop down menu. Make sure the `Targeted for iPad` and `With XIB for user interface` are unchecked.
 
 Open the `LoginViewController.h` file and add two `IBOutlets` of type `UITextfield` for the *username* and *password* fields. Also add an action method for `Login`.
 
