@@ -1,6 +1,6 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 0.9.7.7 - August 23, 2014</span>
+<span class="muted mbm">Version 0.9.7.8 - December 27, 2014</span>
 <div> 
 	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.8.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
 	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.8.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
@@ -25,7 +25,7 @@ To fast track your development, we have created blank projects of different proj
 <br/>
 
 ## v0.9.7.7
-<span class="muted">July 17, 2014</span>
+<span class="muted">Aug 23, 2014</span>
 
 + Includes support for recursively retrieving an object if it contains any children.
 + Referred Appacitive.Query to start pointing to Appacitive.Queries.FindAllQuery.
@@ -33,13 +33,13 @@ To fast track your development, we have created blank projects of different proj
 
 <br/>
 
-## v0.9.7.4
+## v0.9.7.4 Beta
 <span class="muted">July 17, 2014</span>
 
 + Includes support for ACL's.
 
 <br/>
-## v0.9.7.3
+## v0.9.7.3 Beta
 <span class="muted">May 22, 2014</span>
 
 + Includes support for Logging API calls.
@@ -89,12 +89,6 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.3.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.3.js">Development</a></td>
 			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/v0.9.7.3">Github</a></td>
 			<td>May 22, 2014</td>
-		</tr>
-		<tr>
-			<td align="left">0.9.7.2 beta</td>
-			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.2.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.2.js">Development</a></td>
-			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/955f5d409938b6820dcd955ec42ae5d9678885eb">Github</a></td>
-			<td>May 19, 2014</td>
 		</tr>
 	</tbody>
 </table>
