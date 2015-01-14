@@ -459,6 +459,110 @@ You can delete a *connection* using the `deleteInBackground()` method,
 ```
 ----------
 
+## Batch Request
+
+The Android SDK allows you to batch multiple object and connection create/update requests in a single call.
+
+First have a look at object requests. In this example we will create two objects of type entity in a single call.
+
+```
+		AppacitiveObject  entityA = new AppacitiveObject("entity");
+        entityA.setStringProperty("type", "entity a");
+
+        AppacitiveObject  entityB = new AppacitiveObject("entity");
+        entityB.setStringProperty("type", "entity b");
+
+        BatchCallRequest request = new BatchCallRequest();
+		//	Here 'a' and 'b' are unique identifiers we can optionally assign to objects in a batched call. 
+        request.addNode(entityA, "a");
+        request.addNode(entityB, "b");
+
+        AppacitiveBatchCall.Fire(request, new Callback<BatchCallResponse>() {
+            @Override
+            public void success(BatchCallResponse result) {
+                assert result.nodes.size() == 2;
+                for (ObjectContainer container : result.nodes)
+                {
+                    assert container.object != null;
+                    assert container.object.getId() > 0;
+                }
+                                
+            }
+        });
+```
+
+We can also update multiple objects in the same way as creating them. Just remember that any object that has it's `id` property set is considered as an update request. For example,
+
+```
+		//	We first create a new object of type object and set a property in it
+		final AppacitiveObject newObject = new AppacitiveObject("object");
+        newObject.setIntProperty("intfield", 1111);
+
+        newObject.createInBackground(new Callback<AppacitiveObject>() {
+            @Override
+            public void success(final AppacitiveObject createdObject) {
+                //	We then go ahead and update this newly created object.
+                createdObject.setIntProperty("intfield", 2222);
+				
+				BatchCallRequest request = new BatchCallRequest();
+                request.addNode(createdObject, null);
+                AppacitiveBatchCall.Fire(request, new Callback<BatchCallResponse>() {
+                    @Override
+                    public void success(BatchCallResponse result) {
+                        assert result.nodes.size() == 1;
+                        AppacitiveObject updatedObject = (AppacitiveObject) result.nodes.get(0).object;
+                        assert updatedObject.getId() == createdObject.getId();
+                        assert updatedObject.getPropertyAsInt("intfield").equals(2222);
+                        assert updatedObject.getRevision() == 2;                        
+                    }
+                });
+            }
+        });
+
+```
+
+In this way, you can batch multiple create and update object requests in a single call. Simply remember that any object which has it's `id` property set is considered as an update call and an object with it's id property not set is considered as a create request.
+
+These same principles apply to connections as well. You can create connections and the objects they connect in the same call. Here's where the unique identifier that we can optionally assign objects in batch calls comes handy.
+
+```
+		//	These properties, namely 'nameA' and 'nameB' provide information as to which objects to use in the connection as endpoints
+
+		final String nameA = "siblingA";
+        final String nameB = "siblingB";
+        AppacitiveObject siblingA = new AppacitiveObject("object");
+        siblingA.setStringProperty("stringfield", "siblingA");
+
+        AppacitiveObject siblingB = new AppacitiveObject("object");
+        siblingB.setStringProperty("stringfield", "siblingB");
+
+        AppacitiveConnection connection = new AppacitiveConnection("sibling");
+        connection.setStringProperty("field1", "random value");
+
+        final BatchCallRequest request = new BatchCallRequest();
+		//	First we add the objects and assign them unique identifiers 
+        request.addNode(siblingA, nameA);
+        request.addNode(siblingB, nameB);
+
+		//	Then we add the connection to the batch request and tell the batch request which two objects to use as endpoints
+        request.addEdge(connection, "sibling", "object", nameA, "object", nameB);
+        AppacitiveBatchCall.Fire(request, new Callback<BatchCallResponse>() {
+            @Override
+            public void success(BatchCallResponse result) {
+                assert result.nodes.size() == 2;
+                assert result.edges.size() == 1;
+                assert result.edges.get(0).connection.getId() > 0;
+                assert result.edges.get(0).name.equals("sibling");                
+            }
+        });
+``` 
+
+In creating connections via batched calls, you can always create connections between existing objects or use one existing object and a new object. In that case you would not need the name property for the already existing object and can simply pass null. You can assign the pre existing object id in the connection.
+
+You can also update multiple connections in a single call by passing connections into the batch request which have their `id` property set. You can mix and match object create and update and connection create and update requests in a single call.
+
+----------
+
 ## Querying
 
 *Queries* provide a mechanism to search your app's data. All searching through the SDK is done via `AppacitiveQuery` object. You can retrieve many objects at once, put filters on the objects you wish to retrieve, and much more.
