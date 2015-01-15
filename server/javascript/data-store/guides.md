@@ -1012,7 +1012,7 @@ Friends.multiDelete({
 
 # Queries
 
-All searching in SDK is done via `Appacitive.Queries` object. You can retrieve many objects at once, put conditions on the objects you wish to retrieve, and more.
+Searching in SDK is done via `Appacitive.Queries` object. You can retrieve objects at once, put conditions on the objects you wish to retrieve, and more.
 
 ```javascript
 
@@ -1040,7 +1040,7 @@ var successHandler = function(players) {
   // fetching other left players
   if (!players.isLastPage) {
     // if this is not the last page then fetch further records 
-    query.fetchNext(successHandler);
+    query.fetchNext().then(successHandler);
   }
 };
 
@@ -1088,7 +1088,7 @@ Notice the `pageSize`, `pageNumber`, `orderBy`, `isAscending`, `filter`, `fields
 
 ### Pagination
 
-All queries on the Appacitive platform support pagination and sorting. To specify pagination and sorting on your queries, you need to access the query from within the collection and set these parameters.
+All queries on the Appacitive platform support pagination and sorting. To specify pagination and sorting on your queries, you need to access the query from within the collection and set these parameters. By default, the page size for results is 20. This is capped to a max value of 200 for performance reasons.
 
 ```javascript
 var query = new Appacitive.Queries.FindAllQuery({ 
@@ -1189,15 +1189,16 @@ console.log(propFilter.toString()); // *firstname == 'john'
 | equalTo() | ```Appacitive.Filter.Property("location").equalTo(geocode);``` |
 | **String properties** ||
 | startsWith() | ```Appacitive.Filter.Property("name").startsWith("Ja"); ```|
-| like()  | ```Appacitive.Filter.Property("name").like("an"); ```|
 | match()  | ```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
 | endsWith() | ```Appacitive.Filter.Property("name").endsWith("ne"); ``` |
 | equalTo() | ```Appacitive.Filter.Property("name").equalTo("Jane"); ``` |
+| notEqualTo() | ```Appacitive.Filter.Property("name").notEqualTo("Jane"); ``` |
 | contains() | ```Appacitive.Filter.Property("name").contains([value1, value1]);``` |
 | **Text properties** ||
 | match()  |```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
 | **Datetime, int and decimal properties** ||
 | equalTo() | ```Appacitive.Filter.Property("field").equalTo(value);``` |
+| notEqualTo() | ```Appacitive.Filter.Property("field").notEqualTo(value);``` |
 | lessThan() | ```Appacitive.Filter.Property("field").lessThan(value);``` |
 | lessThanEqualTo() | ```Appacitive.Filter.Property("field").lessThanEqualTo(value);``` |
 | greaterThan() | ```Appacitive.Filter.Property("field").greaterThan(value);``` |
@@ -1210,7 +1211,7 @@ console.log(propFilter.toString()); // *firstname == 'john'
 
 ```javascript
 //First name like "oh"
-var likeFilter = Appacitive.Filter.Property("firstname").like("oh");
+var likeFilter = Appacitive.Filter.Property("firstname").match("oh");
 
 //First name starts with "jo"
 var startsWithFilter = Appacitive.Filter.Property("firstname").startsWith("jo");
@@ -1244,7 +1245,7 @@ var greaterThanFilter = Appacitive.Filter.Property("age").greaterThan(25);
 // and for equalTo
 ```
 
-### Compoound Filters
+### Compound Filters
 
 Compound filters allow you to combine multiple filters into one single query. Multiple filters can be combined using `Appacitive.Filter.Or` and `Appacitive.Filter.And` operators. NOTE: All types of filters with the exception of free text filters can be combined into a compound query.
 
@@ -1267,15 +1268,13 @@ var complexFilter =
                       10, 
                       'mi') // can be set to 'km' or 'mi'
       );
-
-//Or you can do it as
-
+```
+Or you can do it as
+```javascript
 var complexFilter = Appacitive.Filter.Property("firstname").startsWith("jo")
-          .Or(Appacitive.Filter.Property("lastname").like("oe"))
-          .And(Appacitive.Filter.Property("location")
-                      .withinCircle(center, 10, 'mi')) // can be set to 'km' or 'mi'
+          .Or(Appacitive.Filter.Property("lastname").match("oe"))
+          .And(Appacitive.Filter.Property("location").withinCircle(center, 10, 'mi')) 
           
-
 //create query object
 var Player = Appacitive.Object.extend('player');
 var query = Player.findAllQuery();
@@ -1543,15 +1542,25 @@ Internally, Appacitive stores data as JSON, so any datatype that can be converte
 
 For example, for type player we had defined following properties:
 
-* firstname: string
-* lastname: string
-* age: integer
-* score: integer
-* hobbies: multivalued string
+* `firstname`: string
+* `lastname`: string
+* `age`: integer
+* `score`: integer
+* `hobbies`: multivalued string
 
 Our SDK handles translating native javascript types to JSON. For example, if you save an `date` object, it will be translated into a Datetime type in our system.
 
 Object Keys starting with the characters $ or __, for example __type/__id, are reserved for the framework to handle additional types, so don't use those yourself.
+
+### Multivalued Properties
+
+To help with storing array data, there are three operations that can be used to atomically change an array associated with a given key:
+
+* `add`: append the given object to the end of an array field.
+* `addUnique`: add the given object only if it isn't already contained in an array field. The position of the insert is not guaranteed.
+* `remove`: remove all instances of the given object from an array field.
+
+For more information on multivalued properties click <a href="#arrays">here</a>
 
 ## Data Type Constraints
 
