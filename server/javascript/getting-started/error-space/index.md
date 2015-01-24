@@ -23,15 +23,16 @@ Depending upon the status code returned via the api, specific errors are returne
 | Error Type | Status Code | Details |
 |:------------- |:-------------:|:-------------|
 | `BadRequest` | `400` | Bad request or invalid request data. |
-| `AccessDenied` | `401` | The current user does not have access on the requested data. |
+| `AccessControl` | `401` | The current user does not have access on the requested data. |
 | `PaymentRequired` | `402` | The appacitive subcription for the application is invalid or has expired. |
 | `UsageLimitExceeded` | `403` | API burst limits have been exceeded. |
 | `NotFound` | `404` | The requested data was not found on the backend server. |
-| `UpdateConflict` | `409` | The revision of the data to be updated was different from the revision on the client. |
+| `MvccFailure` | `409` | The revision of the data to be updated was different from the revision on the client. |
 | `PreconditionFailed` | `412` |  A dependent pre conditional operation did not succeed.  |
 | `ApiAuthenticationError` | `420` | Invalid api key or api session token. |
+| `IdentityFailures` | `421` | Invalid user credentials or session token. |
 | `UserAuthenticationError` | `421` | Invalid user credentials or session token. |
-| `DuplicateObject` | `435` | Duplicate object. |
+| `Duplicate` | `435` | Duplicate object or connection. |
 | `IncorrectConfiguration` | `436` | Backend configuration for the corresponding feature is incorrect. |
 | `InternalServerError` | `500` | Operation failure on the backend platform. |
 | `DataAccessError` | `512` | Data read or write failure on the backend platform. |
