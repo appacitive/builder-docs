@@ -1195,7 +1195,7 @@ batch.add(westin);
 batch.deleteObjects(mixAt36, true);
           OR
 // Delete multiple restaurant with their connections
-batch.deleteObjects(["214214214214", mixAt36, "westin"], 'restaurant', true);
+batch.deleteObjects(["214214214214", mixAt36], 'restaurant', true);
 
 
 // Delete has_restaurant connection kuebarConn 
