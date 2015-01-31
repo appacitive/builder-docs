@@ -11,11 +11,11 @@ It is recommended to serve the sdk directly from our Content Delivery Network. A
 This will include the sdk in your project.
 
 ```html
-<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.8.min.js"></script>
+<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.min.js"></script>
 ```
 Using a protocol relative URI means the sdk will be served using the same protocol (HTTP or HTTPS) as your index.html.
 
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.7.8.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.7.9.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
 
 ##Download and Include the sdk 
 

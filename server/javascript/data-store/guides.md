@@ -1010,6 +1010,208 @@ Friends.multiDelete({
 
 ```  
 
+# Batch Request
+
+The `Batch` class lets you combine multiple operations into a single batch and execute them inside a single transaction. This is useful when you need to create, update and delete a lot of objects and connections in a single operation. As mentioned Batch executes operations in a transaction, failure of any operation will result in a rollback to original state and will give an error.
+
+## Create Objects
+
+The Javascript SDK allows you to batch multiple object and connection create,update and delete requests in a single call.
+
+First have a look at object requests. In this example we will create objects of type `restaurant` and `hotel` in a single call.
+
+```javascript
+// Extend Appacitive.Object class
+var Hotel = Appacitive.Object.extend('hotel');
+
+// Create a Hotel object Westin
+var westin = new Hotel({ name: 'Westin' });
+
+// Extend Appacitive.Object class
+var Restauant = Appacitive.Object.extend('restaurant');
+
+// mixAt36 is a new object with name and type properties
+var mixAt36 = new Restaurant({ name: 'Mix@36', type: 'Lounge' });
+
+// Create Batch class Object
+var batch = new Appacitive.Batch();
+
+// Add the objects that you want to save or update
+batch.add(westin);
+batch.add(mixAt36);
+
+// Call execute to fire the request
+batch.execute().then(function() {
+  console.log(westin.get('name'));  //Westin
+  console.log(mixAt36.get('type')); //Lounge
+  console.log(mixAt36.get('name')); //Mix@36
+}, function(error) {
+  console.log(error);
+});
+```
+
+## Create & Update Objects
+
+We can also update multiple objects in the same way as creating them. Just remember that any object that is already created is considered for an update operation. For example,
+
+```javascript
+
+// Extend Appacitive.Object class
+var Hotel = Appacitive.Object.extend('hotel');
+
+// Create a Hotel object Westin
+var westin = new Hotel({ name: 'Westin' });
+
+// Extend Appacitive.Object class
+var Restauant = Appacitive.Object.extend('restaurant');
+
+// kuebar is a new object
+var kuebar = new Restaurant({ name: 'Kuebar', type: 'Bar' });
+
+// mixAt36 is a new object with name and type properties
+var mixAt36 = new Restaurant({ name: 'Mix@36', type: 'Lounge' });
+
+
+// Save kueBar 
+kuebar.save().then(function() {
+ 
+  // kuebar is an existing object and we're updating the type
+  kuebar.set('type', 'Restaurant & Bar');
+
+  // Create Batch class Object
+  var batch = new Appacitive.Batch();
+
+  // Add the objects that you want to save or update
+  batch.add(westin);
+  batch.add(mixAt36);
+  batch.add(kuebar);
+
+  // Call execute to fire the request
+  batch.execute().then(function() {
+    console.log(westin.get('name'));  //Westin
+    console.log(kuebar.get('type'));  //Restaurant & Bar'
+    console.log(mixAt36.get('type')); //Lounge
+    console.log(mixAt36.get('name')); //Mix@36
+  });
+}, function(error) {
+    console.log(error);
+});
+```
+
+In this way, you can batch multiple create and update object requests in a single call. Simply remember that any object which has it's `id` property set is considered as an update call and an object with it's id property not set is considered as a create request.
+
+
+## Create & Update Objects and Connections
+
+These same principles apply to connections as well. You can create connections and the objects they connect in the same call. 
+
+```javascript
+// Extend Appacitive.Object class
+var Hotel = Appacitive.Object.extend('hotel');
+
+// Create a Hotel object Westin
+var westin = new Hotel({ name: 'Westin' });
+
+// Extend Appacitive.Object class
+var Restauant = Appacitive.Object.extend('restaurant');
+
+// kuebar is an existing object and we're updating the type
+var kuebar = new Restaurant({ name: 'Kuebar', type: 'Bar' });
+
+// mixAt36 is a new object with name and type properties
+var mixAt36 = new Restaurant({ name: 'Mix@36', type: 'Lounge' });
+
+// Extend Appacitive.Connection class
+var conRestaurant = Appacitive.Connection.extend('has_restaurant');
+
+// Connect westin with mixAt36
+var mixConn = new  conRestaurant({
+    endpoints: [{
+      label: 'hotel',
+      object: westin //instance of Appacitive.Object hotel type
+    }, {
+      label: 'restaurant',
+      object: mixAt36   //instance of Appacitive.Object restaurant type
+    }]
+});
+
+// Connect westin with kuebar 
+var kueConn = new  conRestaurant({
+    endpoints: [{
+      label: 'hotel',
+      object: westin //instance of Appacitive.Object hotel type
+    }, {
+      label: 'restaurant',
+      object: kuebar  //instance of Appacitive.Object restaurant type
+    }]
+});
+
+// Save kueBar 
+kuebar.save().then(function() {
+  
+  // kuebar is an existing object and we're updating the type
+  kuebar.set('type', 'Restaurant & Bar');
+
+  // Create Batch class Object
+  var batch = new Appacitive.Batch();
+
+  // Add the objects that you want to save or update
+  batch.add(westin);
+  batch.add(mixAt36);
+  batch.add(kuebar);
+
+  // Add connections to the batch
+  batch.add([kueConn, mixConn]);
+
+  // Call execute to fire the request
+  batch.execute().then(function() {
+    console.log(westin.get('name'));  //Westin
+    console.log(kuebar.get('type'));  //Restaurant & Bar'
+    console.log(mixAt36.get('type')); //Lounge
+    console.log(mixAt36.get('name')); //Mix@36
+  });
+}, function(error) {
+    console.log(error);
+});
+```
+
+In creating connections via batched calls, you can always create connections between existing objects or use one existing object and a new object. 
+
+You can also update multiple connections in a single call by passing connections into the batch request which have their id property set. You can mix and match object create and update and connection create and update requests in a single call.
+
+## Delete Objects and Connections
+
+Batch also supports deleting objects and connection in the same transaction. In the previous example, we created and updated restaurant and hotel objects. Now, we will delete some objects and connection created previously.
+
+
+```javascript
+var batch = new Appacitive.Batch();
+
+// Change rating in existing westin object and add it to batch
+westin.set('rating', 4);
+batch.add(westin);
+
+// Delete mixAt36 restaurant with its connections
+batch.deleteObjects(mixAt36, true);
+          OR
+// Delete multiple restaurant with their connections
+batch.deleteObjects(["214214214214", mixAt36, "westin"], 'restaurant', true);
+
+
+// Delete has_restaurant connection kuebarConn 
+batch.deleteConnections(kuebarConn);
+          OR
+// Delete multiple has_restaurant connections
+batch.deleteConnections([kuebarConn, "90723993297", mixConn], 'has_restaurant');
+
+// Execute batch request 
+batch.execute();
+```
+
+In above example, we can either pass a sinlge object/connection or pass an array of objects/connections to delete methods. In case of an array you a either pass the object itself or pass the ids. If you pass ids you need to expicitly pass the typeName/relationName of the objects/connection as second argument to them methods `deleteObjects` and `deleteConnections`.
+
+For `deleteObjects` you can also pass a third/second argument `deleteConnections` depending on whether you pass an ids or objects. This value specifies whether you want to delete its connections if they exist.
+
 # Queries
 
 Searching in SDK is done via `Appacitive.Queries` object. You can retrieve objects at once, put conditions on the objects you wish to retrieve, and more.

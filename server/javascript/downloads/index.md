@@ -1,9 +1,9 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 0.9.7.8 - December 27, 2014</span>
+<span class="muted mbm">Version 0.9.7.9 - January 30, 2015</span>
 <div> 
-	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.8.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
-	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.8.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
+	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
+	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
 </div>
 <br/>
 
@@ -11,8 +11,19 @@
 To fast track your development, we have created blank projects of different project types. These blank projects have Javascript SDK included with all it's other dependencies. After downloading these projects you can switch over to our [Getting Started](../getting-started) guide.
 <br/>
 <br/>
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.7.8.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.7.9.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
 </div>
+<br/>
+
+
+<h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
+## v0.9.7.9
+<span class="muted">Jan 30, 2015</span>
+
++ Includes support for batch API Delete.
++ Some fixes regarding Date and Datatype parsing.
++ Changes in remove of Multivalued property.
+
 <br/>
 
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
@@ -66,6 +77,12 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td align="left">0.9.7.9</td>
+			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.js">Development</a></td>
+			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/v0.9.7.9">Github</a></td>
+			<td>Jan 30, 2015</td>
+		</tr>
 		<tr>
 			<td align="left">0.9.7.8</td>
 			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.8.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.8.js">Development</a></td>
