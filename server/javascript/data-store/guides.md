@@ -1016,8 +1016,6 @@ The `Batch` class lets you combine multiple operations into a single batch and e
 
 ## Create Objects
 
-The Javascript SDK allows you to batch multiple object and connection create,update and delete requests in a single call.
-
 First have a look at object requests. In this example we will create objects of type `restaurant` and `hotel` in a single call.
 
 ```javascript
@@ -1099,7 +1097,6 @@ kuebar.save().then(function() {
 ```
 
 In this way, you can batch multiple create and update object requests in a single call. Simply remember that any object which has it's `id` property set is considered as an update call and an object with it's id property not set is considered as a create request.
-
 
 ## Create & Update Objects and Connections
 
@@ -1208,9 +1205,9 @@ batch.deleteConnections([kuebarConn, "90723993297", mixConn], 'has_restaurant');
 batch.execute();
 ```
 
-In above example, we can either pass a sinlge object/connection or pass an array of objects/connections to delete methods. In case of an array you a either pass the object itself or pass the ids. If you pass ids you need to expicitly pass the typeName/relationName of the objects/connection as second argument to them methods `deleteObjects` and `deleteConnections`.
+In above example, we can either pass a sinlge object/connection or pass an array of objects/connections to delete methods. In case of an array you a either pass the object itself or pass the ids. If you pass ids you need to expicitly pass the typeName/relationName of the objects/connection as second argument to the methods `deleteObjects` and `deleteConnections`.
 
-For `deleteObjects` you can also pass a third/second argument `deleteConnections` depending on whether you pass an ids or objects. This value specifies whether you want to delete its connections if they exist.
+For `deleteObjects` you can also pass a third/second argument `deleteConnections` depending on whether you pass ids or objects. This argument specifies whether you want to delete its connections if they exist.
 
 # Queries
 

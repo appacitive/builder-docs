@@ -30,11 +30,11 @@ setTimeout(function() {
         if (!err) {
 
             console.log("Html compiled\n\n");
-
+            var version = guid();
             var transform = function(content, filename) {
                 console.log("Transforming " + filename);
 
-                content = replaceAll('__RevisionNoGoesHere__', guid(), content);
+                content = replaceAll('__RevisionNoGoesHere__', version, content);
 
                 require('fs').writeFile(path.resolve(filename), content, function(err) {
                     if (err) throw err;
