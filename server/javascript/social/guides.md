@@ -216,6 +216,19 @@ Appacitive.User.current().unlink('twitter').then(function() {
 });
 ```
 
+### Creating Other Social accounts
+
+Apart from Facebook and Twitter, Appacitive also supports Google Plus login.
+```javascript
+Appacitive.User.authenticateUser({
+  "accesstoken": accessToken,
+  "type": "googleplus",
+  "expiry": 86400000,  //expiry time of apapcitive session
+  "createnew": true    //will create a new user if it doesn't exists
+}, options, 'GP');
+```
+If you pass `createnew: false`, then Appacitive will try to find a user for that accessToken. If it exists then you'll get a user object and a token in the response. If it doesn't exist then you'll get an error.
+
 ## Retreiving all linked accounts
 ```javascript
 Appacitive.User.current().getAllLinkedAccounts().then(function() {
