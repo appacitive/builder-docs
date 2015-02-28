@@ -195,14 +195,14 @@ Device search works exactly the same as any object search.
 
 ```javascript
 //for type
-var Player = Appacitive.Object.extend('player');
+var Device = Appacitive.Object.extend('device');
 
 // Set filter
 var filter = Appacitive.Filter.Property('devicetype').equalTo('ios');
 
 // Create findall query
-var query = Player.findAllQuery(
-  fields: ["*"],      //optional: returns all device fields only
+var query = Device.findAllQuery({
+  fields: ["*"],   //optional: returns all device fields only
   filter: filter   //optional  
 }); 
 
