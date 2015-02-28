@@ -250,7 +250,7 @@ player.fetch().then(function(obj) {
 ```javascript
 ["name", "age", "__createby"] //will set fields to return __id, __type, name, age and __createdby
 [] //will set fields to return only __id and __type
-[*] //will set fields to return all user-defined properties and __id and __type
+["*"] //will set fields to return all user-defined properties and __id and __type
 ```
 
 #### Getting values in Object
@@ -1265,7 +1265,7 @@ var query = Player.findAllQuery(
 // for relation
 var Player = Appacitive.Connection.extend('friends');
 var query = Player.findAllQuery(
-  fields: [*],      //optional: returns all user fields only
+  fields: ["*"],      //optional: returns all user fields only
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1
   pageSize: 20,     //optional: default is 50
@@ -1274,8 +1274,6 @@ var query = Player.findAllQuery(
 }); 
 
 ```
-
-
 Go ahead and explore the query returned. The query contains a private object which is an instance of the `Appacitive.HttpRequest` class which we'll disccus ahead . This request gets transformed into an actual ajax request and does the fetching. In case you are interested in the actual rest endpoints, fire the `toRequest` method on the query. This will return a representation of the http request.
 
 ## Modifiers
@@ -1300,7 +1298,6 @@ alert(query.pageSize()); // will print 30
 query.pageNumber(2);
 //get pageNumber
 alert(query.pageNumber()); // will print 2
-
 
 people.fetch().then(function() {
     // this is the 2nd page of results
@@ -1430,7 +1427,7 @@ var betweenDateTimeFilter = Appacitive.Filter.Property("__utclastupdateddate").b
 var betweenFilter = Appacitive.Filter.Property("age").between(23, 70);
 
 //Greater than a datetime
-var greaterThanDateTimeFilter = Appacitive.Filter.Property("birthdate").greaterThan(date);
+var greaterThanDateTimeFilter = Appacitive.Filter.Property("birthdate").greaterThan(start);
 
 //greater then some number 
 var greaterThanFilter = Appacitive.Filter.Property("age").greaterThan(25);
@@ -1438,7 +1435,7 @@ var greaterThanFilter = Appacitive.Filter.Property("age").greaterThan(25);
 //Same works for greaterThanEqualTo
 //and for lessThan
 //and for lessThanEqualTo
-// and for equalTo
+//and for equalTo
 ```
 
 ### Compound Filters
@@ -1533,7 +1530,7 @@ hilton.save().then(function(obj) {
 });
   
 location.toJSON();
- 
+
 Returns a JSON representation of the lat long coordinates:
 
 {

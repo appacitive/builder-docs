@@ -87,7 +87,7 @@ device.fetch().then(function(obj) {
 ```javascript
 ["name", "age", "__createby"] //will set fields to return __id, __type, name, age and __createdby
 [] //will set fields to return only __id and __type
-[*] //will set fields to return all user-defined properties and __id and __type
+["*"] //will set fields to return all user-defined properties and __id and __type
 ```
 
 ### Retrieve multiple devices 

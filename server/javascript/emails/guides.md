@@ -21,13 +21,13 @@ Email is accessed through the Appacitive.Email module. Before you get to sending
 
 ```javascript
 Appacitive.Email.setupEmail({
-    username: /* username of the sender email account */,
-    from: /* display name of the sender email account*/,
-    password: /* password of the sender */,
-    host: /* the smtp host, eg. smtp.gmail.com */,
-    port: /* the smtp port, eg. 465 */,
-    enablessl: /* is email provider ssl enabled, true or false, default is true */,
-    replyto: /* the reply-to email address */
+    username: "", /* username of the sender email account */
+    from: "", /* display name of the sender email account*/
+    password: "", /* password of the sender */
+    host: "", /* the smtp host, eg. smtp.gmail.com */
+    port: "", /* the smtp port, eg. 465 */
+    enablessl: "", /* is email provider ssl enabled, true or false, default is true */
+    replyto: "" /* the reply-to email address */
 });
 ```
 Now you are ready to send emails.
@@ -37,14 +37,14 @@ Now you are ready to send emails.
 A raw email is one where you can specify the entire body of the email. An email has the structure
 ```javascript
 var email = {
-    to: /* a string array containing the recipient email addresses */,
-    cc: /* a string array containing the cc'd email addresses */,
-    bcc: /* a string array containing the bcc'd email addresses */,
-    from: /* email id of user */,
-    subject: /* string containing the subject of the email */,
-    body: /* html or string that will be the body of the email */,
-    ishtml: /* bool value specifying the body is html or string, default is true */,
-    useConfig: /* set true to use configure settings in email module in SDK */
+    to: [], /* a string array containing the recipient email addresses */
+    cc: [], /* a string array containing the cc'd email addresses */
+    bcc: [], /* a string array containing the bcc'd email addresses */
+    from: "", /* email id of user */
+    subject: "Welcome to Appacitive", /* string containing the subject of the email */
+    body: "Hi, <br/> Welcome to Appacitive", /* html/string that contains body of the email */
+    ishtml: true, /* bool value specifying the body is html or string, default is true */
+    useConfig: false/* set true to use configure settings in email module in SDK */
 };
 ```
 And to send the email
@@ -69,14 +69,17 @@ Here, [#username] and [#appname] denote the placeholders that we would want to s
 
 ```javascript
 var email = {
-    to: /* a string array containing the recipient email addresses */,
-    cc: /* a string array containing the cc'd email addresses */,
-    bcc: /* a string array containing the bcc'd email addresses */,
-    subject: /* string containing the subject of the email */,
-    from: /* email id of user */,
-    templateName: /*name of template to be send */,
-    data: /*an object with placeholder names and their data eg: {username:"test"} */
-    useConfig: /* set true to use configure settings in email module in SDK*/
+    to: [], /* a string array containing the recipient email addresses */
+    cc: [], /* a string array containing the cc'd email addresses */
+    bcc: [], /* a string array containing the bcc'd email addresses */
+    from: "", /* email id of user */
+    subject: "Welcome to Appacitive", /* string containing the subject of the email */
+    templateName: "templateName", /*name of template to be send */
+    data: { 
+        fname: "John",
+        lname: "Doe"
+    }, /*an object with placeholder names and their data eg: {username:"test"} */
+    useConfig: false/* set true to use configure settings in email module in SDK*/
 };
 ```
 And to send the email,
