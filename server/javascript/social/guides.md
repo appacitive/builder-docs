@@ -216,13 +216,13 @@ Appacitive.User.current().unlink('twitter').then(function() {
 });
 ```
 
-### Creating Other Social accounts
+## Creating Other Social accounts
 
 Apart from Facebook and Twitter, Appacitive also supports Google Plus login.
 ```javascript
 Appacitive.User.authenticateUser({
   "accesstoken": accessToken,
-  "type": "googleplus",
+  "type": "googleplus", //name of the provider
   "expiry": 86400000,  //expiry time of apapcitive session
   "createnew": true    //will create a new user if it doesn't exists
 }, options, 'GP');
