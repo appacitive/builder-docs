@@ -1220,7 +1220,7 @@ var filter = Appacitive.Filter.Property("firstname").equalTo("John");
 var query = new Appacitive.Queries.FindAllQuery(
   type: 'player', //mandatory 
   //or relation: 'friends'
-  fields: [*],      //optional: returns all user fields only
+  fields: ['*'],      //optional: returns all user fields only
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1
   pageSize: 20,     //optional: default is 50
@@ -1253,9 +1253,8 @@ You can also use these queries directly from your extended classes for relations
 ```javascript
 //for type
 var Player = Appacitive.Object.extend('player');
-
 var query = Player.findAllQuery(
-  fields: [*],      //optional: returns all user fields only
+  fields: ['*'],      //optional: returns all user fields only
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1
   pageSize: 20,     //optional: default is 50
@@ -1264,9 +1263,7 @@ var query = Player.findAllQuery(
 }); 
 
 // for relation
-
 var Player = Appacitive.Connection.extend('friends');
-
 var query = Player.findAllQuery(
   fields: [*],      //optional: returns all user fields only
   filter: filter,   //optional  
@@ -1331,7 +1328,7 @@ alert(query.isAscending()); // will print true
 
 ### Fields
 
-You can also mention exactly which all fields you want returned in query results. 
+You can also mention exactly which all fields should be returned in query results. 
 
 Fields `__id` and `__type`/`__relationtype`  are the fields which will always be returned. 
 ```javascript
@@ -1339,7 +1336,7 @@ Fields `__id` and `__type`/`__relationtype`  are the fields which will always be
 query.fields(["name", "age", "__createby"]); //will set fields to return __id, __type, name, age and __createdby
 
 query.fields([]); //will set fields to return only __id and __type
-query.fields([*]); //will set fields to return all user-defined properties and __id and __type
+query.fields(["*"]); //will set fields to return all user-defined properties and __id and __type
 ```
 **Note**: By default fields is set as empty, so it returns all fields.
 
@@ -1349,11 +1346,11 @@ Filters are useful for fine tuning the results of your search. Objects and conne
 
 The `Appacitive.Filter` class provides a factory for creating filters for appacitive without having to learn the specialized query format used by the underlying REST api.
 The typical format for the filter helper class is
-```csharp
+```javascript
 Appacitive.Filter.{Property|Attribute|Aggregate}("name").<Condition>(condition args);
 ```
 Some sample examples of how it can be used are
-```csharp
+```javascript
 // To filter on a property called firstname
 var propfilter = Appacitive.Filter.Property("firstname").equalTo("John");
 

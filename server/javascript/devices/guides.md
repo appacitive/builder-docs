@@ -20,7 +20,7 @@ More pre-defined properties are available in the device type for your benefit. Y
 
 ```javascript
 // Extend Appacitive object class to create Device class
-var Device = new Appacitive.Object('device');
+var Device = Appacitive.Object.extend('device');
 
 // Create Device instance
 var device = new Device();
@@ -202,7 +202,7 @@ var filter = Appacitive.Filter.Property('devicetype').equalTo('ios');
 
 // Create findall query
 var query = Player.findAllQuery(
-  fields: [*],      //optional: returns all device fields only
+  fields: ["*"],      //optional: returns all device fields only
   filter: filter   //optional  
 }); 
 
