@@ -60,7 +60,7 @@ Let's take a look at an example. In the code below, we try to fetch an object wi
 
 ```javascript
 var Player = Appacitive.Object.extend('player');
-player.get('11133431223344', {
+Player.get('11133431223344', {
 	success: function(player) {
     	// This function will *not* be called.
     	console.log(player.get('name') + ' fetched');
@@ -77,7 +77,7 @@ The get call might also fail because it couldn't connect to the Appacitive. Here
 
 ```javascript
 var Player = Appacitive.Object.extend('player');
-player.get('11133431223344', {
+Player.get('11133431223344', {
 	success: function(player) {
     	// This function will *not* be called.
     	console.log(player.get('name') + ' fetched');
