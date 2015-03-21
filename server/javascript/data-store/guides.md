@@ -1376,6 +1376,7 @@ console.log(propFilter.toString()); // *firstname == 'john'
 
 | Condition    | Sample usage |
 | ------------- |:-----|
+| isMissing() | ```Appacitive.Filter.Property("name").isMissing();``` |
 | **Geography properties** ||
 | withinPolygon() | ``` Appacitive.Filter.Property("loc").withinPolygon(geocodes); ```
 | withinCircle() | ```Appacitive.Filter.Property("loc").withinCircle(geocode, radius, unit); ```|
@@ -1386,7 +1387,7 @@ console.log(propFilter.toString()); // *firstname == 'john'
 | endsWith() | ```Appacitive.Filter.Property("name").endsWith("ne"); ``` |
 | equalTo() | ```Appacitive.Filter.Property("name").equalTo("Jane"); ``` |
 | notEqualTo() | ```Appacitive.Filter.Property("name").notEqualTo("Jane"); ``` |
-| contains() | ```Appacitive.Filter.Property("name").contains([value1, value1]);``` |
+| containedIn() | ```Appacitive.Filter.Property("name").containedIn([value1, value1]);``` |
 | **Text properties** ||
 | match()  |```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
 | **Datetime, int and decimal properties** ||
@@ -1397,9 +1398,9 @@ console.log(propFilter.toString()); // *firstname == 'john'
 | greaterThan() | ```Appacitive.Filter.Property("field").greaterThan(value);``` |
 | greaterThanEqualTo() | ```Appacitive.Filter.Property("field").greaterThanEqualTo(value);``` |
 | between() | ```Appacitive.Filter.Property("field").between(start, end);``` |
-| contains() | ```Appacitive.Filter.Property("field").contains([value1, value1]);``` |
-** Supports [Lucene query parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
+| containedIn() | ```Appacitive.Filter.Property("name").containedIn([value1, value1]);``` |
 
+** Supports [Lucene query parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
 <br/>
 
 ```javascript
@@ -1413,7 +1414,7 @@ var startsWithFilter = Appacitive.Filter.Property("firstname").startsWith("jo");
 var endsWithFilter = Appacitive.Filter.Property("firstname").endsWith("oe");
 
 //First name matching several different values
-var containsFilter = Appacitive.Filter.Property("firstname").contains(["John", "Jane", "Tarzan"]);
+var containsFilter = Appacitive.Filter.Property("firstname").containedIn(["John", "Jane", "Tarzan"]);
 
 //Between two datetimeobjects
 var start = new Date("12 Dec 1975");
