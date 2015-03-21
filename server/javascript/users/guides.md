@@ -246,7 +246,7 @@ There're 2 ways users can change their password
 Users often forget their passwords for your app. So you are provided with an API to reset their passwords.To start, you ask the user for his username and call
 
 ```javascript
-Appacitive.User.sendResetPasswordEmail("{username}", "{subject for the mail}")
+Appacitive.User.sendResetPasswordEmail("{username}", "{subject for the mail}", options)
 	.then(function(){
 	  alert("Password reset mail sent successfully"); 
 	});
@@ -254,6 +254,19 @@ Appacitive.User.sendResetPasswordEmail("{username}", "{subject for the mail}")
 
 This'll basically send the user an email, with a reset password link. When user clicks on the link, he'll be redirected to an Appacitive page, which will allow him to enter new password and save it.
 
+You can also send a custom reset password link in the email. Moreover you can also define the email template to be used while sending the reset password email. These options are useful when you're using the same Appacitive app in multiple applications. For further information on custom reset password URL you can refer below.
+
+```javascript
+var options = {
+  templateName: "demoemailtemplate", //optional: Name of email template to use
+  resetLink: "http://www.demolink.com" //optional: Custom reset password link
+};
+
+Appacitive.User.sendResetPasswordEmail("{username}", "{subject for the mail}", options)
+  .then(function(){
+    alert("Password reset mail sent successfully"); 
+  });
+```
 #### Custom URL 
 
 You can also create a custom reset password page or provide a custom reset password page URL from our UI.
