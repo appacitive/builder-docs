@@ -469,8 +469,8 @@ Multiple objects can also be deleted at a time. Here's an example
 ```javascript
 Appacitive.Object.multiDelete({   
   type: 'players', //name of type
-  ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of object ids to delete
-}, function() { 
+  ids: ["14696753262625025", "14696753262625026", "14696753262625027"] //array of object ids to delete
+}).then(function() { 
   //successfully deleted all objects
 }, function(err) {
   alert("code:" + err.code + "\nmessage:" + err.message);
@@ -480,8 +480,8 @@ Appacitive.Object.multiDelete({
 var Player = Appacitive.Object.extend('player');
 
 Player.multiDelete({   
-  ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of object ids to delete
-}, function() { 
+  ids: ["14696753262625025", "14696753262625026", "14696753262625027"] //array of object ids to delete
+}).then(function() { 
   //successfully deleted all objects
 }, function(err) {
   alert("code:" + err.code + "\nmessage:" + err.message);
@@ -995,7 +995,7 @@ Multiple coonection can also be deleted at a time. Here's an example
 ```javascript
 Appacitive.Connection.multiDelete({   
   relation: 'friends', //name of relation
-  ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of connection ids to delete
+  ids: ["14696753262625025", "14696753262625026", "14696753262625027"] //array of connection ids to delete
 }).then(function() { 
   //successfully deleted all connections
 });
@@ -1003,7 +1003,7 @@ Appacitive.Connection.multiDelete({
 //by extending class
 var Friends = Appacitive.Connection.extend('friends');
 Friends.multiDelete({   
-  ids: ["14696753262625025", "14696753262625026", "14696753262625027"], //array of connection ids to delete
+  ids: ["14696753262625025", "14696753262625026", "14696753262625027"] //array of connection ids to delete
 }).then(function() { 
   //successfully deleted all connections
 });
