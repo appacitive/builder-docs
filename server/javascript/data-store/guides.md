@@ -1868,6 +1868,16 @@ collection.fetch().then(function(collection) {
                       });
 ```
 
+You can also fetch paginated collections with the help  of `fetchNext` and `fetchPrev`.
+
+```
+var options = { 
+  reset : false  //To add objects to the collection instead of resetting it
+};  
+collection.fetchNext(options);
+collection.fetchPrev(options);
+```
+
 ## Creating, Adding and Removing Items
 
 You can create, add and remove objects/connection from a collection.
