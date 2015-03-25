@@ -1376,7 +1376,7 @@ console.log(propFilter.toString()); // *firstname == 'john'
 
 | Condition    | Sample usage |
 | ------------- |:-----|
-| isMissing() | ```Appacitive.Filter.Property("name").isMissing();``` |
+| isNull() | ```Appacitive.Filter.Property("name").isNull();``` |
 | **Geography properties** ||
 | withinPolygon() | ``` Appacitive.Filter.Property("loc").withinPolygon(geocodes); ```
 | withinCircle() | ```Appacitive.Filter.Property("loc").withinCircle(geocode, radius, unit); ```|
@@ -1398,7 +1398,6 @@ console.log(propFilter.toString()); // *firstname == 'john'
 | greaterThan() | ```Appacitive.Filter.Property("field").greaterThan(value);``` |
 | greaterThanEqualTo() | ```Appacitive.Filter.Property("field").greaterThanEqualTo(value);``` |
 | between() | ```Appacitive.Filter.Property("field").between(start, end);``` |
-| containedIn() | ```Appacitive.Filter.Property("name").containedIn([value1, value1]);``` |
 
 ** Supports [Lucene query parser syntax](http://lucene.apache.org/core/2_9_4/queryparsersyntax.html)
 <br/>
