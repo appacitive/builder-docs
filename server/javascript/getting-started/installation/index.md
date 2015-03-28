@@ -30,11 +30,11 @@ From the source code, you just need to download the `AppacitiveSDK.min.js` or `A
 
 ## Include SDK in your phonegap App
 
-Including the SDK in a <a href="http://phonegap.com/" target="_blank">Phonegap <i class="glyphicon glyphicon-share-alt"></i></a> app and Web app is same. You can simply follow above steps to include the SDK. You can refer this <a  target="_blank" href="">tutorial <i class="glyphicon glyphicon-share-alt"></i></a> for using the SDK in your phonegap app. 
+Including the SDK in a <a href="http://phonegap.com/" target="_blank">Phonegap <i class="glyphicon glyphicon-share-alt"></i></a> app and Web app is same. You can simply follow above steps to include the SDK.
 
 ##Include SDK in your Titanium App
 
-For Titanium download <a href="/javascript/downloads" target="_blank">Ti.AppacitiveSDK.js <i class="glyphicon glyphicon-share-alt"></i></a> and include it in your app. For more info on including Titanium SDK please refer this <a  target="_blank" href="">blog <i class="glyphicon glyphicon-share-alt"></i></a>.
+For Titanium download <a href="/javascript/downloads" target="_blank">Ti.AppacitiveSDK.js <i class="glyphicon glyphicon-share-alt"></i></a> and include it in your app. 
 
 ##Include SDK in your Node.js App
 
