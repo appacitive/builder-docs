@@ -250,12 +250,17 @@ user.set('profile_pic', 'http://lorempixel.com/64/64/people');
 Appacitive.User.loginWithFacebook(Appacitive.Facebook.accessToken(), { create: true, user: user });
 ```
 
-*Using Universal Social Login*
+*Using loginWithTwitter*
 ```javascript
-Appacitive.User.loginWithFacebook(Appacitive.Facebook.accessToken(), { create: true, user: user });
+Appacitive.User.loginWithTwitter({
+  oauthtoken: {{twitterObj.oAuthToken}} ,
+  oauthtokensecret: {{twitterObj.oAuthTokenSecret}},
+  consumerKey: {{twitterObj.consumerKey}},
+  consumerSecret: {{twitterObj.consumerSecret}}
+}, { create: true, user: user });
 ```
 
-*Using loginWithFacebook*
+*Using Universal Social Login*
 ```javascript
 Appacitive.User.authenticateUser({
   "accesstoken": accessToken,
