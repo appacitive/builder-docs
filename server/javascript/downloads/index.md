@@ -1,9 +1,9 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 0.9.7.9 - March 27, 2015</span>
+<span class="muted mbm">Version 0.9.8.0 - March 27, 2015</span>
 <div> 
-	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
-	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
+	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.8.0.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
+	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.8.0.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
 </div>
 <br/>
 
@@ -11,12 +11,24 @@
 To fast track your development, we have created blank projects of different project types. These blank projects have Javascript SDK included with all it's other dependencies. After downloading these projects you can switch over to our [Getting Started](../getting-started) guide.
 <br/>
 <br/>
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.7.9.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.8.0.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
 </div>
 <br/>
 
 
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
+## v0.9.8.0
+<span class="muted">April 28, 2015</span>
+
++ Includes support for setting user properties while registering/login with Facebook and Twitter.
++ Includes support for 2 new filters: isNotNull and notIn.
++ Includes support for async flag ( Send `async:true` in options object ).
++ Changes in setting global context for process/window.
++ Some fixes regarding XDomainRequest Domain, UserAgent issue for MSIE9.
++ Fixed an issue with error handling while chaining promises.
+
+<br/>
+
 ## v0.9.7.9
 <span class="muted">March 27, 2015</span>
 
@@ -30,7 +42,6 @@ To fast track your development, we have created blank projects of different proj
 
 <br/>
 
-<h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
 ## v0.9.7.8
 <span class="muted">Dec 27, 2014</span>
 
@@ -81,6 +92,12 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td align="left">0.9.8.0</td>
+			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.8.0.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.8.0.js">Development</a></td>
+			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/v0.9.8.0">Github</a></td>
+			<td>April 28, 2015</td>
+		</tr>
 		<tr>
 			<td align="left">0.9.7.9</td>
 			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.7.9.js">Development</a></td>

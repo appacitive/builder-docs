@@ -1189,25 +1189,25 @@ westin.set('rating', 4);
 batch.add(westin);
 
 // Delete mixAt36 restaurant with its connections
-batch.deleteObjects(mixAt36, true);
+batch.removeObjects(mixAt36, true);
           OR
 // Delete multiple restaurant with their connections
-batch.deleteObjects(["214214214214", mixAt36], 'restaurant', true);
+batch.removeObjects(["214214214214", mixAt36], 'restaurant', true);
 
 
 // Delete has_restaurant connection kuebarConn 
-batch.deleteConnections(kuebarConn);
+batch.removeConnections(kuebarConn);
           OR
 // Delete multiple has_restaurant connections
-batch.deleteConnections([kuebarConn, "90723993297", mixConn], 'has_restaurant');
+batch.removeConnections([kuebarConn, "90723993297", mixConn], 'has_restaurant');
 
 // Execute batch request 
 batch.execute();
 ```
 
-In above example, we can either pass a sinlge object/connection or pass an array of objects/connections to delete methods. In case of an array you a either pass the object itself or pass the ids. If you pass ids you need to expicitly pass the typeName/relationName of the objects/connection as second argument to the methods `deleteObjects` and `deleteConnections`.
+In above example, we can either pass a sinlge object/connection or pass an array of objects/connections to delete methods. In case of an array you a either pass the object itself or pass the ids. If you pass ids you need to expicitly pass the typeName/relationName of the objects/connection as second argument to the methods `removeObjects` and `removeConnections`.
 
-For `deleteObjects` you can also pass a third/second argument `deleteConnections` depending on whether you pass ids or objects. This argument specifies whether you want to delete its connections if they exist.
+For `removeObjects` you can also pass a third/second argument `removeConnections` depending on whether you pass ids or objects. This argument specifies whether you want to delete its connections if they exist.
 
 # Queries
 
