@@ -1389,6 +1389,8 @@ console.log(propFilter.toString()); // *firstname == 'john'
 | equalTo() | ```Appacitive.Filter.Property("name").equalTo("Jane"); ``` |
 | notEqualTo() | ```Appacitive.Filter.Property("name").notEqualTo("Jane"); ``` |
 | containedIn() | ```Appacitive.Filter.Property("name").containedIn([value1, value1]);``` |
+| notIn() | ```Appacitive.Filter.Property("name").notIn([value1, value1]);``` |
+| contains() | ```Appacitive.Filter.Attribute("name").contains([value1, value1]);``` |
 | **Text properties** ||
 | match()  |```Appacitive.Filter.Property("description").match("roam~0.8"); ```|
 | **Datetime, int and decimal properties** ||
