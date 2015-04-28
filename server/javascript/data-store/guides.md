@@ -1377,6 +1377,7 @@ console.log(propFilter.toString()); // *firstname == 'john'
 | Condition    | Sample usage |
 | ------------- |:-----|
 | isNull() | ```Appacitive.Filter.Property("name").isNull();``` |
+| isNotNull() | ```Appacitive.Filter.Property("name").isNotNull();``` |
 | **Geography properties** ||
 | withinPolygon() | ``` Appacitive.Filter.Property("loc").withinPolygon(geocodes); ```
 | withinCircle() | ```Appacitive.Filter.Property("loc").withinCircle(geocode, radius, unit); ```|

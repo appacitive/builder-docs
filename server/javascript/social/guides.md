@@ -223,7 +223,6 @@ Apart from Facebook and Twitter, Appacitive also supports Google Plus login.
 Appacitive.User.authenticateUser({
   "accesstoken": accessToken,
   "type": "googleplus", //name of the provider
-  "expiry": 86400000,  //expiry time of apapcitive session
   "createnew": true    //will create a new user if it doesn't exists
 }, options, 'GP');
 ```
@@ -235,3 +234,37 @@ Appacitive.User.current().getAllLinkedAccounts().then(function() {
   console.dir(Appacitive.User.current().linkedAccounts());
 });
 ```
+
+## Setting user properties while registration
+
+While using social signup , if you want to store some additional user properties in the user object, you can achieve this by sending the `user` object in the `options` parameter.
+
+```javascript
+// Create user object
+var user = new Appacitive.user();
+user.set('profile_pic', 'http://lorempixel.com/64/64/people');
+```
+
+*Using loginWithFacebook*
+```javascript
+Appacitive.User.loginWithFacebook(Appacitive.Facebook.accessToken(), { create: true, user: user });
+```
+
+*Using Universal Social Login*
+```javascript
+Appacitive.User.loginWithFacebook(Appacitive.Facebook.accessToken(), { create: true, user: user });
+```
+
+*Using loginWithFacebook*
+```javascript
+Appacitive.User.authenticateUser({
+  "accesstoken": accessToken,
+  "type": "googleplus", //name of the provider
+  "createnew": true    //will create a new user if it doesn't exists
+}, {
+  user: user
+}, 'GP');
+```
+
+On a related note: This feature allows you to set mandatory properties on the user type if you're using the above mentioned API for signups.
+
