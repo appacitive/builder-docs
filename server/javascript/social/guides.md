@@ -20,6 +20,7 @@ To start using Facebook with Appacitive, you need to:
 window.fbAsyncInit = function() {
   Appacitive.Facebook.initialize({
     appId      : 'YOUR_APP_ID', // Facebook App ID
+    version    : 'v2.3',
     status     : false, // check login status
     cookie     : true, // enable cookies to allow Appacitive to access the session
     xfbml      : true  // parse XFBML
