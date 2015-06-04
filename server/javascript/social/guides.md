@@ -12,8 +12,8 @@ Appacitive provides an easy way to integrate Facebook in your application. For t
 
 To start using Facebook with Appacitive, you need to:
 
-1. <a href="https://developers.facebook.com/apps">Setup Facebook app <i class="glyphicon glyphicon-share-alt"></i></a>.
-2. Follow these instructions to <a href="https://developers.facebook.com/docs/reference/javascript/">include Facebook SDK <i class="glyphicon glyphicon-share-alt"></i></a> in your app.
+1. <a href="https://developers.facebook.com/apps" target="_blank">Setup Facebook app <i class="glyphicon glyphicon-share-alt"></i></a>.
+2. Follow these instructions to <a href="https://developers.facebook.com/docs/reference/javascript/" target="_blank">include Facebook SDK <i class="glyphicon glyphicon-share-alt"></i></a> in your app.
 3. Replace your call to FB.init() with a call to `Appacitive.Facebook.initialize()`. This is how you need to do it
 
 ```javascript
@@ -27,6 +27,14 @@ window.fbAsyncInit = function() {
   });
   // Additional initialization code here
 };
+
+(function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 ```
 
 ### Login & Signup via Facebook
@@ -89,6 +97,21 @@ Appacitive.Facebook.accessToken(token);
 //Call login
 Appacitive.User.loginWithFacebook(token);
 ```
+
+### Permissions
+
+You may optionally provide a comma-separated string that specifies what permissions your app requires from the Facebook user in the options object as a `scope` property to the method `Appacitive.Facebook.requestLogin`.
+
+```javascript```
+var options = { scope: 'email' }; //a comma-separated list of the permissions
+Appacitive.Facebook.requestLogin(options).then(function(response) {
+    console.log('Facebook login successfull');
+}, function() {
+  console.log('Facebook login failed');
+});
+```
+
+`Appacitive.User` integration doesn't require any permissions to work out of the box (ie. null or specifying no permissions is perfectly acceptable). Read more about <a href="https://developers.facebook.com/docs/reference/api/permissions/" target="_blank">permissions<i class="glyphicon glyphicon-share-alt"></i></a> on Facebook's developer guide.
 
 ### Linking Facebook account
 
