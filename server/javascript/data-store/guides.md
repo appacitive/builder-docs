@@ -1822,17 +1822,25 @@ var PlayerCollection = Appacitive.Collection.extend({
   model: Player
 });
 var collection = new PlayerCollection();
- 
-// A Collection of Players whose score is greater than 200
+```
+A Collection of Players, with a query set in the initialize method to fetch the ones whose score is greater than 200.
+
+```javascript
 var HighScoreCollection = Appacitive.Collection.extend({
   model: Player,
-  query: (new Appacitive.Query(Player)).filter(
-          Appacitive.Filter.Property('score').greaterThan(200)
-          )
+  
+  initialize: function() {
+    //Override collection query to set the filter
+    var query = new Appacitive.Query(Player);
+    query.filter(Appacitive.Filter.Property('score').greaterThan(200))
+    this.query(query);
+  }
 });
 var collection = new HighScoreCollection();
- 
-// The Collection of Players that match a complex query.
+```
+A Collection of Players that matches a complex query.
+
+```javascript
 var query = Player.findAllQuery();
 var scoreFilter = Appacitive.Filter.Property("score").greaterThan(200);
 var levelFilter = Appacitive.Filter.Property("level").between(5, 10);
@@ -1882,7 +1890,7 @@ collection.fetchPrev(options);
 
 ## Creating, Adding and Removing Items
 
-You can create, add and remove objects/connection from a collection.
+You can create, add and remove objects/connections from a collection.
 
 ### Create
 
