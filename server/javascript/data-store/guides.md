@@ -57,7 +57,7 @@ var Player = Appacitive.Object.extend('player', {
     }
 
     //Invoke internal constructor
-    this.base.call(this, atts); 
+    Appacitive.Object.call(this, atts); 
   },
 
   // Function called after object is created
@@ -551,7 +551,7 @@ var Friend = Appacitive.Connection.extend('friends', {
     }
 
     //Invoke internal constructor
-    this.base.call(this, atts); 
+    Appacitive.Connection.call(this, atts); 
   },
 
   // Function called after connection is created
@@ -1908,7 +1908,7 @@ var Player = Appacitive.Object.extend('player', {
     }
 
     //Invoke internal constructor
-    this.base.call(this, atts); 
+    Appacitive.Object.call(this, atts); 
   },
 });
 var PlayerCollection = Appacitive.Collection.extend({
