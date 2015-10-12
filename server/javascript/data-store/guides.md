@@ -1224,8 +1224,7 @@ var query = new Appacitive.Queries.FindAllQuery(
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1
   pageSize: 20,     //optional: default is 50
-  orderBy: '__id',  //optional: default is by relevance
-  isAscending: false  //optional: default is false
+  descending: '__id'  //optional: order is descending
 }); 
 
 // success callback
@@ -1258,8 +1257,7 @@ var query = Player.findAllQuery(
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1
   pageSize: 20,     //optional: default is 50
-  orderBy: '__id',  //optional: default is by relevance
-  isAscending: false  //optional: default is false
+  asccending: '__id'  //optional: order is ascending
 }); 
 
 // for relation
@@ -1269,8 +1267,7 @@ var query = Player.findAllQuery(
   filter: filter,   //optional  
   pageNumber: 1 ,   //optional: default is 1
   pageSize: 20,     //optional: default is 50
-  orderBy: '__id',  //optional: default is by relevance
-  isAscending: false  //optional: default is false
+  descending: ['__id']  //optional: order is descending
 }); 
 
 ```
@@ -1278,7 +1275,7 @@ Go ahead and explore the query returned. The query contains a private object whi
 
 ## Modifiers
 
-Notice the `pageSize`, `pageNumber`, `orderBy`, `isAscending`, `filter`, `fields`  and `freeText` in the query? These're the options that you can specify in a query. Lets get to those.
+Notice the `pageSize`, `pageNumber`, `ascending`, `descending`, `filter`, `fields`  and `freeText` in the query? These're the options that you can specify in a query. Lets get to those.
 
 ### Pagination
 
@@ -1299,35 +1296,56 @@ query.pageNumber(2);
 //get pageNumber
 alert(query.pageNumber()); // will print 2
 
-people.fetch().then(function() {
+query.fetch().then(function() {
     // this is the 2nd page of results
     // where each page is 10 results long
 });
 ```
-**Note**: By default, pageNumber is 1 and pageSize is 50
+**Note**: By default, pageNumber is 1 and pageSize is 20
+
+To reset paging to default simple call reset.
+```javascript
+query.resetPaging();
+```
 
 ### Sorting
 
-Queries can be sorted similarly. Lets take the same example from above:
+For sortable types like `numbers` and `strings`, you can control the order in which results are returned:
+
 ```javascript
-var query = people.query();
+var query = new Appacitive.Queries.FindAllQuery({ 
+  type: 'person' // or relation: 'friends'
+});
 
-//set orderBy to specify the field on which you want to sort
-query.orderBy('name');
-//get orderBy
-alert(query.orderBy()); //will print name
+// Sorts the results in ascending order by the name field
+query.ascending("name");
 
-//set whether sortOrder is ascending or not 
-query.isAscending(true);
-//get orderBy
-alert(query.isAscending()); // will print true
+// Sorts the results in descending order by the name field
+query.descending("name");
+```
+It is also possible to add multiple fields to sort on. You can sort on multiple keys by using `ascending` or `descending` with a list of values.
+
+```javascript
+query.descending(['name', 'age']);
 ```
 
+Note that you can still use descending in combination with ascending if needed.
+
+```javascript
+// Sort on name (ascending), then on age (descending).
+query.ascending('name');
+query.descending('age');
+```
+
+To reset sorting to default order simple call reset.
+```javascript
+query.resetSorting();
+```
 ### Fields
 
-You can also mention exactly which all fields should be returned in query results. 
+By default, all fields in an object will be retrieved. You can, however, specify specific fields to retrieve. This can be useful to save bandwidth.
 
-Fields `__id` and `__type`/`__relationtype`  are the fields which will always be returned. 
+`__id` and `__type`/`__relationtype`  are the fields which will always be returned. 
 ```javascript
 //set fields
 query.fields(["name", "age", "__createby"]); //will set fields to return __id, __type, name, age and __createdby
@@ -1724,7 +1742,7 @@ We've designed the Javascript SDK in such a way that you typically don't need to
 
 Nevertheless, there are some cases where it's useful to be aware of how data is stored on the Appacitive platform.
 
-Internally, Appacitive stores data as JSON, so any datatype that can be converted to JSON can be stored on Parse. Overall, the following types are allowed for each field in your object:
+Internally, Appacitive stores data as JSON, so any datatype that can be converted to JSON can be stored on Appacitive. Overall, the following types are allowed for each field in your object:
 
 * string
 * integer

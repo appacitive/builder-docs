@@ -1,20 +1,20 @@
 {
-  "guides": {
-      "title": "JavaScript Data Store Guide - Dev Center - Appacitive",
-      "description": "JavaScript guide explaining the data storage in Appacitive Platform using JavaScript SDK.",
-      "keywords": "javascript, guide, data store, appacitive, javascript sdk",
-      "platform": "JavaScript",
-      "platform_link": "javascript",
-      "layout":"../../_layout-menu.ejs",
-      "language": "JavaScript",
-      "guide_name": "data-store"
-   },
-   "tutorial": {
-   	"title": "JavaScript Data Store Tutorial - Dev Center - Appacitive",
-		"description": "Tutorial on data storage in Appacitive Platform using JavaScript SDK.",
-      "keywords": "javascript, tutorial, data store, appacitive, javascript sdk",
-      "platform": "JavaScript",
-      "platform_link": "javascript",
-      "language": "JavaScript"
-   }
+    "guides": {
+        "title": "JavaScript Data Store Guide - Dev Center - Appacitive",
+        "description": "JavaScript guide explaining the data storage in Appacitive Platform using JavaScript SDK.",
+        "keywords": "javascript, guide, data store, appacitive, javascript sdk, query, object, connection, collection, promise, pagination, sorting",
+        "platform": "JavaScript",
+        "platform_link": "javascript",
+        "layout": "../../_layout-menu.ejs",
+        "language": "JavaScript",
+        "guide_name": "data-store"
+    },
+    "tutorial": {
+        "title": "JavaScript Data Store Tutorial - Dev Center - Appacitive",
+        "description": "Tutorial on data storage in Appacitive Platform using JavaScript SDK.",
+        "keywords": "javascript, tutorial, data store, appacitive, javascript sdk",
+        "platform": "JavaScript",
+        "platform_link": "javascript",
+        "language": "JavaScript"
+    }
 }

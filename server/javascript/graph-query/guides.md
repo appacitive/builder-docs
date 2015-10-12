@@ -20,10 +20,13 @@ Following example refers to the Graph Query that we created in the video.
 var queryName = "get_users";
 
 // any placeholders if provided : optional
-var placeholderFillers = { topic: "avengers" };
+var placeholders = { topic: "avengers" };
 
 // Create query for Graph API
-var query = new Appacitive.Queries.GraphQuery(queryName, placeholderFillers);
+var query = new Appacitive.Queries.GraphQuery({ 
+	name :queryName, 
+	placeholders: placeholders 
+});
 
 // call fetch
 query.fetch().then(function(ids) {
@@ -34,5 +37,70 @@ query.fetch().then(function(ids) {
 });
 ```
 
+## Pagination and Sorting
 
+By default, the API returns ids without pagination and is sorted by relevance. You can, however, specify pagination and sorting as well. The syntax to set it is the same as the one used in [basic queries](/javascript/data-store/guides.html#modifiers).
 
+```javascript
+// Create query for Graph API
+var query = new Appacitive.Queries.GraphQuery({ 
+	name: 'get_users', 
+	placeholders: placeholders, 
+	pageSize: 20, 
+	pageNumber: 3,
+	ascending: 'username'
+});
+
+// success callback
+var successHandler = function(userIds) {
+  //`userIds` is `PagedList` of `ids`
+
+  console.log(userIds.total); //total records for query
+  console.log(userIds.pageNumber); //pageNumber for this set of records
+  console.log(userIds.pageSize); //pageSize for this set of records
+
+  // fetching other left userIds
+  if (!userIds.isLastPage) {
+    // if this is not the last page then fetch further records 
+    query.fetchNext().then(successHandler);
+  }
+};
+
+// make a call
+query.fetch().then(successHandler);
+```
+
+## Return Objects with Fields
+
+Graph query returns a list of ids by default. Bu it also supports returning respective objects instead of ids with support to specific [fields](/javascript/data-store/guides.html#fields) to retrieve.
+
+```javascript
+// Create query for Graph API
+var query = new Appacitive.Queries.GraphQuery({ 
+	name: 'get_users', 
+	placeholders: placeholders, 
+	pageSize: 20, 
+	pageNumber: 3,
+	ascending: 'username',
+	fields: ['username','firstnam', 'lastname'],
+	returnObjects: true //set true to return objects 
+});
+
+// success callback
+var successHandler = function(users) {
+  //`users` is `PagedList` of `Object`
+
+  console.log(users.total); //total records for query
+  console.log(users.pageNumber); //pageNumber for this set of records
+  console.log(users.pageSize); //pageSize for this set of records
+
+  // fetching other left users
+  if (!users.isLastPage) {
+    // if this is not the last page then fetch further records 
+    query.fetchNext().then(successHandler);
+  }
+};
+
+// make a call
+query.fetch().then(successHandler);
+```
