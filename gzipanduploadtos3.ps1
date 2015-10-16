@@ -42,6 +42,8 @@ $onedayrfc1123 = ((Get-Date).AddSeconds(86400)).ToString('r')
 #"Emptying current bucket contents"
 #python $s3cmdpath -r -f del s3://$s3bucket
 
+$env:path="$env:Path;C:\Python27"
+
 # Upload files to S3
 $workingdir = [regex]::Escape((Get-Location).ToString()) #Escapes any special characters that may interfere with RegEx matching
 

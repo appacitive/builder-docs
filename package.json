@@ -6,6 +6,7 @@
     "start": "harp server server --port 9000"
   },
   "dependencies": {
-    "harp": "*"
+    "harp": "*",
+    "node-dir":"*"
   }
 }
