@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-var path = require('path'),
-exec = require('child_process').exec;
+var path = require('path');
 
 function replaceAll(find, replace, str) {
     return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
@@ -25,8 +24,8 @@ function guid() {
 setTimeout(function() {
 
     console.log("Compiling html using Harp");
-
-    exec('harp compile server publish', function(err, stdout, stderr) {
+    var harp = require("harp");
+    harp.compile("server", "../publish" ,function(err, stdout, stderr) {
         
         console.log("Html compiled\n\n");
         var version = guid();
@@ -52,6 +51,9 @@ setTimeout(function() {
             console.log('finished transforming files');
         });
     });
+
+    return;
+
 }, 0);
 
 process.on('uncaughtexceptions', function(e) {
