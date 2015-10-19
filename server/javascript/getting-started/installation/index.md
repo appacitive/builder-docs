@@ -15,7 +15,7 @@ This will include the sdk in your project.
 ```
 Using a protocol relative URI means the sdk will be served using the same protocol (HTTP or HTTPS) as your index.html.
 
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v0.9.8.1.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.5.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
 
 ##Download and Include the sdk 
 
@@ -52,13 +52,17 @@ var Appacitive = require('appacitive');
 
 ## Initializing the sdk for your app.
 
-To start using the SDK inside your app, you need to initialize it with your `apikey`, `appId` and `environment`. You can initialize the SDK any where in your app, before using any Appacitive classes. To initialize the SDK insert following code.
+To start using the SDK inside your app, you need to initialize it with your `apikey`, `appId` and `environment`. You can initialize the SDK any where in your app, before using any Appacitive classes. The returned promise fulfills with current user.
 
 ```javscript
-Appacitive.initialize({ 
+var promise = Appacitive.initialize({ 
   apikey: "{apikey}",// The master or client api key for your app on appacitive.
   env: "sandbox", 	 // The environment that you are targetting (sandbox or live).
   appId: "{appId}"	 // The app id for your app on appacitive. 
+});
+
+promise.then(function(current) {
+    ...
 });
 ```
 

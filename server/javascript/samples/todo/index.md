@@ -62,18 +62,22 @@ All the html that is needed by views is placed in index.html file inside script 
 To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
 ```html
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.4.min.js"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.5.min.js"></script>
 ```
 
 #### 3.2 Initialize the SDK
 
-You can initialize the SDK any where in your app, but we suggest to do it in `app.js`. To initialize the SDK, open `app.js` and insert following code in the beginning.
+You can initialize the SDK any where in your app, but we suggest to do it in `app.js`. To initialize the SDK, open `app.js` and replace following code with the function call `renderAppView()`.
 
-```javscript
-Appacitive.initialize({ 
-  apikey: "{{API Key}}", 
-  env: "sandbox", 
-  appId: "{{App Id}}"
+```javascript
+var promise = Appacitive.initialize({ 
+  apikey: "{apikey}",// The master or client api key for your app on appacitive.
+  env: "sandbox", 	 // The environment that you are targetting (sandbox or live).
+  appId: "{appId}"	 // The app id for your app on appacitive. 
+});
+
+promise.then(function(current) {
+    renderAppView();
 });
 ```
 
