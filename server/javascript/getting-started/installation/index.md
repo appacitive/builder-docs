@@ -1,4 +1,4 @@
-﻿Appacitive Javascript SDK is built mostly in the way models and collections work in <a href="http://backbonejs.org/" target="_blank">Backbone.js <i class="glyphicon glyphicon-share-alt"></i></a>, with changes to accomodate Appacitive's API  convention. Thus integrating SDK with backbone apps becomes more easy.
+﻿Appacitive Javascript SDK is built mostly in the way models and collections work in <a href="http://backbonejs.org/" target="_blank">Backbone.js</a>, with changes to accomodate Appacitive's API  convention. Thus integrating SDK with backbone apps becomes more easy.
 
 #Include SDK
 
@@ -19,10 +19,9 @@ Using a protocol relative URI means the sdk will be served using the same protoc
 
 ##Download and Include the sdk 
 
-Incase you don't want to use CDN, you can always <a href="/javascript/downloads" target="_blank">download <i class="glyphicon glyphicon-share-alt"></i></a> the SDK.
+Incase you don't want to use CDN, you can always <a href="/javascript/downloads" target="_blank">download</a> the SDK.
 
-The source code for the Javascript sdk for Appacitive is open source and
-is available on github under the [Apache License](https://github.com/chiragsanghvi/JavascriptSDK/blob/master/License).
+The source code for the Javascript sdk for Appacitive is open source and is available on Github under the [Apache License](https://github.com/chiragsanghvi/JavascriptSDK/blob/master/License).
 
 From the source code, you just need to download the `AppacitiveSDK.min.js` or `AppacitiveSDK.js` file, and include it in your app.
 
@@ -30,13 +29,13 @@ From the source code, you just need to download the `AppacitiveSDK.min.js` or `A
 
 ## Include SDK in your Phonegap App
 
-Including the SDK in a <a href="http://phonegap.com/" target="_blank">Phonegap <i class="glyphicon glyphicon-share-alt"></i></a> app and Web app is same. 
+Including the SDK in a <a href="http://phonegap.com/" target="_blank">Phonegap</a> app and Web app is same. 
 
-##Include SDK in your Titanium App
+## Include SDK in your Titanium App
 
-For Titanium download <a href="/javascript/downloads" target="_blank">Ti.AppacitiveSDK.js <i class="glyphicon glyphicon-share-alt"></i></a> and include it in your app. 
+For Titanium download <a href="https://raw.githubusercontent.com/chiragsanghvi/JavascriptSDK/master/Ti.AppacitiveSDK.js" target="_blank">Ti.AppacitiveSDK.js </a> and include it in your app. 
 
-##Include SDK in your Node.js App
+## Include SDK in your Node.js App
 
 You should add the SDK as npm dependency. Run the command below to install the module, and update your apps package.json.
 
@@ -50,7 +49,7 @@ In your app, import the library using require.
 var Appacitive = require('appacitive');
 ```
 
-##Include SDK in your React Native App
+## Include SDK in your React Native App
 
 You should add the SDK as npm dependency. Run the command below to install the module, and update your apps package.json.
 
@@ -124,4 +123,4 @@ Appacitive.ping({
 
 Your app will be used by a real-life human being; this person is represented by the Current User. It would be bothersome if the user had to log in every time they open your app. 
 
-Thus, whenever you initialize your app, the sdk will set the user session and current user if available by default. For more info on current user you can refer this <a  target="_blank" href="/javascript/users/guides.html#current-user">guide <i class="glyphicon glyphicon-share-alt"></i></a>.
+Thus, whenever you initialize your app, the sdk will set the user session and current user if available by default. For more info on current user you can refer this <a  target="_blank" href="/javascript/users/guides.html#current-user">guide</a>.
