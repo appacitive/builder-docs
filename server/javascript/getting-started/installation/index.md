@@ -11,11 +11,11 @@ It is recommended to serve the sdk directly from our Content Delivery Network. A
 This will include the sdk in your project.
 
 ```html
-<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v0.9.8.1.min.js"></script>
+<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.6.min.js"></script>
 ```
 Using a protocol relative URI means the sdk will be served using the same protocol (HTTP or HTTPS) as your index.html.
 
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.5.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.6.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
 
 ##Download and Include the sdk 
 
@@ -28,9 +28,9 @@ From the source code, you just need to download the `AppacitiveSDK.min.js` or `A
 
 <a title="View on Github" class="btn btn-success <%- github %>" target="_blank" href="https://github.com/chiragsanghvi/JavascriptSDK">Github <i class="glyphicon glyphicon-share-alt"></i></a>
 
-## Include SDK in your phonegap App
+## Include SDK in your Phonegap App
 
-Including the SDK in a <a href="http://phonegap.com/" target="_blank">Phonegap <i class="glyphicon glyphicon-share-alt"></i></a> app and Web app is same. You can simply follow above steps to include the SDK.
+Including the SDK in a <a href="http://phonegap.com/" target="_blank">Phonegap <i class="glyphicon glyphicon-share-alt"></i></a> app and Web app is same. 
 
 ##Include SDK in your Titanium App
 
@@ -48,6 +48,20 @@ In your app, import the library using require.
 
 ```
 var Appacitive = require('appacitive');
+```
+
+##Include SDK in your React Native App
+
+You should add the SDK as npm dependency. Run the command below to install the module, and update your apps package.json.
+
+```javascript
+npm install appacitive
+```
+
+In your app, import the library using require.
+
+```
+var Appacitive = require('appacitive/react-native');
 ```
 
 ## Initializing the sdk for your app.
