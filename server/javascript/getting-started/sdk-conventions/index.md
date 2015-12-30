@@ -3,6 +3,7 @@
 Before we dive into using the SDK, we need to grok a couple of things. The Javascript sdk follows certain conventions for all operations. These are applied for all types through out the SDK.
 
 ## Appacitive platform and SDK mapping.
+
 The following table shows the different sub systems in the Appacitive platform and their corresponding
 SDK classes.
 

@@ -1,9 +1,9 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 1.0.6 - Oct 21, 2015</span>
+<span class="muted mbm">Version 1.0.7 - Oct 21, 2015</span>
 <div> 
-	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.6.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
-	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.6.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
+	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
+	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
 </div>
 <br/>
 
@@ -18,6 +18,12 @@ To fast track your development, we have created blank projects of different proj
 
 
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
+## v1.0.7
+<span class="muted">Dec 29, 2015</span>
++ Optimized baseobject class functions to use extend instead of prototype.
+<br/>
+
+
 ## v1.0.6
 <span class="muted">Oct 21, 2015</span>
 
@@ -29,7 +35,6 @@ To fast track your development, we have created blank projects of different proj
 + Added containedIn, notIn, isNull and notNull support for attribute filters.
 + Added promise support for Appacitive.Initialize.
 + Fixed an issue with UTC date parsing.
-
 <br/>
 
 ## v0.9.8.1
@@ -116,6 +121,12 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td align="left">1.0.7</td>
+			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.js">Development</a></td>
+			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/v1.0.7">Github</a></td>
+			<td>Dec 29, 2015</td>
+		</tr>
 		<tr>
 			<td align="left">1.0.6</td>
 			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.6.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.6.js">Development</a></td>

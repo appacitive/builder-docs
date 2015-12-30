@@ -1,23 +1,23 @@
 ﻿Appacitive Javascript SDK is built mostly in the way models and collections work in <a href="http://backbonejs.org/" target="_blank">Backbone.js</a>, with changes to accomodate Appacitive's API  convention. Thus integrating SDK with backbone apps becomes more easy.
 
-#Include SDK
+# Include SDK
 
 The SDK itself has no dependencies on any libraries. The SDK doesn't include backbone.js, so if you're developing a backbone app you'll need to include backbone.js and its dependencies.
 
-##Include the SDK in your app using CDN
+## Include the SDK in your app using CDN
 
 It is recommended to serve the sdk directly from our Content Delivery Network. Add the following line of code after loading Backbone.js and its dependencies.
 
 This will include the sdk in your project.
 
 ```html
-<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.6.min.js"></script>
+<script src="//cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.min.js"></script>
 ```
 Using a protocol relative URI means the sdk will be served using the same protocol (HTTP or HTTPS) as your index.html.
 
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.6.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.7.zip"><i class="glyphicon glyphicon-download-alt"></i>  Download blank Javascript/HTML5 project</a>
 
-##Download and Include the sdk 
+## Download and Include the sdk 
 
 Incase you don't want to use CDN, you can always <a href="/javascript/downloads" target="_blank">download</a> the SDK.
 
@@ -105,7 +105,7 @@ Appacitive.Session.environment('live');
 Appacitive.Session.reset();
 ```
 
-##Verify Set Up
+## Verify Set Up
 
 Your app is now connected to Appacitive. The `ping` method, as shown below, will contact the backend and verify that the SDK can communicate with your app.
 
