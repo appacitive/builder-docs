@@ -1,6 +1,6 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 1.0.7 - Oct 21, 2015</span>
+<span class="muted mbm">Version 1.0.7 - Dec 29, 2015</span>
 <div> 
 	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
 	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
