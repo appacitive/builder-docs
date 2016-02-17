@@ -1,9 +1,9 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 1.0.7 - Dec 29, 2015</span>
+<span class="muted mbm">Version 1.0.7 - Feb 16, 2016</span>
 <div> 
-	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
-	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
+	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.8.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
+	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.8.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
 </div>
 <br/>
 
@@ -11,13 +11,19 @@
 To fast track your development, we have created blank projects of different project types. These blank projects have Javascript SDK included with all it's other dependencies. After downloading these projects you can switch over to our [Getting Started](../getting-started) guide.
 <br/>
 <br/>
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.6.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.8.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
 </div>
 <br/>
 
 
 
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
+
+## v1.0.8
+<span class="muted">Jan 16, 2016</span>
++ Fixed issue with undeclared functions and usage in BaseObject Class.
+<br/>
+
 ## v1.0.7
 <span class="muted">Dec 29, 2015</span>
 + Optimized baseobject class functions to use extend instead of prototype.
@@ -121,6 +127,12 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td align="left">1.0.8</td>
+			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.8.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.8.js">Development</a></td>
+			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/v1.0.8">Github</a></td>
+			<td>Jan 16, 2016</td>
+		</tr>
 		<tr>
 			<td align="left">1.0.7</td>
 			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.7.js">Development</a></td>
