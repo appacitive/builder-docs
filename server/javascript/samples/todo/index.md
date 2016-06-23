@@ -62,7 +62,7 @@ All the html that is needed by views is placed in index.html file inside script 
 To get started, add the SDK to the head tag inside `index.html` file and remove `backbone.localstorage.js` script tag.
 
 ```html
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.9.min.js"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.10.min.js"></script>
 ```
 
 #### 3.2 Initialize the SDK

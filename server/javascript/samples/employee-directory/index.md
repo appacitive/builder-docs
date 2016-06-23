@@ -64,7 +64,7 @@ To change the data adapter, just comment out `model-in-memory.js` script, and un
 <!--<script src="js/models/model-in-memory.js"></script>-->
 
 <!-- Uncomment the two scripts below to use Appacitive.com as the data persistence layer. -->
-<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.9.min.js" type="text/javascript"></script>
+<script src="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.10.min.js" type="text/javascript"></script>
 <script src="js/models/model-appacitive-com.js"></script>
 ```
 

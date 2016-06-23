@@ -1,9 +1,9 @@
 ﻿
 <h1><span class="glyphicon glyphicon-download-alt"></span> Javascript SDK Downloads</h1>
-<span class="muted mbm">Version 1.0.9 - Jun 17, 2016</span>
+<span class="muted mbm">Version 1.0.10 - Jun 22, 2016</span>
 <div> 
-	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.9.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
-	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.9.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
+	<a class="btn btn-info pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.10.min.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Production</a>
+	<a class="btn btn-info mll pll prm" href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.10.js"><i class="glyphicon glyphicon-download-alt"></i>    Download Development</a>
 </div>
 <br/>
 
@@ -11,17 +11,17 @@
 To fast track your development, we have created blank projects of different project types. These blank projects have Javascript SDK included with all it's other dependencies. After downloading these projects you can switch over to our [Getting Started](../getting-started) guide.
 <br/>
 <br/>
-<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.9.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
+<a title="Download blank Javascript/HTML5 project" class="btn btn-success pll" href="http://cdn.appacitive.com/devcenter/javascript/js_appacitive_empty_project_v1.0.10.zip"><i class="glyphicon glyphicon-download-alt"></i>    Download blank Javascript/HTML5 project</a>
 </div>
 <br/>
 
 
-
 <h1><span class="glyphicon glyphicon-time"></span> SDK Changelog</h1>
 
-## v1.0.9
-<span class="muted">Jun 17, 2016</span>
+## v1.0.10
+<span class="muted">Jun 22, 2016</span>
 + Fixed a typo in BaseObject Class.
++ Exposed updatePassword function on User class instead just for currentUser.
 <br/>
 
 ## v1.0.8
@@ -133,10 +133,10 @@ Always use the latest version of the SDK, it will be most reliable and compatibl
 	</thead>
 	<tbody>
 		<tr>
-			<td align="left">1.0.9</td>
-			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.9.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.9.js">Development</a></td>
+			<td align="left">1.0.10</td>
+			<td align="left"><a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.10.min.js">Production</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://cdn.appacitive.com/sdk/js/appacitive-js-sdk-v1.0.10.js">Development</a></td>
 			<td><a href="https://github.com/chiragsanghvi/JavascriptSDK/tree/master">Github</a></td>
-			<td>Jun 17, 2016</td>
+			<td>Jun 2, 2016</td>
 		</tr>
 		<tr>
 			<td align="left">1.0.8</td>
