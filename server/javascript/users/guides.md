@@ -300,8 +300,9 @@ Appacitive.User.resetPassword(token, newPassword).then(function() {
 ### Update Password
 Users need to change their passwords whenever they've compromised it. You can update it using this call:
 ```javascript
-//You can make this call only for a loggedin user
-Appacitive.User.current().updatePassword('{oldPassword}','{newPassword}')
+//For this call to work you need to have the user logged in or
+//you must be using the master key (in node.js)
+user.updatePassword('{oldPassword}','{newPassword}')
 	.then(function(){
 	  alert("Password updated successfully"); 
 	});
